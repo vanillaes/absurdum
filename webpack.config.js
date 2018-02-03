@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    'arrays': './src/arrays/index.js',
+    'arrays': './src/arrays/index.js'
   },
   devtool: 'source-map',
   module: {
@@ -22,7 +22,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     libraryTarget: 'umd'
   }
