@@ -14,6 +14,7 @@
     "main": "index",
     "dependencies": {},
     "scripts": {
+        "start": "npx chokidar './src/**/*.js' -c 'npm run build'",
         "build": "webpack",
         "preversion": "npx semistandard",
         "version": "git push",
