@@ -1,6 +1,6 @@
 {
     "name": "absurdum",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Reductio Ad Absurdum - The Riduculous Application of Reduce",
     "keywords": [
         "functional",
@@ -32,8 +32,8 @@
         "webpack": "^3.10.0"
     },
     "semistandard": {
-      "ignore": [
-        "dist"
-      ]
+        "ignore": [
+            "dist"
+        ]
     }
 }
