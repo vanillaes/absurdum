@@ -30,5 +30,10 @@
         "semistandard": "^12.0.0",
         "tape": "^4.8.0",
         "webpack": "^3.10.0"
+    },
+    "semistandard": {
+      "ignore": [
+        "dist"
+      ]
     }
 }
