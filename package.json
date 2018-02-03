@@ -13,7 +13,11 @@
     "license": "MIT",
     "main": "index",
     "dependencies": {},
-    "scripts": {}
+    "scripts": {
+        "preversion": "npx semistandard",
+        "version": "git push",
+        "postversion": "git push --tags"
+    },
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
