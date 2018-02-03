@@ -84,7 +84,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _map = __webpack_require__(1);
+var _filter = __webpack_require__(1);
+
+Object.defineProperty(exports, 'filter', {
+  enumerable: true,
+  get: function get() {
+    return _filter.filter;
+  }
+});
+
+var _map = __webpack_require__(2);
 
 Object.defineProperty(exports, 'map', {
   enumerable: true,
@@ -95,6 +104,22 @@ Object.defineProperty(exports, 'map', {
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var filter = exports.filter = function filter(input, predicate) {
+  return input.reduce(function (acc, curr) {
+    return predicate(curr) ? acc.concat([curr]) : acc;
+  }, []);
+};
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
