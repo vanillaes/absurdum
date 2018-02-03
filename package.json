@@ -16,6 +16,7 @@
     "scripts": {
         "start": "npx chokidar './src/**/*.js' -c 'npm run build'",
         "build": "webpack",
+        "test": "npx tape ./test/*.js",
         "preversion": "npx semistandard",
         "version": "git push",
         "postversion": "git push --tags"
