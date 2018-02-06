@@ -20,7 +20,7 @@ Before I introduce the steps to begin, let's set some ground rules. You can impl
 
 1. You must use reduce in your solution, no map/filter/foreach
 2. Your solution must be functional, with no side-effects
-3. Recursion will be allowed for nexted data types
+3. Recursion will be allowed for nested data types
 4. If recursion is used, it must be tail call optimized
 5. Be mindful of performance
 6. Use only vanilla JS, whatever features babel-preset-env supports
@@ -28,6 +28,10 @@ Before I introduce the steps to begin, let's set some ground rules. You can impl
 ## Getting Started
 
 This library is designed to make contributing as easy and simple as possible.
+
+Start by suggesting a new [Operator][operator] or [Type][type].
+
+Development is done following the [Feature Branch Workflow][feature-workflow]:
 
 1. Fork the repo
 2. Clone your fork
@@ -47,8 +51,10 @@ This library is designed to make contributing as easy and simple as possible.
 - [HTML][html]
 
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
+[operator]: https://github.com/evanplaice/absurdum/issues/new?title=Operator([operator])&template=OPERATOR_TEMPLATE.md&labels=enhancement,operator
+[type]: https://github.com/evanplaice/absurdum/issues/new?title=Type([typ])&template=TYPE_TEMPLATE.md&labels=enhancement,type
+[feature-workflow]:https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 [arrays]: ./docs/arrays.md
 [objects]: ./docs/objects.md
 [strings]: ./docs/strings.md
 [html]: ./docs/html.md
-
