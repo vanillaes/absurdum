@@ -39,4 +39,16 @@ This library is designed to make contributing as easy and simple as possible.
 8. Cleanup with 'npm run checkstyle'
 8. Submit a PR
 
+## Operator(s) Documentation
+
+- [Arrays][arrays]
+- [Objects][objects]
+- [Strings][strings]
+- [HTML][html]
+
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
+[arrays]: ./docs/arrays.md
+[objects]: ./docs/objects.md
+[strings]: ./docs/strings.md
+[html]: ./docs/html.md
+
