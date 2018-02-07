@@ -21,3 +21,12 @@ let result = arrays.map([1, 2, 3, 4], (x) => x + 2);
 console.log(result)
 > [ 3, 4, 5, 6 ]
 ```
+
+### arrays.reverse(arr)
+
+Returns an array in reverse order
+
+```javascript
+let result = arrays.reverse([1, 2, 3, 4]);
+> [4, 3, 2, 1]
+```
