@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/evanplaice/absurdum.svg?branch=master)](https://travis-ci.org/evanplaice/absurdum)
+
 # Absurdum
 
 ## Why the Funky Name?
