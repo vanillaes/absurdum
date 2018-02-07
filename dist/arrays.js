@@ -102,6 +102,15 @@ Object.defineProperty(exports, 'map', {
   }
 });
 
+var _reverse = __webpack_require__(3);
+
+Object.defineProperty(exports, 'reverse', {
+  enumerable: true,
+  get: function get() {
+    return _reverse.reverse;
+  }
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -131,6 +140,22 @@ Object.defineProperty(exports, "__esModule", {
 var map = exports.map = function map(input, func) {
   return input.reduce(function (acc, curr) {
     return acc.concat([func(curr)]);
+  }, []);
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var reverse = exports.reverse = function reverse(input) {
+  return input.reduce(function (acc, curr, idx, arr) {
+    return acc.concat([arr[arr.length - idx - 1]]);
   }, []);
 };
 
