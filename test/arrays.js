@@ -1,6 +1,5 @@
 const test = require('tape');
 const arrays = require('../dist/arrays');
-console.log(arrays);
 
 test('filter(arr, predicate) - should filter out values based on the result of the predicate', (t) => {
   let result = arrays.filter([1, 2, 3, 4], (x) => x % 2 === 0);
