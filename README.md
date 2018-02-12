@@ -48,16 +48,32 @@ Development is done following the [Feature Branch Workflow][feature-workflow]:
 
 ## Operator(s) Documentation
 
-- [Arrays][arrays]
-- [Objects][objects]
-- [Strings][strings]
-- [HTML][html]
+### [Arrays][arrays]
+
+- [filter][arr-filter]
+- [map][arr-map]
+- [reverse][arr-reverse]
+- [tap][arr-tap]
+
+[arrays]: ./docs/arrays.md
+[arr-filter]: ./docs/arrays.md#arraysfilterarray-predicate
+[arr-map]: ./docs/arrays.md#arraysmaparray-func
+[arr-reverse]: ./docs/arrays.md#arraysreversearray
+[arr-tap]: ./docs/arrays.md#arraystaparray-func
+
+### [Objects][objects]
+
+[objects]: ./docs/objects.md
+
+### [Strings][strings]
+
+[strings]: ./docs/strings.md
+
+### [HTML][html]
+
+[html]: ./docs/html.md
 
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
 [operator]: https://github.com/evanplaice/absurdum/issues/new?title=Operator([operator])&template=OPERATOR_TEMPLATE.md&labels=enhancement,operator
 [type]: https://github.com/evanplaice/absurdum/issues/new?title=Type([typ])&template=TYPE_TEMPLATE.md&labels=enhancement,type
 [feature-workflow]:https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
-[arrays]: ./docs/arrays.md
-[objects]: ./docs/objects.md
-[strings]: ./docs/strings.md
-[html]: ./docs/html.md
