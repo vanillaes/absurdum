@@ -1,3 +1,4 @@
+[![npm](https://img.shields.io/npm/v/absurdum.svg)](https://www.npmjs.com/package/absurdum)
 [![Build Status](https://travis-ci.org/evanplaice/absurdum.svg?branch=master)](https://travis-ci.org/evanplaice/absurdum)
 
 # Absurdum
