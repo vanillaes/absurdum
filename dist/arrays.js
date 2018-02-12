@@ -111,6 +111,15 @@ Object.defineProperty(exports, 'reverse', {
   }
 });
 
+var _tap = __webpack_require__(4);
+
+Object.defineProperty(exports, 'tap', {
+  enumerable: true,
+  get: function get() {
+    return _tap.tap;
+  }
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -157,6 +166,23 @@ var reverse = exports.reverse = function reverse(input) {
   return input.reduce(function (acc, curr, idx, arr) {
     return acc.concat([arr[arr.length - idx - 1]]);
   }, []);
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var tap = exports.tap = function tap(input, func) {
+  input.forEach(function (x) {
+    return func(x);
+  });
+  return input;
 };
 
 /***/ })
