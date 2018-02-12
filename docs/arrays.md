@@ -2,7 +2,7 @@
 
 ## Operators
 
-### arrays.filter(arr, predicate)
+### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.
 
@@ -12,7 +12,7 @@ console.log(result)
 > [ 2, 4 ]
 ```
 
-### arrays.map(arr, function)
+### arrays.map(array, func)
 
 Map iterates over an array of values and applies a function to each value
 
@@ -22,7 +22,7 @@ console.log(result)
 > [ 3, 4, 5, 6 ]
 ```
 
-### arrays.reverse(arr)
+### arrays.reverse(array)
 
 Returns an array in reverse order
 
@@ -31,7 +31,7 @@ let result = arrays.reverse([1, 2, 3, 4]);
 > [4, 3, 2, 1]
 ```
 
-### arrays.tap(arr, func)
+### arrays.tap(array, func)
 
 Applies a function to each element in the array without mutating it
 

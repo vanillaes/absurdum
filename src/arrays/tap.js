@@ -1,4 +1,4 @@
-export const tap = (input, func) => {
-  input.forEach(x => func(x));
-  return input;
+export const tap = (array, func) => {
+  array.forEach(x => func(x));
+  return array;
 };

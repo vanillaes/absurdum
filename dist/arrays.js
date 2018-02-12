@@ -130,8 +130,8 @@ Object.defineProperty(exports, 'tap', {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var filter = exports.filter = function filter(input, predicate) {
-  return input.reduce(function (acc, curr) {
+var filter = exports.filter = function filter(array, predicate) {
+  return array.reduce(function (acc, curr) {
     return predicate(curr) ? acc.concat([curr]) : acc;
   }, []);
 };
@@ -146,8 +146,8 @@ var filter = exports.filter = function filter(input, predicate) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var map = exports.map = function map(input, func) {
-  return input.reduce(function (acc, curr) {
+var map = exports.map = function map(array, func) {
+  return array.reduce(function (acc, curr) {
     return acc.concat([func(curr)]);
   }, []);
 };
@@ -162,8 +162,8 @@ var map = exports.map = function map(input, func) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var reverse = exports.reverse = function reverse(input) {
-  return input.reduce(function (acc, curr, idx, arr) {
+var reverse = exports.reverse = function reverse(array) {
+  return array.reduce(function (acc, curr, idx, arr) {
     return acc.concat([arr[arr.length - idx - 1]]);
   }, []);
 };
@@ -178,11 +178,11 @@ var reverse = exports.reverse = function reverse(input) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var tap = exports.tap = function tap(input, func) {
-  input.forEach(function (x) {
+var tap = exports.tap = function tap(array, func) {
+  array.forEach(function (x) {
     return func(x);
   });
-  return input;
+  return array;
 };
 
 /***/ })

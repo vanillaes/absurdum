@@ -1,7 +1,7 @@
 const test = require('tape');
 const arrays = require('../dist/arrays');
 
-test('filter(arr, predicate) - should filter out values based on the result of the predicate', (t) => {
+test('arrays.filter(array, predicate) - should filter out values based on the result of the predicate', (t) => {
   let result = arrays.filter([1, 2, 3, 4], (x) => x % 2 === 0);
   let expect = [2, 4];
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'type');
@@ -10,7 +10,7 @@ test('filter(arr, predicate) - should filter out values based on the result of t
   t.end();
 });
 
-test('map(arr, func) - should map over and apply the function to each value', (t) => {
+test('arrays.map(array, func) - should map over and apply the function to each value', (t) => {
   let result = arrays.map([1, 2, 3, 4], (x) => x + 2);
   let expect = [3, 4, 5, 6];
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'type');
@@ -19,7 +19,7 @@ test('map(arr, func) - should map over and apply the function to each value', (t
   t.end();
 });
 
-test('reverse(arr) - should return the input in reverse order', (t) => {
+test('arrays.reverse(array) - should return the input in reverse order', (t) => {
   let result = arrays.reverse([1, 2, 3, 4]);
   let expect = [4, 3, 2, 1];
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'type');
@@ -28,7 +28,7 @@ test('reverse(arr) - should return the input in reverse order', (t) => {
   t.end();
 });
 
-test('tap(arr) - should apply a function to the input without mutating it', (t) => {
+test('arrays.tap(array) - should apply a function to the input without mutating it', (t) => {
   let result = arrays.tap([1, 2, 3, 4], console.log);
   let expect = [1, 2, 3, 4];
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'type');
