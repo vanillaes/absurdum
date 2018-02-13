@@ -1,0 +1,1 @@
+export { startsWith } from './startsWith';

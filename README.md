@@ -67,7 +67,10 @@ Development is done following the [Feature Branch Workflow][feature-workflow]:
 
 ### [Strings][strings]
 
+- [startsWith][str-startswith]
+
 [strings]: ./docs/strings.md
+[str-startswith]: ./docs/strings.md#stringsstartswithstring-substr
 
 ### [HTML][html]
 

@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    'arrays': './src/arrays/index.js'
+    'arrays': './src/arrays/index.js',
+    'strings': './src/strings/index.js'
   },
   devtool: 'source-map',
   module: {
