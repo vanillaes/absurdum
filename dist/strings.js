@@ -73,9 +73,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 5:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85,7 +89,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _startsWith = __webpack_require__(6);
+var _endsWith = __webpack_require__(6);
+
+Object.defineProperty(exports, 'endsWith', {
+  enumerable: true,
+  get: function get() {
+    return _endsWith.endsWith;
+  }
+});
+
+var _startsWith = __webpack_require__(7);
 
 Object.defineProperty(exports, 'startsWith', {
   enumerable: true,
@@ -95,8 +108,32 @@ Object.defineProperty(exports, 'startsWith', {
 });
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 6:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var endsWith = exports.endsWith = function endsWith(string, substr) {
+  return string.split('').reduce(function (acc, curr, idx, arr) {
+    // exit early on mismatch
+    if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
+      arr = arr.splice(0);
+    }
+    // exit early on match
+    if (idx === substr.length - 1) {
+      arr = arr.splice(0);
+      return true;
+    }
+    return acc;
+  }, false);
+};
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -121,7 +158,6 @@ var startsWith = exports.startsWith = function startsWith(string, substr) {
 };
 
 /***/ })
-
-/******/ });
+/******/ ]);
 });
 //# sourceMappingURL=strings.js.map
