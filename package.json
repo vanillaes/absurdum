@@ -19,8 +19,7 @@
         "test": "npx tape ./test/*.js",
         "lint": "npx semistandard",
         "preversion": "npm run lint",
-        "version": "git push",
-        "postversion": "git push --tags"
+        "postversion": "git push --follow-tags"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
