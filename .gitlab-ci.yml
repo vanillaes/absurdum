@@ -26,5 +26,5 @@ publish:
     - triggers
   script:
     - npm run build
-    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+    - export NPM_TOKEN=$NPM_TOKEN
     - npm publish
