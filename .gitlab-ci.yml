@@ -7,16 +7,13 @@ cache:
   paths:
     - node_modules/
 
-all_tests:
-  script:
-    - npm run build
-
 test:lint:
   script:
     - npm run lint
 
 test:main:
   script:
+    - npm run build
     - npm test
 
 publish:  
@@ -26,5 +23,5 @@ publish:
     - triggers
   script:
     - npm run build
-    - export NPM_TOKEN=$NPM_TOKEN
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>~/.npmrc
     - npm publish
