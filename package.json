@@ -1,6 +1,6 @@
 {
     "name": "absurdum",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Reductio Ad Absurdum - The Riduculous Application of Reduce",
     "keywords": [
         "functional",
@@ -17,8 +17,8 @@
         "start": "npx chokidar './src/**/*.js' -c 'npm run build'",
         "build": "webpack",
         "test": "npx tape ./test/*.js",
-        "checkstyle": "npx semistandard",
-        "preversion": "npm run checkstyle",
+        "lint": "npx semistandard",
+        "preversion": "npm run lint",
         "version": "git push",
         "postversion": "git push --tags"
     },

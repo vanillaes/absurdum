@@ -1,0 +1,20 @@
+image: node:10.15.0
+
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+all_tests:
+  script:
+    - npm run build
+
+test:lint:
+  script:
+    - npm run lint
+
+test:main:
+  script:
+    - npm test
