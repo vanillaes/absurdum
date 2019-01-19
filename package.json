@@ -8,7 +8,7 @@
         "operators",
         "reduce"
     ],
-    "repository": "https://github.com/evanplaice/absurdum",
+    "repository": "https://gitlab.com/evanplaice/absurdum",
     "author": "Evan Plaice <evanplaice@gmail.com>",
     "license": "MIT",
     "main": "index",
