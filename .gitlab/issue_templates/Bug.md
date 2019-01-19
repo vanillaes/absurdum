@@ -1,6 +1,6 @@
 # Subject of the issue
 
-Provide a brief description of your issue.
+(Provide a brief description of your issue.)
 
 ## Environment
 
@@ -16,12 +16,17 @@ Provide a brief description of your issue.
 
 ## Expected behaviour
 
-Tell us what should happen
+(Tell us what should happen)
 
 ## Actual behaviour
 
-Tell us what happens instead
+(Tell us what happens instead)
 
 ## References
 
+(Add Reference Links)
+
  - [name](href)
+
+/title Bug([title]) - [description]
+/label ~bug

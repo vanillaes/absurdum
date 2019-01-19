@@ -43,7 +43,7 @@ Development is done following the [Feature Branch Workflow][feature-workflow]:
 5. Implement your operator
 6. Add a test to verify its functionality
 7. Add supporting documentation
-8. Cleanup with 'npm run checkstyle'
+8. Cleanup with 'npm run lint'
 8. Submit a PR
 
 ## Operator(s) Documentation
