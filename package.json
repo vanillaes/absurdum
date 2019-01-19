@@ -1,6 +1,6 @@
 {
     "name": "absurdum",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "description": "Reductio Ad Absurdum - The Riduculous Application of Reduce",
     "keywords": [
         "functional",
@@ -8,7 +8,7 @@
         "operators",
         "reduce"
     ],
-    "repository": "https://github.com/evanplaice/absurdum",
+    "repository": "https://gitlab.com/evanplaice/absurdum",
     "author": "Evan Plaice <evanplaice@gmail.com>",
     "license": "MIT",
     "main": "index",
