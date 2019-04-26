@@ -1,4 +1,4 @@
-export { filter } from './filter';
-export { map } from './map';
-export { reverse } from './reverse';
-export { tap } from './tap';
+export { filter } from './filter.js';
+export { map } from './map.js';
+export { reverse } from './reverse.js';
+export { tap } from './tap.js';
