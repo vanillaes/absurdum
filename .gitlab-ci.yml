@@ -8,10 +8,14 @@ cache:
     - node_modules/
 
 test:
+  only:
+    - master
   script:
     - npm test
 
 lint:
+  only:
+    - master
   script:
     - npm run lint
 
@@ -20,6 +24,8 @@ publish:
   only:
     - tags
     - triggers
+  except:
+    - master
   script:
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
     - npm publish
