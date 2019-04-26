@@ -1,5 +1,5 @@
-const test = require('tape');
-const strings = require('../dist/strings');
+import test from 'tape';
+import { strings } from '../index.js';
 
 test('strings.startsWith(array) - checks to see if the input starts with a string', (t) => {
   let result = strings.startsWith('This sentence starts with', 'This');
