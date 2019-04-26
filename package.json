@@ -12,6 +12,7 @@
     "author": "Evan Plaice <evanplaice@gmail.com>",
     "license": "MIT",
     "main": "index.js",
+    "type": "module",
     "dependencies": {},
     "scripts": {
         "start": "npx chokidar './src/**/*.js' -c 'npm run build'",
