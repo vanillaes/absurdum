@@ -16,15 +16,13 @@
   "type": "module",
   "scripts": {
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
-    "test:watch": "npx chokidar -i 'node_modules' '**/*.js' -c 'npm test'",
+    "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
     "lint": "npx semistandard",
     "preversion": "npm run lint",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {},
   "devDependencies": {
-    "chokidar-cli": "^1.2.0",
-    "semistandard": "^12.0.0",
     "tape": "^4.8.0"
   },
   "semistandard": {
