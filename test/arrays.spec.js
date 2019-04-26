@@ -1,5 +1,5 @@
-const test = require('tape');
-const arrays = require('../dist/arrays');
+import test from 'tape';
+import { arrays } from '../index.js';
 
 test('arrays.filter(array, predicate) - should filter out values based on the result of the predicate', (t) => {
   let result = arrays.filter([1, 2, 3, 4], (x) => x % 2 === 0);
