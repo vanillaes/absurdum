@@ -25,6 +25,7 @@
   "devDependencies": {
     "tape": "^4.8.0"
   },
+  "engines" : { "node" : ">=12.0" },
   "semistandard": {
     "ignore": [
       "dist",
