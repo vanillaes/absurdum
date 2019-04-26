@@ -1,0 +1,6 @@
+.gitlab/
+docs/
+test/
+*.tgz
+.gitlab-ci.yml
+CONTRIBUTING.md
