@@ -14,9 +14,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "npx chokidar './src/**/*.js' -c 'npm run build'",
-        "build": "webpack",
-        "test": "npx tape ./test/*.js",
+        "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
+        "test:watch": "npx chokidar -i 'node_modules' '**/*.js' -c 'npm test'",
         "lint": "npx semistandard",
         "preversion": "npm run lint",
         "postversion": "git push --follow-tags"
