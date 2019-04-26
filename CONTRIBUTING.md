@@ -25,13 +25,13 @@ Development is done following the [Feature Branch Workflow][feature-workflow]:
 1. Fork the repo
 2. Clone your fork
 3. Create a *feature branch* named after your operator
-4. Run `npm run start`, so webpack can watch for changes
-5. Implement your operator
-6. Add a test(s) to verify its functionality
+4. Implement your operator
+5. Add a test(s) to verify its functionality
+6. Test with 'npm test' or 'npm run test:watch'
 7. Add supporting documentation
 8. Lint the new code 'npm run lint'
 9. Commit the changes
 10. Push the commit to your fork
-11. Create a merge request with `closes #[number]`* in the body on the main fork
+11. Create a merge request referencing the related issue with `ref #[number]`* in the body
 
 * Replace [number] with the issue number you're working on
