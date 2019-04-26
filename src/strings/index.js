@@ -1,2 +1,2 @@
-export { endsWith } from './endsWith';
-export { startsWith } from './startsWith';
+export { endsWith } from './endsWith.js';
+export { startsWith } from './startsWith.js';
