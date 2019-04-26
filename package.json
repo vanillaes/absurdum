@@ -6,7 +6,8 @@
     "functional",
     "pipeline",
     "operators",
-    "reduce"
+    "reduce",
+    "esm"
   ],
   "repository": "https://gitlab.com/evanplaice/absurdum",
   "author": "Evan Plaice <evanplaice@gmail.com>",
