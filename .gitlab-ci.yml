@@ -1,20 +1,19 @@
 image: node:12.0
 
 before_script:
-  - npm install
+  - npm i
 
 cache:
   paths:
     - node_modules/
 
-test:lint:
+test:
+  script:
+    - npm test
+
+lint:
   script:
     - npm run lint
-
-test:main:
-  script:
-    - npm run build
-    - npm test
 
 publish:  
   stage: deploy
