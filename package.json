@@ -1,6 +1,6 @@
 {
   "name": "absurdum",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Reductio Ad Absurdum - The Riduculous Application of Reduce",
   "keywords": [
     "functional",
@@ -26,7 +26,9 @@
   "devDependencies": {
     "tape": "^4.8.0"
   },
-  "engines" : { "node" : ">=12.0" },
+  "engines": {
+    "node": ">=12.0"
+  },
   "semistandard": {
     "ignore": [
       "index.js"
