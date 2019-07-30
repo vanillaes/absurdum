@@ -21,16 +21,16 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 ### [Arrays][arrays]
 
-- [filter][arr-filter]
-- [map][arr-map]
-- [reverse][arr-reverse]
-- [tap][arr-tap]
+- [filter][arrays.filter]
+- [map][arrays.map]
+- [reverse][arrays.reverse]
+- [tap][arrays.tap]
 
 [arrays]: ./docs/arrays.md
-[arr-filter]: ./docs/arrays.md#arraysfilterarray-predicate
-[arr-map]: ./docs/arrays.md#arraysmaparray-func
-[arr-reverse]: ./docs/arrays.md#arraysreversearray
-[arr-tap]: ./docs/arrays.md#arraystaparray-func
+[arrays.filter]: ./docs/arrays.md#arraysfilterarray-predicate
+[arrays.map]: ./docs/arrays.md#arraysmaparray-func
+[arrays.reverse]: ./docs/arrays.md#arraysreversearray
+[arrays.tap]: ./docs/arrays.md#arraystaparray-func
 
 ### [Objects][objects]
 
@@ -38,12 +38,14 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 ### [Strings][strings]
 
-- [endsWith][str-endswith]
-- [startsWith][str-startswith]
+- [endsWith][strings.endswith]
+- [reverse][strings.reverse]
+- [startsWith][strings.startswith]
 
 [strings]: ./docs/strings.md
-[str-endswith]: ./docs/strings.md#stringsendswithstring-substr
-[str-startswith]: ./docs/strings.md#stringsstartswithstring-substr
+[strings.endswith]: ./docs/strings.md#stringsendswithstring-substr
+[strings.reverse]: ./docs/strings.md#stringsreversestring
+[strings.startswith]: ./docs/strings.md#stringsstartswithstring-substr
 
 ### [HTML][html]
 

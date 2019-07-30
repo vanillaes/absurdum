@@ -7,7 +7,7 @@
 Filter iterates over an array of values and only outputs values where `predicate = true`.
 
 ```javascript
-let result = arrays.filter([1, 2, 3, 4], (x) => x % 2 === 0);
+const result = arrays.filter([1, 2, 3, 4], (x) => x % 2 === 0);
 console.log(result)
 > [ 2, 4 ]
 ```
@@ -17,7 +17,7 @@ console.log(result)
 Map iterates over an array of values and applies a function to each value
 
 ```javascript
-let result = arrays.map([1, 2, 3, 4], (x) => x + 2);
+const result = arrays.map([1, 2, 3, 4], (x) => x + 2);
 console.log(result)
 > [ 3, 4, 5, 6 ]
 ```
@@ -27,7 +27,7 @@ console.log(result)
 Returns an array in reverse order
 
 ```javascript
-let result = arrays.reverse([1, 2, 3, 4]);
+const result = arrays.reverse([1, 2, 3, 4]);
 > [4, 3, 2, 1]
 ```
 
@@ -36,7 +36,7 @@ let result = arrays.reverse([1, 2, 3, 4]);
 Applies a function to each element in the array without mutating it
 
 ```javascript
-let result = arrays.tap([1, 2, 3, 4], console.log);
+const result = arrays.tap([1, 2, 3, 4], console.log);
 console.log(result);
 > 1
 > 2
