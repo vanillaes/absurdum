@@ -11,8 +11,7 @@ test(`strings.endsWith(string, substr) - returns truthy if the string ends with 
   t.end();
 });
 
-
-test(`strings.endsWith(string, substr) - returns falsy when the string doesn't end with the substr`, t => {  
+test(`strings.endsWith(string, substr) - returns falsy when the string doesn't end with the substr`, t => {
   const expect = false;
   const result = strings.endsWith('This sentence does not end with', 'nope');
 
