@@ -19,7 +19,7 @@
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
     "lint": "npx semistandard",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
-    "preversion": "npm run lint",
+    "preversion": "npm test && npm run lint",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {},
