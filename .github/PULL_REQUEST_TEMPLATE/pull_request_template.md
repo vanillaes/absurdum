@@ -7,10 +7,12 @@
 
 ## Description
 
-(Post a brief description of the changes)
+<!-- Post a brief description of the changes -->
 
-## References
+## References <!-- optional -->
 
-(Add Reference Links)
+<!--
 
-- [name](href)
+ - [name](href)
+
+-->
