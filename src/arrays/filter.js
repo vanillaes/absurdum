@@ -1,5 +1,8 @@
 export const filter = (array, predicate) => {
   return array.reduce((acc, curr) => {
-    return (predicate(curr)) ? acc.concat([curr]) : acc;
+    if (predicate(curr)) {
+      acc.push(curr);
+    }
+    return acc;
   }, []);
 };
