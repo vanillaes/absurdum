@@ -1,6 +1,6 @@
 {
   "name": "absurdum",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Reducio Ad Absurdum - The Riduculous Application of Reduce",
   "keywords": [
     "functional",
@@ -9,7 +9,7 @@
     "reduce",
     "esm"
   ],
-  "repository": "https://gitlab.com/evanplaice/absurdum",
+  "repository": "https://github.com/vanillajs2/absurdum",
   "author": "Evan Plaice <evanplaice@gmail.com>",
   "license": "MIT",
   "main": "index.js",
