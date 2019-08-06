@@ -1,5 +1,4 @@
 [![npm](https://img.shields.io/npm/v/absurdum.svg)](https://www.npmjs.com/package/absurdum)
-[![Build Status](https://gitlab.com/evanplaice/absurdum/badges/master/build.svg)](https://gitlab.com/evanplaice/absurdum/pipelines)
 
 # Absurdum
 
