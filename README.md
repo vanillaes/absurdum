@@ -38,11 +38,13 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 ### [Strings][strings]
 
 - [endsWith][strings.endswith]
+- [padStart][strings.padStart]
 - [reverse][strings.reverse]
 - [startsWith][strings.startswith]
 
 [strings]: ./docs/strings.md
 [strings.endswith]: ./docs/strings.md#stringsendswithstring-substr
+[strings.padStart]: ./docs/strings.md#stringspadstartstring-length-substr
 [strings.reverse]: ./docs/strings.md#stringsreversestring
 [strings.startswith]: ./docs/strings.md#stringsstartswithstring-substr
 
