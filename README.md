@@ -20,13 +20,14 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 ### [Arrays][arrays]
 
+- [chunk][arrays.chunk]
 - [filter][arrays.filter]
 - [map][arrays.map]
 - [reverse][arrays.reverse]
 - [tap][arrays.tap]
 
 [arrays]: ./docs/arrays.md
-[arrays.chunk]: ./docs/arrays/md
+[arrays.chunk]: ./docs/arrays.md#arrayschunkarray-size1
 [arrays.filter]: ./docs/arrays.md#arraysfilterarray-predicate
 [arrays.map]: ./docs/arrays.md#arraysmaparray-func
 [arrays.reverse]: ./docs/arrays.md#arraysreversearray
