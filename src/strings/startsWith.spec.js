@@ -20,3 +20,23 @@ test(`strings.startsWith(string, substr) - returns falsy when the string doesn't
 
   t.end();
 });
+
+test(`strings.startsWith(string, substr) - returns falsy when the string doesn't start with the substr`, t => {
+  const expect = false;
+  const result = strings.startsWith('abc', 'f');
+
+  t.equal(Object.prototype.toString.call(result), '[object Boolean]', 'return type');
+  t.equal(result, expect, 'output value');
+
+  t.end();
+});
+
+test(`strings.startsWith(string, substr) - should not mutate the input`, t => {
+  const input = 'abc';
+  const expect = 'abc';
+  strings.startsWith(input, 'f');
+
+  t.equal(input, expect, 'input mutation');
+
+  t.end();
+});
