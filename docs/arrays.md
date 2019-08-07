@@ -32,6 +32,16 @@ console.log(result);
 > [1, 2, 3, 4]'
 ```
 
+### arrays.difference(array, values)
+
+Returns an array containing the difference of the input array vs the specified values.
+
+```javascript
+const result = arrays.difference([2, 1], [2, 3]);
+console.log(result);
+> [1]
+```
+
 ### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.
