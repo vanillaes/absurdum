@@ -12,6 +12,16 @@ console.log(result);
 > [[1, 2], [3, 4], [5]]
 ```
 
+### arrays.compact(array)
+
+Returns an array with all falsy `[false, null, 0, "", undefined, NaN]` values removed.
+
+```javascript
+const result = arrays.compact([1, false, 2, null, 3, 0, 4, "", 5, undefined, 6, NaN]);
+console.log(result);
+> [1, 2, 3, 4, 5, 6]
+```
+
 ### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.
