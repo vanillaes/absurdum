@@ -22,6 +22,16 @@ console.log(result);
 > [1, 2, 3, 4, 5, 6]
 ```
 
+### arrays.concat(...arrays)
+
+Concat takes any number or arrays or values as input. The arrays can be any level of depth. The output will be a single, one-dimensional array containing all the values.
+
+```javascript
+const result = arrays.concat([1], 2, [3], [[4]]);
+console.log(result);
+> [1, 2, 3, 4]'
+```
+
 ### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.

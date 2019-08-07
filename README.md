@@ -22,6 +22,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 - [chunk][arrays.chunk]
 - [compact][arrays.compact]
+- [concat][arrays.concat]
 - [filter][arrays.filter]
 - [map][arrays.map]
 - [reverse][arrays.reverse]
@@ -30,6 +31,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [arrays]: ./docs/arrays.md
 [arrays.chunk]: ./docs/arrays.md#arrayschunkarray-size1
 [arrays.compact]: ./docs/arrays.md#arrayscompactarray
+[arrays.concat]: ./docs/arrays.md#arraysconcatarrays
 [arrays.filter]: ./docs/arrays.md#arraysfilterarray-predicate
 [arrays.map]: ./docs/arrays.md#arraysmaparray-func
 [arrays.reverse]: ./docs/arrays.md#arraysreversearray
