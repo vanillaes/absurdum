@@ -26,6 +26,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [tap][arrays.tap]
 
 [arrays]: ./docs/arrays.md
+[arrays.chunk]: ./docs/arrays/md
 [arrays.filter]: ./docs/arrays.md#arraysfilterarray-predicate
 [arrays.map]: ./docs/arrays.md#arraysmaparray-func
 [arrays.reverse]: ./docs/arrays.md#arraysreversearray

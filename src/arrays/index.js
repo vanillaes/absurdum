@@ -1,3 +1,4 @@
+export { chunk } from "./chunk.js";
 export { filter } from './filter.js';
 export { map } from './map.js';
 export { reverse } from './reverse.js';

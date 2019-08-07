@@ -2,6 +2,16 @@
 
 ## Operators
 
+### arrays.chunk(array, size=1)
+
+Splits an array up into an array of equal size chunks.
+
+```javascript
+const result = arrays.chunk([1, 2, 3, 4, 5], 2);
+console.log(result);
+> [[1, 2], [3, 4], [5]]
+```
+
 ### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.
