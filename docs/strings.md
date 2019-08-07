@@ -18,6 +18,36 @@ console.log(result);
 > false
 ```
 
+### strings.padEnd(string, length, substr?)
+
+PadEnd pads the end of a string.
+
+PadStart pads the start of of a string.
+
+If no `substr` is provided, it pads the string w/ spaces.
+
+```javascript
+const result = strings.padEnd('abcabc', 9);
+console.log(result);
+> abcabc   
+```
+
+If `length` is shorter than `string` it doesn't add any padding.
+
+```javascript
+const result = strings.padEnd('abcabc', 4);
+console.log(result);
+> abcabc
+```
+
+If `substr` is defined, it uses that for padding.
+
+```javascript
+const result = strings.padEnd('abcabc', 16, 'fun');
+console.log(result);
+> 'abcabcfunfunfunf'
+```
+
 ### strings.padStart(string, length, substr?)
 
 PadStart pads the start of of a string.
