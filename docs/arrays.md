@@ -42,7 +42,7 @@ console.log(result);
 > [1]
 ```
 
-### arrays.drop(array, n)
+### arrays.drop(array, [n = 1])
 
 Returns an array with n items dropped from the beginning.
 
@@ -50,6 +50,16 @@ Returns an array with n items dropped from the beginning.
 const result = arrays.drop([1, 2, 3], 2);
 console.log(result);
 > [3]
+```
+
+### arrays.dropRight(array, [n = 1])
+
+Returns an array with n items dropped from the end.
+
+```javascript
+const result = arrays.drop([1, 2, 3], 2);
+console.log(result);
+> [1]
 ```
 
 ### arrays.filter(array, predicate)

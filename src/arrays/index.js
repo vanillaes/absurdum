@@ -3,6 +3,7 @@ export { compact } from "./compact.js";
 export { concat } from "./concat.js";
 export { difference } from "./difference.js";
 export { drop } from "./drop.js";
+export { dropRight } from "./dropRight.js";
 export { filter } from './filter.js';
 export { map } from './map.js';
 export { reduceRight } from './reduceRight.js';
