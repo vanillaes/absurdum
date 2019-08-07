@@ -2,6 +2,7 @@ export { chunk } from "./chunk.js";
 export { compact } from "./compact.js";
 export { concat } from "./concat.js";
 export { difference } from "./difference.js";
+export { drop } from "./drop.js";
 export { filter } from './filter.js';
 export { map } from './map.js';
 export { reverse } from './reverse.js';

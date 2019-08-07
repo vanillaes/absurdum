@@ -42,6 +42,16 @@ console.log(result);
 > [1]
 ```
 
+### arrays.drop(array, n)
+
+Returns an array with n items dropped from the beginning.
+
+```javascript
+const result = arrays.drop([1, 2, 3], 2);
+console.log(result);
+> [3]
+```
+
 ### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.
