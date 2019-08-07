@@ -5,5 +5,6 @@ export { difference } from "./difference.js";
 export { drop } from "./drop.js";
 export { filter } from './filter.js';
 export { map } from './map.js';
+export { reduceRight } from './reduceRight.js';
 export { reverse } from './reverse.js';
 export { tap } from './tap.js';
