@@ -62,6 +62,16 @@ console.log(result);
 > [1]
 ```
 
+### arrays.fill(array, value, start = 0, end = array.length-1)
+
+Fills the array items with the value. Can optionally start and/or end from a specific index
+
+```javascript
+const result = arrays.fill([1, 2, 3, 4], 'a', 1, 2);
+console.log(result)
+> [1, 'a', 'a', 4]
+```
+
 ### arrays.filter(array, predicate)
 
 Filter iterates over an array of values and only outputs values where `predicate = true`.

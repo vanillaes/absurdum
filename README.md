@@ -26,6 +26,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [difference][arrays.difference]
 - [drop][arrays.drop]
 - [dropRight][arrays.dropRight]
+- [fill][arrays.fill]
 - [filter][arrays.filter]
 - [map][arrays.map]
 - [reduceRight][arrays.reduceRight]
@@ -39,6 +40,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [arrays.difference]: ./docs/arrays.md#arraysdifferencearray-values
 [arrays.drop]: ./docs/arrays.md#arraysdroparray-n
 [arrays.dropRight]: ./docs/arrays.md#arraysdroprightarray-n--1
+[arrays.fill]: ./docs/arrays.md#arraysfilllarray-value-start--0-end--arraylength-1
 [arrays.filter]: ./docs/arrays.md#arraysfilterarray-predicate
 [arrays.map]: ./docs/arrays.md#arraysmaparray-func
 [arrays.reduceRight]: ./docs/arrays.md#arraysreducerightarray-reducer----array-initial--
