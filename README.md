@@ -48,7 +48,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 ### Objects
 
-### Strings]
+### Strings
 
 - [endsWith][strings.endswith]
 - [padEnd][strings.padEnd]
