@@ -2,22 +2,6 @@
 
 ## Operators
 
-### strings.endsWith(string, substr)
-
-EndsWith tests a string to see if it ends with a substring
-
-```javascript
-const result = strings.endsWith('This sentence ends with', 'with');
-console.log(result);
-> true
-```
-
-```javascript
-const result = strings.endsWith('This sentence does not end with', 'nope');
-console.log(result);
-> false
-```
-
 ### strings.padEnd(string, length, substr?)
 
 PadEnd pads the end of a string.
