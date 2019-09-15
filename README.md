@@ -38,7 +38,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [arrays.concat]: ./docs/arrays/concat.md
 [arrays.difference]: ./docs/arrays/difference.md
 [arrays.drop]: ./docs/arrays/drop.md
-[arrays.dropRight]: ./docs_old/arrays.md#arraysdroprightarray-n--1
+[arrays.dropRight]: ./docs/arrays/dropRight.md
 [arrays.fill]: ./docs_old/arrays.md#arraysfilllarray-value-start--0-end--arraylength-1
 [arrays.filter]: ./docs_old/arrays.md#arraysfilterarray-predicate
 [arrays.map]: ./docs_old/arrays.md#arraysmaparray-func

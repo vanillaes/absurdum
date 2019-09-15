@@ -2,16 +2,6 @@
 
 ## Operators
 
-### arrays.dropRight(array, [n = 1])
-
-Returns an array with n items dropped from the end.
-
-```javascript
-const result = arrays.drop([1, 2, 3], 2);
-console.log(result);
-> [1]
-```
-
 ### arrays.fill(array, value, start = 0, end = array.length-1)
 
 Fills the array items with the value. Can optionally start and/or end from a specific index
