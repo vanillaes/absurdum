@@ -33,7 +33,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [reverse][arrays.reverse]
 - [tap][arrays.tap]
 
-[arrays.chunk]: ./docs_old/arrays.md#arrayschunkarray-size1
+[arrays.chunk]: ./docs/arrays/chunk.md
 [arrays.compact]: ./docs_old/arrays.md#arrayscompactarray
 [arrays.concat]: ./docs_old/arrays.md#arraysconcatarrays
 [arrays.difference]: ./docs_old/arrays.md#arraysdifferencearray-values

@@ -2,16 +2,6 @@
 
 ## Operators
 
-### arrays.chunk(array, size=1)
-
-Splits an array up into an array of equal size chunks.
-
-```javascript
-const result = arrays.chunk([1, 2, 3, 4, 5], 2);
-console.log(result);
-> [[1, 2], [3, 4], [5]]
-```
-
 ### arrays.compact(array)
 
 Returns an array with all falsy `[false, null, 0, "", undefined, NaN]` values removed.
