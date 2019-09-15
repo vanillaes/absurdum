@@ -1,4 +1,30 @@
-export const padEnd = (string, length, substr = ' ') => {
+/**
+ * PadEnd pads the end of a string.
+ *
+ * @param {string} string
+ * @param {number} length
+ * @param {string} [substr=' ']
+ * @returns {string}
+ *
+ * @example
+ * // if no `substr` is provided, it pads the string w/ spaces
+ * const result = strings.padEnd('abcabc', 9);
+ * console.log(result);
+ * > abcabc
+ *
+ * @example
+ * // if `length` is shorter than `string` it doesn't add any padding
+ * const result = strings.padEnd('abcabc', 4);
+ * console.log(result);
+ * > abcabc
+ *
+ * @example
+ * // if `substr` is defined, it uses that for padding
+ *  const result = strings.padEnd('abcabc', 16, 'fun');
+ *  console.log(result);
+ *  > 'abcabcfunfunfunf'
+ */
+function padEnd (string, length, substr = ' ') {
   let strLen = string.length;
   let padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
@@ -15,3 +41,5 @@ export const padEnd = (string, length, substr = ' ') => {
     return acc;
   }, []).join('');
 };
+
+export { padEnd }

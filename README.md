@@ -57,7 +57,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [startsWith][strings.startswith]
 
 [strings.endswith]: ./docs/strings/endsWith.md
-[strings.padEnd]: ./docs_old/strings.md#stringspadendstring-length-substr
+[strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs_old/strings.md#stringspadstartstring-length-substr
 [strings.reverse]: ./docs_old/strings.md#stringsreversestring
 [strings.startswith]: ./docs_old/strings.md#stringsstartswithstring-substr
