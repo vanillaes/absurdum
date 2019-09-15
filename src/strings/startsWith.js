@@ -1,4 +1,21 @@
-export const startsWith = (string, substr) => {
+/**
+ * StartsWith tests a string to see if it starts with a substring
+ *
+ * @param {string} string
+ * @param {string} substr
+ * @returns {string}
+ *
+ * @example
+ * const result = strings.startsWith('This sentence starts with', 'This');
+ * console.log(result);
+ * > true
+ *
+ * @example
+ * const result = strings.startsWith('This sentence does not start with', 'Nope');
+ * console.log(result);
+ * > false
+ */
+function startsWith (string, substr) {
   let chars = string.split('');
   return chars.reduce((acc, curr, idx, arr) => {
     // exit early on mismatch
@@ -14,3 +31,5 @@ export const startsWith = (string, substr) => {
     return acc;
   }, null);
 };
+
+export { startsWith }

@@ -60,7 +60,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
 [strings.reverse]: ./docs/strings/reverse.md
-[strings.startswith]: ./docs_old/strings.md#stringsstartswithstring-substr
+[strings.startswith]: ./docs/strings/startsWith.md
 
 ### HTML
 
