@@ -2,34 +2,6 @@
 
 ## Operators
 
-### strings.padStart(string, length, substr?)
-
-PadStart pads the start of of a string.
-
-If no `substr` is provided, it pads the string w/ spaces.
-
-```javascript
-const result = strings.padStart('abcabc', 9);
-console.log(result);
->    abcabc
-```
-
-If `length` is shorter than `string` it doesn't add any padding.
-
-```javascript
-const result = strings.padStart('abcabc', 4);
-console.log(result);
-> abcabc
-```
-
-If `substr` is defined, it uses that for padding.
-
-```javascript
-const result = strings.padStart('abcabc', 16, 'fun');
-console.log(result);
-> 'funfunfunfabcabc'
-```
-
 ### strings.reverse(string)
 
 Reverse takes an returns a reversed version of the string input.
