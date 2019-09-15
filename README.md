@@ -39,7 +39,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [arrays.difference]: ./docs/arrays/difference.md
 [arrays.drop]: ./docs/arrays/drop.md
 [arrays.dropRight]: ./docs/arrays/dropRight.md
-[arrays.fill]: ./docs_old/arrays.md#arraysfilllarray-value-start--0-end--arraylength-1
+[arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs_old/arrays.md#arraysfilterarray-predicate
 [arrays.map]: ./docs_old/arrays.md#arraysmaparray-func
 [arrays.reduceRight]: ./docs_old/arrays.md#arraysreducerightarray-reducer----array-initial--
