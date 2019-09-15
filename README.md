@@ -41,7 +41,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [arrays.dropRight]: ./docs/arrays/dropRight.md
 [arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs/arrays/filter.md
-[arrays.map]: ./docs_old/arrays.md#arraysmaparray-func
+[arrays.map]: ./docs/arrays/map.md
 [arrays.reduceRight]: ./docs_old/arrays.md#arraysreducerightarray-reducer----array-initial--
 [arrays.reverse]: ./docs_old/arrays.md#arraysreversearray
 [arrays.tap]: ./docs_old/arrays.md#arraystaparray-func

@@ -2,16 +2,6 @@
 
 ## Operators
 
-### arrays.map(array, func)
-
-Map iterates over an array of values and applies a function to each value
-
-```javascript
-const result = arrays.map([1, 2, 3, 4], (x) => x + 2);
-console.log(result)
-> [ 3, 4, 5, 6 ]
-```
-
 ### arrays.reduceRight(array, reducer = () => array, initial = [])
 
 Reduce right performs reduce in reverse order (ie last->first). The reducer parameter follows the standard API (ie reducer(accumulator, current, index, array)). The initial parameter can be used to set the starting value for the accumulator.
