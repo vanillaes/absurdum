@@ -43,7 +43,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 [arrays.filter]: ./docs/arrays/filter.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
-[arrays.reverse]: ./docs_old/arrays.md#arraysreversearray
+[arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.tap]: ./docs_old/arrays.md#arraystaparray-func
 
 ### Objects
