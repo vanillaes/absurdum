@@ -25,6 +25,7 @@
   "dependencies": {},
   "devDependencies": {
     "docdown": "github:evanplaice/docdown",
+    "glob": "^7.1.4",
     "tape": "^4.8.0"
   },
   "engines": {
