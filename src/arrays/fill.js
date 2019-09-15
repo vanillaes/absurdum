@@ -6,7 +6,7 @@
  * @param {number} [start=0]
  * @param {number} end
  * @returns {Array} The filled array
- * 
+ *
  * @example
  * const result = arrays.fill([1, 2, 3, 4], 'a', 1, 2);
  * console.log(result)
@@ -24,6 +24,6 @@ function fill (array, value, start = 0, end) {
     }
     return acc;
   }, []);
-};
+}
 
-export { fill }
+export { fill };

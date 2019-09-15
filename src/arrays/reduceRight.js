@@ -14,12 +14,12 @@
  * console.log(result);
  * > ['d', 'c', 'b', 'a'];
  */
-function reduceRight (array, reducer = x=>array, initial = []) {
+function reduceRight (array, reducer = x => array, initial = []) {
   return array.reduce((accB, currB, idxB) => {
     const idxA = array.length - idxB - 1;
     const currA = array[idxA];
     return reducer(accB, currA, idxA, array);
   }, initial);
-};
+}
 
-export { reduceRight }
+export { reduceRight };

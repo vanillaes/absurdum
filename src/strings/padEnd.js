@@ -40,6 +40,6 @@ function padEnd (string, length, substr = ' ') {
     substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
     return acc;
   }, []).join('');
-};
+}
 
-export { padEnd }
+export { padEnd };

@@ -18,7 +18,7 @@
  *  console.log(result);
  *  > abcabc
  *
- * @example 
+ * @example
  * // if `substr` is defined, it uses that for padding
  * const result = strings.padStart('abcabc', 16, 'fun');
  * console.log(result);
@@ -39,6 +39,6 @@ function padStart (string, length, substr = ' ') {
     acc.push(curr);
     return acc;
   }, []).join('');
-};
+}
 
-export { padStart }
+export { padStart };

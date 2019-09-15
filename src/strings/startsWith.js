@@ -30,6 +30,6 @@ function startsWith (string, substr) {
     }
     return acc;
   }, null);
-};
+}
 
-export { startsWith }
+export { startsWith };

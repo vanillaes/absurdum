@@ -19,6 +19,6 @@ function drop (array, n = 1) {
     acc.push(curr);
     return acc;
   }, []);
-};
+}
 
-export { drop }
+export { drop };

@@ -29,6 +29,6 @@ function endsWith (string, substr = '') {
     }
     return acc;
   }, null);
-};
+}
 
-export { endsWith }
+export { endsWith };

@@ -17,6 +17,6 @@ function filter (array, predicate) {
     }
     return acc;
   }, []);
-};
+}
 
-export { filter }
+export { filter };

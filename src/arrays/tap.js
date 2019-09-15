@@ -4,7 +4,7 @@
  * @param {Array} array
  * @param {Function} func
  * @returns {Array} The source array
- * 
+ *
  * @example
  * const result = arrays.tap([1, 2, 3, 4], console.log);
  * > 1
@@ -17,6 +17,6 @@
 function tap (array, func) {
   array.forEach(x => func(x));
   return array;
-};
+}
 
-export { tap }
+export { tap };

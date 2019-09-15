@@ -3,7 +3,7 @@
  *
  * @param {Array} arrays
  * @returns {Array} The concatenated array
- * 
+ *
  * @example
  * const result = arrays.concat([1], 2, [3], [[4]]);
  * console.log(result);
@@ -11,7 +11,7 @@
  */
 function concat (...arrays) {
   return flatten(arrays, []);
-};
+}
 
 function flatten (array, initial = []) {
   return array.reduce((acc, curr) => {
@@ -24,4 +24,4 @@ function flatten (array, initial = []) {
   }, initial);
 }
 
-export { concat }
+export { concat };

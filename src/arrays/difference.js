@@ -19,6 +19,6 @@ function difference (array, values) {
     }
     return acc;
   }, []);
-};
+}
 
-export { difference }
+export { difference };

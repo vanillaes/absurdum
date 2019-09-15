@@ -13,6 +13,6 @@ function reverse (array) {
     acc.push(arr[arr.length - idx - 1]);
     return acc;
   }, []);
-};
+}
 
-export { reverse }
+export { reverse };

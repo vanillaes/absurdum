@@ -15,6 +15,6 @@ function map (array, func) {
     acc.push(func(curr));
     return acc;
   }, []);
-};
+}
 
-export { map }
+export { map };

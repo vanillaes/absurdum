@@ -3,7 +3,7 @@
  *
  * @param {Array} array
  * @returns {Array} the compacted array
- * 
+ *
  * @example
  * const result = arrays.compact([1, false, 2, null, 3, 0, 4, "", 5, undefined, 6, NaN]);
  * console.log(result);
@@ -25,6 +25,6 @@ function compact (array) {
     }
     return acc;
   }, []);
-};
+}
 
-export { compact }
+export { compact };

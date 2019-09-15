@@ -19,6 +19,6 @@ function dropRight (array, n = 1) {
     acc.unshift(arr[arr.length - idx - 1]);
     return acc;
   }, []);
-};
+}
 
-export { dropRight }
+export { dropRight };
