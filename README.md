@@ -34,7 +34,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [tap][arrays.tap]
 
 [arrays.chunk]: ./docs/arrays/chunk.md
-[arrays.compact]: ./docs_old/arrays.md#arrayscompactarray
+[arrays.compact]: ./docs/arrays/compact.md
 [arrays.concat]: ./docs_old/arrays.md#arraysconcatarrays
 [arrays.difference]: ./docs_old/arrays.md#arraysdifferencearray-values
 [arrays.drop]: ./docs_old/arrays.md#arraysdroparray-n

@@ -2,16 +2,6 @@
 
 ## Operators
 
-### arrays.compact(array)
-
-Returns an array with all falsy `[false, null, 0, "", undefined, NaN]` values removed.
-
-```javascript
-const result = arrays.compact([1, false, 2, null, 3, 0, 4, "", 5, undefined, 6, NaN]);
-console.log(result);
-> [1, 2, 3, 4, 5, 6]
-```
-
 ### arrays.concat(...arrays)
 
 Concat takes any number or arrays or values as input. The arrays can be any level of depth. The output will be a single, one-dimensional array containing all the values.
