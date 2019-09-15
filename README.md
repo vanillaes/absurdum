@@ -18,7 +18,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 ## Operator(s) Documentation
 
-### [Arrays][arrays]
+### Arrays
 
 - [chunk][arrays.chunk]
 - [compact][arrays.compact]
@@ -33,25 +33,22 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [reverse][arrays.reverse]
 - [tap][arrays.tap]
 
-[arrays]: ./docs/arrays.md
-[arrays.chunk]: ./docs/arrays.md#arrayschunkarray-size1
-[arrays.compact]: ./docs/arrays.md#arrayscompactarray
-[arrays.concat]: ./docs/arrays.md#arraysconcatarrays
-[arrays.difference]: ./docs/arrays.md#arraysdifferencearray-values
-[arrays.drop]: ./docs/arrays.md#arraysdroparray-n
-[arrays.dropRight]: ./docs/arrays.md#arraysdroprightarray-n--1
-[arrays.fill]: ./docs/arrays.md#arraysfilllarray-value-start--0-end--arraylength-1
-[arrays.filter]: ./docs/arrays.md#arraysfilterarray-predicate
-[arrays.map]: ./docs/arrays.md#arraysmaparray-func
-[arrays.reduceRight]: ./docs/arrays.md#arraysreducerightarray-reducer----array-initial--
-[arrays.reverse]: ./docs/arrays.md#arraysreversearray
-[arrays.tap]: ./docs/arrays.md#arraystaparray-func
+[arrays.chunk]: ./docs_old/arrays.md#arrayschunkarray-size1
+[arrays.compact]: ./docs_old/arrays.md#arrayscompactarray
+[arrays.concat]: ./docs_old/arrays.md#arraysconcatarrays
+[arrays.difference]: ./docs_old/arrays.md#arraysdifferencearray-values
+[arrays.drop]: ./docs_old/arrays.md#arraysdroparray-n
+[arrays.dropRight]: ./docs_old/arrays.md#arraysdroprightarray-n--1
+[arrays.fill]: ./docs_old/arrays.md#arraysfilllarray-value-start--0-end--arraylength-1
+[arrays.filter]: ./docs_old/arrays.md#arraysfilterarray-predicate
+[arrays.map]: ./docs_old/arrays.md#arraysmaparray-func
+[arrays.reduceRight]: ./docs_old/arrays.md#arraysreducerightarray-reducer----array-initial--
+[arrays.reverse]: ./docs_old/arrays.md#arraysreversearray
+[arrays.tap]: ./docs_old/arrays.md#arraystaparray-func
 
-### [Objects][objects]
+### Objects
 
-[objects]: ./docs/objects.md
-
-### [Strings][strings]
+### Strings]
 
 - [endsWith][strings.endswith]
 - [padEnd][strings.padEnd]
@@ -59,16 +56,14 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 - [reverse][strings.reverse]
 - [startsWith][strings.startswith]
 
-[strings]: ./docs/strings.md
-[strings.endswith]: ./docs/strings.md#stringsendswithstring-substr
-[strings.padEnd]: ./docs/strings.md#stringspadendstring-length-substr
-[strings.padStart]: ./docs/strings.md#stringspadstartstring-length-substr
-[strings.reverse]: ./docs/strings.md#stringsreversestring
-[strings.startswith]: ./docs/strings.md#stringsstartswithstring-substr
+[strings.endswith]: ./docs_old/strings.md#stringsendswithstring-substr
+[strings.padEnd]: ./docs_old/strings.md#stringspadendstring-length-substr
+[strings.padStart]: ./docs_old/strings.md#stringspadstartstring-length-substr
+[strings.reverse]: ./docs_old/strings.md#stringsreversestring
+[strings.startswith]: ./docs_old/strings.md#stringsstartswithstring-substr
 
-### [HTML][html]
+### HTML
 
-[html]: ./docs/html.md
 
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
 [operator]: https://github.com/evanplaice/absurdum/issues/new?title=Operator([operator])&template=OPERATOR_TEMPLATE.md&labels=enhancement,operator
