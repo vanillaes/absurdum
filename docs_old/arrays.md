@@ -2,16 +2,6 @@
 
 ## Operators
 
-### arrays.concat(...arrays)
-
-Concat takes any number or arrays or values as input. The arrays can be any level of depth. The output will be a single, one-dimensional array containing all the values.
-
-```javascript
-const result = arrays.concat([1], 2, [3], [[4]]);
-console.log(result);
-> [1, 2, 3, 4]'
-```
-
 ### arrays.difference(array, values)
 
 Returns an array containing the difference of the input array vs the specified values.
