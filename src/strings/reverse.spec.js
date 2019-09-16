@@ -1,7 +1,7 @@
 import test from 'tape';
 import { strings } from '../../index.js';
 
-test(`strings.reverse(string) - returns the input string reversed`, t => {
+test('strings.reverse(string) - returns the input string reversed', t => {
   const expect = 'gnirts tupni na si siht';
   const result = strings.reverse('this is an input string');
 

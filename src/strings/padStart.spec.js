@@ -1,7 +1,7 @@
 import test from 'tape';
 import { strings } from '../../index.js';
 
-test(`strings.padStart(string, length) - returns a string padded w/ spaces`, t => {
+test('strings.padStart(string, length) - returns a string padded w/ spaces', t => {
   const expect = '   abcabc';
   const result = strings.padStart('abcabc', 9);
 
@@ -12,7 +12,7 @@ test(`strings.padStart(string, length) - returns a string padded w/ spaces`, t =
   t.end();
 });
 
-test(`strings.padStart(string, length) - returns the string unchanged when the length is < string.length`, t => {
+test('strings.padStart(string, length) - returns the string unchanged when the length is < string.length', t => {
   const expect = 'abcabc';
   const result = strings.padStart('abcabc', 4);
 
@@ -23,7 +23,7 @@ test(`strings.padStart(string, length) - returns the string unchanged when the l
   t.end();
 });
 
-test(`strings.padStart(string, length, substr) - returns a string padded w/ substr`, t => {
+test('strings.padStart(string, length, substr) - returns a string padded w/ substr', t => {
   const expect = 'funfunfunfabcabc';
   const result = strings.padStart('abcabc', 16, 'fun');
 

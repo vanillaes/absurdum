@@ -1,7 +1,7 @@
 import test from 'tape';
 import { strings } from '../../index.js';
 
-test(`strings.startsWith(string, substr) - returns truthy when the string starts with the substring`, t => {
+test('strings.startsWith(string, substr) - returns truthy when the string starts with the substring', t => {
   const expect = true;
   const result = strings.startsWith('This sentence starts with', 'This');
 
@@ -11,7 +11,7 @@ test(`strings.startsWith(string, substr) - returns truthy when the string starts
   t.end();
 });
 
-test(`strings.startsWith(string, substr) - returns falsy when the string doesn't start with the substring`, t => {
+test('strings.startsWith(string, substr) - returns falsy when the string does not start with the substring', t => {
   const expect = false;
   const result = strings.startsWith('This sentence does not start with', 'Nope');
 
@@ -21,7 +21,7 @@ test(`strings.startsWith(string, substr) - returns falsy when the string doesn't
   t.end();
 });
 
-test(`strings.startsWith(string, substr) - returns falsy when the string doesn't start with the substr`, t => {
+test('strings.startsWith(string, substr) - returns falsy when the string does not start with the substr', t => {
   const expect = false;
   const result = strings.startsWith('abc', 'f');
 
@@ -31,7 +31,7 @@ test(`strings.startsWith(string, substr) - returns falsy when the string doesn't
   t.end();
 });
 
-test(`strings.startsWith(string, substr) - should not mutate the input`, t => {
+test('strings.startsWith(string, substr) - should not mutate the input', t => {
   const input = 'abc';
   const expect = 'abc';
   strings.startsWith(input, 'f');

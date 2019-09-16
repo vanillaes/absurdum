@@ -26,7 +26,7 @@
  */
 function padEnd (string, length, substr = ' ') {
   let strLen = string.length;
-  let padLen = (length - string.length) > 0 ? length - string.length : 0;
+  const padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
   string = [...string, ...Array(padLen)];
 

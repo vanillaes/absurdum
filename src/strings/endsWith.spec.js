@@ -1,7 +1,7 @@
 import test from 'tape';
 import { strings } from '../../index.js';
 
-test(`strings.endsWith(string, substr) - returns truthy if the string ends with the substring`, t => {
+test('strings.endsWith(string, substr) - returns truthy if the string ends with the substring', t => {
   const expect = true;
   const result = strings.endsWith('This sentence ends with', 'with');
 
@@ -11,7 +11,7 @@ test(`strings.endsWith(string, substr) - returns truthy if the string ends with 
   t.end();
 });
 
-test(`strings.endsWith(string, substr) - returns falsy when the string doesn't end with the substr`, t => {
+test('strings.endsWith(string, substr) - returns falsy when the string does not end with the substr', t => {
   const expect = false;
   const result = strings.endsWith('This sentence does not end with', 'nope');
 
@@ -21,7 +21,7 @@ test(`strings.endsWith(string, substr) - returns falsy when the string doesn't e
   t.end();
 });
 
-test(`strings.endsWith(string, substr) - returns falsy when the string doesn't end with the substr`, t => {
+test('strings.endsWith(string, substr) - returns falsy when the string does not end with the substr', t => {
   const expect = false;
   const result = strings.endsWith('abc', 'f');
 
@@ -31,7 +31,7 @@ test(`strings.endsWith(string, substr) - returns falsy when the string doesn't e
   t.end();
 });
 
-test(`strings.endsWith(string, substr) - should not mutate the input`, t => {
+test('strings.endsWith(string, substr) - should not mutate the input', t => {
   const input = 'abc';
   const expect = 'abc';
   strings.endsWith(input, 'f');

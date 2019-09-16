@@ -1,7 +1,7 @@
 import test from 'tape';
 import { arrays } from '../../index.js';
 
-test(`arrays.fill(array, value) - should fill the array with the value`, t => {
+test('arrays.fill(array, value) - should fill the array with the value', t => {
   const expect = ['a', 'a', 'a', 'a'];
   const result = arrays.fill([1, 2, 3, 4], 'a');
 
@@ -12,7 +12,7 @@ test(`arrays.fill(array, value) - should fill the array with the value`, t => {
   t.end();
 });
 
-test(`arrays.fill(array, value, start) - should fill the array with the value from the start index`, t => {
+test('arrays.fill(array, value, start) - should fill the array with the value from the start index', t => {
   const expect = [1, 2, 'b', 'b'];
   const result = arrays.fill([1, 2, 3, 4], 'b', 2);
 
@@ -23,7 +23,7 @@ test(`arrays.fill(array, value, start) - should fill the array with the value fr
   t.end();
 });
 
-test(`arrays.fill(array, value, , end) - should fill the array up to the end index`, t => {
+test('arrays.fill(array, value, , end) - should fill the array up to the end index', t => {
   const expect = ['c', 'c', 3, 4];
   const result = arrays.fill([1, 2, 3, 4], 'c', null, 1);
 
