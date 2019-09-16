@@ -18,7 +18,7 @@
     "docs": "node --experimental-modules docs.config.js",
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
-    "lint": "npx semistandard",
+    "lint": "semistandard",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint",
     "postversion": "git push --follow-tags"
@@ -27,6 +27,7 @@
   "devDependencies": {
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
+    "semistandard": "^14.2.0",
     "tape": "^4.8.0"
   },
   "engines": {
