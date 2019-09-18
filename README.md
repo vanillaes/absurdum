@@ -2,19 +2,28 @@
 
 # Absurdum
 
+> "if all you have is a hammer, everything looks like a nail" - Maslow's Hammer
+
+In this package, [Array.prototype.reduce][] is the hammer
+
 ## Why the Funky Name?
 
 It's a play on the latin phrase [Reductio ad absurdum][wikipedia]
 
 > In logic, reductio ad absurdum (Latin for "reduction to absurdity"; or argumentum ad absurdum, "argument to absurdity") is a form of argument which attempts either to disprove a statement by showing it inevitably leads to a ridiculous, absurd, or impractical conclusion, or to prove one by showing that if it were not true, the result would be absurd or impossible.
 
-It is often said that of the big trio **Map**, **Filter**, and **Reduce**, that reduce is by far the most flexible. In fact, it's trivial to implement both map and filter using reduce.
+It is often said that of the big trio `map`, `filter`, and `reduce`, the first two are redundant. In fact, it's trivial to implement both `map` and `filter` using `reduce`.
 
-This library exists to take that concept to an absurd extreme by experimenting with leveraging reduce to produce as many different types functional transforms as possible.
+This library exists to take that concept to an absurd extreme by using `reduce` to implement as many different types of functional transforms as possible.
 
 ## What's the Point?
 
-Who cares, it's fun. It's good practice. It's a challenging approach to practice transforming data in a purely function manner. At some point, Javscript will include the pipeline operator and these may actually become useful. If you're up for the challenge give it a try.
+- It's a challenge
+- It's good practice
+- It forces you to code/think in a functional manner
+- Who cares, it's fun
+
+...and just maybe, new patterns/practice will emerge from pushing `reduce` to its limits.
 
 ## Operator(s) Documentation
 
@@ -64,7 +73,7 @@ Who cares, it's fun. It's good practice. It's a challenging approach to practice
 
 ### HTML
 
-
+[Array.prototype.reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
 [operator]: https://github.com/evanplaice/absurdum/issues/new?title=Operator([operator])&template=OPERATOR_TEMPLATE.md&labels=enhancement,operator
 [type]: https://github.com/evanplaice/absurdum/issues/new?title=Type([typ])&template=TYPE_TEMPLATE.md&labels=enhancement,type
