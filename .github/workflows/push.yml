@@ -11,7 +11,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: npm ci   
+      - name: Setup
+        run: npm ci   
   test:
     name: Test
     runs-on: ubuntu-latest
