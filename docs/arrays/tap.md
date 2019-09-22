@@ -12,11 +12,11 @@
 Applies a function to each element in the array without mutating it
 
 #### Arguments
-1. `array` *(Array)*:
-2. `func` *(Function)*:
+1. `array` *(Array)*: input array
+2. `func` *(Function)*: function to apply
 
 #### Returns
-*(Array)*: The source array
+*(Array)*: input array unchanged
 
 #### Example
 ```js

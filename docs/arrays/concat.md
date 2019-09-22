@@ -12,10 +12,10 @@
 Concat takes any number or arrays or values as input. The arrays can be any level of depth. The output will be a single, one-dimensional array containing all the values.
 
 #### Arguments
-1. `arrays` *(Array)*:
+1. `arrays` *(Array): input array(s)*
 
 #### Returns
-*(Array)*: The concatenated array
+*(Array)*: an array containing all of the input array values
 
 #### Example
 ```js

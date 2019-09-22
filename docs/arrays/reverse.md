@@ -9,13 +9,13 @@
 
 <h3 id="reversearray"><code>reverse(array)</code></h3>
 
-Returns an array in reverse order
+Reverses the order of the values of an array
 
 #### Arguments
-1. `array` *(Array)*:
+1. `array` *(Array)*: input array
 
 #### Returns
-*(Array)*: The array in reversed order
+*(Array)*: input array in reversed order
 
 #### Example
 ```js

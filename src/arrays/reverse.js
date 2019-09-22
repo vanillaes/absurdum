@@ -1,8 +1,8 @@
 /**
- * Returns an array in reverse order
+ * Reverses the order of the values of an array
  *
- * @param {Array} array
- * @returns {Array} The array in reversed order
+ * @param {Array} array input array
+ * @returns {Array} input array in reversed order
  *
  * @example
  * const result = arrays.reverse([1, 2, 3, 4]);

@@ -1,9 +1,9 @@
 /**
- * Splits an array up into an array of equal size chunks.
+ * Splits the input array up into an subset arrays of equal size
  *
- * @param {Array} array The input array
- * @param {number} [size=1] The size of each chunk
- * @returns {Array} An array of chunk arrays
+ * @param {Array} array input array
+ * @param {number} [size=1] size of each chunk
+ * @returns {Array} array of chunk arrays
  *
  * @example
  * const result = arrays.chunk([1, 2, 3, 4, 5], 2);

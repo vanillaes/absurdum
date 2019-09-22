@@ -9,13 +9,13 @@
 
 <h3 id="reversestring"><code>reverse(string)</code></h3>
 
-Reverse takes an returns a reversed version of the string input.
+Reversed the characters in a string
 
 #### Arguments
-1. `string` *(string)*:
+1. `string` *(string)*: input string
 
 #### Returns
-*(string)*:
+*(string)*: input string reversed
 
 #### Example
 ```js

@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="differencearray-values"><code>difference(array, values)</code></h3>
+<h3 id="differencearraya-arrayb"><code>difference(arrayA, arrayB)</code></h3>
 
-Returns an array containing the difference of the input array vs the specified values.
+Finds the difference of two arrays
 
 #### Arguments
-1. `array` *(Array)*:
-2. `values` *(Array)*:
+1. `arrayA` *(Array)*: first input array
+2. `arrayB` *(Array)*: second input array
 
 #### Returns
 *(Array)*: an array containing the difference

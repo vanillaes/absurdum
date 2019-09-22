@@ -9,13 +9,13 @@
 
 <h3 id="compactarray"><code>compact(array)</code></h3>
 
-Returns an array with all falsy `[false, null, 0, "", undefined, NaN]` values removed.
+Compact removes all falsy values `[false, null, 0, "", undefined, NaN]` from an array.
 
 #### Arguments
-1. `array` *(Array)*:
+1. `array` *(Array)*: input array
 
 #### Returns
-*(Array)*: the compacted array
+*(Array)*: the input array w/ no falsy values
 
 #### Example
 ```js

@@ -1,8 +1,8 @@
 /**
- * Returns an array containing the difference of the input array vs the specified values.
+ * Finds the difference of two arrays
  *
- * @param {Array} array
- * @param {Array} values
+ * @param {Array} arrayA first input array
+ * @param {Array} arrayB second input array
  * @returns {Array} an array containing the difference
  *
  * @example
@@ -10,10 +10,10 @@
  * console.log(result);
  * > [1]
  */
-function difference (array, values) {
-  const uniqueValues = new Set(values);
+function difference (arrayA, arrayB) {
+  const uniqueValues = new Set(arrayB);
 
-  return array.reduce((acc, curr) => {
+  return arrayA.reduce((acc, curr) => {
     if (!uniqueValues.has(curr)) {
       acc.push(curr);
     }

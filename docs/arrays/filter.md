@@ -9,14 +9,14 @@
 
 <h3 id="filterarray-predicate"><code>filter(array, predicate)</code></h3>
 
-Filter iterates over an array of values and only outputs values where `predicate = true`.
+Iterates over an array of values and only outputs values where `predicate = true`.
 
 #### Arguments
-1. `array` *(Array)*:
-2. `predicate` *(Function)*:
+1. `array` *(Array)*: input array
+2. `predicate` *(Function)*: predicate function
 
 #### Returns
-*(Array)*: A filtered array
+*(Array)*: the input array w/ unwanted values removed
 
 #### Example
 ```js

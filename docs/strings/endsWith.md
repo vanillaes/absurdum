@@ -9,14 +9,14 @@
 
 <h3 id="endswithstring-substr"><code>endsWith(string, [substr=''])</code></h3>
 
-EndsWith tests a string to see if it ends with a substring
+Tests a string to see if it ends with a substring
 
 #### Arguments
-1. `string` *(string)*:
-2. `[substr='']` *(string)*:
+1. `string` *(string)*: input string
+2. `[substr='']` *(string)*: substring to test
 
 #### Returns
-*(boolean)*:
+*(boolean)*: does the input end with the substring?
 
 #### Example
 ```js

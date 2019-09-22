@@ -9,15 +9,15 @@
 
 <h3 id="padendstring-length-substr"><code>padEnd(string, length, [substr=' '])</code></h3>
 
-PadEnd pads the end of a string.
+Pads the end of a string w/ repeated spaces|substrings
 
 #### Arguments
-1. `string` *(string)*:
-2. `length` *(number)*:
-3. `[substr=' ']` *(string)*:
+1. `string` *(string)*: input string
+2. `length` *(number)*: length of the padded portion
+3. `[substr=' ']` *(string)*: substring to apply
 
 #### Returns
-*(string)*:
+*(string)*: the input padded w/ spaces|substrings
 
 #### Example
 ```js

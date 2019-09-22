@@ -9,14 +9,14 @@
 
 <h3 id="chunkarray-size1"><code>chunk(array, [size=1])</code></h3>
 
-Splits an array up into an array of equal size chunks.
+Splits the input array up into an subset arrays of equal size
 
 #### Arguments
-1. `array` *(Array)*: The input array
-2. `[size=1]` *(number)*: The size of each chunk
+1. `array` *(Array)*: input array
+2. `[size=1]` *(number)*: size of each chunk
 
 #### Returns
-*(Array)*: An array of chunk arrays
+*(Array)*: array of chunk arrays
 
 #### Example
 ```js

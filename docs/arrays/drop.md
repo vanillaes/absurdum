@@ -9,14 +9,14 @@
 
 <h3 id="droparray-n1"><code>drop(array, [n=1])</code></h3>
 
-Returns an array with n items dropped from the beginning.
+Remove N items from the beginning of the input array
 
 #### Arguments
-1. `array` *(Array)*:
-2. `[n=1]` *(number)*:
+1. `array` *(Array)*: input array
+2. `[n=1]` *(number)*: number of items to drop
 
 #### Returns
-*(Array)*: The input array sans the dropped items
+*(Array)*: input array sans the dropped items
 
 #### Example
 ```js

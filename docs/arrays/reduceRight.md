@@ -9,15 +9,15 @@
 
 <h3 id="reducerightarray-reducer-initial"><code>reduceRight(array, reducer, [initial=[]])</code></h3>
 
-Reduce right performs reduce in reverse order *(ie last->first). The reducer parameter follows the standard API (ie reducer(accumulator, current, index, array))*. The initial parameter can be used to set the starting value for the accumulator.
+Reduce the input in reverse order *(ie last->first). The reducer parameter follows the standard API (ie reducer(accumulator, current, index, array))*. The initial parameter can be used to set the starting value for the accumulator.
 
 #### Arguments
-1. `array` *(Array)*:
-2. `reducer` *(Function)*:
-3. `[initial=[]]` *(&#42;)*:
+1. `array` *(Array)*: input array
+2. `reducer` *(Function)*: reducer function
+3. `[initial=[]]` *(&#42;)*: initial accumulator value
 
 #### Returns
-*(&#42;)*: The reduced value
+*(&#42;)*: accumulated value
 
 #### Example
 ```js

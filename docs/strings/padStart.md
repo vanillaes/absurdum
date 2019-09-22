@@ -12,12 +12,12 @@
 PadStart pads the start of of a string.
 
 #### Arguments
-1. `string` *(string)*:
-2. `length` *(number)*:
-3. `[substr=' ']` *(string)*:
+1. `string` *(string)*: input string
+2. `length` *(number)*: length of the padded portion
+3. `[substr=' ']` *(string)*: substring to apply
 
 #### Returns
-*(string)*:
+*(string)*: the input padded w/ spaces|substrings
 
 #### Example
 ```js

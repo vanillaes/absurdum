@@ -12,11 +12,11 @@
 StartsWith tests a string to see if it starts with a substring
 
 #### Arguments
-1. `string` *(string)*:
-2. `substr` *(string)*:
+1. `string` *(string)*: input string
+2. `substr` *(string)*: substring to test
 
 #### Returns
-*(string)*:
+*(string)*: does the input start with the substring?
 
 #### Example
 ```js

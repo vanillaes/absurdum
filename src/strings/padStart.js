@@ -1,10 +1,10 @@
 /**
  * PadStart pads the start of of a string.
  *
- * @param {string} string
- * @param {number} length
- * @param {string} [substr=' ']
- * @returns {string}
+ * @param {string} string input string
+ * @param {number} length length of the padded portion
+ * @param {string} [substr=' '] substring to apply
+ * @returns {string} the input padded w/ spaces|substrings
  *
  * @example
  * // if no `substr` is provided, it pads the string w/ spaces

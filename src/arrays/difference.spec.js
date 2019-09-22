@@ -1,7 +1,7 @@
 import test from 'tape';
 import { arrays } from '../../index.js';
 
-test('arrays.difference(array, values) - should return the difference between the input array and included values', t => {
+test('arrays.difference(arrayA, arrayB) - should return the difference between the input array and included values', t => {
   const expect = [1];
   const result = arrays.difference([2, 1], [2, 3]);
 

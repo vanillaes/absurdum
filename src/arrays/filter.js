@@ -1,9 +1,9 @@
 /**
- * Filter iterates over an array of values and only outputs values where `predicate = true`.
+ * Iterates over an array of values and only outputs values where `predicate = true`.
  *
- * @param {Array} array
- * @param {Function} predicate
- * @returns {Array} A filtered array
+ * @param {Array} array input array
+ * @param {Function} predicate predicate function
+ * @returns {Array} the input array w/ unwanted values removed
  *
  * @example
  * const result = arrays.filter([1, 2, 3, 4], (x) => x % 2 === 0);

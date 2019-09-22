@@ -7,18 +7,18 @@
 
 <!-- div -->
 
-<h3 id="fillarray-value-start0-end"><code>fill(array, value, [start=0], end)</code></h3>
+<h3 id="fillarray-value-start0-end"><code>fill(array, value, [start=0], [end])</code></h3>
 
-Fills the array items with the value. Can optionally start and/or end from a specific index
+Fills items in an array with a specified value. *(Optional)* can start and/or end from a specific index.
 
 #### Arguments
-1. `array` *(Array)*:
-2. `value` *(&#42;)*:
-3. `[start=0]` *(number)*:
-4. `end` *(number)*:
+1. `array` *(Array)*: input array
+2. `value` *(&#42;)*: value that fills the array
+3. `[start=0]` *(number)*: start index
+4. `[end]` *(number)*: end index
 
 #### Returns
-*(Array)*: The filled array
+*(Array)*: input array filled w/ the value
 
 #### Example
 ```js

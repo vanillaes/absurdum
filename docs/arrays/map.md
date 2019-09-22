@@ -12,11 +12,11 @@
 Map iterates over an array of values and applies a function to each value
 
 #### Arguments
-1. `array` *(Array)*:
-2. `func` *(Function)*:
+1. `array` *(Array)*: input array
+2. `func` *(Function)*: map function
 
 #### Returns
-*(Array)*: The array of mutated values
+*(Array)*: array of mutated values
 
 #### Example
 ```js
