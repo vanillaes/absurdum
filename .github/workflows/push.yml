@@ -3,37 +3,21 @@ name: Push
 on: push
 
 jobs:
-  setup:
-    name: Setup
+  verify:
+    name: Verify
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Setup
-        run: npm ci   
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:      
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Install
+        run: npm ci
       - name: Test
-        run: |
-          npm ci
-          npm t
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
+        run: npm t
       - name: Lint
-        run: |
-          npm ci
-          npm run lint
+        run: npm run lint
+      - name: Types
+        run: npm run types
