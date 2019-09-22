@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "target": "es2017"
+  },
+  "exclude": [
+    "docs.config.js"
+  ]
+}
