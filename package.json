@@ -19,12 +19,14 @@
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
     "lint": "semistandard",
+    "types": "npx tsc --checkJs",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
-    "preversion": "npm test && npm run lint",
+    "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/tape": "^4.2.33",
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
     "semistandard": "^14.2.0",
