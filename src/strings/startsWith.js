@@ -17,7 +17,8 @@
  */
 function startsWith (string, substr) {
   let chars = string.split('');
-  return chars.reduce((acc, curr, idx, arr) => {
+
+  const reducer = (acc, curr, idx, arr) => {
     // exit early on mismatch
     if (curr !== substr[idx]) {
       chars = arr.splice(0);
@@ -29,7 +30,9 @@ function startsWith (string, substr) {
       return true;
     }
     return acc;
-  }, null);
+  };
+
+  return chars.reduce(reducer, null);
 }
 
 export { startsWith };

@@ -4,7 +4,7 @@
  * @param {Array} array
  * @param {*} value
  * @param {number} [start=0]
- * @param {number} end
+ * @param {number} [end]
  * @returns {Array} The filled array
  *
  * @example
@@ -12,8 +12,8 @@
  * console.log(result)
  * > [1, 'a', 'a', 4]
  */
-function fill (array, value, start = 0, end) {
-  if (!end) {
+function fill (array, value, start = 0, end = null) {
+  if (end === null) {
     end = array.length - 1;
   }
   return array.reduce((acc, curr, idx, arr) => {

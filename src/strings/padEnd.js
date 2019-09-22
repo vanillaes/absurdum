@@ -28,9 +28,9 @@ function padEnd (string, length, substr = ' ') {
   let strLen = string.length;
   const padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
-  string = [...string, ...Array(padLen)];
+  const stringArr = [...string, ...Array(padLen)];
 
-  return string.reduce((acc, curr, idx, arr) => {
+  const reducer = (acc, curr, idx, arr) => {
     if (strLen !== 0) {
       acc.push(curr);
       strLen--;
@@ -39,7 +39,9 @@ function padEnd (string, length, substr = ' ') {
     acc.push(substr[substrIdx]);
     substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
     return acc;
-  }, []).join('');
+  };
+
+  return stringArr.reduce(reducer, []).join('');
 }
 
 export { padEnd };

@@ -16,7 +16,15 @@
  * > false
  */
 function endsWith (string, substr = '') {
-  return string.split('').reduce((acc, curr, idx, arr) => {
+/**
+ * @private
+ * @param {*} acc output accumulator
+ * @param {*} curr the value of the current iteration
+ * @param {number} [idx] the index of the current iteration
+ * @param {*[]} [arr] reference to the input array
+ * @returns
+ */
+  const reducer = (acc, curr, idx, arr) => {
     // exit early on mismatch
     if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
       arr = arr.splice(0);
@@ -28,7 +36,9 @@ function endsWith (string, substr = '') {
       return true;
     }
     return acc;
-  }, null);
+  };
+
+  return string.split('').reduce(reducer, null);
 }
 
 export { endsWith };

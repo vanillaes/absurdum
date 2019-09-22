@@ -11,10 +11,10 @@
  * > [1]
  */
 function difference (array, values) {
-  values = new Set(values);
+  const uniqueValues = new Set(values);
 
   return array.reduce((acc, curr) => {
-    if (!values.has(curr)) {
+    if (!uniqueValues.has(curr)) {
       acc.push(curr);
     }
     return acc;
