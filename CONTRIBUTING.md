@@ -20,9 +20,9 @@ Development follows the [Feature Branch Workflow][feature-workflow]:
 3. Create a `feat/[name]` branch
 4. Implement your feature
 5. Commit the changes
-6. Add tests (w/ `npm run test`)
-7. Lint (w/ `npm run lint`)
-8. Document w/ JSDoc comments
+6. Add tests (verify w/ `npm run test`)
+7. Check styling (verify w/ `npm run lint`)
+8. Add JSDoc documentation w/ typings (verify w/ `npm run types`)
 9. Create a PR to merge the feature branch
 10. Reference the issue in the PR
 
