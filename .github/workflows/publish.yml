@@ -9,14 +9,18 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Setup
+      uses: actions/setup-node@v1
       with:
         version: 12.x
-    - name: PrePublish
+    - name: Verify
       run: |
         npm ci
-        npm run preversion
+        npm t
+        npm run lint
+        npm run types
     - name: Publish
       uses: actions/npm@master
       env:
