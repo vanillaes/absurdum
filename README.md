@@ -1,4 +1,8 @@
+[![GitHub release](https://img.shields.io/github/release/vanillajs2/absurdum.svg)](https://github.com/vanillajs2/absurdum/releases)
 [![npm](https://img.shields.io/npm/v/absurdum.svg)](https://www.npmjs.com/package/absurdum)
+[![David](https://img.shields.io/david/dev/vanillajs2/absurdum.svg)](https://david-dm.org/vanillajs2/absurdum?type=dev)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillajs2/absurdum/master/LICENSE)
+[![Actions Status](https://github.com/vanillajs2/absurdum/workflows/Release/badge.svg)](https://github.com/vanillajs2/absurdum/actions)
 
 # Absurdum
 
@@ -25,7 +29,20 @@ This library exists to take that concept to an absurd extreme by using `reduce` 
 
 ...and just maybe, new patterns/practice will emerge from pushing `reduce` to its limits.
 
-## Operator(s) Documentation
+## Usage
+
+Import the desired namespace then call the operator from it
+
+```javascript
+import { arrays } from 'absurdum';
+
+const input = ['a', 'b', 'c', 'd'];
+const output = arrays.reverse(input);
+console.log(output);
+// > ['d', 'c', 'b', 'a']
+```
+
+## API Documentation
 
 ### Arrays
 
