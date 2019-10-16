@@ -28,15 +28,36 @@ Development follows the [Feature Branch Workflow][feature-workflow]:
 
 ## Developing
 
-The easiest path to implement new operators is via TDD (Test Driven Development) using the VSCode debugger.
+The easiest path to implement new operators is via TDD (Test Driven Development).
 
 1. Create a class for the operator (`[operator].js`)
 2. Create a test for the operator (`[operator].spec.js`)
 3. Write a test proof and implement it in the class
-4. Make sure the test file has focus in VSCode
-5. In the 'Debug' pane select the 'Test' configuration
+4. Run the test
 
-The 'Test' configuration runs on the currently open file.  
+### Testing
 
+There are 4 different ways to run tests
+
+#### VSCode Debugger [Best]
+
+1. Open the `.spec` file in VSCode
+2. Open the 'Debug' pane
+3. Run the 'Test' configuration
+
+#### Test Watcher [Easiest]
+
+The watcher looks for changes in the `.spec` files. When a change is detected, the tests in that file are run.
+
+1. Open a terminal an the project directory
+2. Run `npm run test:watch`
+3. Modify then save a `.spec` file
+
+#### CLI [Simplest]
+
+1. Open a terminal
+2. Run `node --experimental-modules [path]`
+
+All `.spec` files can be run directly from the CLI.
 
 [feature-workflow]: https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
