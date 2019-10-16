@@ -4,4 +4,4 @@ export default {
     file: 'dist/absurdum.cjs.js',
     format: 'cjs'
   }
-}
+};

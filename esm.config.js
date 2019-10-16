@@ -4,4 +4,4 @@ export default {
     file: 'dist/absurdum.esm.js',
     format: 'esm'
   }
-}
+};
