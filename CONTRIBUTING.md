@@ -26,4 +26,17 @@ Development follows the [Feature Branch Workflow][feature-workflow]:
 9. Create a PR to merge the feature branch
 10. Reference the issue in the PR
 
+## Developing
+
+The easiest path to implement new operators is via TDD (Test Driven Development) using the VSCode debugger.
+
+1. Create a class for the operator (`[operator].js`)
+2. Create a test for the operator (`[operator].spec.js`)
+3. Write a test proof and implement it in the class
+4. Make sure the test file has focus in VSCode
+5. In the 'Debug' pane select the 'Test' configuration
+
+The 'Test' configuration runs on the currently open file.  
+
+
 [feature-workflow]: https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
