@@ -20,6 +20,8 @@ jobs:
         npm ci
         npm run preversion
     - name: Publish
-      run: npm publish --access public
+      run: |
+        npm adduser --registry=https://registry.npmjs.com
+        npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
