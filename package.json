@@ -26,8 +26,8 @@
     "build:cjs": "npx rollup --config cjs.config.js",
     "clean": "npx rimraf ./dist",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
-    "preversion": "npm test && npm run lint && npm run types && npm run build",
-    "prepare": "git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
+    "preversion": "npm test && npm run lint && npm run types",
+    "prepare": "npm run build && git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
     "postversion": "npm run prepare && git push --follow-tags"
   },
   "dependencies": {},

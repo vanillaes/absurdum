@@ -18,12 +18,7 @@ jobs:
     - name: Verify
       run: |
         npm ci
-        npm t
-        npm run lint
-        npm run types
-    - name: Publish
-      uses: actions/npm@master
+        npm run preversion
+        npm publish publish --access public
       env:
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      with:
-        args: publish --access public
