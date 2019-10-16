@@ -43,7 +43,9 @@
   "semistandard": {
     "ignore": [
       "index.js",
-      "docs.config.js"
+      "docs.config.js",
+      "*.esm.js",
+      "*.cjs.js"
     ]
   }
 }
