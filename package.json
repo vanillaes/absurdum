@@ -27,7 +27,8 @@
     "clean": "npx rimraf ./dist",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types && npm run build",
-    "postversion": "git add dist/* && git commit -am 'Build' && git push --follow-tags"
+    "prepare": "git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
+    "postversion": "npm run prepare && git push --follow-tags"
   },
   "dependencies": {},
   "devDependencies": {
