@@ -21,8 +21,12 @@
     "lint": "semistandard",
     "types": "npx tsc -p jsconfig.json",
     "typings": "npx tsc -p tsconfig.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "npx rollup --config esm.config.js ",
+    "build:cjs": "npx rollup --config cjs.config.js",
+    "clean": "npx rimraf ./dist",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
-    "preversion": "npm test && npm run lint && npm run types",
+    "preversion": "npm test && npm run lint && npm run types && npm run build",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {},
