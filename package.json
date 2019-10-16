@@ -17,7 +17,7 @@
   "scripts": {
     "docs": "node --experimental-modules docs.config.js",
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
-    "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
+    "test:watch": "npx chokidar-cli -i 'node_modules' 'src/**/*.spec.js' -c 'node --experimental-modules {path}'",
     "lint": "semistandard",
     "types": "npx tsc -p jsconfig.json",
     "typings": "npx tsc -p tsconfig.json",
