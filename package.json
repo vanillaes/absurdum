@@ -13,6 +13,7 @@
   "author": "Evan Plaice <evanplaice@gmail.com>",
   "license": "MIT",
   "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
   "scripts": {
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
