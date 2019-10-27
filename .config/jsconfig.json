@@ -3,6 +3,10 @@
     "checkJs": true,
     "target": "es2017"
   },
+  "include": [
+    // source code for project is one directory up from tsconfig.json
+    "../**/*"
+  ],
   "exclude": [
     "docs.config.js"
   ]
