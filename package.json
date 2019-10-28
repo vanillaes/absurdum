@@ -11,6 +11,13 @@
   ],
   "repository": "https://github.com/vanillajs2/absurdum",
   "author": "Evan Plaice <evanplaice@gmail.com>",
+  "contributors": [
+    {
+      "name": "Jens Kristian Vyff",
+      "email": "kristianvyff@gmail.com",
+      "url": "http://vyff.com"
+    }
+  ],
   "license": "MIT",
   "main": "index.js",
   "type": "module",
