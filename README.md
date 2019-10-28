@@ -68,7 +68,7 @@ console.log(output);
 [arrays.dropRight]: ./docs/arrays/dropRight.md
 [arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs/arrays/filter.md
-[arrays.indexOf]: ./docs/arrays/filter.md
+[arrays.indexOf]: ./docs/arrays/indexOf.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
 [arrays.reverse]: ./docs/arrays/reverse.md
