@@ -207,9 +207,9 @@ function filter (array, predicate) {
  * beyond the starting index, or -1 if it is not present.
  *
  * @param {Array} array
- * @param {Integer} searchElement to be looked for in the array
- * @param {Integer} starting index in array to begin searching for search Element
- * @returns {integer} a integer representing the first index in the array that contains the element
+ * @param {number} searchElement to be looked for in the array
+ * @param {number} starting index in array to begin searching for search Element
+ * @returns {number} a integer representing the first index in the array that contains the element
  * @example
  * const result = arrays.indexOf([1,2,3,4,5,4], 4, 4));
  * console.log(result);
