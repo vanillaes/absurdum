@@ -1,5 +1,5 @@
 /**
- * IndexOf method returns the first index at which a given element can be found in the array 
+ * IndexOf method returns the first index at which a given element can be found in the array
  * beyond the starting index, or -1 if it is not present.
  *
  * @param {Array} array
@@ -16,14 +16,14 @@ function indexOf (array, searchElement, start = 0) {
   if (array[0] === searchElement) return 0;
 
   return array.reduce((res, cur, i) => {
-    if ( i >= start) {
-      if ( i === 1) return cur === searchElement ? 1 : -1;
-      if ( cur === searchElement && res === -1) return i;
+    if (i >= start) {
+      if (i === 1) return cur === searchElement ? 1 : -1;
+      if (cur === searchElement && res === -1) return i;
       return res;
     } else {
       return -1;
-    };
+    }
   });
-};
+}
 
 export { indexOf };
