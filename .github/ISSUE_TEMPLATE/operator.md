@@ -10,10 +10,9 @@ assignees: ''
 
 ## Checklist
 
-- [ ] implemented
-- [ ] documented
-- [ ] tested
-- [ ] linted
+- [ ] implementation
+- [ ] tests
+- [ ] jsdoc
 
 ## Details
 

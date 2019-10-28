@@ -10,10 +10,8 @@ assignees: ''
 
 ## Checklist
 
-- [ ] implemented
-- [ ] documented
-- [ ] tested
-- [ ] linted
+- [ ] implementation
+- [ ] tests
 
 ## Details
 
