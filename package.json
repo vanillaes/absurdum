@@ -36,7 +36,7 @@
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
     "semistandard": "^14.2.0",
-    "tape": "^4.8.0"
+    "tape": "^4.11.0"
   },
   "engines": {
     "node": ">=12.0"
