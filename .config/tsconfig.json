@@ -5,11 +5,12 @@
     "declaration": true,
     "allowJs": true,
     "checkJs": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "types" : ["node", "tape"]
   },
   "include": [
     // source code for project is one directory up from tsconfig.json
-    "../**/*.js"
+    "../index.js"
   ],
   "exclude": [
     "docs.config.js"
