@@ -1,7 +1,9 @@
 name: Verify
 
-on: push
-
+on:
+  push:
+    tags:
+    - '!*'
 jobs:
   verify:
     name: Verify
