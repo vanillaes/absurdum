@@ -1,7 +1,7 @@
 {
   "name": "absurdum",
   "version": "0.19.10",
-  "description": "Reducio Ad Absurdum - The Riduculous Application of Reduce",
+  "description": "Reductio Ad Absurdum - The Ridiculous Application of Reduce",
   "keywords": [
     "functional",
     "pipeline",
@@ -13,22 +13,23 @@
   "author": "Evan Plaice <evanplaice@gmail.com>",
   "license": "MIT",
   "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
   "scripts": {
-    "docs": "node --experimental-modules docs.config.js",
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
     "test:watch": "npx chokidar-cli -i 'node_modules' 'src/**/*.spec.js' -c 'node --experimental-modules {path}'",
     "lint": "semistandard",
-    "types": "npx tsc -p jsconfig.json",
-    "typings": "npx tsc -p tsconfig.json",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "npx rollup --config esm.config.js ",
-    "build:cjs": "npx rollup --config cjs.config.js",
+    "types": "npx tsc -p .config/jsconfig.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:docs && npm run build:typings",
+    "build:docs": "node --experimental-modules .config/docs.config.js",
+    "build:esm": "npx rollup --config .config/esm.config.js ",
+    "build:cjs": "npx rollup --config .config/cjs.config.js",
+    "build:typings": "npx tsc -p .config/tsconfig.json", 
     "clean": "npx rimraf ./dist",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
-    "prepare": "npm run build && git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
-    "postversion": "npm run prepare && git push --follow-tags"
+    "version": "npm run build && git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {},
   "devDependencies": {

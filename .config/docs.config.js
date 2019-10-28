@@ -4,11 +4,9 @@ const globAsync = promisify(glob);
 import { writeFile } from 'fs';
 import { basename, dirname, join } from 'path';
 import { promisify } from 'util';
-import { fileURLToPath } from 'url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const srcPath = join(__dirname, 'src');
-const docPath = join(__dirname, 'docs');
+const srcPath = join(process.cwd(), 'src');
+const docPath = join(process.cwd(), 'docs');
 
 const baseConfig = {
   toc: 'none',

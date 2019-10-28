@@ -1,6 +1,6 @@
-.gitlab/
-docs/
-test/
-*.tgz
-.gitlab-ci.yml
+.config/
+.github/
+.vscode/
+compat/
+*.spec.js
 CONTRIBUTING.md
