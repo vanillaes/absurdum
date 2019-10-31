@@ -13,6 +13,7 @@
   "author": "Evan Plaice <evanplaice@gmail.com>",
   "license": "MIT",
   "main": "index.js",
+  "module": "dist/absurdum.esm.js",
   "types": "index.d.ts",
   "type": "module",
   "scripts": {
