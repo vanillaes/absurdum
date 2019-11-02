@@ -11,7 +11,7 @@ const docPath = join(process.cwd(), 'docs');
 const baseConfig = {
   toc: 'none',
   style: 'github',
-  url: `https://github.com/vanillajs2/absurdum/doc/README.md`,
+  url: `https://github.com/vanillaes/absurdum/doc/README.md`,
   sourceLink: '',
   tocHref: '',
   tocLink: ''

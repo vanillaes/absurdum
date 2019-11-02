@@ -9,7 +9,7 @@
     "reduce",
     "esm"
   ],
-  "repository": "https://github.com/vanillajs2/absurdum",
+  "repository": "https://github.com/vanillaes/absurdum",
   "author": "Evan Plaice <evanplaice@gmail.com>",
   "license": "MIT",
   "main": "index.js",
