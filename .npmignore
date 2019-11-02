@@ -3,4 +3,5 @@
 .vscode/
 compat/
 *.spec.js
+*.tgz
 CONTRIBUTING.md
