@@ -54,6 +54,7 @@ console.log(output);
 - [dropRight][arrays.dropRight]
 - [fill][arrays.fill]
 - [filter][arrays.filter]
+- [find][arrays.find]
 - [indexOf][arrays.indexOf]
 - [map][arrays.map]
 - [reduceRight][arrays.reduceRight]
@@ -68,6 +69,7 @@ console.log(output);
 [arrays.dropRight]: ./docs/arrays/dropRight.md
 [arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs/arrays/filter.md
+[arrays.find]: ./docs/arrays/find.md
 [arrays.indexOf]: ./docs/arrays/indexOf.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
