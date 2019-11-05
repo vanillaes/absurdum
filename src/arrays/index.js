@@ -8,6 +8,7 @@ export { every } from './every.js';
 export { fill } from './fill.js';
 export { filter } from './filter.js';
 export { find } from './find.js';
+export { flat } from './flat.js';
 export { indexOf } from './indexOf.js';
 export { map } from './map.js';
 export { reduceRight } from './reduceRight.js';
