@@ -10,10 +10,6 @@
  * const result = arrays.find([5, 12, 8, 130, 44], (x) => x > 10);
  * console.log(result);
  * > 12
- * @example2
- * const result = arrays.find([5, 12, 8, 130, 44], function(x) { return x > this }, 4);
- * console.log(result);
- * > 5
  */
 function find (array, predicate, thisArg = undefined) {
   if (array.length === 0) return undefined;
