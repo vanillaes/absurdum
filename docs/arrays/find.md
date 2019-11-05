@@ -7,15 +7,15 @@
 
 <!-- div -->
 
-<h3 id="findarray-predicate-value"><code>find(array, predicate, value)</code></h3>
+<h3 id="findarray-predicate-thisarg"><code>find(array, predicate, thisArg)</code></h3>
 
-Find method returns the value of first element at which a provided function is true, 
+Find method returns the value of first element at which a provided function is true,
 or undefined if no elements in the array satisfy the function.
 
 #### Arguments
 1. `array` *(Array)*:
 2. `predicate` *(Function)*: to be run against each element of the array
-3. `value` *(&#42;)*: of this
+3. `thisArg` *(&#42;)*: of this
 
 #### Returns
 *(&#42;)*: value of element that satisfied function.
