@@ -23,7 +23,7 @@ test('arrays.find(array, predicate) - should return the value of first element a
 
 test('arrays.find(array, predicate, thisArg) - should return the value of first element at which a provided function is true, with a replaceable this', t => {
   const expect = 5;
-  const result = arrays.find([5, 12, 8, 130, 44], function(x) { return x > this }, 4);
+  const result = arrays.find([5, 12, 8, 130, 44], function (x) { return x > this; }, 4);
 
   t.equal(Object.prototype.toString.call(result), '[object Number]', 'return type');
   t.equal(result, expect, 'output value');
