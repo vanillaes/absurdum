@@ -16,32 +16,20 @@
  * console.log(result)
  * > [ 'ham 5', 'cheese 12', 'bread 8' ]
  */
-function zip (array1, array2, predicate) {
+function zip (array1, array2, predicate = (a,b) => [a,b]) {
   if (predicate && typeof predicate !== 'function') {
     throw TypeError('predicate must be a function');
   };
   if (array1.length <= array2.length) {
-    return predicate 
-      ? array1.reduce((res, cur, i) => {
+    return array1.reduce((res, cur, i) => {
         res[i] = predicate(cur, array2[i]);
         return res;
-      }, [])
-      : array1.reduce((res, cur, i) => {
-        res[i] = [cur, array2[i]];
-        return res;
-      }, [])
-    ;
+    }, []);
   } else {
-    return predicate 
-      ? array2.reduce((res, cur, i) => {
+    return array2.reduce((res, cur, i) => {
         res[i] = predicate(array1[i], cur);
         return res;
-      }, [])
-      : array2.reduce((res, cur, i) => {
-        res[i] = [array1[i], cur];
-        return res;
-      }, [])
-    ;
+    }, []);
   };
 };
 
