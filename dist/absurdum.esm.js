@@ -261,6 +261,29 @@ function find (array, predicate, thisArg = undefined) {
 }
 
 /**
+ * Flattens an array of nested arrays
+ *
+ * @param {Array} array input array
+ * @param {Array} initial reducer initial state
+ * @returns {Array} the flattened array
+ *
+ * @example
+ * const result = arrays.flat([1, [2, [3, [4]]]]);
+ * console.log(result);
+ * > [1, 2, 3, 4]
+ */
+function flat (array, initial = []) {
+  return array.reduce((acc, curr) => {
+    if (Array.isArray(curr)) {
+      acc = flat(curr, acc);
+    } else {
+      acc.push(curr);
+    }
+    return acc;
+  }, initial);
+}
+
+/**
  * IndexOf method returns the first index at which a given element can be found in the array
  * beyond the starting index, or -1 if it is not present.
  *
@@ -383,6 +406,7 @@ var index = /*#__PURE__*/Object.freeze({
   fill: fill,
   filter: filter,
   find: find,
+  flat: flat,
   indexOf: indexOf,
   map: map,
   reduceRight: reduceRight,
