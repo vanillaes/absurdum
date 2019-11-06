@@ -62,6 +62,7 @@ console.log(output);
 - [reduceRight][arrays.reduceRight]
 - [reverse][arrays.reverse]
 - [tap][arrays.tap]
+- [zip][arrays.zip]
 
 [arrays.chunk]: ./docs/arrays/chunk.md
 [arrays.compact]: ./docs/arrays/compact.md
@@ -79,6 +80,7 @@ console.log(output);
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
 [arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.tap]: ./docs/arrays/tap.md
+[arrays.zip]: ./docs/arrays/zip.md
 
 ### Objects
 
