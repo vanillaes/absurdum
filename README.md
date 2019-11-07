@@ -87,12 +87,14 @@ console.log(output);
 ### Strings
 
 - [endsWith][strings.endswith]
+- [includes][strings.includes]
 - [padEnd][strings.padEnd]
 - [padStart][strings.padStart]
 - [reverse][strings.reverse]
 - [startsWith][strings.startswith]
 
 [strings.endswith]: ./docs/strings/endsWith.md
+[strings.includes]: ./docs/strings/includes.md
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
 [strings.reverse]: ./docs/strings/reverse.md
