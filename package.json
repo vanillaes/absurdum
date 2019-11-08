@@ -32,7 +32,7 @@
     "clean:typings": "npx rimraf src/*.d.ts",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
-    "version": "npm run clean && npm run build && sleep 15 && git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
+    "version": "npm run build && git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Build'",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {},
