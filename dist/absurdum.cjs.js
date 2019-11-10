@@ -463,6 +463,23 @@ function tap (array, func) {
 }
 
 /**
+ * Removes all duplicate items of an array
+ *
+ * @param {Array} array input array
+ * @returns {Array} an array of unique values
+ * @example
+ * const result = arrays.unique([2, 1, 2]);
+ * console.log(result);
+ * > [2, 1]
+ */
+function unique (array) {
+  return [...array.reduce((acc, curr, i, arr) => {
+    acc.add(curr);
+    return acc;
+  }, new Set())];
+}
+
+/**
  * Zip applies a specified function to the corresponding elements of two sequences,
  * producing a sequence of the results.
  *
@@ -519,6 +536,7 @@ var index = /*#__PURE__*/Object.freeze({
   reverse: reverse,
   some: some,
   tap: tap,
+  unique: unique,
   zip: zip
 });
 
