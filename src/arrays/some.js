@@ -15,19 +15,22 @@
  * console.log(result);
  * > true
  */
-function some (array, predicate, thisArg = undefined) {
+function some(array, predicate, thisArg = undefined) {
   if (array.length === 0) return false;
   if (this == null) { throw TypeError('"this" is null or not defined'); }
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
   if (predicate.call(thisArg, array[0])) return true;
   if (array.length === 1) return true;
 
-  return array.reduce((res, cur, i, arr) => {
-    if (res === true) { return true; }
+  return array.slice(0).reduce((res, cur, i, arr) => {
+    if (res === true) {
+      arr.splice(0)
+      return true;
+    }
     if (i === 1) return predicate.call(thisArg, cur);
     if (predicate.call(thisArg, cur)) return true;
     return false;
   });
-}
-
+};
+  
 export { some };
