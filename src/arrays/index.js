@@ -13,5 +13,6 @@ export { indexOf } from './indexOf.js';
 export { map } from './map.js';
 export { reduceRight } from './reduceRight.js';
 export { reverse } from './reverse.js';
+export { some } from './some.js';
 export { tap } from './tap.js';
 export { zip } from './zip.js';
