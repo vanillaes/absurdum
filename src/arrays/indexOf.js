@@ -4,7 +4,7 @@
  *
  * @param {Array} array
  * @param {number} searchElement to be looked for in the array
- * @param {number} start index in array to begin searching for search Element
+ * @param {number} [start=0] index in array to begin searching for search Element
  * @returns {number} a integer representing the first index in the array that contains the element
  * @example
  * const result = arrays.indexOf([1,2,3,4,5,4], 4, 4));
