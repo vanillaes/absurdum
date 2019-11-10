@@ -22,7 +22,7 @@ function some(array, predicate, thisArg = undefined) {
     if (predicate.call(thisArg, array[0])) return true;
     if (array.length === 1) return true;
   
-    return array.reduce((res, cur, i, arr) => {
+    return array.slice(0).reduce((res, cur, i, arr) => {
       if (res === true) {
           arr.splice(0)
           return true;

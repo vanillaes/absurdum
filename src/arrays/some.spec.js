@@ -50,3 +50,13 @@ test('arrays.some(array, predicate, thisArg) - should return true if one or more
 
   t.end();
 });
+
+test('arrays.some(array, predicate, thisArg) - should not mutate the input', t => {
+  const input = ['ham', 'cheese', 'bread'];
+  const expect = ['ham', 'cheese', 'bread'];
+  arrays.some(input, function (x) { return x === 'cheese' } );
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});
