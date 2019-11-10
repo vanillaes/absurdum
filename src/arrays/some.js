@@ -2,10 +2,10 @@
  * Every method returns true if every element in the array satisfies the function
  * and false if any element in the array does not satisfy the function.
  *
- * @param {Array} array - input array
- * @param {Function} predicate - functionto be run against each element of the array
- * @param {*} [thisArg] - A value to use as this when executing predicate.
- * @returns {Boolean} - if any of the elements in array satisfy the function.
+ * @param {Array} array input array
+ * @param {Function} predicate functionto be run against each element of the array
+ * @param {*} [thisArg=undefined] A value to use as this when executing predicate.
+ * @returns {Boolean} if any of the elements in array satisfy the function.
  * @example
  * const result = arrays.some(["ham", "cheese", "bread"], (x) => x.length === 3);
  * console.log(result);
