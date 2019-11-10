@@ -24,13 +24,13 @@ function some (array, predicate, thisArg = undefined) {
 
   return array.slice(0).reduce((res, cur, i, arr) => {
     if (res === true) {
-      arr.splice(0)
+      arr.splice(0);
       return true;
     }
     if (i === 1) return predicate.call(thisArg, cur);
     if (predicate.call(thisArg, cur)) return true;
     return false;
   });
-};
+}
 
 export { some };
