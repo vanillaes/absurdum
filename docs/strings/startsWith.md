@@ -16,7 +16,7 @@ StartsWith tests a string to see if it starts with a substring
 2. `substr` *(string)*: substring to test
 
 #### Returns
-*(string)*: does the input start with the substring?
+*(boolean)*: does the input start with the substring?
 
 #### Example
 ```js
