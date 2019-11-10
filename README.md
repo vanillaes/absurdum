@@ -64,6 +64,7 @@ console.log(output);
 - [reverse][arrays.reverse]
 - [some][arrays.some]
 - [tap][arrays.tap]
+- [unique][arrays.unique]
 - [zip][arrays.zip]
 
 [arrays.chunk]: ./docs/arrays/chunk.md
@@ -84,6 +85,7 @@ console.log(output);
 [arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.some]: ./docs/arrays/some.md
 [arrays.tap]: ./docs/arrays/tap.md
+[arrays.unique]: ./docs/arrays.unique.md
 [arrays.zip]: ./docs/arrays/zip.md
 
 ### Objects
