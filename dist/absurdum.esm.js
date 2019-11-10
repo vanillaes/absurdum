@@ -372,6 +372,38 @@ function reverse (array) {
 }
 
 /**
+ * Some method returns true if any element in the array satisfies the function
+ * and false if no element in the array satisfies the function.
+ *
+ * @param {Array} array input array
+ * @param {Function} predicate function to be run against each element of the array
+ * @param {*} [thisArg=undefined] A value to use as this when executing predicate.
+ * @returns {Boolean} if any of the elements in array satisfy the function.
+ * @example
+ * const result = arrays.some(["ham", "cheese", "bread"], (x) => x.length === 3);
+ * console.log(result);
+ * > true
+ * @example
+ * const result = arrays.some(["ham", "cheese", "bread"], function(x) { return x.length === this }, 3);
+ * console.log(result);
+ * > true
+ */
+function some (array, predicate, thisArg = undefined) {
+  if (array.length === 0) return false;
+  if (this == null) { throw TypeError('"this" is null or not defined'); }
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
+  if (predicate.call(thisArg, array[0])) return true;
+  if (array.length === 1) return true;
+
+  return array.reduce((res, cur, i, arr) => {
+    if (res === true) { return true; }
+    if (i === 1) return predicate.call(thisArg, cur);
+    if (predicate.call(thisArg, cur)) return true;
+    return false;
+  });
+}
+
+/**
  * Applies a function to each element in the array without mutating it
  *
  * @param {Array} array input array
@@ -446,6 +478,7 @@ var index = /*#__PURE__*/Object.freeze({
   map: map,
   reduceRight: reduceRight,
   reverse: reverse,
+  some: some,
   tap: tap,
   zip: zip
 });
@@ -483,6 +516,40 @@ function endsWith (string, substr = '') {
   };
 
   return string.split('').reduce(reducer, null);
+}
+
+/**
+ * Includes determines whether one string can be found in another string
+ *
+ * @param {string} string input string
+ * @param {string} substr candidate string to be searched for
+ * @param {Number} start optional index to begin search for string
+ * @returns {boolean} does the input string include the substring?
+ *
+ * @example
+ * const result = strings.includes('This Lovely Life', 'Love');
+ * console.log(result);
+ * > true
+ * @example
+ * const result = strings.includes('This Lovely Life', 'Love', 5);
+ * console.log(result);
+ * > false
+ */
+function includes (string, substr, start = 0) {
+  if (string.length === 0) return false;
+  const len = substr.length;
+  const first = substr.charAt(0);
+  if (start === 0 && string.substring(0, len) === substr) return true;
+
+  return string.split('').reduce((res, cur, i) => {
+    if (i >= start) {
+      if (res) return res;
+      if (cur === first) {
+        return string.substring(i, i + len) === substr;
+      }
+    }
+    return false;
+  }, false);
 }
 
 /**
@@ -635,6 +702,7 @@ function startsWith (string, substr) {
 var index$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   endsWith: endsWith,
+  includes: includes,
   padEnd: padEnd,
   padStart: padStart,
   reverse: reverse$1,

@@ -5,7 +5,6 @@
 3. Recursion is be allowed for nested data types
 4. Be mindful of performance/memory
 5. VanillaJS only
-6. Forget DRY (Don't Repeat Yourself), keep modules self-contained
 
 ## Getting Started
 
@@ -22,11 +21,11 @@ Development follows the [Feature Branch Workflow][feature-workflow]:
 5. Commit the changes
 6. Add tests (verify w/ `npm run test`)
 7. Check styling (verify w/ `npm run lint`)
-8. Add JSDoc comments (verify w/ `npm run types`)
+8. Add JSDoc comments and type check them (verify w/ `npm run types`)
 9. Create a PR to merge the feature branch
 10. Reference the issue in the PR
 
-*Note: If linting and adding types feels daunting, don't hesitate to submit a PR anyway*
+*Note: If linting (7) and/or adding typed JSDoc comments (8) feel daunting, don't hesitate to submit a PR without them.*
 
 ## Developing
 
@@ -39,7 +38,7 @@ The easiest path to implement new operators is via TDD (Test Driven Development)
 
 ### Testing
 
-There are 4 different ways to run tests
+There are 3 different ways to run tests
 
 #### VSCode Debugger [Best]
 
