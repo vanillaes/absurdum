@@ -1,9 +1,9 @@
 /**
- * Every method returns true if every element in the array satisfies the function
- * and false if any element in the array does not satisfy the function.
+ * Some method returns true if any element in the array satisfies the function
+ * and false if no element in the array satisfies the function.
  *
  * @param {Array} array input array
- * @param {Function} predicate functionto be run against each element of the array
+ * @param {Function} predicate function to be run against each element of the array
  * @param {*} [thisArg=undefined] A value to use as this when executing predicate.
  * @returns {Boolean} if any of the elements in array satisfy the function.
  * @example
@@ -25,7 +25,7 @@ function some(array, predicate, thisArg = undefined) {
     return array.reduce((res, cur, i, arr) => {
       if (res === true) {
           arr.splice(0)
-          return true
+          return true;
       }
       if (i === 1) return predicate.call(thisArg, cur);
       if (predicate.call(thisArg, cur)) return true;
