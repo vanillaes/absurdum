@@ -90,6 +90,10 @@ console.log(output);
 
 ### Objects
 
+- [include][objects.include]
+
+[objects.include]: ./docs/objects/include.md
+
 ### Strings
 
 - [endsWith][strings.endswith]
