@@ -239,7 +239,7 @@ function filter (array, predicate) {
  *
  * @param {Array} array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} thisArg of this
+ * @param {*} [thisArg=undefined] of this
  * @returns {*} value of element that satisfied function.
  * @example
  * const result = arrays.find([5, 12, 8, 130, 44], (x) => x > 10);
@@ -260,6 +260,37 @@ function find (array, predicate, thisArg = undefined) {
   return array.reduce((res, cur, i) => {
     if (i === 1) return predicate.call(thisArg, cur) ? cur : undefined;
     if (!res && predicate.call(thisArg, cur)) return cur;
+    return res;
+  });
+}
+
+/**
+ * FindLastIndex method returns the value of Last element at which a provided function is true,
+ * or undefined if no elements in the array satisfy the function.
+ *
+ * @param {Array} array input array
+ * @param {Function} predicate to be run against each element of the array
+ * @param {*} [thisArg=undefined]
+ * @returns {*} value of element that satisfied function.
+ * @example
+ * const result = arrays.findLastIndex([5, 12, 8, 130, 44], (x) => x < 10);
+ * console.log(result);
+ * > 2
+ * @example
+ * const result = arrays.findLastIndex([5, 174, 8, 130, 44], function(x) { return x > this }, 100);
+ * console.log(result);
+ * > 3
+ */
+function findLastIndex (array, predicate, thisArg = undefined) {
+  if (array.length === 0) return -1;
+  if (this == null) { throw TypeError('"this" is null or not defined'); }
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
+  if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1;
+  if (array.length === 1) return -1;
+
+  return array.reduceRight((res, cur, i) => {
+    if (i === array.length - 2) return predicate.call(thisArg, cur) ? i : -1;
+    if (res < 0 && predicate.call(thisArg, cur)) return i;
     return res;
   });
 }
@@ -293,7 +324,7 @@ function flat (array, initial = []) {
  *
  * @param {Array} array
  * @param {number} searchElement to be looked for in the array
- * @param {number} start index in array to begin searching for search Element
+ * @param {number} [start=0] index in array to begin searching for search Element
  * @returns {number} a integer representing the first index in the array that contains the element
  * @example
  * const result = arrays.indexOf([1,2,3,4,5,4], 4, 4));
@@ -399,8 +430,11 @@ function some (array, predicate, thisArg = undefined) {
   if (predicate.call(thisArg, array[0])) return true;
   if (array.length === 1) return true;
 
-  return array.reduce((res, cur, i, arr) => {
-    if (res === true) { return true; }
+  return array.slice(0).reduce((res, cur, i, arr) => {
+    if (res === true) {
+      arr.splice(0);
+      return true;
+    }
     if (i === 1) return predicate.call(thisArg, cur);
     if (predicate.call(thisArg, cur)) return true;
     return false;
@@ -429,12 +463,29 @@ function tap (array, func) {
 }
 
 /**
+ * Removes all duplicate items of an array
+ *
+ * @param {Array} array input array
+ * @returns {Array} an array of unique values
+ * @example
+ * const result = arrays.unique([2, 1, 2]);
+ * console.log(result);
+ * > [2, 1]
+ */
+function unique (array) {
+  return [...array.reduce((acc, curr, i, arr) => {
+    acc.add(curr);
+    return acc;
+  }, new Set())];
+}
+
+/**
  * Zip applies a specified function to the corresponding elements of two sequences,
  * producing a sequence of the results.
  *
  * @param {Array} array1 input array
  * @param {Array} array2 input array
- * @param {Function} predicate optional to be applied to corresponding values
+ * @param {Function} [predicate=(a, b)=>[a, b]] to be applied to corresponding values
  * @returns {Array} input array filled value pairs after the function has been applied
  *
  * @example
@@ -477,6 +528,7 @@ var index = /*#__PURE__*/Object.freeze({
   fill: fill,
   filter: filter,
   find: find,
+  findLastIndex: findLastIndex,
   flat: flat,
   indexOf: indexOf,
   map: map,
@@ -484,6 +536,7 @@ var index = /*#__PURE__*/Object.freeze({
   reverse: reverse,
   some: some,
   tap: tap,
+  unique: unique,
   zip: zip
 });
 
@@ -669,7 +722,7 @@ function reverse$1 (string) {
  *
  * @param {string} string input string
  * @param {string} substr substring to test
- * @returns {string} does the input start with the substring?
+ * @returns {boolean} does the input start with the substring?
  *
  * @example
  * const result = strings.startsWith('This sentence starts with', 'This');

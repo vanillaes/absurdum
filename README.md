@@ -56,6 +56,7 @@ console.log(output);
 - [fill][arrays.fill]
 - [filter][arrays.filter]
 - [find][arrays.find]
+- [findLastIndex][arrays.findLastIndex]
 - [flat][arrays.flat]
 - [indexOf][arrays.indexOf]
 - [map][arrays.map]
@@ -63,6 +64,7 @@ console.log(output);
 - [reverse][arrays.reverse]
 - [some][arrays.some]
 - [tap][arrays.tap]
+- [unique][arrays.unique]
 - [zip][arrays.zip]
 
 [arrays.chunk]: ./docs/arrays/chunk.md
@@ -75,6 +77,7 @@ console.log(output);
 [arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs/arrays/filter.md
 [arrays.find]: ./docs/arrays/find.md
+[arrays.findLastIndex]: ./docs/arrays/findLastIndex.md
 [arrays.flat]: ./docs/arrays/flat.md
 [arrays.indexOf]: ./docs/arrays/indexOf.md
 [arrays.map]: ./docs/arrays/map.md
@@ -82,6 +85,7 @@ console.log(output);
 [arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.some]: ./docs/arrays/some.md
 [arrays.tap]: ./docs/arrays/tap.md
+[arrays.unique]: ./docs/arrays/unique.md
 [arrays.zip]: ./docs/arrays/zip.md
 
 ### Objects

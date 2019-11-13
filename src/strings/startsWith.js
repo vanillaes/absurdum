@@ -3,7 +3,7 @@
  *
  * @param {string} string input string
  * @param {string} substr substring to test
- * @returns {string} does the input start with the substring?
+ * @returns {boolean} does the input start with the substring?
  *
  * @example
  * const result = strings.startsWith('This sentence starts with', 'This');

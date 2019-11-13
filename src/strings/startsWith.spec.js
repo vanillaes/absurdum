@@ -21,7 +21,7 @@ test('strings.startsWith(string, substr) - returns falsy when the string does no
   t.end();
 });
 
-test('strings.startsWith(string, substr) - returns falsy when the string does not start with the substr', t => {
+test('strings.startsWith(string, substr) - returns falsy when the string does not start with the substring', t => {
   const expect = false;
   const result = strings.startsWith('abc', 'f');
 

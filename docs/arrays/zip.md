@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="ziparray1-array2-predicate"><code>zip(array1, array2, predicate)</code></h3>
+<h3 id="ziparray1-array2-predicatea-b"><code>zip(array1, array2, [predicate=(a,b)])</code></h3>
 
 Zip applies a specified function to the corresponding elements of two sequences,
 producing a sequence of the results.
@@ -15,7 +15,7 @@ producing a sequence of the results.
 #### Arguments
 1. `array1` *(Array)*: input array
 2. `array2` *(Array)*: input array
-3. `predicate` *(Function)*: optional to be applied to corresponding values
+3. `[predicate=(a,b)]` *(Function)*: to be applied to corresponding values
 
 #### Returns
 *(Array)*: input array filled value pairs after the function has been applied
