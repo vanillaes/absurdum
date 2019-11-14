@@ -1,5 +1,5 @@
 /**
- * Repeat returns a new string containing the provided string copied and concatenated 
+ * Repeat returns a new string containing the provided string copied and concatenated
  * for the number of times given in the parameter
  *
  * @param {string} string input string
@@ -11,12 +11,12 @@
  * console.log(result);
  * > 'Moo Moo Moo '
  */
-function repeat(string, count) {
-    if (string.length === 0 || count < 0) return '';
+function repeat (string, count) {
+  if (string.length === 0 || count < 0) return '';
 
-    return new Array(count).fill("").reduce((res) => {
-        return res + string
-    }, "");
+  return new Array(count).fill('').reduce((res) => {
+    return res + string;
+  }, '');
 }
 
 export { repeat };
