@@ -10,16 +10,16 @@
  * console.log(result);
  * > { small: 'ant', big: 'elephant' }
  */
-function include(object, filter) {
-    return Object.entries(object).reduce((acc, curr, i) => {
-        if (filter.reduce((res, cur) => {
-            if (res === true || cur === curr[0]) return true;
-            return false;
-        }, "")) {
-            acc[curr[0]] = curr[1];
-        }
-        return acc;
-    }, {});
-};
+function include (object, filter) {
+  return Object.entries(object).reduce((acc, curr, i) => {
+    if (filter.reduce((res, cur) => {
+      if (res === true || cur === curr[0]) { return true; }
+      return false;
+    }, '')) {
+      acc[curr[0]] = curr[1];
+    }
+    return acc;
+  }, {});
+}
 
 export { include };
