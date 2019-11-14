@@ -15,7 +15,7 @@
  * console.log(result);
  * > true
  */
-function some (array, predicate, thisArg = undefined) {
+function some(array, predicate, thisArg = undefined) {
   if (array.length === 0) return false;
   if (this == null) { throw TypeError('"this" is null or not defined'); }
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
@@ -31,6 +31,6 @@ function some (array, predicate, thisArg = undefined) {
     if (predicate.call(thisArg, cur)) return true;
     return false;
   });
-}
+};
 
 export { some };
