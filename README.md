@@ -96,6 +96,7 @@ console.log(output);
 - [includes][strings.includes]
 - [padEnd][strings.padEnd]
 - [padStart][strings.padStart]
+- [repeat][strings.repeat]
 - [reverse][strings.reverse]
 - [startsWith][strings.startswith]
 
@@ -103,6 +104,7 @@ console.log(output);
 [strings.includes]: ./docs/strings/includes.md
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
+[strings.repeat]: ./docs/strings/repeat.md
 [strings.reverse]: ./docs/strings/reverse.md
 [strings.startswith]: ./docs/strings/startsWith.md
 
