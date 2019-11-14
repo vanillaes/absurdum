@@ -697,6 +697,27 @@ function padStart (string, length, substr = ' ') {
 }
 
 /**
+ * Repeat returns a new string containing the provided string copied and concatenated
+ * for the number of times given in the parameter
+ *
+ * @param {string} string input string
+ * @param {Number} count number of times to repeat the string
+ * @returns {string} string containing the specified number of copies of the given string
+ *
+ * @example
+ * const result = strings.repeat('Moo', 3);
+ * console.log(result);
+ * > 'Moo Moo Moo '
+ */
+function repeat (string, count) {
+  if (string.length === 0 || count < 0) return '';
+
+  return new Array(count).fill('').reduce((res) => {
+    return res + string;
+  }, '');
+}
+
+/**
  * Reversed the characters in a string
  *
  * @param {string} string input string
@@ -758,6 +779,7 @@ var index$1 = /*#__PURE__*/Object.freeze({
   includes: includes,
   padEnd: padEnd,
   padStart: padStart,
+  repeat: repeat,
   reverse: reverse$1,
   startsWith: startsWith
 });
