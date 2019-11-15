@@ -90,8 +90,10 @@ console.log(output);
 
 ### Objects
 
+- [exclude][objects.exclude]
 - [include][objects.include]
 
+[objects.exclude]: ./docs/objects/exclude.md
 [objects.include]: ./docs/objects/include.md
 
 ### Strings
