@@ -1,5 +1,5 @@
 /**
- * Include determines whether one string can be found in another string
+ * Include filters elements in a new object based on an array of keys to include
  *
  * @param {object} object input string
  * @param {array} filter array of keys to be kept in the filtered object
