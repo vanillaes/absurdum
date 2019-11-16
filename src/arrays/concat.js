@@ -7,21 +7,17 @@
  * @example
  * const result = arrays.concat([1], 2, [3], [[4]]);
  * console.log(result);
- * > [1, 2, 3, 4]
+ * > [1, 2, 3, [4]]
  */
 function concat (...arrays) {
-  return flatten(arrays, []);
-}
-
-function flatten (array, initial = []) {
-  return array.reduce((acc, curr) => {
-    if (Array.isArray(curr)) {
-      acc = flatten(curr, acc);
+  return [...arrays].reduce((res, cur) => {
+    if (typeof cur === 'object') {
+      res.push(...cur);
     } else {
-      acc.push(curr);
+      res.push(cur);
     }
-    return acc;
-  }, initial);
+    return res;
+  });
 }
 
 export { concat };
