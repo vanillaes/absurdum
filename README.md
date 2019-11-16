@@ -56,6 +56,7 @@ console.log(output);
 - [fill][arrays.fill]
 - [filter][arrays.filter]
 - [find][arrays.find]
+- [findIndex][arrays.findIndex]
 - [findLastIndex][arrays.findLastIndex]
 - [flat][arrays.flat]
 - [indexOf][arrays.indexOf]
@@ -77,6 +78,7 @@ console.log(output);
 [arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs/arrays/filter.md
 [arrays.find]: ./docs/arrays/find.md
+[arrays.findIndex]: ./docs/arrays/findIndex.md
 [arrays.findLastIndex]: ./docs/arrays/findLastIndex.md
 [arrays.flat]: ./docs/arrays/flat.md
 [arrays.indexOf]: ./docs/arrays/indexOf.md
