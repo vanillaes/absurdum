@@ -63,6 +63,7 @@ console.log(output);
 - [reduceRight][arrays.reduceRight]
 - [reverse][arrays.reverse]
 - [some][arrays.some]
+- [take][arrays.take]
 - [tap][arrays.tap]
 - [unique][arrays.unique]
 - [zip][arrays.zip]
@@ -84,6 +85,7 @@ console.log(output);
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
 [arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.some]: ./docs/arrays/some.md
+[arrays.take]: ./docs/arrays/take.md
 [arrays.tap]: ./docs/arrays/tap.md
 [arrays.unique]: ./docs/arrays/unique.md
 [arrays.zip]: ./docs/arrays/zip.md
