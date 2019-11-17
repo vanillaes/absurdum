@@ -10,6 +10,7 @@ export { filter } from './filter.js';
 export { find } from './find.js';
 export { findLastIndex } from './findLastIndex.js';
 export { flat } from './flat.js';
+export { fromPairs } from './fromPairs.js';
 export { indexOf } from './indexOf.js';
 export { map } from './map.js';
 export { reduceRight } from './reduceRight.js';
