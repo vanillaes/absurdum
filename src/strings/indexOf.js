@@ -3,7 +3,7 @@
  * beyond the starting index, or -1 if it is not present.
  *
  * @param {String} string input string
- * @param {String} substr string to be searched for in the string
+ * @param {Number} substr string to be searched for in the string
  * @param {Number} [start=0] index of string to begin searching for substr
  * @returns {Number} an integer representing the first index in the string that contains the substr
  * @example
