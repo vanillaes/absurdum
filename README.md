@@ -98,6 +98,7 @@ console.log(output);
 
 - [endsWith][strings.endswith]
 - [includes][strings.includes]
+- [indexOf][strings.indexOf]
 - [padEnd][strings.padEnd]
 - [padStart][strings.padStart]
 - [repeat][strings.repeat]
@@ -106,6 +107,7 @@ console.log(output);
 
 [strings.endswith]: ./docs/strings/endsWith.md
 [strings.includes]: ./docs/strings/includes.md
+[strings.indexOf]: ./docs/strings/indexOf.md
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
 [strings.repeat]: ./docs/strings/repeat.md
