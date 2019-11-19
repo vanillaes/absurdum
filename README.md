@@ -67,6 +67,7 @@ console.log(output);
 - [some][arrays.some]
 - [take][arrays.take]
 - [tap][arrays.tap]
+- [union][arrays.union]
 - [unique][arrays.unique]
 - [zip][arrays.zip]
 
@@ -91,6 +92,7 @@ console.log(output);
 [arrays.some]: ./docs/arrays/some.md
 [arrays.take]: ./docs/arrays/take.md
 [arrays.tap]: ./docs/arrays/tap.md
+[arrays.union]: ./docs/arrays/union.md
 [arrays.unique]: ./docs/arrays/unique.md
 [arrays.zip]: ./docs/arrays/zip.md
 
