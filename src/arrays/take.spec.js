@@ -54,7 +54,7 @@ test('arrays.take(array, len - should return the an empty array if len provided 
 test('arrays.take(array, len) - should not mutate the input', t => {
   const input = ['Amy', 'Brie', 'Cam', 'Dimitri'];
   const expect = ['Amy', 'Brie', 'Cam', 'Dimitri'];
-  arrays.take(input, function (x) { return x === 'cheese'; });
+  arrays.take(input, 2);
 
   t.deepEqual(input, expect, 'input mutation');
 
