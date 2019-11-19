@@ -17,6 +17,7 @@ export { map } from "./map.js";
 export { reduceRight } from "./reduceRight.js";
 export { reverse } from "./reverse.js";
 export { some } from "./some.js";
+export { takeRight } from "./takeRight.js";
 export { take } from "./take.js";
 export { tap } from "./tap.js";
 export { unique } from "./unique.js";
