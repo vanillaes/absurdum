@@ -20,4 +20,5 @@ export { some } from "./some.js";
 export { take } from "./take.js";
 export { tap } from "./tap.js";
 export { unique } from "./unique.js";
+export { union } from "./union.js";
 export { zip } from "./zip.js";

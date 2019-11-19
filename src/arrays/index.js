@@ -19,5 +19,6 @@ export { reverse } from './reverse.js';
 export { some } from './some.js';
 export { take } from './take.js';
 export { tap } from './tap.js';
+export { union } from './union.js';
 export { unique } from './unique.js';
 export { zip } from './zip.js';
