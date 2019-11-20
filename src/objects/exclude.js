@@ -10,16 +10,16 @@
  * console.log(result);
  * > { medium: "dog" }
  */
-function exclude(object, filter) {
-    return Object.entries(object).reduce((acc, curr, i) => {
-        if (filter.reduce((res, cur) => {
-            if (res === false || cur === curr[0]) { return false; }
-            return true;
-        }, '')) {
-            acc[curr[0]] = curr[1];
-        }
-        return acc;
-    }, {});
+function exclude (object, filter) {
+  return Object.entries(object).reduce((acc, curr, i) => {
+    if (filter.reduce((res, cur) => {
+      if (res === false || cur === curr[0]) { return false; }
+      return true;
+    }, '')) {
+      acc[curr[0]] = curr[1];
+    }
+    return acc;
+  }, {});
 }
 
 export { exclude };
