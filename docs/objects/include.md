@@ -9,7 +9,7 @@
 
 <h3 id="includeobject-filter"><code>include(object, filter)</code></h3>
 
-Include determines whether one string can be found in another string
+Include filters elements in a new object based on an array of keys to include
 
 #### Arguments
 1. `object` *(object)*: input string
