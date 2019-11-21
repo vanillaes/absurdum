@@ -63,6 +63,7 @@ console.log(output);
 - [indexOf][arrays.indexOf]
 - [join][arrays.join]
 - [map][arrays.map]
+- [pull][arrays.pull]
 - [reduceRight][arrays.reduceRight]
 - [reverse][arrays.reverse]
 - [slice][arrays.slice]
@@ -91,6 +92,7 @@ console.log(output);
 [arrays.indexOf]: ./docs/arrays/indexOf.md
 [arrays.join]: ./docs/arrays/join.md
 [arrays.map]: ./docs/arrays/map.md
+[arrays.pull]: ./docs/arrays/pull.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
 [arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.slice]: ./docs/arrays/slice.md
