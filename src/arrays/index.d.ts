@@ -14,6 +14,7 @@ export { flat } from "./flat.js";
 export { fromPairs } from "./fromPairs.js";
 export { indexOf } from "./indexOf.js";
 export { join } from "./join.js";
+export { intersection } from "./intersection.js";
 export { map } from "./map.js";
 export { reduceRight } from "./reduceRight.js";
 export { reverse } from "./reverse.js";
