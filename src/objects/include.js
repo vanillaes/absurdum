@@ -11,13 +11,9 @@
  * > { small: 'ant', big: 'elephant' }
  */
 function include (object, filter) {
-  return Object.entries(object).reduce((acc, curr, i) => {
-    if (filter.reduce((res, cur) => {
-      if (res === true || cur === curr[0]) { return true; }
-      return false;
-    }, '')) {
-      acc[curr[0]] = curr[1];
-    }
+  const filterSet = new Set(filter);
+  return Object.entries(object).reduce((acc, curr) => {
+    if (filterSet.has(curr[0])) { acc[curr[0]] = curr[1]; }
     return acc;
   }, {});
 }
