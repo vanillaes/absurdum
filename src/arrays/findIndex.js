@@ -16,14 +16,14 @@
  * > 1
  */
 function findIndex (array, predicate, thisArg = undefined) {
-    if (array.length === 0) return -1;
-    if (this == null) { throw TypeError('"this" is null or not defined'); }
-    if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
-  
-    return array.reduce((res, cur, i) => {
-      if (res < 0 && predicate.call(thisArg, cur)) return i;
-      return res;
-    }, -1);
-  }
-  
-  export { findIndex };
+  if (array.length === 0) return -1;
+  if (this == null) { throw TypeError('"this" is null or not defined'); }
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
+
+  return array.reduce((res, cur, i) => {
+    if (res < 0 && predicate.call(thisArg, cur)) return i;
+    return res;
+  }, -1);
+}
+
+export { findIndex };
