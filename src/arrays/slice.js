@@ -10,7 +10,7 @@
  * console.log(result);
  * > ['Amy', 'Brie', 'Cam', 'Dimitri']
  * @example
- * const result = arrays.take(['Amy', 'Brie', 'Cam', 'Dimitri'], 1, 3);
+ * const result = arrays.slice(['Amy', 'Brie', 'Cam', 'Dimitri'], 1, 3);
  * console.log(result);
  * > ['Brie', 'Cam']
  */
