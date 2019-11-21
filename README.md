@@ -126,7 +126,7 @@ console.log(output);
 [strings.reverse]: ./docs/strings/reverse.md
 [strings.startswith]: ./docs/strings/startsWith.md
 
-### HTML
+<!-- ### Elements -->
 
 [Array.prototype.reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
