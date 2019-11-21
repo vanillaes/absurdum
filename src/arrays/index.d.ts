@@ -17,6 +17,7 @@ export { join } from "./join.js";
 export { map } from "./map.js";
 export { reduceRight } from "./reduceRight.js";
 export { reverse } from "./reverse.js";
+export { slice } from "./slice.js";
 export { some } from "./some.js";
 export { takeRight } from "./takeRight.js";
 export { take } from "./take.js";

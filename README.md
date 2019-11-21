@@ -65,6 +65,7 @@ console.log(output);
 - [map][arrays.map]
 - [reduceRight][arrays.reduceRight]
 - [reverse][arrays.reverse]
+- [slice][arrays.slice]
 - [some][arrays.some]
 - [take][arrays.take]
 - [takeRight][arrays.takeRight]
@@ -92,6 +93,7 @@ console.log(output);
 [arrays.map]: ./docs/arrays/map.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
 [arrays.reverse]: ./docs/arrays/reverse.md
+[arrays.slice]: ./docs/arrays/slice.md
 [arrays.some]: ./docs/arrays/some.md
 [arrays.tap]: ./docs/arrays/tap.md
 [arrays.take]: ./docs/arrays/take.md
