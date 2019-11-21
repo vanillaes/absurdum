@@ -14,11 +14,11 @@
  * > ['Brie', 'Cam', 'Dimitri']
  */
 function takeRight (array, len = 1) {
-  const start = array.length - 1 - len
+  const start = array.length - 1 - len;
   return array.reduce((res, cur, i) => {
     if (i > start) { res.push(cur); }
     return res;
   }, []);
 }
-  
+
 export { takeRight };
