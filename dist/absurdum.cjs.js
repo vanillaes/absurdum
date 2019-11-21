@@ -433,6 +433,26 @@ function map (array, func) {
 }
 
 /**
+ * Pull removes all of the given values from an array
+ *
+ * @param {Array} array input array
+ * @param {...*} [values] values to be removed from the array
+ * @returns {Array} array of with values removed
+ *
+ * @example
+ * const result = arrays.pull([1, 2, 3, 4], 2, 4);
+ * console.log(result)
+ * > [1, 3]
+ */
+function pull (array, ...values) {
+  const valueSet = new Set(values);
+  return array.reduce((acc, curr) => {
+    if (!valueSet.has(curr)) { acc.push(curr); }
+    return acc;
+  }, []);
+}
+
+/**
  * Reduce the input in reverse order (ie last->first). The reducer parameter follows the standard API (ie reducer(accumulator, current, index, array)). The initial parameter can be used to set the starting value for the accumulator.
  *
  * @param {Array} array input array
@@ -692,6 +712,7 @@ var index = /*#__PURE__*/Object.freeze({
   indexOf: indexOf,
   join: join,
   map: map,
+  pull: pull,
   reduceRight: reduceRight,
   reverse: reverse,
   slice: slice,
