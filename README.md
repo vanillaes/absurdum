@@ -62,6 +62,7 @@ console.log(output);
 - [fromPairs][arrays.fromPairs]
 - [indexOf][arrays.indexOf]
 - [join][arrays.join]
+- [intersection][arrays.intersection]
 - [map][arrays.map]
 - [pull][arrays.pull]
 - [reduceRight][arrays.reduceRight]
@@ -91,6 +92,7 @@ console.log(output);
 [arrays.fromPairs]: ./docs/arrays/fromPairs.md
 [arrays.indexOf]: ./docs/arrays/indexOf.md
 [arrays.join]: ./docs/arrays/join.md
+[arrays.intersection]: ./docs/arrays/intersection.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.pull]: ./docs/arrays/pull.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
