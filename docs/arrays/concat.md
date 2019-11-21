@@ -21,7 +21,7 @@ Concat takes any number or arrays or values as input. The arrays can be any leve
 ```js
 const result = arrays.concat([1], 2, [3], [[4]]);
 console.log(result);
-> [1, 2, 3, 4]
+> [1, 2, 3, [4]]
 ```
 ---
 
