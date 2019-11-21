@@ -1,7 +1,7 @@
 /**
  * Union creates an array of unique elements from all given arrays in order encountered
  *
- * @param {Arrays} arrays input arrays
+ * @param {Array} arrays input arrays
  * @returns {Array} an array of unique elements from all given arrays
  *
  * @example
