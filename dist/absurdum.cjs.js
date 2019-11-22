@@ -436,7 +436,7 @@ function map (array, func) {
  * Pull removes all of the given values from an array
  *
  * @param {Array} array input array
- * @param {...*} [values] values to be removed from the array
+ * @param {...*} values values to be removed from the array
  * @returns {Array} array of with values removed
  *
  * @example

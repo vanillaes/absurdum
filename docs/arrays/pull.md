@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="pullarray-values"><code>pull(array, [values])</code></h3>
+<h3 id="pullarray-values"><code>pull(array, values)</code></h3>
 
 Pull removes all of the given values from an array
 
 #### Arguments
 1. `array` *(Array)*: input array
-2. `[values]` *(...&#42;)*: values to be removed from the array
+2. `values` *(...&#42;)*: values to be removed from the array
 
 #### Returns
 *(Array)*: array of with values removed
