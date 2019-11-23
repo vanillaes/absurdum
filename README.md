@@ -116,6 +116,7 @@ console.log(output);
 
 ### Strings
 
+- [chomp][strings.chomp]
 - [endsWith][strings.endswith]
 - [includes][strings.includes]
 - [indexOf][strings.indexOf]
@@ -125,6 +126,7 @@ console.log(output);
 - [reverse][strings.reverse]
 - [startsWith][strings.startswith]
 
+[strings.chomp]: ./docs/strings/chomp.md
 [strings.endswith]: ./docs/strings/endsWith.md
 [strings.includes]: ./docs/strings/includes.md
 [strings.indexOf]: ./docs/strings/indexOf.md
