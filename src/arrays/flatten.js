@@ -32,7 +32,7 @@ function flatten (array, isShallow, callback, thisArg) {
       }, []);
     } else if (typeof callback === 'object') {
       array = array.reduce((acc, curr) => {
-        if (objContains(curr, callback)) { acc.push(curr); }
+        acc.push(objContains(curr, callback));
         return acc;
       }, []);
     }

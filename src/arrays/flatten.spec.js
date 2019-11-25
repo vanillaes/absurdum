@@ -68,33 +68,33 @@ test('arrays.flatten(array, callback) - should flatten array by plucking values 
 });
 
 test('arrays.flatten(array, callback) - should filter array to objects containing key-value pair of input callback', t => {
-  const expect = [{ first: 'Martin', last: 'Smith' }];
+  const expect = [false, true];
   const result = arrays.flatten([{ first: 'Tammy', last: 'Lane' }, { first: 'Martin', last: 'Smith' }], { last: 'Smith' });
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 1, 'output length');
+  t.equal(result.length, 2, 'output length');
   t.deepEqual(result, expect, 'output value');
 
   t.end();
 });
 
 test('arrays.flatten(array, callback) - should filter array to objects containing key-value pair of input callback', t => {
-  const expect = [{ first: 'Martin', last: 'Smith' }];
+  const expect = [false, true];
   const result = arrays.flatten([{ first: 'Tammy', last: 'Lane' }, { first: 'Martin', last: 'Smith' }], { first: 'Martin', last: 'Smith' });
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 1, 'output length');
+  t.equal(result.length, 2, 'output length');
   t.deepEqual(result, expect, 'output value');
 
   t.end();
 });
 
 test('arrays.flatten(array, callback) - should filter array to objects containing key-value pair of input callback', t => {
-  const expect = [{ first: 'Martin', last: 'Smith' }];
-  const result = arrays.flatten([{ first: 'Tammy', last: 'Lane' }, { first: 'Martin', last: 'Smith' }], { first: 'Martin', last: 'Smith' });
+  const expect = [false, true];
+  const result = arrays.flatten([{ first: 'Tammy', last: 'Lane' }, { first: 'Martin', last: ['Smith'] }], { first: 'Martin', last: ['Smith'] });
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 1, 'output length');
+  t.equal(result.length, 2, 'output length');
   t.deepEqual(result, expect, 'output value');
 
   t.end();
