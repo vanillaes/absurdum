@@ -25,6 +25,7 @@ test('arrays.flat(array) - an already flat array should return the same as the i
 
 test('arrays.flat(array) - should remove empty slots in arrays', t => {
   const expect = [1, 3, 5];
+  // eslint-disable-next-line
   const result = arrays.flat([1, , 3, , 5]);
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
