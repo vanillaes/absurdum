@@ -1,3 +1,5 @@
+**Notice: This is a ES package, development requires a Node >=v13.2**
+
 ## Ground Rules
 
 1. You must use reduce in your solution, (ie no map/filter/foreach)
