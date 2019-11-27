@@ -48,7 +48,7 @@
       "index.js",
       "docs.config.js",
       "*.esm.js",
-      "*.cjs.js"
+      "*.cjs"
     ]
   }
 }
