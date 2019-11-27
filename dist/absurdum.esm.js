@@ -305,26 +305,26 @@ function findLastIndex (array, predicate, thisArg = undefined) {
 }
 
 /**
- * Flattens an array of nested arrays
+ * Flat flattens an array of nested arrays
  *
  * @param {Array} array input array
- * @param {Array} initial reducer initial state
+ * @param {Array} [depth=1] optional depth of array elements to flat
  * @returns {Array} the flattened array
  *
  * @example
  * const result = arrays.flat([1, [2, [3, [4]]]]);
  * console.log(result);
- * > [1, 2, 3, 4]
+ * > [1, 2, [3, [4]]]
  */
-function flat (array, initial = []) {
+function flat (array, depth = 1) {
   return array.reduce((acc, curr) => {
-    if (Array.isArray(curr)) {
-      acc = flat(curr, acc);
+    if (Array.isArray(curr) && depth > 0) {
+      acc.push(...flat(curr, depth - 1));
     } else {
       acc.push(curr);
     }
     return acc;
-  }, initial);
+  }, []);
 }
 
 /**

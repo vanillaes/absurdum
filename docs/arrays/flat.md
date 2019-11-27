@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="flatarray-initial"><code>flat(array, initial)</code></h3>
+<h3 id="flatarray-depth1"><code>flat(array, [depth=1])</code></h3>
 
-Flattens an array of nested arrays
+Flat flattens an array of nested arrays
 
 #### Arguments
 1. `array` *(Array)*: input array
-2. `initial` *(Array)*: reducer initial state
+2. `[depth=1]` *(Array)*: optional depth of array elements to flat
 
 #### Returns
 *(Array)*: the flattened array
@@ -22,7 +22,7 @@ Flattens an array of nested arrays
 ```js
 const result = arrays.flat([1, [2, [3, [4]]]]);
 console.log(result);
-> [1, 2, 3, 4]
+> [1, 2, [3, [4]]]
 ```
 ---
 
