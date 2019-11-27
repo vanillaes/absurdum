@@ -421,6 +421,29 @@ function intersection (...arrays) {
 }
 
 /**
+ * LastIndexOf method returns the first index at which a given element can be found in the array
+ * going from right to left and beginning at the end index, or returns -1 if it is not present.
+ *
+ * @param {Array} array
+ * @param {number} searchElement to be looked for in the array
+ * @param {number} [fromIndex=array.length-1] index in array to begin searching for searchElement from right to left
+ * @returns {number} a integer representing the first index in the array that contains the element from right to left
+ * @example
+ * const result = arrays.lastIndexOf([1,2,3,4,5,4], 4, 4));
+ * console.log(result);
+ * > 3
+ */
+function lastIndexOf (array, searchElement, fromIndex = array.length - 1) {
+  return array.reduceRight((res, cur, i) => {
+    if (i <= fromIndex) {
+      return (res === -1 && cur === searchElement) ? i : res;
+    } else {
+      return -1;
+    }
+  }, -1);
+}
+
+/**
  * Map iterates over an array of values and applies a function to each value
  *
  * @param {Array} array input array
@@ -719,6 +742,7 @@ var index = /*#__PURE__*/Object.freeze({
   indexOf: indexOf,
   join: join,
   intersection: intersection,
+  lastIndexOf: lastIndexOf,
   map: map,
   pull: pull,
   reduceRight: reduceRight,
