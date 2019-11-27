@@ -17,12 +17,12 @@
   "types": "index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
-    "test:watch": "npx chokidar-cli -i 'node_modules' 'src/**/*.spec.js' -c 'node --experimental-modules {path}'",
+    "test": "tape-es",
+    "test:watch": "npx chokidar-cli -i 'node_modules' 'src/**/*.spec.js' -c 'node {path}'",
     "lint": "semistandard",
     "types": "npx tsc -p .config/jsconfig.json",
     "build": "npm run build:esm && npm run build:cjs && npm run build:docs && npm run build:typings",
-    "build:docs": "node --experimental-modules .config/docs.config.js",
+    "build:docs": "node .config/docs.config.js",
     "build:esm": "npx rollup --config .config/esm.config.js ",
     "build:cjs": "npx rollup --config .config/cjs.config.js",
     "build:typings": "npx tsc -p .config/tsconfig.json",
@@ -41,7 +41,7 @@
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
     "semistandard": "^14.2.0",
-    "tape": "^4.11.0"
+    "tape-es": "^1.0.0"
   },
   "semistandard": {
     "ignore": [

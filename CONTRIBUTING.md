@@ -59,7 +59,7 @@ The watcher looks for changes in the `.spec` files. When a change is detected, t
 #### CLI [Simplest]
 
 1. Open a terminal
-2. Run `node --experimental-modules [path]`
+2. Run `node [path]`
 
 All `.spec` files can be run directly from the CLI.
 
