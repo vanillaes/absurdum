@@ -41,7 +41,7 @@
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
     "semistandard": "^14.2.0",
-    "tape-es": "^1.1.0"
+    "tape-es": "^1.1.1"
   },
   "semistandard": {
     "ignore": [
