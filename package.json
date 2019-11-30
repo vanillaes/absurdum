@@ -18,7 +18,7 @@
   "type": "module",
   "scripts": {
     "test": "tape-es",
-    "test:watch": "npx chokidar-cli -i 'node_modules' 'src/**/*.spec.js' -c 'node {path}'",
+    "test:watch": "tape-watch-es",
     "lint": "semistandard",
     "types": "npx tsc -p .config/jsconfig.json",
     "build": "npm run build:esm && npm run build:cjs && npm run build:docs && npm run build:typings",
@@ -41,7 +41,7 @@
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
     "semistandard": "^14.2.0",
-    "tape-es": "^1.0.2"
+    "tape-es": "^1.1.0"
   },
   "semistandard": {
     "ignore": [
