@@ -2,6 +2,7 @@
 [![NPM Release](https://img.shields.io/npm/v/absurdum.svg)](https://www.npmjs.com/package/absurdum)
 [![David](https://img.shields.io/david/dev/vanillaes/absurdum.svg)](https://david-dm.org/vanillaes/absurdum?type=dev)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillaes/absurdum/master/LICENSE)
+[![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 
 # Absurdum
