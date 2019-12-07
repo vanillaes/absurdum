@@ -110,9 +110,11 @@ console.log(output);
 
 - [exclude][objects.exclude]
 - [include][objects.include]
+- [keys][objects.keys]
 
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.include]: ./docs/objects/include.md
+[objects.keys]: ./docs/objects/keys.md
 
 ### Strings
 
