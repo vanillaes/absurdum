@@ -1178,12 +1178,28 @@ function include (object, filter) {
   }, {});
 }
 
+/**
+ * Keys is an alias for Object.keys returns an array of all keys in an object
+ *
+ * @param {object} object input object
+ * @returns {array} returns an array of all keys in an object
+ *
+ * @example
+ * const result = objects.keys({ hold: 25, your: 19, horses: 4 });
+ * console.log(result);
+ * > ['hold', 'your', 'horses']
+ */
+function keys (object) {
+  return Object.keys(object);
+}
+
 
 
 var index$2 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   exclude: exclude,
-  include: include
+  include: include,
+  keys: keys
 });
 
 export { index as arrays, index$2 as objects, index$1 as strings };
