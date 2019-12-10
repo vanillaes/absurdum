@@ -114,10 +114,12 @@ console.log(output);
 
 - [exclude][objects.exclude]
 - [include][objects.include]
+- [invert][objects.invert]
 - [keys][objects.keys]
 
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.include]: ./docs/objects/include.md
+[objects.invert]: ./docs/objects/invert.md
 [objects.keys]: ./docs/objects/keys.md
 
 ### Strings
