@@ -12,6 +12,7 @@ export { findIndex } from './findIndex.js';
 export { findLastIndex } from './findLastIndex.js';
 export { flat } from './flat.js';
 export { flatten } from './flatten.js';
+export { frequency } from './frequency.js';
 export { fromPairs } from './fromPairs.js';
 export { indexOf } from './indexOf.js';
 export { join } from './join.js';
