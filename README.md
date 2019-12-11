@@ -60,6 +60,7 @@ console.log(output);
 - [findLastIndex][arrays.findLastIndex]
 - [flat][arrays.flat]
 - [flatten][arrays.flatten]
+- [frequency][arrays.frequency]
 - [fromPairs][arrays.fromPairs]
 - [indexOf][arrays.indexOf]
 - [join][arrays.join]
@@ -92,6 +93,7 @@ console.log(output);
 [arrays.findLastIndex]: ./docs/arrays/findLastIndex.md
 [arrays.flat]: ./docs/arrays/flat.md
 [arrays.flatten]: ./docs/arrays/flatten.md
+[arrays.frequency]: ./docs/arrays/frequency.md
 [arrays.fromPairs]: ./docs/arrays/fromPairs.md
 [arrays.indexOf]: ./docs/arrays/indexOf.md
 [arrays.join]: ./docs/arrays/join.md
