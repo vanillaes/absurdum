@@ -118,11 +118,13 @@ console.log(output);
 - [include][objects.include]
 - [invert][objects.invert]
 - [keys][objects.keys]
+- [pick][objects.pick]
 
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.include]: ./docs/objects/include.md
 [objects.invert]: ./docs/objects/invert.md
 [objects.keys]: ./docs/objects/keys.md
+[objects.pick]: ./docs/objects/pick.md
 
 ### Strings
 
