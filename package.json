@@ -14,8 +14,8 @@
   "license": "MIT",
   "main": "index.js",
   "module": "dist/absurdum.esm.js",
-  "types": "index.d.ts",
   "type": "module",
+  "types": "index.d.ts",
   "scripts": {
     "test": "tape-es",
     "test:watch": "tape-watch-es",
