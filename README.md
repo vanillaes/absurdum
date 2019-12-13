@@ -42,6 +42,10 @@ console.log(output);
 // > ['d', 'c', 'b', 'a']
 ```
 
+## CommonJS
+
+A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
+
 ## API Documentation
 
 ### Arrays
