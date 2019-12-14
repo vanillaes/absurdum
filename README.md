@@ -42,6 +42,10 @@ console.log(output);
 // > ['d', 'c', 'b', 'a']
 ```
 
+## CommonJS
+
+A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
+
 ## API Documentation
 
 ### Arrays
@@ -116,11 +120,13 @@ console.log(output);
 - [include][objects.include]
 - [invert][objects.invert]
 - [keys][objects.keys]
+- [values][objects.values]
 
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.include]: ./docs/objects/include.md
 [objects.invert]: ./docs/objects/invert.md
 [objects.keys]: ./docs/objects/keys.md
+[objects.values]: ./docs/objects/values.md
 
 ### Strings
 
