@@ -46,6 +46,7 @@ console.log(output);
 
 A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
 
+<<<<<<< HEAD
 ```javascript
 const CSV = require('absurdum/dist/absurdum.cjs');
 ```
@@ -55,6 +56,8 @@ const CSV = require('absurdum/dist/absurdum.cjs');
 A ES module bundle is included under `dist/absurdum.esm.js` and is defined as the `pkg.modules` entry point.
 
 
+=======
+>>>>>>> aa1a0270c5421ff9974168a35dd1c5d7021ccf96
 ## API Documentation
 
 ### Arrays
@@ -131,14 +134,20 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 - [include][objects.include]
 - [invert][objects.invert]
 - [keys][objects.keys]
+<<<<<<< HEAD
 - [pick][objects.pick]
+=======
+>>>>>>> aa1a0270c5421ff9974168a35dd1c5d7021ccf96
 - [values][objects.values]
 
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.include]: ./docs/objects/include.md
 [objects.invert]: ./docs/objects/invert.md
 [objects.keys]: ./docs/objects/keys.md
+<<<<<<< HEAD
 [objects.pick]: ./docs/objects/pick.md
+=======
+>>>>>>> aa1a0270c5421ff9974168a35dd1c5d7021ccf96
 [objects.values]: ./docs/objects/values.md
 
 ### Strings
