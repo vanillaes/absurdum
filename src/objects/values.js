@@ -10,8 +10,7 @@
  * > [25, 19, 4]
  */
 function values (object) {
-    return Object.values(object);
-  }
-  
-  export { values };
-  
+  return Object.values(object);
+}
+
+export { values };
