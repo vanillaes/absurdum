@@ -4,5 +4,6 @@ export { findKey } from './findKey.js';
 export { include } from './include.js';
 export { invert } from './invert.js';
 export { keys } from './keys.js';
+export { mapKeys } from './mapKeys.js';
 export { pick } from './pick.js';
 export { values } from './values.js';
