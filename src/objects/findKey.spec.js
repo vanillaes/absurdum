@@ -11,7 +11,7 @@ test('objects.findKey(object) - returns a first key when iterated if not provide
   t.end();
 });
 
-test('objects.findKey(object, predicate) - returns an object predicateed by the predicate array, ignores unused elements of the predicate array', t => {
+test('objects.findKey(object, predicate) - returns an object predicated by the predicate array, ignores unused elements of the predicate array', t => {
   const expect = 'rain';
   const result = objects.findKey({ sandstorm: { wet: false, temp: 35 }, rain: { wet: true, temp: 71 } }, x => x.temp > 50);
 
@@ -31,7 +31,7 @@ test('objects.findKey(object, predicate) - returns an empty object if the input 
   t.end();
 });
 
-test('objects.findKey(object, predicate) - returns the same object if no elments in the predicate array exist as object keys', t => {
+test('objects.findKey(object, predicate) - returns the same object if no elements in the predicate array exist as object keys', t => {
   const expect = 'sandstorm';
   const result = objects.findKey({ sandstorm: { wet: false, temp: 35 }, rain: { wet: true, temp: 71 } }, { temp: 35 });
 
