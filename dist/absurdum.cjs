@@ -693,8 +693,10 @@ function take (array, len = 1) {
  * > [1, 2, 3, 4]
  */
 function tap (array, func) {
-  array.forEach(x => func(x));
-  return array;
+  return array.reduce((acc, cur) => {
+    func(cur);
+    return [...acc, cur];
+  }, []);
 }
 
 /**
