@@ -90,6 +90,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 - [tap][arrays.tap]
 - [union][arrays.union]
 - [unique][arrays.unique]
+- [unzip][arrays.unzip]
 - [zip][arrays.zip]
 
 [arrays.chunk]: ./docs/arrays/chunk.md
@@ -123,6 +124,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 [arrays.takeRight]: ./docs/arrays/takeRight.md
 [arrays.union]: ./docs/arrays/union.md
 [arrays.unique]: ./docs/arrays/unique.md
+[arrays.unzip]: ./docs/arrays/unzip.md
 [arrays.zip]: ./docs/arrays/zip.md
 
 ### Objects
