@@ -5,5 +5,6 @@ export { include } from "./include.js";
 export { invert } from "./invert.js";
 export { keys } from "./keys.js";
 export { mapKeys } from "./mapKeys.js";
+export { merge } from "./merge.js";
 export { pick } from "./pick.js";
 export { values } from "./values.js";
