@@ -9,8 +9,14 @@
     "reduce",
     "esm"
   ],
+  "contributors": [
+    {
+      "name": "Evan Plaice",
+      "email": "evan.plaice@gmail.com",
+      "url": "http://evanplaice.com"
+    }
+  ],
   "repository": "https://github.com/vanillaes/absurdum",
-  "author": "Evan Plaice <evanplaice@gmail.com>",
   "license": "MIT",
   "main": "index.js",
   "module": "dist/absurdum.esm.js",
