@@ -47,7 +47,8 @@ const objectMerge = (current, source) => {
   if (typeof current === 'object') {
     Object.entries(current).reduce((_, entry) => {
       res[entry[0]] = entry[1];
-    }, true);
+      return null;
+    }, null);
   }
   Object.entries(source).reduce((_, entry) => {
     if (typeof entry[1] !== 'object' || !current[entry[0]]) {
@@ -55,7 +56,8 @@ const objectMerge = (current, source) => {
     } else {
       res[entry[0]] = deepMerge(current[entry[0]], entry[1]);
     }
-  }, true);
+    return null;
+  }, null);
   return res;
 };
 
