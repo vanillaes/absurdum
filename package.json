@@ -14,6 +14,11 @@
       "name": "Evan Plaice",
       "email": "evan.plaice@gmail.com",
       "url": "http://evanplaice.com"
+    },
+    {
+      "name": "Jens Kristian Vyff",
+      "email": "kristianvyff@gmail.com",
+      "url": "https://www.vyff.com"
     }
   ],
   "repository": "https://github.com/vanillaes/absurdum",
