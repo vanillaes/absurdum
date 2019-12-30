@@ -40,7 +40,7 @@
     "clean": "npm run clean:docs && npm run clean:bundles && npm run clean:typings",
     "clean:docs": "npx rimraf docs/*.md",
     "clean:bundles": "npx rimraf dist/*",
-    "clean:typings": "npx rimraf src/*.d.ts",
+    "clean:typings": "npx rimraf src/**/*.d.ts",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
     "version": "npm run build && git add dist/* && git diff --quiet && git diff --staged --quiet || git commit -am 'Bump'",
