@@ -7,9 +7,10 @@
  * @returns {object} returns new object
  *
  * @example
- * const result = objects.merge({ paper: 25, crane: 16 }, { paper: 9, tiger: 4 });
+ * const someObj = { hold: 44 };
+ * const result = objects.defaults(someObj, { hold: 25, your: 19, horses: 4 });
  * console.log(result);
- * > { paper: 25, crane: 16, tiger: 4 }
+ * > { hold: 44, your: 19, horses: 4 }
  */
 function defaults (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
