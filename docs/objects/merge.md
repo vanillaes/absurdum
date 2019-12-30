@@ -14,10 +14,10 @@ being merged recursively and other value types overridden when applied from left
 
 #### Arguments
 1. `object` *(object)*: input object
-2. `[sources]` *(...object)*: input object
+2. `[sources]` *(...object)*: input object/s
 
 #### Returns
-*(array)*: returns an array of all values in an object
+*(object)*: returns an object with all included object properties merged
 
 #### Example
 ```js
