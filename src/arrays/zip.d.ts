@@ -4,7 +4,7 @@
  *
  * @param {Array} array1 input array
  * @param {Array} array2 input array
- * @param {Function} predicate optional to be applied to corresponding values
+ * @param {Function} [predicate=(a, b)=>[a, b]] to be applied to corresponding values
  * @returns {Array} input array filled value pairs after the function has been applied
  *
  * @example

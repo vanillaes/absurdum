@@ -13,7 +13,7 @@ Flat flattens an array of nested arrays
 
 #### Arguments
 1. `array` *(Array)*: input array
-2. `[depth=1]` *(Array)*: optional depth of array elements to flat
+2. `[depth=1]` *(number)*: optional depth of array elements to flat
 
 #### Returns
 *(Array)*: the flattened array

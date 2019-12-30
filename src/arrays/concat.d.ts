@@ -7,6 +7,6 @@
  * @example
  * const result = arrays.concat([1], 2, [3], [[4]]);
  * console.log(result);
- * > [1, 2, 3, 4]
+ * > [1, 2, 3, [4]]
  */
 export function concat(...arrays: any[]): any[];

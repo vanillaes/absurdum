@@ -4,7 +4,7 @@
  *
  * @param {Array} array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} thisArg of this
+ * @param {*} [thisArg=undefined] of this
  * @returns {*} value of element that satisfied function.
  * @example
  * const result = arrays.find([5, 12, 8, 130, 44], (x) => x > 10);
