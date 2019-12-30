@@ -1,4 +1,5 @@
 export { at } from "./at.js";
+export { defaults } from "./defaults.js";
 export { exclude } from "./exclude.js";
 export { findKey } from "./findKey.js";
 export { include } from "./include.js";
