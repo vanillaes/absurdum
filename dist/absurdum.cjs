@@ -764,6 +764,25 @@ function unzip (array) {
 }
 
 /**
+ * Without, returns an array with all values parameters removed from the input array
+ *
+ * @param {Array} array input array
+ * @param {...*} values input values
+ * @returns {Array} an array of unique values
+ * @example
+ * const result = arrays.without(['a', 'b', 'c', ['d']], 'b', ['d']);
+ * console.log(result);
+ * > ['a', 'c', ['d']]
+ */
+function without (array, ...values) {
+  const toExclude = new Set(values);
+  return array.reduce((acc, curr) => {
+    if (!toExclude.has(curr)) { acc.push(curr); }
+    return acc;
+  }, []);
+}
+
+/**
  * Zip applies a specified function to the corresponding elements of two sequences,
  * producing a sequence of the results.
  *
@@ -834,6 +853,7 @@ var index = /*#__PURE__*/Object.freeze({
   union: union,
   unique: unique,
   unzip: unzip,
+  without: without,
   zip: zip
 });
 
