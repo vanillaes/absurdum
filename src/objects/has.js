@@ -3,7 +3,7 @@
  *
  * @param {object} object input object
  * @param {Array|string)} path strings describing paths to be returned from an object
- * @returns {array} array of values found by object paths in object
+ * @returns {boolean} boolean true is a direct property of the object
  *
  * @example
  * const result = objects.has({ front: [1, 3, 5], back: [37, 39] });
