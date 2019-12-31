@@ -30,4 +30,5 @@ export { tap } from './tap.js';
 export { union } from './union.js';
 export { unique } from './unique.js';
 export { unzip } from './unzip.js';
+export { without } from './without.js';
 export { zip } from './zip.js';
