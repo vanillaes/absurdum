@@ -2,7 +2,7 @@
  * Get, creates an array of values corresponding to paths of the object
  *
  * @param {object} object input object
- * @param {Array|string)} path string or an array of strings describing paths to be returned from an object
+ * @param {Array|string} path string or an array of strings describing paths to be returned from an object
  * @param {*} [defaultValue] value returned when path resolves undefined
  * @returns {*} value found by object paths in object, or returns defaultValue if provided and return would otherwise be undefined
  *
