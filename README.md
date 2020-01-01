@@ -141,6 +141,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 - [invert][objects.invert]
 - [keys][objects.keys]
 - [mapKeys][objects.mapKeys]
+- [mapValues][objects.mapValues]
 - [merge][objects.merge]
 - [pick][objects.pick]
 - [values][objects.values]
@@ -155,6 +156,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 [objects.invert]: ./docs/objects/invert.md
 [objects.keys]: ./docs/objects/keys.md
 [objects.mapKeys]: ./docs/objects/mapKeys.md
+[objects.mapValues]: ./docs/objects/mapValues.md
 [objects.merge]: ./docs/objects/merge.md
 [objects.pick]: ./docs/objects/pick.md
 [objects.values]: ./docs/objects/values.md
