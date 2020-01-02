@@ -13,8 +13,8 @@ test('objects.mapValues(object, func) - returns an object with updated values', 
 
 test('objects.mapValues(object, func) - returns an object with updated keys using keys, values, and the object as arguments', t => {
   const expect = { a: 'a_1_1', b: 'b_2_1', c: 'c_3_1' };
-  const result = objects.mapValues({ a: 1, b: 2, c: 3 }, function(value, key, object) {
-    return `${key}_${value}_${object.a}`
+  const result = objects.mapValues({ a: 1, b: 2, c: 3 }, function (value, key, object) {
+    return `${key}_${value}_${object.a}`;
   });
 
   t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
