@@ -135,6 +135,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 - [defaults][objects.defaults]
 - [exclude][objects.exclude]
 - [findKey][objects.findKey]
+- [forIn][objects.forIn]
 - [has][objects.has]
 - [get][objects.get]
 - [include][objects.include]
@@ -149,6 +150,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 [objects.defaults]: ./docs/objects/defaults.md
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.findKey]: ./docs/objects/findKey.md
+[objects.forIn]: ./docs/objects/forIn.md
 [objects.has]: ./docs/objects/has.md
 [objects.get]: ./docs/objects/get.md
 [objects.include]: ./docs/objects/include.md
