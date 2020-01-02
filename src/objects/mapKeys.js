@@ -11,6 +11,7 @@
  * > { neat_1: 1, neat_2: 2, neat_3: 3 }
  */
 function mapKeys (object, func) {
+  if (typeof func !== 'function') { return object; }
   return Object.entries(object).reduce(
     (acc, [key, value]) => ({
       ...acc,

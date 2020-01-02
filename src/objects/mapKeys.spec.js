@@ -20,3 +20,13 @@ test('objects.mapKeys(object) - returns an object with updated keys using values
 
   t.end();
 });
+
+test('objects.mapKeys(object) - returns the input object if no function is applied', t => {
+  const expect = { a: 1, b: 2, c: 3 };
+  const result = objects.mapKeys({ a: 1, b: 2, c: 3 });
+
+  t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
+  t.deepEqual(result, expect, 'output value');
+
+  t.end();
+});
