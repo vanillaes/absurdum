@@ -31,4 +31,5 @@ export { union } from "./union.js";
 export { unique } from "./unique.js";
 export { unzip } from "./unzip.js";
 export { without } from "./without.js";
+export { xor } from "./xor.js";
 export { zip } from "./zip.js";
