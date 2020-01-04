@@ -21,7 +21,8 @@
  */
 function forIn (object, func) {
   const local = Object.entries(object);
-  const proto = Object.entries(Object.getPrototypeOf(object));
+  const objProto = Object.getPrototypeOf(object);
+  const proto = objProto ? Object.entries(objProto) : [];
   const entries = new Set([...local, ...proto]);
 
   [...entries].reduce((_, [key, value]) => {
