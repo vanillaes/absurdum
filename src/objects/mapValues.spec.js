@@ -36,7 +36,7 @@ test('objects.mapValues(object) - returns the input object if no function is app
 test('objects.mapValues(object, func) - should not mutate the input', t => {
   const input = { a: 1, b: 2, c: 3 };
   const expect = { a: 1, b: 2, c: 3 };
-  objects.get(input, value => value + 3);
+  objects.mapValues(input, value => value + 3);
 
   t.deepEqual(input, expect, 'input mutation');
 

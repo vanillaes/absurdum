@@ -50,7 +50,7 @@ test('objects.forIn(object, func) - returns input object, logs to console as it 
 test('objects.forIn(object, func) - should not mutate the input', t => {
   const input = { a: 1, b: 2, c: 3 };
   const expect = { a: 1, b: 2, c: 3 };
-  objects.has(input, (value, key) => key + value);
+  objects.forIn(input, (value, key) => key + value);
 
   t.deepEqual(input, expect, 'input mutation');
 
