@@ -13,4 +13,5 @@ export { mapKeys } from './mapKeys.js';
 export { mapValues } from './mapValues.js';
 export { merge } from './merge.js';
 export { pick } from './pick.js';
+export { result } from './result.js';
 export { values } from './values.js';
