@@ -47,7 +47,7 @@ console.log(output);
 A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
 
 ```javascript
-const CSV = require('absurdum/dist/absurdum.cjs');
+const absurdum = require('absurdum/dist/absurdum.cjs');
 ```
 
 ## Bundling
