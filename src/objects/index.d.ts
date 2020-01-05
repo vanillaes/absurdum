@@ -15,4 +15,5 @@ export { mapValues } from "./mapValues.js";
 export { merge } from "./merge.js";
 export { pick } from "./pick.js";
 export { result } from "./result.js";
+export { transform } from "./transform.js";
 export { values } from "./values.js";
