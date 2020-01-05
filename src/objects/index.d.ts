@@ -1,3 +1,4 @@
+export { assign } from "./assign.js";
 export { at } from "./at.js";
 export { defaults } from "./defaults.js";
 export { exclude } from "./exclude.js";
