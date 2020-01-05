@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="xorarrays"><code>xor([arrays])</code></h3>
+<h3 id="xorarrays"><code>xor(arrays)</code></h3>
 
 Creates an array of unique values that is the symmetric difference of the given arrays
 
 #### Arguments
-1. `[arrays]` *(...Array)*: input arrays
+1. `arrays` *(...Array)*: input arrays
 
 #### Returns
 *(Array)*: an array of unique values
