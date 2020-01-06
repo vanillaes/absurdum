@@ -13,11 +13,10 @@ test('objects.transform(object, func) - returns an object with updated values, '
   t.end();
 });
 
-test('objects.transform(object, func, accumulator) - returns an array with updated values, and exited early by returning false', t => {
-  const expect = [4, 9];
-  const result = objects.transform([2, 3, 4], (result, n) => {
+test('objects.transform(object, func, accumulator) - returns an array with updated values', t => {
+  const expect = [4, 9, 16];
+  const result = objects.transform({ a: 2, b: 3, c: 4 }, (result, n) => {
     result.push(n *= n);
-    return n % 2 === 0;
   }, []);
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
