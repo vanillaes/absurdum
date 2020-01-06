@@ -1,6 +1,7 @@
 export { assign } from './assign.js';
 export { at } from './at.js';
 export { defaults } from './defaults.js';
+export { defaultsDeep } from './defaultsDeep.js';
 export { exclude } from './exclude.js';
 export { findKey } from './findKey.js';
 export { forIn } from './forIn.js';
