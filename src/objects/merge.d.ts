@@ -7,8 +7,8 @@
  * @returns {object} returns an object with all included object properties merged
  *
  * @example
- * const result = objects.merge({ hold: 25, your: 19 }, { a: 1, b: 2 });
+ * const result = objects.merge({ a: [{ b: [2, 3, 14] }, { d: 4 }] }, { a: [{ b: [5, 7] }, { e: 5 }] });
  * console.log(result);
- * > { a: 1, b: 2, hold: 25, your: 19 }
+ * > { a: [{ b: [5, 7, 14] }, { d: 4, e: 5 }] }
  */
 export function merge(object: any, ...sources: any[]): any;

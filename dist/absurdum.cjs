@@ -1698,9 +1698,9 @@ function mapValues (object, func) {
  * @returns {object} returns an object with all included object properties merged
  *
  * @example
- * const result = objects.merge({ hold: 25, your: 19 }, { a: 1, b: 2 });
+ * const result = objects.merge({ a: [{ b: [2, 3, 14] }, { d: 4 }] }, { a: [{ b: [5, 7] }, { e: 5 }] });
  * console.log(result);
- * > { a: 1, b: 2, hold: 25, your: 19 }
+ * > { a: [{ b: [5, 7, 14] }, { d: 4, e: 5 }] }
  */
 function merge (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
@@ -1720,32 +1720,33 @@ const deepMerge = (object, next) => {
 };
 
 const arrayMerge = (current, source) => {
-  const res = current.slice();
+  const res = [...current];
   source.reduce((_, elem, idx) => {
     if (typeof res[idx] === 'undefined') {
       res[idx] = elem;
     } else if (typeof elem === 'object') {
       res[idx] = deepMerge(current[idx], elem);
-    } else if (current.indexOf(elem) === -1) {
-      res.push(elem);
+    } else {
+      res[idx] = elem;
     }
-  }, true);
+    return null;
+  }, null);
   return res;
 };
 
 const objectMerge = (current, source) => {
   const res = {};
   if (typeof current === 'object') {
-    Object.entries(current).reduce((_, entry) => {
-      res[entry[0]] = entry[1];
+    Object.entries(current).reduce((_, [key, value]) => {
+      res[key] = value;
       return null;
     }, null);
   }
-  Object.entries(source).reduce((_, entry) => {
-    if (typeof entry[1] !== 'object' || !current[entry[0]]) {
-      res[entry[0]] = entry[1];
+  Object.entries(source).reduce((_, [key, value]) => {
+    if (typeof value !== 'object' || !current[key]) {
+      res[key] = value;
     } else {
-      res[entry[0]] = deepMerge(current[entry[0]], entry[1]);
+      res[key] = deepMerge(current[key], value);
     }
     return null;
   }, null);
