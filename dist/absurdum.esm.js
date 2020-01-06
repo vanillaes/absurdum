@@ -1335,6 +1335,70 @@ function defaults (object, ...sources) {
 }
 
 /**
+ * DefaultsDeep recursively merges object properties from all supplied objects with object values
+ * being merged recursively and once a property is set, additional values of the same property are ignored.
+ *
+ * @param {object} object input object
+ * @param {...object} sources input object/s
+ * @returns {object} returns an object with all included object properties merged
+ *
+ * @example
+ * const result = objects.defaultsDeep({ a: { b: [3, 4] } }, { a: { b: [9, 18, 15], c: 3 } });
+ * console.log(result);
+ * > { a: { b: [ 3, 4, 15 ], c: 3 } }
+ */
+function defaultsDeep (object, ...sources) {
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
+  const result = [object, ...sources];
+
+  return result.reduce((prev, next) => {
+    return deepMerge(prev, next);
+  });
+}
+
+const deepMerge = (object, next) => {
+  if (Array.isArray(next)) {
+    return Array.isArray(object) ? arrayMerge(object, next) : object;
+  } else {
+    return objectMerge(object, next);
+  }
+};
+
+const arrayMerge = (current, source) => {
+  const res = [...current];
+  source.reduce((_, elem, idx) => {
+    if (typeof current[idx] === 'undefined') {
+      res[idx] = elem;
+    } else if (typeof elem === 'object') {
+      res[idx] = deepMerge(current[idx], elem);
+    }
+    return null;
+  }, null);
+  return res;
+};
+
+const objectMerge = (current, source) => {
+  const res = {};
+  if (typeof current === 'object') {
+    Object.entries(current).reduce((_, [key, value]) => {
+      if (typeof res[key] === 'undefined') { res[key] = value; }
+      return null;
+    }, null);
+  } else {
+    return current;
+  }
+  Object.entries(source).reduce((_, [key, value]) => {
+    if (typeof value !== 'object' || !current[key]) {
+      if (typeof res[key] === 'undefined') { res[key] = value; }
+    } else {
+      res[key] = deepMerge(current[key], value);
+    }
+    return null;
+  }, null);
+  return res;
+};
+
+/**
  * Exclude filters out elements from an object based on an array of keys to exclude
  *
  * @param {object} object input string
@@ -1703,25 +1767,25 @@ function merge (object, ...sources) {
   const result = [object, ...sources];
 
   return result.reduce((prev, next) => {
-    return deepMerge(prev, next);
+    return deepMerge$1(prev, next);
   });
 }
 
-const deepMerge = (object, next) => {
+const deepMerge$1 = (object, next) => {
   if (Array.isArray(next)) {
-    return Array.isArray(object) ? arrayMerge(object, next) : next;
+    return Array.isArray(object) ? arrayMerge$1(object, next) : next;
   } else {
-    return objectMerge(object, next);
+    return objectMerge$1(object, next);
   }
 };
 
-const arrayMerge = (current, source) => {
+const arrayMerge$1 = (current, source) => {
   const res = current.slice();
   source.reduce((_, elem, idx) => {
     if (typeof res[idx] === 'undefined') {
       res[idx] = elem;
     } else if (typeof elem === 'object') {
-      res[idx] = deepMerge(current[idx], elem);
+      res[idx] = deepMerge$1(current[idx], elem);
     } else if (current.indexOf(elem) === -1) {
       res.push(elem);
     }
@@ -1729,7 +1793,7 @@ const arrayMerge = (current, source) => {
   return res;
 };
 
-const objectMerge = (current, source) => {
+const objectMerge$1 = (current, source) => {
   const res = {};
   if (typeof current === 'object') {
     Object.entries(current).reduce((_, entry) => {
@@ -1741,7 +1805,7 @@ const objectMerge = (current, source) => {
     if (typeof entry[1] !== 'object' || !current[entry[0]]) {
       res[entry[0]] = entry[1];
     } else {
-      res[entry[0]] = deepMerge(current[entry[0]], entry[1]);
+      res[entry[0]] = deepMerge$1(current[entry[0]], entry[1]);
     }
     return null;
   }, null);
@@ -1867,6 +1931,7 @@ var index$2 = /*#__PURE__*/Object.freeze({
   assign: assign,
   at: at,
   defaults: defaults,
+  defaultsDeep: defaultsDeep,
   exclude: exclude,
   findKey: findKey,
   forIn: forIn,
