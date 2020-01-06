@@ -22,8 +22,8 @@ test('objects.merge(object, sources) - returns an object with properties merged 
 });
 
 test('objects.merge(object, sources) - returns an object with properties merged and nested objects or array values merged recursively', t => {
-  const expect = { a: [{ b: 2, c: 3 }, { d: 4, e: 5 }] };
-  const result = objects.merge({ a: [{ b: 2 }, { d: 4 }] }, { a: [{ c: 3 }, { e: 5 }] });
+  const expect = { a: [{ b: [5, 7, 14] }, { d: 4, e: 5 }] };
+  const result = objects.merge({ a: [{ b: [2, 3, 14] }, { d: 4 }] }, { a: [{ b: [5, 7] }, { e: 5 }] });
 
   t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
   t.deepEqual(result, expect, 'output value');
