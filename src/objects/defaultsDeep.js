@@ -1,15 +1,15 @@
 /**
  * DefaultsDeep recursively merges object properties from all supplied objects with object values
- * being merged recursively and other value types overridden when applied from left to right.
+ * being merged recursively and once a property is set, additional values of the same property are ignored.
  *
  * @param {object} object input object
  * @param {...object} sources input object/s
  * @returns {object} returns an object with all included object properties merged
  *
  * @example
- * const result = objects.defaultsDeep({ hold: 25, your: 19 }, { a: 1, b: 2 });
+ * const result = objects.defaultsDeep({ a: { b: [3, 4] } }, { a: { b: [9, 18, 15], c: 3 } });
  * console.log(result);
- * > { a: 1, b: 2, hold: 25, your: 19 }
+ * > { a: { b: [ 3, 4, 15 ], c: 3 } }
  */
 function defaultsDeep (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
