@@ -11,7 +11,7 @@
  */
 function camelCase (string = '') {
   let first = true;
-  const res = string.split(/(?<=[0-9])|[\u2019|\u002D|-|_|'|\s]+/).reduce((acc, word) => {
+  const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (first && word.length > 0) {
       word = word.toLowerCase();
       first = false;
