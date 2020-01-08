@@ -182,6 +182,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 - [endsWith][strings.endswith]
 - [includes][strings.includes]
 - [indexOf][strings.indexOf]
+- [pad][strings.pad]
 - [padEnd][strings.padEnd]
 - [padStart][strings.padStart]
 - [repeat][strings.repeat]
@@ -193,6 +194,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 [strings.endswith]: ./docs/strings/endsWith.md
 [strings.includes]: ./docs/strings/includes.md
 [strings.indexOf]: ./docs/strings/indexOf.md
+[strings.pad]: ./docs/strings/pad.md
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
 [strings.repeat]: ./docs/strings/repeat.md

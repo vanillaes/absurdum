@@ -3,6 +3,7 @@ export { chomp } from "./chomp.js";
 export { endsWith } from "./endsWith.js";
 export { includes } from "./includes.js";
 export { indexOf } from "./indexOf.js";
+export { pad } from "./pad.js";
 export { padEnd } from "./padEnd.js";
 export { padStart } from "./padStart.js";
 export { repeat } from "./repeat.js";
