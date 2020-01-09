@@ -178,6 +178,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 ### Strings
 
 - [camelCase][strings.camelCase]
+- [capitalize][strings.capitalize]
 - [chomp][strings.chomp]
 - [endsWith][strings.endswith]
 - [includes][strings.includes]
@@ -190,6 +191,7 @@ A ES module bundle is included under `dist/absurdum.esm.js` and is defined as th
 - [startsWith][strings.startswith]
 
 [strings.camelCase]: ./docs/strings/camelCase.md
+[strings.capitalize]: ./docs/strings/capitalize.md
 [strings.chomp]: ./docs/strings/chomp.md
 [strings.endswith]: ./docs/strings/endsWith.md
 [strings.includes]: ./docs/strings/includes.md

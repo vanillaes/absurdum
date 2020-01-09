@@ -1,4 +1,5 @@
 export { camelCase } from "./camelCase.js";
+export { capitalize } from "./capitalize.js";
 export { chomp } from "./chomp.js";
 export { endsWith } from "./endsWith.js";
 export { includes } from "./includes.js";
