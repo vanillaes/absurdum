@@ -180,6 +180,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [pad][strings.pad]
 - [padEnd][strings.padEnd]
 - [padStart][strings.padStart]
+- [pascalCase][strings.pascalCase]
 - [repeat][strings.repeat]
 - [reverse][strings.reverse]
 - [startsWith][strings.startswith]
@@ -192,6 +193,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [strings.pad]: ./docs/strings/pad.md
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
+[strings.pascalCase]: ./docs/strings/pascalCase.md
 [strings.repeat]: ./docs/strings/repeat.md
 [strings.reverse]: ./docs/strings/reverse.md
 [strings.startswith]: ./docs/strings/startsWith.md
