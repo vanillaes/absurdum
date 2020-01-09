@@ -50,11 +50,6 @@ A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
 const absurdum = require('absurdum/dist/absurdum.cjs');
 ```
 
-## Bundling
-
-A ES module bundle is included under `dist/absurdum.esm.js` and is defined as the `pkg.modules` entry point.
-
-
 ## API Documentation
 
 ### Arrays
