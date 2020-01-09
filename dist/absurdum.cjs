@@ -1210,6 +1210,24 @@ function padStart (string, length, substr = ' ') {
 }
 
 /**
+ * pascalCase updates a string to pascalCase
+ *
+ * @param {string} [string=''] input string
+ * @returns {string} returns new pascalCase string
+ *
+ * @example
+ * const result = strings.pascalCase('classes use pascal case');
+ * console.log(result);
+ * > 'ClassesUsePascalCase'
+ */
+function pascalCase (string = '') {
+  const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
+    return acc + word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }, '');
+  return res;
+}
+
+/**
  * Repeat returns a new string containing the provided string copied and concatenated
  * for the number of times given in the parameter
  *
@@ -1296,6 +1314,7 @@ var index$1 = /*#__PURE__*/Object.freeze({
   pad: pad,
   padEnd: padEnd,
   padStart: padStart,
+  pascalCase: pascalCase,
   repeat: repeat,
   reverse: reverse$1,
   startsWith: startsWith
