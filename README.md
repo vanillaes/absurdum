@@ -56,7 +56,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 
 - [chunk][arrays.chunk]
 - [compact][arrays.compact]
-- [concat][arrays.concat]
 - [difference][arrays.difference]
 - [drop][arrays.drop]
 - [dropRight][arrays.dropRight]
@@ -92,7 +91,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 
 [arrays.chunk]: ./docs/arrays/chunk.md
 [arrays.compact]: ./docs/arrays/compact.md
-[arrays.concat]: ./docs/arrays/concat.md
 [arrays.difference]: ./docs/arrays/difference.md
 [arrays.drop]: ./docs/arrays/drop.md
 [arrays.dropRight]: ./docs/arrays/dropRight.md
