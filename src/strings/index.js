@@ -9,4 +9,5 @@ export { padStart } from './padStart.js';
 export { pascalCase } from './pascalCase.js';
 export { repeat } from './repeat.js';
 export { reverse } from './reverse.js';
+export { snakeCase } from './snakeCase.js';
 export { startsWith } from './startsWith.js';
