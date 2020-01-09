@@ -177,6 +177,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [endsWith][strings.endswith]
 - [includes][strings.includes]
 - [indexOf][strings.indexOf]
+- [kebabCase][strings.kebabCase]
 - [pad][strings.pad]
 - [padEnd][strings.padEnd]
 - [padStart][strings.padStart]
@@ -191,6 +192,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [strings.endswith]: ./docs/strings/endsWith.md
 [strings.includes]: ./docs/strings/includes.md
 [strings.indexOf]: ./docs/strings/indexOf.md
+[strings.kebabCase]: ./docs/strings/kebabCase.md
 [strings.pad]: ./docs/strings/pad.md
 [strings.padEnd]: ./docs/strings/padEnd.md
 [strings.padStart]: ./docs/strings/padStart.md
