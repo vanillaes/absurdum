@@ -8,25 +8,25 @@
  *
  * @example
  * // if no `substr` is provided, it pads the string w/ spaces
- * const result = strings.padEnd('abcabc', 9);
+ * const result = strings.pad('xyzxyz', 9);
  * console.log(result);
- * > abcabc
+ * > ' xyzxyz  '
  *
  * @example
  * // if `length` is shorter than `string` it doesn't add any padding
- * const result = strings.padEnd('abcabc', 4);
+ * const result = strings.pad('xyzxyz', 4);
  * console.log(result);
- * > abcabc
+ * > 'xyzxyz'
  *
  * @example
  * // if `substr` is defined, it uses that for padding
- *  const result = strings.padEnd('abcabc', 16, 'fun');
+ *  const result = strings.pad('xyzxyz', 16, 'FUN');
  *  console.log(result);
- *  > 'abcabcfunfunfunf'
+ *  > 'FUNFUxyzxyzFUNFU'
  */
 function pad (string, length, substr = ' ') {
   const strLen = string.length;
-  const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen)/2) : 0;
+  const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen) / 2) : 0;
   return string.padStart(length - padLen, substr).padEnd(length, substr);
 }
 
