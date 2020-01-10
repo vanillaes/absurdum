@@ -15,7 +15,6 @@ export { fromPairs } from "./fromPairs.js";
 export { intersection } from "./intersection.js";
 export { map } from "./map.js";
 export { pull } from "./pull.js";
-export { slice } from "./slice.js";
 export { some } from "./some.js";
 export { takeRight } from "./takeRight.js";
 export { take } from "./take.js";
