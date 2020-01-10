@@ -69,7 +69,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [frequency][arrays.frequency]
 - [fromPairs][arrays.fromPairs]
 - [intersection][arrays.intersection]
-- [lastIndexOf][arrays.lastIndexOf]
 - [map][arrays.map]
 - [pull][arrays.pull]
 - [reduceRight][arrays.reduceRight]
@@ -101,7 +100,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [arrays.frequency]: ./docs/arrays/frequency.md
 [arrays.fromPairs]: ./docs/arrays/fromPairs.md
 [arrays.intersection]: ./docs/arrays/intersection.md
-[arrays.lastIndexOf]: ./docs/arrays/lastIndexOf.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.pull]: ./docs/arrays/pull.md
 [arrays.reduceRight]: ./docs/arrays/reduceRight.md
