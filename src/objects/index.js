@@ -10,7 +10,6 @@ export { has } from './has.js';
 export { get } from './get.js';
 export { include } from './include.js';
 export { invert } from './invert.js';
-export { keys } from './keys.js';
 export { mapKeys } from './mapKeys.js';
 export { mapValues } from './mapValues.js';
 export { merge } from './merge.js';

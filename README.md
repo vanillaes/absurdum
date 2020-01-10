@@ -136,7 +136,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [get][objects.get]
 - [include][objects.include]
 - [invert][objects.invert]
-- [keys][objects.keys]
 - [mapKeys][objects.mapKeys]
 - [mapValues][objects.mapValues]
 - [merge][objects.merge]
@@ -157,7 +156,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [objects.get]: ./docs/objects/get.md
 [objects.include]: ./docs/objects/include.md
 [objects.invert]: ./docs/objects/invert.md
-[objects.keys]: ./docs/objects/keys.md
 [objects.mapKeys]: ./docs/objects/mapKeys.md
 [objects.mapValues]: ./docs/objects/mapValues.md
 [objects.merge]: ./docs/objects/merge.md
