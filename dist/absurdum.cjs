@@ -409,23 +409,6 @@ function pull (array, ...values) {
 }
 
 /**
- * Reverses the order of the values of an array
- *
- * @param {Array} array input array
- * @returns {Array} input array in reversed order
- *
- * @example
- * const result = arrays.reverse([1, 2, 3, 4]);
- * > [4, 3, 2, 1]
- */
-function reverse (array) {
-  return array.reduce((acc, curr, idx, arr) => {
-    acc.push(arr[arr.length - idx - 1]);
-    return acc;
-  }, []);
-}
-
-/**
  * Take method returns a slice of array between input indexes start and end
  *
  * @param {Array} array input array
@@ -721,7 +704,6 @@ var index = /*#__PURE__*/Object.freeze({
   intersection: intersection,
   map: map,
   pull: pull,
-  reverse: reverse,
   slice: slice,
   some: some,
   takeRight: takeRight,
@@ -1131,7 +1113,7 @@ function repeat (string, count) {
  * console.log(result);
  * > desrever eb lliw gnirts sihT
  */
-function reverse$1 (string) {
+function reverse (string) {
   return string.split('').reduce((acc, curr) => {
     return curr + acc;
   }, '');
@@ -1215,7 +1197,7 @@ var index$1 = /*#__PURE__*/Object.freeze({
   padStart: padStart,
   pascalCase: pascalCase,
   repeat: repeat,
-  reverse: reverse$1,
+  reverse: reverse,
   snakeCase: snakeCase,
   startsWith: startsWith
 });
