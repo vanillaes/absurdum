@@ -18,7 +18,6 @@ export { intersection } from "./intersection.js";
 export { lastIndexOf } from "./lastIndexOf.js";
 export { map } from "./map.js";
 export { pull } from "./pull.js";
-export { reduceRight } from "./reduceRight.js";
 export { reverse } from "./reverse.js";
 export { slice } from "./slice.js";
 export { some } from "./some.js";
