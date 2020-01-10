@@ -13,7 +13,6 @@ export { flat } from './flat.js';
 export { frequency } from './frequency.js';
 export { fromPairs } from './fromPairs.js';
 export { intersection } from './intersection.js';
-export { lastIndexOf } from './lastIndexOf.js';
 export { map } from './map.js';
 export { pull } from './pull.js';
 export { reduceRight } from './reduceRight.js';
