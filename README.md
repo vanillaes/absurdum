@@ -71,7 +71,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [intersection][arrays.intersection]
 - [map][arrays.map]
 - [pull][arrays.pull]
-- [reduceRight][arrays.reduceRight]
 - [reverse][arrays.reverse]
 - [slice][arrays.slice]
 - [some][arrays.some]
@@ -102,7 +101,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [arrays.intersection]: ./docs/arrays/intersection.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.pull]: ./docs/arrays/pull.md
-[arrays.reduceRight]: ./docs/arrays/reduceRight.md
 [arrays.reverse]: ./docs/arrays/reverse.md
 [arrays.slice]: ./docs/arrays/slice.md
 [arrays.some]: ./docs/arrays/some.md
