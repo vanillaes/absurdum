@@ -329,25 +329,6 @@ function frequency (array) {
 }
 
 /**
- * FromPairs takes an array of arrays with key-value pairs and returns an
- * object composed from key-value pairs.
- *
- * @param {Array} array input key-value pairs in an array of arrays
- * @returns {object} object filtered to only include elemnts with a key from the filter
- *
- * @example
- * const result = objects.fromPairs([['age', 12034], ['name', 'Trair'],['state', 'Floating']]);
- * console.log(result);
- * > { age: 12034, name: 'Trair', state: 'Floating' }
- */
-function fromPairs (array) {
-  return array.reduce((acc, curr) => {
-    acc[curr[0]] = curr[1];
-    return acc;
-  }, {});
-}
-
-/**
  * Intersection creates an array of unique values that are included in all given arrays
  *
  * @param {Array} arrays input array(s)
@@ -677,7 +658,6 @@ var index = /*#__PURE__*/Object.freeze({
   findLastIndex: findLastIndex,
   flat: flat,
   frequency: frequency,
-  fromPairs: fromPairs,
   intersection: intersection,
   map: map,
   pull: pull,
@@ -1386,41 +1366,6 @@ const objContained = (obj1, obj2) => {
 };
 
 /**
- * forIn Iterates over own and inherited enumerable string keyed properties of an object and invokes
- * iteratee for each property. The iteratee is invoked with three arguments: (value, key, object)
- *
- * @param {Object} object input object
- * @param {Function} func function invoked per iteration
- * @returns {Object} original object
- *
- * @example
- * const Obj_A = function () {
- *   this.a = 5;
- *   this.b = 10;
- * }
- * Obj_A.prototype.c = 15;
- * const result = objects.forIn(new Obj_A, (v, k, o) => console.log(v));
- * console.log(result);
- * // 5
- * // 10
- * // 15
- * > { a: 5, b: 10 }
- */
-function forIn (object, func) {
-  const local = Object.entries(object);
-  const objProto = Object.getPrototypeOf(object);
-  const proto = objProto ? Object.entries(objProto) : [];
-  const entries = new Set([...local, ...proto]);
-
-  [...entries].reduce((_, [key, value]) => {
-    func(value, key, object);
-    return null;
-  }, null);
-
-  return object;
-}
-
-/**
  * FindLastKey returns the key of the last property value for which a supplied function returns true
  *
  * @param {object} object input object
@@ -1480,6 +1425,60 @@ const objContained$1 = (obj1, obj2) => {
     return true;
   }, false);
 };
+
+/**
+ * forIn Iterates over own and inherited enumerable string keyed properties of an object and invokes
+ * iteratee for each property. The iteratee is invoked with three arguments: (value, key, object)
+ *
+ * @param {Object} object input object
+ * @param {Function} func function invoked per iteration
+ * @returns {Object} original object
+ *
+ * @example
+ * const Obj_A = function () {
+ *   this.a = 5;
+ *   this.b = 10;
+ * }
+ * Obj_A.prototype.c = 15;
+ * const result = objects.forIn(new Obj_A, (v, k, o) => console.log(v));
+ * console.log(result);
+ * // 5
+ * // 10
+ * // 15
+ * > { a: 5, b: 10 }
+ */
+function forIn (object, func) {
+  const local = Object.entries(object);
+  const objProto = Object.getPrototypeOf(object);
+  const proto = objProto ? Object.entries(objProto) : [];
+  const entries = new Set([...local, ...proto]);
+
+  [...entries].reduce((_, [key, value]) => {
+    func(value, key, object);
+    return null;
+  }, null);
+
+  return object;
+}
+
+/**
+ * FromEntries takes an array of arrays with key-value pairs and returns an
+ * object composed from key-value pairs.
+ *
+ * @param {Array} array input key-value pairs in an array of arrays
+ * @returns {object} an object composed from the key-value pairs
+ *
+ * @example
+ * const result = objects.fromEntries([['age', 12034], ['name', 'Trair'],['state', 'Floating']]);
+ * console.log(result);
+ * > { age: 12034, name: 'Trair', state: 'Floating' }
+ */
+function fromEntries (array) {
+  return array.reduce((acc, curr) => {
+    acc[curr[0]] = curr[1];
+    return acc;
+  }, {});
+}
 
 /**
  * Has, creates an array of values corresponding to paths of the object
@@ -1825,8 +1824,9 @@ var index$2 = /*#__PURE__*/Object.freeze({
   defaultsDeep: defaultsDeep,
   exclude: exclude,
   findKey: findKey,
-  forIn: forIn,
   findLastKey: findLastKey,
+  forIn: forIn,
+  fromEntries: fromEntries,
   has: has,
   get: get,
   include: include,
