@@ -67,7 +67,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [findLastIndex][arrays.findLastIndex]
 - [flat][arrays.flat]
 - [frequency][arrays.frequency]
-- [fromPairs][arrays.fromPairs]
 - [intersection][arrays.intersection]
 - [map][arrays.map]
 - [pull][arrays.pull]
@@ -95,7 +94,6 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [arrays.findLastIndex]: ./docs/arrays/findLastIndex.md
 [arrays.flat]: ./docs/arrays/flat.md
 [arrays.frequency]: ./docs/arrays/frequency.md
-[arrays.fromPairs]: ./docs/arrays/fromPairs.md
 [arrays.intersection]: ./docs/arrays/intersection.md
 [arrays.map]: ./docs/arrays/map.md
 [arrays.pull]: ./docs/arrays/pull.md
@@ -120,6 +118,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [findKey][objects.findKey]
 - [forIn][objects.forIn]
 - [findLastKey][objects.findLastKey]
+- [fromEntries][objects.fromEntries]
 - [has][objects.has]
 - [get][objects.get]
 - [include][objects.include]
@@ -140,6 +139,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [objects.findKey]: ./docs/objects/findKey.md
 [objects.forIn]: ./docs/objects/forIn.md
 [objects.findLastKey]: ./docs/objects/findLastKey.md
+[objects.fromEntries]: ./docs/objects/fromEntries.md
 [objects.has]: ./docs/objects/has.md
 [objects.get]: ./docs/objects/get.md
 [objects.include]: ./docs/objects/include.md

@@ -1,4 +1,4 @@
-# arrays.fromPairs
+# objects.fromEntries
 
 <!-- div class="doc-container" -->
 
@@ -7,20 +7,20 @@
 
 <!-- div -->
 
-<h3 id="frompairsarray"><code>fromPairs(array)</code></h3>
+<h3 id="fromentriesarray"><code>fromEntries(array)</code></h3>
 
-FromPairs takes an array of arrays with key-value pairs and returns an
+FromEntries takes an array of arrays with key-value pairs and returns an
 object composed from key-value pairs.
 
 #### Arguments
 1. `array` *(Array)*: input key-value pairs in an array of arrays
 
 #### Returns
-*(object)*: object filtered to only include elemnts with a key from the filter
+*(object)*: an object composed from the key-value pairs
 
 #### Example
 ```js
-const result = objects.fromPairs([['age', 12034], ['name', 'Trair'],['state', 'Floating']]);
+const result = objects.fromEntries([['age', 12034], ['name', 'Trair'],['state', 'Floating']]);
 console.log(result);
 > { age: 12034, name: 'Trair', state: 'Floating' }
 ```
