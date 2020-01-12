@@ -114,6 +114,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [at][objects.at]
 - [defaults][objects.defaults]
 - [defaultsDeep][objects.defaultsDeep]
+- [entries][objects.entries]
 - [exclude][objects.exclude]
 - [findKey][objects.findKey]
 - [forIn][objects.forIn]
@@ -135,6 +136,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [objects.at]: ./docs/objects/at.md
 [objects.defaults]: ./docs/objects/defaults.md
 [objects.defaultsDeep]: ./docs/objects/defaultsDeep.md
+[objects.entries]: ./docs/objects/entries.md
 [objects.exclude]: ./docs/objects/exclude.md
 [objects.findKey]: ./docs/objects/findKey.md
 [objects.forIn]: ./docs/objects/forIn.md
