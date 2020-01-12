@@ -13,3 +13,4 @@ export { reverse } from './reverse.js';
 export { snakeCase } from './snakeCase.js';
 export { startsWith } from './startsWith.js';
 export { trimStart } from './trimStart.js';
+export { trimEnd } from './trimEnd.js';
