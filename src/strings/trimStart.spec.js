@@ -11,7 +11,7 @@ test('strings.trimStart(string) - returns the string with all spaces removed fro
   t.end();
 });
 
-test('strings.trimStart(string, chars) - returns falsy when the string does not start with the charsing', t => {
+test('strings.trimStart(string, chars) - returns the string with all passed characters removed from the beginning', t => {
   const expect = 'Time:Warp::';
   const result = strings.trimStart('::Time:Warp::', ':');
 
@@ -21,7 +21,7 @@ test('strings.trimStart(string, chars) - returns falsy when the string does not 
   t.end();
 });
 
-test('strings.trimStart(string, chars) - returns falsy when the string does not start with the substring', t => {
+test('strings.trimStart(string, chars) - returns the string with all passed characters removed from the beginning', t => {
   const expect = 'abc-_-';
   const result = strings.trimStart('-_-abc-_-', '_-');
 

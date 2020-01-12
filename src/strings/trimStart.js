@@ -10,7 +10,7 @@
  * console.log(result);
  * > 'abc-_-'
  */
-function trimStart (string, chars = ' ') {
+function trimStart (string = '', chars = ' ') {
   const testChars = new Set([...chars]);
   let first = true;
   return [...string].reduce((acc, curr) => {
