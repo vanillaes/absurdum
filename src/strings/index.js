@@ -1,5 +1,6 @@
 export { camelCase } from './camelCase.js';
 export { chomp } from './chomp.js';
+export { deburr } from './deburr.js';
 export { endsWith } from './endsWith.js';
 export { includes } from './includes.js';
 export { kebabCase } from './kebabCase.js';

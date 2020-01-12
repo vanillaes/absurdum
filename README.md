@@ -156,6 +156,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 
 - [camelCase][strings.camelCase]
 - [chomp][strings.chomp]
+- [deburr][strings.deburr]
 - [endsWith][strings.endswith]
 - [includes][strings.includes]
 - [kebabCase][strings.kebabCase]
@@ -170,6 +171,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 
 [strings.camelCase]: ./docs/strings/camelCase.md
 [strings.chomp]: ./docs/strings/chomp.md
+[strings.deburr]: ./docs/strings/deburr.md
 [strings.endswith]: ./docs/strings/endsWith.md
 [strings.includes]: ./docs/strings/includes.md
 [strings.kebabCase]: ./docs/strings/kebabCase.md
