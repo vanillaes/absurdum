@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "checkJs": true,
-    "target": "es2017"
+    "target": "ESNext",
+    "checkJs": true
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "../index.js"
-  ],
-  "exclude": [
-    "docs.config.js"
   ]
 }
