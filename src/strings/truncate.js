@@ -31,23 +31,31 @@ function truncate (string = '', options) {
   let result = string.slice(0, end);
   if (separator === undefined) { return result + omission; }
 
-  if (Object.prototype.toString.call(separator) === '[object RegExp]') {
-    if (string.slice(end).search(separator)) {
+  let strSeparator;
+  let regexSeparator;
+  if (typeof separator === 'string') {
+    strSeparator = separator;
+  } else {
+    regexSeparator = separator;
+  }
+
+  if (regexSeparator) {
+    if (string.slice(end).search(regexSeparator)) {
       let match, newEnd;
       const substring = result;
-      if (!separator.global) {
-        separator = RegExp(separator.source, separator.flags + 'g');
+      if (!regexSeparator.global) {
+        regexSeparator = RegExp(regexSeparator.source, regexSeparator.flags + 'g');
       }
-      separator.lastIndex = 0;
-      match = separator.exec(substring);
+      regexSeparator.lastIndex = 0;
+      match = regexSeparator.exec(substring);
       while (match) {
         newEnd = match.index;
-        match = separator.exec(substring);
+        match = regexSeparator.exec(substring);
       }
       result = result.slice(0, newEnd === undefined ? end : newEnd);
     }
-  } else if (string.indexOf(separator, end) !== end) {
-    const index = result.lastIndexOf(separator);
+  } else if (string.indexOf(strSeparator, end) !== end) {
+    const index = result.lastIndexOf(strSeparator);
     if (index > -1) {
       result = result.slice(0, index);
     }
