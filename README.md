@@ -172,6 +172,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 - [startsWith][strings.startswith]
 - [trimStart][strings.trimStart]
 - [trimEnd][strings.trimEnd]
+- [truncate][strings.truncate]
 
 [strings.camelCase]: ./docs/strings/camelCase.md
 [strings.chomp]: ./docs/strings/chomp.md
@@ -189,6 +190,7 @@ const absurdum = require('absurdum/dist/absurdum.cjs');
 [strings.startswith]: ./docs/strings/startsWith.md
 [strings.trimStart]: ./docs/strings/trimStart.md
 [strings.trimEnd]: ./docs/strings/trimEnd.md
+[strings.truncate]: ./docs/strings/truncate.md
 
 <!-- ### Elements -->
 
