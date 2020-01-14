@@ -15,3 +15,4 @@ export { startsWith } from './startsWith.js';
 export { trimStart } from './trimStart.js';
 export { trimEnd } from './trimEnd.js';
 export { truncate } from './truncate.js';
+export { words } from './words.js';
