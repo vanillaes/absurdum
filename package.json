@@ -50,6 +50,7 @@
     "@types/tape": "^4.2.33",
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
+    "rollup-plugin-terser": "^5.2.0",
     "semistandard": "^14.2.0",
     "tape-es": "^1.1.1"
   },
