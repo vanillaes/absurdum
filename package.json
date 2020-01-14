@@ -35,6 +35,7 @@
     "build": "npm run build:cjs && npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
     "build:cjs": "npx rollup --config .config/cjs.config.js",
+    "build:min": "npx rollup --config .config/min.config.js",
     "build:typings": "npx tsc -p .config/tsconfig.json",
     "clean": "npm run clean:docs && npm run clean:bundles && npm run clean:typings",
     "clean:docs": "npx rimraf docs/*.md",
