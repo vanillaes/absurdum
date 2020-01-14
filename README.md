@@ -44,10 +44,10 @@ console.log(output);
 
 ## CommonJS
 
-A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
+A CommonJS bundle is included for backward compatibility with `node <= 13.2`
 
 ```javascript
-const absurdum = require('absurdum/dist/absurdum.cjs');
+const absurdum = require('absurdum/index.cjs');
 ```
 
 ## API Documentation

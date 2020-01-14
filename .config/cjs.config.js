@@ -1,7 +1,7 @@
 export default {
   input: 'index.js',
   output: {
-    file: 'dist/absurdum.cjs',
+    file: 'index.cjs',
     format: 'cjs'
   }
 };
