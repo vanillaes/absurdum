@@ -1,7 +1,6 @@
 .config/
 .github/
 .vscode/
-compat/
+CONTRIBUTING.md
 *.spec.js
 *.tgz
-CONTRIBUTING.md
