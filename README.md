@@ -123,7 +123,6 @@ const absurdum = require('absurdum/index.cjs');
 - [fromEntries][objects.fromEntries]
 - [has][objects.has]
 - [get][objects.get]
-- [include][objects.include]
 - [invert][objects.invert]
 - [mapKeys][objects.mapKeys]
 - [mapValues][objects.mapValues]
@@ -146,7 +145,6 @@ const absurdum = require('absurdum/index.cjs');
 [objects.fromEntries]: ./docs/objects/fromEntries.md
 [objects.has]: ./docs/objects/has.md
 [objects.get]: ./docs/objects/get.md
-[objects.include]: ./docs/objects/include.md
 [objects.invert]: ./docs/objects/invert.md
 [objects.mapKeys]: ./docs/objects/mapKeys.md
 [objects.mapValues]: ./docs/objects/mapValues.md
