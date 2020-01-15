@@ -3,7 +3,6 @@ export { compact } from "./compact.js";
 export { difference } from "./difference.js";
 export { drop } from "./drop.js";
 export { dropRight } from "./dropRight.js";
-export { every } from "./every.js";
 export { fill } from "./fill.js";
 export { filter } from "./filter.js";
 export { find } from "./find.js";
