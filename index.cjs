@@ -1575,6 +1575,31 @@ function exclude (object, filter) {
 }
 
 /**
+ * Filter iterates over an object and applies a function to each property, for all properties
+ * where the function it returns true return that property in a new object. Function is invoked
+ * with 3 arguments (value, key, object)
+ *
+ * @param {Object} object input object
+ * @param {Function} filter function to check what properties to include
+ * @returns {Object} object with selected properties
+ *
+ * @example
+ * const obj = { small: "ant", medium: "dog", big: "elephant" }
+ * const result = objects.filter(obj, (value, key, object) => ['small', 'big'].includes(key)));
+ * console.log(result);
+ * > { small: "ant", big: "elephant" }
+ */
+function filter$1 (object, filter) {
+  if (typeof filter !== 'function') { return object; }
+  return Object.keys(object).reduce((acc, key) => {
+    if (filter(object[key], key, object) === true) {
+      acc[key] = object[key];
+    }
+    return acc;
+  }, {});
+}
+
+/**
  * FindKey returns the key of the first property value for which a supplied function returns true
  *
  * @param {object} object input object
@@ -2094,6 +2119,7 @@ var index$2 = /*#__PURE__*/Object.freeze({
   defaultsDeep: defaultsDeep,
   entries: entries,
   exclude: exclude,
+  filter: filter$1,
   findKey: findKey,
   findLastKey: findLastKey,
   forIn: forIn,
