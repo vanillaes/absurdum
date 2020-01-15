@@ -14,7 +14,6 @@ export { frequency } from "./frequency.js";
 export { intersection } from "./intersection.js";
 export { map } from "./map.js";
 export { pull } from "./pull.js";
-export { some } from "./some.js";
 export { takeRight } from "./takeRight.js";
 export { take } from "./take.js";
 export { union } from "./union.js";
