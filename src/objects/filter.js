@@ -13,10 +13,10 @@
  * console.log(result);
  * > { small: "ant", big: "elephant" }
  */
-function filter (object, func) {
-  if (typeof func !== 'function') { return object; }
+function filter (object, filter) {
+  if (typeof filter !== 'function') { return object; }
   return Object.keys(object).reduce((acc, key) => {
-    if (func(object[key], key, object) === true) {
+    if (filter(object[key], key, object) === true) {
       acc[key] = object[key];
     }
     return acc;
