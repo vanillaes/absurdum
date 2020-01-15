@@ -470,29 +470,6 @@ function take (array, len = 1) {
 }
 
 /**
- * Applies a function to each element in the array without mutating it
- *
- * @param {Array} array input array
- * @param {Function} func function to apply
- * @returns {Array} input array unchanged
- *
- * @example
- * const result = arrays.tap([1, 2, 3, 4], console.log);
- * > 1
- * > 2
- * > 3
- * > 4
- * console.log(result);
- * > [1, 2, 3, 4]
- */
-function tap (array, func) {
-  return array.reduce((acc, cur) => {
-    func(cur);
-    return [...acc, cur];
-  }, []);
-}
-
-/**
  * Union creates an array of unique elements from all given arrays in order encountered
  *
  * @param {Array} arrays input arrays
@@ -664,7 +641,6 @@ var index = /*#__PURE__*/Object.freeze({
   some: some,
   takeRight: takeRight,
   take: take,
-  tap: tap,
   union: union,
   unique: unique,
   unzip: unzip,
