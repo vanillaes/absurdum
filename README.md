@@ -59,7 +59,6 @@ const absurdum = require('absurdum/index.cjs');
 - [difference][arrays.difference]
 - [drop][arrays.drop]
 - [dropRight][arrays.dropRight]
-- [every][arrays.every]
 - [fill][arrays.fill]
 - [filter][arrays.filter]
 - [find][arrays.find]
@@ -84,7 +83,6 @@ const absurdum = require('absurdum/index.cjs');
 [arrays.difference]: ./docs/arrays/difference.md
 [arrays.drop]: ./docs/arrays/drop.md
 [arrays.dropRight]: ./docs/arrays/dropRight.md
-[arrays.every]: ./docs/arrays/every.md
 [arrays.fill]: ./docs/arrays/fill.md
 [arrays.filter]: ./docs/arrays/filter.md
 [arrays.find]: ./docs/arrays/find.md
