@@ -73,7 +73,6 @@ const absurdum = require('absurdum/index.cjs');
 - [some][arrays.some]
 - [take][arrays.take]
 - [takeRight][arrays.takeRight]
-- [tap][arrays.tap]
 - [union][arrays.union]
 - [unique][arrays.unique]
 - [unzip][arrays.unzip]
@@ -98,7 +97,6 @@ const absurdum = require('absurdum/index.cjs');
 [arrays.map]: ./docs/arrays/map.md
 [arrays.pull]: ./docs/arrays/pull.md
 [arrays.some]: ./docs/arrays/some.md
-[arrays.tap]: ./docs/arrays/tap.md
 [arrays.take]: ./docs/arrays/take.md
 [arrays.takeRight]: ./docs/arrays/takeRight.md
 [arrays.union]: ./docs/arrays/union.md

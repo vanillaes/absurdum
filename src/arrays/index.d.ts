@@ -17,7 +17,6 @@ export { pull } from "./pull.js";
 export { some } from "./some.js";
 export { takeRight } from "./takeRight.js";
 export { take } from "./take.js";
-export { tap } from "./tap.js";
 export { union } from "./union.js";
 export { unique } from "./unique.js";
 export { unzip } from "./unzip.js";
