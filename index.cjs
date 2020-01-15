@@ -839,6 +839,40 @@ function endsWith (string, substr = '') {
 }
 
 /**
+ * Includes determines whether one string can be found in another string
+ *
+ * @param {string} string input string
+ * @param {string} substr candidate string to be searched for
+ * @param {Number} start optional index to begin search for string
+ * @returns {boolean} does the input string include the substring?
+ *
+ * @example
+ * const result = strings.includes('This Lovely Life', 'Love');
+ * console.log(result);
+ * > true
+ * @example
+ * const result = strings.includes('This Lovely Life', 'Love', 5);
+ * console.log(result);
+ * > false
+ */
+function includes (string, substr, start = 0) {
+  if (string.length === 0) return false;
+  const len = substr.length;
+  const first = substr.charAt(0);
+  if (start === 0 && string.substring(0, len) === substr) return true;
+
+  return string.split('').reduce((res, cur, i) => {
+    if (i >= start) {
+      if (res) return res;
+      if (cur === first) {
+        return string.substring(i, i + len) === substr;
+      }
+    }
+    return false;
+  }, false);
+}
+
+/**
  * kebabCase updates a string to kebabcase
  *
  * @param {string} [string=''] input string
@@ -1819,26 +1853,6 @@ function get (object, path, defaultValue) {
 }
 
 /**
- * Include filters elements in a new object based on an array of keys to include
- *
- * @param {object} object input string
- * @param {array} filter array of keys to be kept in the filtered object
- * @returns {object} object filtered to only include elemnts with a key from the filter
- *
- * @example
- * const result = objects.include({ small: "ant", medium: "dog", big: "elephant" }, ['small', 'big']);
- * console.log(result);
- * > { small: 'ant', big: 'elephant' }
- */
-function include (object, filter) {
-  const filterSet = new Set(filter);
-  return Object.entries(object).reduce((acc, curr) => {
-    if (filterSet.has(curr[0])) { acc[curr[0]] = curr[1]; }
-    return acc;
-  }, {});
-}
-
-/**
  * Create a new object with key-value pairs inverted, in the case of duplicate values the latter value
  * will overwrite the previous value.
  *
@@ -2092,7 +2106,6 @@ var index$2 = /*#__PURE__*/Object.freeze({
   fromEntries: fromEntries,
   has: has,
   get: get,
-  include: include,
   invert: invert,
   mapKeys: mapKeys,
   mapValues: mapValues,
