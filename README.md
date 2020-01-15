@@ -117,11 +117,11 @@ const absurdum = require('absurdum/index.cjs');
 - [entries][objects.entries]
 - [filter][objects.filter]
 - [findKey][objects.findKey]
-- [forIn][objects.forIn]
 - [findLastKey][objects.findLastKey]
+- [forIn][objects.forIn]
 - [fromEntries][objects.fromEntries]
-- [has][objects.has]
 - [get][objects.get]
+- [has][objects.has]
 - [invert][objects.invert]
 - [mapKeys][objects.mapKeys]
 - [mapValues][objects.mapValues]
@@ -137,12 +137,13 @@ const absurdum = require('absurdum/index.cjs');
 [objects.defaultsDeep]: ./docs/objects/defaultsDeep.md
 [objects.entries]: ./docs/objects/entries.md
 [objects.exclude]: ./docs/objects/exclude.md
+[objects.filter]: ./docs/objects/filter.md
 [objects.findKey]: ./docs/objects/findKey.md
-[objects.forIn]: ./docs/objects/forIn.md
 [objects.findLastKey]: ./docs/objects/findLastKey.md
+[objects.forIn]: ./docs/objects/forIn.md
 [objects.fromEntries]: ./docs/objects/fromEntries.md
-[objects.has]: ./docs/objects/has.md
 [objects.get]: ./docs/objects/get.md
+[objects.has]: ./docs/objects/has.md
 [objects.invert]: ./docs/objects/invert.md
 [objects.mapKeys]: ./docs/objects/mapKeys.md
 [objects.mapValues]: ./docs/objects/mapValues.md
@@ -168,8 +169,8 @@ const absurdum = require('absurdum/index.cjs');
 - [reverse][strings.reverse]
 - [snakeCase][strings.snakeCase]
 - [startsWith][strings.startswith]
-- [trimStart][strings.trimStart]
 - [trimEnd][strings.trimEnd]
+- [trimStart][strings.trimStart]
 - [truncate][strings.truncate]
 - [words][strings.words]
 
@@ -187,12 +188,10 @@ const absurdum = require('absurdum/index.cjs');
 [strings.reverse]: ./docs/strings/reverse.md
 [strings.snakeCase]: ./docs/strings/snakeCase.md
 [strings.startswith]: ./docs/strings/startsWith.md
-[strings.trimStart]: ./docs/strings/trimStart.md
 [strings.trimEnd]: ./docs/strings/trimEnd.md
+[strings.trimStart]: ./docs/strings/trimStart.md
 [strings.truncate]: ./docs/strings/truncate.md
 [strings.words]: ./docs/strings/words.md
-
-<!-- ### Elements -->
 
 [Array.prototype.reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
