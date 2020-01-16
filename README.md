@@ -54,29 +54,31 @@ const absurdum = require('absurdum/index.cjs');
 
 ### Arrays
 
-- [chunk][arrays.chunk]
-- [compact][arrays.compact]
-- [difference][arrays.difference]
-- [drop][arrays.drop]
-- [dropRight][arrays.dropRight]
-- [fill][arrays.fill]
-- [filter][arrays.filter]
-- [find][arrays.find]
-- [findIndex][arrays.findIndex]
-- [findLastIndex][arrays.findLastIndex]
-- [flat][arrays.flat]
-- [frequency][arrays.frequency]
-- [intersection][arrays.intersection]
-- [map][arrays.map]
-- [pull][arrays.pull]
-- [take][arrays.take]
-- [takeRight][arrays.takeRight]
-- [union][arrays.union]
-- [unique][arrays.unique]
-- [unzip][arrays.unzip]
-- [without][arrays.without]
-- [xor][arrays.xor]
-- [zip][arrays.zip]
+| Operator                            | Lodash            | Polyfills                     |
+|-------------------------------------|-------------------|-------------------------------|
+|[chunk][arrays.chunk]                |[_.chunk][]        |                               |
+|[compact][arrays.compact]            |[_.compact][]      |                               |
+|[difference][arrays.difference]      |[_.difference][]   |                               |
+|[drop][arrays.drop]                  |[_.drop][]         |                               |
+|[dropRight][arrays.dropRight]        |[_.dropRight][]    |                               |
+|[fill][arrays.fill]                  |[_.fill][]         |[Array.prototype.fill][]       |
+|[filter][arrays.filter]              |[_.filter][]       |                               |
+|[find][arrays.find]                  |[_.find][]         |[Array.prototype.find][]       |
+|[findIndex][arrays.findIndex]        |[_.findIndex][]    |[Array.prototype.findIndex][]  |
+|[findLastIndex][arrays.findLastIndex]|[_.findLastIndex][]|                               |
+|[flat][arrays.flat]                  |[_.flatten][]      |[Array.prototype.flat][]       |
+|[frequency][arrays.frequency]        |                   |                               |
+|[intersection][arrays.intersection]  |[_.intersection][] |                               |
+|[map][arrays.map]                    |[_.map][]          |                               |
+|[pull][arrays.pull]                  |[_.pull][]         |                               |
+|[take][arrays.take]                  |[_.take][]         |                               |
+|[takeRight][arrays.takeRight]        |[_.takeRight][]    |                               |
+|[union][arrays.union]                |[_.union][]        |                               |
+|[unique][arrays.unique]              |[_.uniq][]         |                               |
+|[unzip][arrays.unzip]                |[_.unzip][]        |                               |
+|[without][arrays.without]            |[_.without][]      |                               |
+|[xor][arrays.xor]                    |[_.xor][]          |                               |
+|[zip][arrays.zip]                    |[_.zip][]          |                               |
 
 [arrays.chunk]: ./docs/arrays/chunk.md
 [arrays.compact]: ./docs/arrays/compact.md
@@ -102,28 +104,58 @@ const absurdum = require('absurdum/index.cjs');
 [arrays.xor]: ./docs/arrays/xor.md
 [arrays.zip]: ./docs/arrays/zip.md
 
+[_.chunk]: https://lodash.com/docs/#chunk
+[_.compact]: https://lodash.com/docs/#compact
+[_.difference]: https://lodash.com/docs/#difference
+[_.drop]: https://lodash.com/docs/#drop
+[_.dropRight]: https://lodash.com/docs/#dropRight
+[_.fill]: https://lodash.com/docs/#fill
+[_.filter]: https://lodash.com/docs/#filter
+[_.find]: https://lodash.com/docs/#find
+[_.findIndex]: https://lodash.com/docs/#findIndex
+[_.findLastIndex]: https://lodash.com/docs/#findLastIndex
+[_.flatten]: https://lodash.com/docs/#flatten
+[_.intersection]: https://lodash.com/docs/#intersection
+[_.map]: https://lodash.com/docs/#map
+[_.pull]: https://lodash.com/docs/#pull
+[_.take]: https://lodash.com/docs/#take
+[_.takeRight]: https://lodash.com/docs/#takeRight
+[_.union]: https://lodash.com/docs/#union
+[_.uniq]: https://lodash.com/docs/#uniq
+[_.unzip]: https://lodash.com/docs/#unzip
+[_.without]: https://lodash.com/docs/#without
+[_.xor]: https://lodash.com/docs/#xor
+[_.zip]: https://lodash.com/docs/#zip
+
+[Array.prototype.fill]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
+[Array.prototype.find]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+[Array.prototype.findIndex]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+[Array.prototype.flat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+
 ### Objects
 
-- [assign][objects.assign]
-- [at][objects.at]
-- [defaults][objects.defaults]
-- [defaultsDeep][objects.defaultsDeep]
-- [entries][objects.entries]
-- [filter][objects.filter]
-- [findKey][objects.findKey]
-- [findLastKey][objects.findLastKey]
-- [forIn][objects.forIn]
-- [fromEntries][objects.fromEntries]
-- [get][objects.get]
-- [has][objects.has]
-- [invert][objects.invert]
-- [mapKeys][objects.mapKeys]
-- [mapValues][objects.mapValues]
-- [merge][objects.merge]
-- [pick][objects.pick]
-- [result][objects.result]
-- [transform][objects.transform]
-- [values][objects.values]
+| Operator                            | Lodash            | Polyfills                     |
+|-------------------------------------|-------------------|-------------------------------|
+|[assign][objects.assign]             |[_.assign][]       |[Object.assign][]              |
+|[at][objects.at]                     |[_.at][]           |                               |
+|[defaults][objects.defaults]         |[_.defaults][]     |                               |
+|[defaultsDeep][objects.defaultsDeep] |[_.defaultsDeep][] |                               |
+|[entries][objects.entries]           |[_.toPairs][]      |[Object.entries][]             |
+|[filter][objects.filter]             |[_.filter][]       |                               |
+|[findKey][objects.findKey]           |[_.findKey][]      |                               |
+|[findLastKey][objects.findLastKey]   |[_.findLastKey][]  |                               |
+|[forIn][objects.forIn]               |[_.forIn][]        |                               |
+|[fromEntries][objects.fromEntries]   |[_.fromPairs][]    |[Object.fromEntries][]         |
+|[get][objects.get]                   |[_.get][]          |                               |
+|[has][objects.has]                   |[_.has][]          |                               |
+|[invert][objects.invert]             |[_.invert][]       |                               |
+|[mapKeys][objects.mapKeys]           |[_.mapKeys][]      |                               |
+|[mapValues][objects.mapValues]       |[_.mapValues][]    |                               |
+|[merge][objects.merge]               |[_.merge][]        |                               |
+|[pick][objects.pick]                 |[_.pick][]         |                               |
+|[result][objects.result]             |[_.result][]       |                               |
+|[transform][objects.transform]       |[_.transform][]    |                               |
+|[values][objects.values]             |[_.values][]       |[Object.values][]              |
 
 [objects.assign]: ./docs/objects/assign.md
 [objects.at]: ./docs/objects/at.md
@@ -147,26 +179,54 @@ const absurdum = require('absurdum/index.cjs');
 [objects.transform]: ./docs/objects/transform.md
 [objects.values]: ./docs/objects/values.md
 
+[_.assign]: https://lodash.com/docs/#assign
+[_.at]: https://lodash.com/docs/#at
+[_.defaults]: https://lodash.com/docs/#defaults
+[_.defaultsDeep]: https://lodash.com/docs/#defaultsDeep
+[_.toPairs]: https://lodash.com/docs/#toPairs
+[_.filter]: https://lodash.com/docs/#filter
+[_.findKey]: https://lodash.com/docs/#findKey
+[_.findLastKey]: https://lodash.com/docs/#findLastKey
+[_.forIn]: https://lodash.com/docs/#forIn
+[_.fromPairs]: https://lodash.com/docs/#fromPairs
+[_.get]: https://lodash.com/docs/#get
+[_.has]: https://lodash.com/docs/#has
+[_.invert]: https://lodash.com/docs/#invert
+[_.mapKeys]: https://lodash.com/docs/#mapKeys
+[_.mapValues]: https://lodash.com/docs/#mapValues
+[_.merge]: https://lodash.com/docs/#merge
+[_.pick]: https://lodash.com/docs/#pick
+[_.result]: https://lodash.com/docs/#result
+[_.transform]: https://lodash.com/docs/#transform
+[_.values]: https://lodash.com/docs/#values
+
+[Object.assign]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+[Object.entries]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+[Object.fromEntries]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+[Object.values]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
+
 ### Strings
 
-- [camelCase][strings.camelCase]
-- [chomp][strings.chomp]
-- [deburr][strings.deburr]
-- [endsWith][strings.endswith]
-- [includes][strings.includes]
-- [kebabCase][strings.kebabCase]
-- [pad][strings.pad]
-- [padEnd][strings.padEnd]
-- [padStart][strings.padStart]
-- [pascalCase][strings.pascalCase]
-- [repeat][strings.repeat]
-- [reverse][strings.reverse]
-- [snakeCase][strings.snakeCase]
-- [startsWith][strings.startswith]
-- [trimEnd][strings.trimEnd]
-- [trimStart][strings.trimStart]
-- [truncate][strings.truncate]
-- [words][strings.words]
+| Operator                            | Lodash            | Polyfills                     |
+|-------------------------------------|-------------------|-------------------------------|
+|[camelCase][strings.camelCase]       |[_.camelCase][]    |                               |
+|[chomp][strings.chomp]               |                   |                               |
+|[deburr][strings.deburr]             |[_.deburr][]       |                               |
+|[endsWith][strings.endswith]         |[_.endsWith][]     |[String.prototype.endsWith][]  |
+|[includes][strings.includes]         |                   |[String.prototype.includes][]  |
+|[kebabCase][strings.kebabCase]       |[_.kebabCase][]    |                               |
+|[pad][strings.pad]                   |[_.pad][]          |                               |
+|[padEnd][strings.padEnd]             |[_.padEnd][]       |[String.prototype.padEnd][]    |
+|[padStart][strings.padStart]         |[_.padStart][]     |[String.prototype.padStart][]  |
+|[pascalCase][strings.pascalCase]     |[_.startCase][]    |                               |
+|[repeat][strings.repeat]             |[_.repeat][]       |[String.prototype.repeat][]    |
+|[reverse][strings.reverse]           |                   |                               |
+|[snakeCase][strings.snakeCase]       |[_.snakeCase][]    |                               |
+|[startsWith][strings.startswith]     |[_.startsWith][]   |[String.prototype.startsWith][]|
+|[trimEnd][strings.trimEnd]           |[_.trimEnd][]      |[String.prototype.trimEnd][]   |
+|[trimStart][strings.trimStart]       |[_.trimStart][]    |[String.prototype.trimStart][] |
+|[truncate][strings.truncate]         |[_.truncate][]     |                               |
+|[words][strings.words]               |[_.words][]        |                               |
 
 [strings.camelCase]: ./docs/strings/camelCase.md
 [strings.chomp]: ./docs/strings/chomp.md
@@ -186,6 +246,31 @@ const absurdum = require('absurdum/index.cjs');
 [strings.trimStart]: ./docs/strings/trimStart.md
 [strings.truncate]: ./docs/strings/truncate.md
 [strings.words]: ./docs/strings/words.md
+
+[_.camelCase]: https://lodash.com/docs/#camelCase
+[_.deburr]: https://lodash.com/docs/#deburr
+[_.endsWith]: https://lodash.com/docs/#endsWith
+[_.kebabCase]: https://lodash.com/docs/#kebabCase
+[_.pad]: https://lodash.com/docs/#pad
+[_.padEnd]: https://lodash.com/docs/#padEnd
+[_.padStart]: https://lodash.com/docs/#padStart
+[_.startCase]: https://lodash.com/docs/#startCase
+[_.repeat]: https://lodash.com/docs/#repeat
+[_.snakeCase]: https://lodash.com/docs/#snakeCase
+[_.startsWith]: https://lodash.com/docs/#startsWith
+[_.trimEnd]: https://lodash.com/docs/#trimEnd
+[_.trimStart]: https://lodash.com/docs/#trimStart
+[_.truncate]: https://lodash.com/docs/#truncate
+[_.words]: https://lodash.com/docs/#words
+
+[String.prototype.endsWith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
+[String.prototype.includes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+[String.prototype.padEnd]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
+[String.prototype.padStart]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+[String.prototype.repeat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+[String.prototype.startsWith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
+[String.prototype.trimEnd]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
+[String.prototype.trimStart]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 
 [Array.prototype.reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
