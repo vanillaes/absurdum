@@ -1,33 +1,21 @@
+# Absurdum
+
 [![GitHub Releases](https://img.shields.io/github/release/vanillaes/absurdum.svg)](https://github.com/vanillaes/absurdum/releases)
 [![NPM Releases](https://img.shields.io/npm/v/absurdum.svg)](https://www.npmjs.com/package/absurdum)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillaes/absurdum/master/LICENSE)
 [![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 
-# Absurdum
+Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free functions and clear/readable modular source for tree shaking.
 
-> "if all you have is a hammer, everything looks like a nail" - Maslow's Hammer
+## Features
 
-In this package, [Array.prototype.reduce][] is the hammer
-
-## Why the Funky Name?
-
-It's a play on the latin phrase [Reductio ad absurdum][wikipedia]
-
-> In logic, reductio ad absurdum (Latin for "reduction to absurdity"; or argumentum ad absurdum, "argument to absurdity") is a form of argument which attempts either to disprove a statement by showing it inevitably leads to a ridiculous, absurd, or impractical conclusion, or to prove one by showing that if it were not true, the result would be absurd or impossible.
-
-It is often said that of the big trio `map`, `filter`, and `reduce`, the first two are redundant. In fact, it's trivial to implement both `map` and `filter` using `reduce`.
-
-This library exists to take that concept to an absurd extreme by using `reduce` to implement as many different types of functional transforms as possible.
-
-## What's the Point?
-
-- It's a challenge
-- It's good practice
-- It forces you to code/think in a functional manner
-- Who cares, it's fun
-
-...and just maybe, new patterns/practice will emerge from pushing `reduce` to its limits.
+- Exploration of the flexibility of Reduce
+- Source of functions is viewable in one file
+- CommonJS and ES2015 module support
+- All functions are side-effect free
+- Polyfills for older environments
+- Executes on VanillaJS data structures
 
 ## Usage
 
