@@ -1426,18 +1426,18 @@ const arrayMerge = (current, source) => {
 const objectMerge = (current, source) => {
   const res = {};
   if (typeof current === 'object') {
-    Object.entries(current).reduce((_, [key, value]) => {
-      if (typeof res[key] === 'undefined') { res[key] = value; }
+    Object.keys(current).reduce((_, key) => {
+      if (typeof res[key] === 'undefined') { res[key] = current[key]; }
       return null;
     }, null);
   } else {
     return current;
   }
-  Object.entries(source).reduce((_, [key, value]) => {
-    if (typeof value !== 'object' || !current[key]) {
-      if (typeof res[key] === 'undefined') { res[key] = value; }
+  Object.keys(source).reduce((_, key) => {
+    if (typeof source[key] !== 'object' || !current[key]) {
+      if (typeof res[key] === 'undefined') { res[key] = source[key]; }
     } else {
-      res[key] = deepMerge(current[key], value);
+      res[key] = deepMerge(current[key], source[key]);
     }
     return null;
   }, null);
