@@ -2,9 +2,9 @@
  * Zip applies a specified function to the corresponding elements of two sequences,
  * producing a sequence of the results.
  *
- * @param {Array} array1 input array
- * @param {Array} array2 input array
- * @param {Function} [predicate=(a, b)=>[a, b]] to be applied to corresponding values
+ * @param {Array} arrayA input array
+ * @param {Array} ArrayB input array
+ * @param {Function} [func=(a, b)=>[a, b]] to be applied to corresponding values
  * @returns {Array} input array filled value pairs after the function has been applied
  *
  * @example
@@ -16,18 +16,18 @@
  * console.log(result)
  * > [ 'ham 5', 'cheese 12', 'bread 8' ]
  */
-function zip (array1, array2, predicate = (a, b) => [a, b]) {
-  if (predicate && typeof predicate !== 'function') {
-    throw TypeError('predicate must be a function');
+function zip (arrayA, ArrayB, func = (a, b) => [a, b]) {
+  if (func && typeof func !== 'function') {
+    throw TypeError('func must be a function');
   }
-  if (array1.length <= array2.length) {
-    return array1.reduce((res, cur, i) => {
-      res[i] = predicate(cur, array2[i]);
+  if (arrayA.length <= ArrayB.length) {
+    return arrayA.reduce((res, cur, i) => {
+      res[i] = func(cur, ArrayB[i]);
       return res;
     }, []);
   } else {
-    return array2.reduce((res, cur, i) => {
-      res[i] = predicate(array1[i], cur);
+    return ArrayB.reduce((res, cur, i) => {
+      res[i] = func(arrayA[i], cur);
       return res;
     }, []);
   }

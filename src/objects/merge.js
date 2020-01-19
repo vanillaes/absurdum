@@ -3,7 +3,7 @@
  * being merged recursively and other value types overridden when applied from left to right.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input object(s)
  * @returns {object} returns an object with all included object properties merged
  *
  * @example
@@ -38,7 +38,8 @@ const arrayMerge = (current, source) => {
     } else if (current.indexOf(elem) === -1) {
       res.push(elem);
     }
-  }, true);
+    return null;
+  }, null);
   return res;
 };
 

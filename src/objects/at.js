@@ -2,7 +2,7 @@
  * At, creates an array of values corresponding to paths of the object
  *
  * @param {object} object input object
- * @param {...(string|string[])} paths strings describing paths to be returned from an object
+ * @param {...(string|string[])} [paths] strings describing paths to be returned from an object
  * @returns {array} array of values found by object paths in object
  *
  * @example
@@ -17,7 +17,8 @@ function at (object, ...paths) {
   const filterPathArray = (x) => {
     x.reduce((_, curr, i) => {
       pathArray[i] = String(curr).replace(/\[(\w+)\]/g, '.$1').split('.');
-    }, true);
+      return null;
+    }, null);
   };
 
   if (Array.isArray(paths[0])) {

@@ -9,7 +9,7 @@
  * > [2, 1, 3]
  */
 function union (...arrays) {
-  return Array.from([...arrays].reduce((acc, curr, i) => {
+  return Array.from([...arrays].reduce((acc, curr) => {
     if (Array.isArray(curr)) {
       curr.reduce((res, cur) => {
         acc.add(cur);

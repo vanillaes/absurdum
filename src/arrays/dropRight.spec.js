@@ -1,7 +1,7 @@
 import test from 'tape';
 import { arrays } from '../../index.js';
 
-test('arrays.dropRight(array) - should return an array w/ the last item dropped when n is not specified', t => {
+test('arrays.dropRight(array) - should return an array w/ the last item dropped when count is not specified', t => {
   const expect = [1, 2];
   const result = arrays.dropRight([1, 2, 3]);
 
@@ -12,7 +12,7 @@ test('arrays.dropRight(array) - should return an array w/ the last item dropped 
   t.end();
 });
 
-test('arrays.dropRight(array, n) - should return an array with n items dropped from the end', t => {
+test('arrays.dropRight(array, count) - should return an array with count items dropped from the end', t => {
   const expect = [1];
   const result = arrays.dropRight([1, 2, 3], 2);
 
@@ -23,7 +23,7 @@ test('arrays.dropRight(array, n) - should return an array with n items dropped f
   t.end();
 });
 
-test('arrays.dropRight(array, n) - should return an empty array when n is larger than array.length', t => {
+test('arrays.dropRight(array, count) - should return an empty array when count is larger than array.length', t => {
   const expect = [];
   const result = arrays.dropRight([1, 2, 3], 5);
 
@@ -34,7 +34,7 @@ test('arrays.dropRight(array, n) - should return an empty array when n is larger
   t.end();
 });
 
-test('arrays.dropRight(array, n) - should return the input array when n is 0', t => {
+test('arrays.dropRight(array, count) - should return the input array when count is 0', t => {
   const expect = [1, 2, 3];
   const result = arrays.dropRight([1, 2, 3], 0);
 
@@ -45,7 +45,7 @@ test('arrays.dropRight(array, n) - should return the input array when n is 0', t
   t.end();
 });
 
-test('arrays.dropRight(array, n) - should not mutate the input', t => {
+test('arrays.dropRight(array, count) - should not mutate the input', t => {
   const input = [1, 2, 3];
   const expect = [1, 2, 3];
   arrays.dropRight(input, 2);

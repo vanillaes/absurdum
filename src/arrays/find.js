@@ -2,10 +2,11 @@
  * Find method returns the value of first element at which a provided function is true,
  * or undefined if no elements in the array satisfy the function.
  *
- * @param {Array} array
+ * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] of this
+ * @param {*} [thisArg=undefined] this argument in the function
  * @returns {*} value of element that satisfied function.
+ *
  * @example
  * const result = arrays.find([5, 12, 8, 130, 44], (x) => x > 10);
  * console.log(result);

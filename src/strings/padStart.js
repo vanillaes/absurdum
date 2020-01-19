@@ -2,7 +2,7 @@
  * PadStart pads the start of of a string.
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -24,12 +24,12 @@
  * console.log(result);
  * > 'funfunfunfabcabc'
  */
-function padStart (string, length, substr = ' ') {
+function padStart (string, length = 0, substr = ' ') {
   let padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
   const stringArr = [...Array(padLen), ...string];
 
-  const reducer = (acc, curr, idx, arr) => {
+  const reducer = (acc, curr) => {
     if (padLen !== 0) {
       acc.push(substr[substrIdx]);
       substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;

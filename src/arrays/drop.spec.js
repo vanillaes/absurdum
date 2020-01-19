@@ -23,7 +23,7 @@ test('arrays.drop(array, n) - should return an array with n items dropped from t
   t.end();
 });
 
-test('arrays.drop(array, n) - should return an empty array when n is larger than array.length', t => {
+test('arrays.drop(array, count) - should return an empty array when count is larger than array.length', t => {
   const expect = [];
   const result = arrays.drop([1, 2, 3], 5);
 
@@ -34,7 +34,7 @@ test('arrays.drop(array, n) - should return an empty array when n is larger than
   t.end();
 });
 
-test('arrays.drop(array, n) - should return the input array when n is 0', t => {
+test('arrays.drop(array, count) - should return the input array when count is 0', t => {
   const expect = [1, 2, 3];
   const result = arrays.drop([1, 2, 3], 0);
 
@@ -45,7 +45,7 @@ test('arrays.drop(array, n) - should return the input array when n is 0', t => {
   t.end();
 });
 
-test('arrays.drop(array, n) - should not mutate the input', t => {
+test('arrays.drop(array, count) - should not mutate the input', t => {
   const input = [1, 2, 3];
   const expect = [1, 2, 3];
   arrays.drop(input, 2);

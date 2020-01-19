@@ -3,6 +3,7 @@
  *
  * @param {Array} array input array
  * @returns {Array} an array of unique values
+ *
  * @example
  * const result = arrays.unzip([['a', 'b', 'c'], [1, 2, 3], [true, false, true]]);
  * console.log(result);
@@ -17,8 +18,8 @@ function unzip (array) {
     res.reduce((_, __, x) => {
       acc[x] = acc[x] || [];
       acc[x].push(array[idx][x]);
-      return _;
-    }, true);
+      return null;
+    }, null);
     return acc;
   }, []);
 }

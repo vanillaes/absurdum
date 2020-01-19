@@ -11,7 +11,7 @@ test('arrays.takeRight(array) - should return a slice of the array containing th
   t.end();
 });
 
-test('arrays.takeRight(array, len) - should return a slice of the array containing the last len elements of the array', t => {
+test('arrays.takeRight(array, count) - should return a slice of the array containing the last count elements of the array', t => {
   const expect = ['Brie', 'Cam', 'Dimitri'];
   const result = arrays.takeRight(['Amy', 'Brie', 'Cam', 'Dimitri'], 3);
 
@@ -21,7 +21,7 @@ test('arrays.takeRight(array, len) - should return a slice of the array containi
   t.end();
 });
 
-test('arrays.takeRight(array, len) - should return an empty array if array arg is empty', t => {
+test('arrays.takeRight(array, count) - should return an empty array if array arg is empty', t => {
   const expect = [];
   const result = arrays.takeRight([], 3);
 
@@ -31,7 +31,7 @@ test('arrays.takeRight(array, len) - should return an empty array if array arg i
   t.end();
 });
 
-test('arrays.takeRight(array, len) - should return the same array if len provided is greater than array length', t => {
+test('arrays.takeRight(array, count) - should return the same array if count provided is greater than array length', t => {
   const expect = ['Amy', 'Brie', 'Cam', 'Dimitri'];
   const result = arrays.takeRight(['Amy', 'Brie', 'Cam', 'Dimitri'], 6);
 
@@ -41,7 +41,7 @@ test('arrays.takeRight(array, len) - should return the same array if len provide
   t.end();
 });
 
-test('arrays.takeRight(array, len - should return the an empty array if len provided is less than or equal to zero', t => {
+test('arrays.takeRight(array, count) - should return the an empty array if count provided is less than or equal to zero', t => {
   const expect = [];
   const result = arrays.takeRight(['Amy', 'Brie', 'Cam', 'Dimitri'], -4);
 
@@ -51,7 +51,7 @@ test('arrays.takeRight(array, len - should return the an empty array if len prov
   t.end();
 });
 
-test('arrays.takeRight(array, len) - should not mutate the input', t => {
+test('arrays.takeRight(array, count) - should not mutate the input', t => {
   const input = ['Amy', 'Brie', 'Cam', 'Dimitri'];
   const expect = ['Amy', 'Brie', 'Cam', 'Dimitri'];
   arrays.takeRight(input, 2);

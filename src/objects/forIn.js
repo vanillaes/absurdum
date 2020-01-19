@@ -1,5 +1,5 @@
 /**
- * forIn Iterates over own and inherited enumerable string keyed properties of an object and invokes
+ * forIn iterates over own and inherited enumerable string keyed properties of an object and invokes
  * iteratee for each property. The iteratee is invoked with three arguments: (value, key, object)
  *
  * @param {Object} object input object

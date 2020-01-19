@@ -2,7 +2,7 @@
  * Pads the both ends of a string w/ repeated spaces|substrings
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -24,7 +24,7 @@
  *  console.log(result);
  *  > 'FUNFUxyzxyzFUNFU'
  */
-function pad (string, length, substr = ' ') {
+function pad (string, length = 0, substr = ' ') {
   const strLen = string.length;
   const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen) / 2) : 0;
   return string.padStart(length - padLen, substr).padEnd(length, substr);
