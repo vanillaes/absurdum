@@ -1,5 +1,3 @@
-# Absurdum
-
 [![GitHub Releases](https://img.shields.io/github/release/vanillaes/absurdum.svg)](https://github.com/vanillaes/absurdum/releases)
 [![NPM Releases](https://img.shields.io/npm/v/absurdum.svg)](https://www.npmjs.com/package/absurdum)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillaes/absurdum/master/LICENSE)
@@ -16,6 +14,7 @@ Absurdum is a Javascript utility library built with a focus on providing idempot
 - All functions are side-effect free
 - Polyfills for older environments
 - Executes on VanillaJS data structures
+- Small footprint (15K minified)
 
 ## Usage
 
