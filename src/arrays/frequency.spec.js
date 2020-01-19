@@ -40,3 +40,13 @@ test('arrays.frequency(array) - should return an object of uniq values when pars
 
   t.end();
 });
+
+test('arrays.frequency(array) - should not mutate the input', t => {
+  const input = ['a', 'b', 'a', 'c', 'a', 'c', 'b'];
+  const expect = ['a', 'b', 'a', 'c', 'a', 'c', 'b'];
+  arrays.frequency(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

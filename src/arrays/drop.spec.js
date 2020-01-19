@@ -44,3 +44,13 @@ test('arrays.drop(array, n) - should return the input array when n is 0', t => {
 
   t.end();
 });
+
+test('arrays.drop(array, n) - should not mutate the input', t => {
+  const input = [1, 2, 3];
+  const expect = [1, 2, 3];
+  arrays.drop(input, 2);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

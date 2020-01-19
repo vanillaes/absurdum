@@ -50,3 +50,13 @@ test('arrays.find(array, predicate) - should return undefined if the array no el
 
   t.end();
 });
+
+test('arrays.find(array, predicate) - should not mutate the input', t => {
+  const input = [5, 12, 8, 130, 44];
+  const expect = [5, 12, 8, 130, 44];
+  arrays.find(input, (x) => x > 200);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

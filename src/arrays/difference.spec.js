@@ -11,3 +11,13 @@ test('arrays.difference(arrayA, arrayB) - should return the difference between t
 
   t.end();
 });
+
+test('arrays.difference(arrayA, arrayB) - should not mutate the input', t => {
+  const input = [2, 1];
+  const expect = [2, 1];
+  arrays.difference(input, [2, 3]);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

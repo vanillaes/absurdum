@@ -45,3 +45,13 @@ test('arrays.unzip(array) - should return an empty array if the input array is e
 
   t.end();
 });
+
+test('arrays.unzip(array) - should not mutate the input', t => {
+  const input = [[5, 'ham'], [12, 'cheese'], [8, 'bread']];
+  const expect = [[5, 'ham'], [12, 'cheese'], [8, 'bread']];
+  arrays.unzip(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

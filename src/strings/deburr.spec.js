@@ -40,3 +40,13 @@ test('strings.deburr(string) - should return empty string if provided an empty s
 
   t.end();
 });
+
+test('strings.deburr(string) - should not mutate the input', t => {
+  const input = 'déjà vu';
+  const expect = 'déjà vu';
+  strings.deburr(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

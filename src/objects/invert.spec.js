@@ -40,3 +40,13 @@ test('objects.invert(object) - returns an empty object if there are no items in 
 
   t.end();
 });
+
+test('objects.invert(object) - should not mutate the input', t => {
+  const input = { 80: 'big', 4: 'small', 9: 'small' };
+  const expect = { 80: 'big', 4: 'small', 9: 'small' };
+  objects.invert(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

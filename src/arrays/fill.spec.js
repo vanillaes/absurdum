@@ -33,3 +33,13 @@ test('arrays.fill(array, value, , end) - should fill the array up to the end ind
 
   t.end();
 });
+
+test('arrays.fill(array, value) - should not mutate the input', t => {
+  const input = [1, 2, 3];
+  const expect = [1, 2, 3];
+  arrays.fill(input, 'a');
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

@@ -40,3 +40,13 @@ test('strings.camelCase(string) - should return empty string if provided an empt
 
   t.end();
 });
+
+test('strings.camelCase(string) - should not mutate the input', t => {
+  const input = '__WOLF_TIMBER__';
+  const expect = '__WOLF_TIMBER__';
+  strings.camelCase(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

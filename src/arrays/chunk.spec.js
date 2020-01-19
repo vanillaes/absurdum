@@ -22,3 +22,13 @@ test('arrays.chunk(array, size) - should return an array of chunks of the specif
 
   t.end();
 });
+
+test('arrays.chunk(array, size) - should not mutate the input', t => {
+  const input = [1, 2, 3, 4, 5];
+  const expect = [1, 2, 3, 4, 5];
+  arrays.chunk(input, 2);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

@@ -11,3 +11,13 @@ test('arrays.map(array, func) - should map over and apply the function to each v
 
   t.end();
 });
+
+test('arrays.map(array, func) - should not mutate the input', t => {
+  const input = ['a', 'b', 'a', 'c', 'a', 'c', 'b'];
+  const expect = ['a', 'b', 'a', 'c', 'a', 'c', 'b'];
+  arrays.map(input, (x) => x + 2);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});
