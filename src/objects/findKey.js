@@ -2,8 +2,8 @@
  * FindKey returns the key of the first property value for which a supplied function returns true
  *
  * @param {object} object input object
- * @param {function} [predicate = identity] function to test against object values
- * @param {*} [thisArg = undefined] value of this in a function call
+ * @param {function} [predicate] function to test against object values
+ * @param {*} [thisArg] value of this in a function call
  * @returns {string} string of the first object key whose value returns truthy against the function
  *
  * @example
@@ -11,7 +11,7 @@
  * console.log(result);
  * > 'pear'
  */
-function findKey (object, predicate = x => x, thisArg = undefined) {
+function findKey (object, predicate = x => x, thisArg) {
   const keys = Object.keys(object);
 
   if (typeof predicate === 'function') {
