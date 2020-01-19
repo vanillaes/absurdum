@@ -2,7 +2,7 @@
  * PadStart pads the start of of a string.
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -24,4 +24,4 @@
  * console.log(result);
  * > 'funfunfunfabcabc'
  */
-export function padStart(string: string, length: number, substr?: string): string;
+export function padStart(string: string, length?: number, substr?: string): string;

@@ -2,7 +2,7 @@
  * Remove N items from the end of the input array
  *
  * @param {Array} array input array
- * @param {number} [n=1] number of items to drop
+ * @param {number} [count=1] number of items to drop
  * @returns {Array} input array sans the dropped items
  *
  * @example
@@ -10,4 +10,4 @@
  * console.log(result);
  * > [1]
  */
-export function dropRight(array: any[], n?: number): any[];
+export function dropRight(array: any[], count?: number): any[];

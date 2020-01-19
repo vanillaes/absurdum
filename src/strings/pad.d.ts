@@ -2,7 +2,7 @@
  * Pads the both ends of a string w/ repeated spaces|substrings
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -24,4 +24,4 @@
  *  console.log(result);
  *  > 'FUNFUxyzxyzFUNFU'
  */
-export function pad(string: string, length: number, substr?: string): string;
+export function pad(string: string, length?: number, substr?: string): string;

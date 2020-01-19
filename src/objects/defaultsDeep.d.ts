@@ -3,7 +3,7 @@
  * being merged recursively and once a property is set, additional values of the same property are ignored.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input source object(s)
  * @returns {object} returns an object with all included object properties merged
  *
  * @example

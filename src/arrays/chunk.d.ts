@@ -8,6 +8,6 @@
  * @example
  * const result = arrays.chunk([1, 2, 3, 4, 5], 2);
  * console.log(result);
- * // > [[1, 2], [3, 4], [5]]
+ * > [[1, 2], [3, 4], [5]]
  */
 export function chunk(array: any[], size?: number): any[];

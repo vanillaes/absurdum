@@ -2,9 +2,9 @@
  * Zip applies a specified function to the corresponding elements of two sequences,
  * producing a sequence of the results.
  *
- * @param {Array} array1 input array
- * @param {Array} array2 input array
- * @param {Function} [predicate=(a, b)=>[a, b]] to be applied to corresponding values
+ * @param {Array} arrayA input array
+ * @param {Array} ArrayB input array
+ * @param {Function} [func=(a, b)=>[a, b]] to be applied to corresponding values
  * @returns {Array} input array filled value pairs after the function has been applied
  *
  * @example
@@ -16,4 +16,4 @@
  * console.log(result)
  * > [ 'ham 5', 'cheese 12', 'bread 8' ]
  */
-export function zip(array1: any[], array2: any[], predicate?: Function): any[];
+export function zip(arrayA: any[], ArrayB: any[], func?: Function): any[];

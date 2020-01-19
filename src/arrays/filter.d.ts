@@ -1,5 +1,5 @@
 /**
- * Iterates over an array of values and only outputs values where `predicate = true`.
+ * Iterates over an array of values and only outputs values where `predicate is equal to true`.
  *
  * @param {Array} array input array
  * @param {Function} predicate predicate function
