@@ -45,16 +45,16 @@ const arrayMerge = (current, source) => {
 const objectMerge = (current, source) => {
   const res = {};
   if (typeof current === 'object') {
-    Object.entries(current).reduce((_, entry) => {
-      res[entry[0]] = entry[1];
+    Object.keys(current).reduce((_, key) => {
+      res[key] = current[key];
       return null;
     }, null);
   }
-  Object.entries(source).reduce((_, entry) => {
-    if (typeof entry[1] !== 'object' || !current[entry[0]]) {
-      res[entry[0]] = entry[1];
+  Object.keys(source).reduce((_, key) => {
+    if (typeof source[key] !== 'object' || !current[key]) {
+      res[key] = source[key];
     } else {
-      res[entry[0]] = deepMerge(current[entry[0]], entry[1]);
+      res[key] = deepMerge(current[key], source[key]);
     }
     return null;
   }, null);
