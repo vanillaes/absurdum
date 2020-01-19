@@ -2,7 +2,7 @@
  * Remove N items from the end of the input array
  *
  * @param {Array} array input array
- * @param {number} [n=1] number of items to drop
+ * @param {number} [count=1] number of items to drop
  * @returns {Array} input array sans the dropped items
  *
  * @example
@@ -10,10 +10,10 @@
  * console.log(result);
  * > [1]
  */
-function dropRight (array, n = 1) {
-  return array.reduce((acc, curr, idx, arr) => {
-    if (n > 0) {
-      n--;
+function dropRight (array, count = 1) {
+  return array.reduce((acc, _, idx, arr) => {
+    if (count > 0) {
+      count--;
       return acc;
     }
     acc.unshift(arr[arr.length - idx - 1]);

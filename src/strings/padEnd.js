@@ -2,7 +2,7 @@
  * Pads the end of a string w/ repeated spaces|substrings
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -24,13 +24,13 @@
  *  console.log(result);
  *  > 'abcabcfunfunfunf'
  */
-function padEnd (string, length, substr = ' ') {
+function padEnd (string, length = 0, substr = ' ') {
   let strLen = string.length;
   const padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
   const stringArr = [...string, ...Array(padLen)];
 
-  const reducer = (acc, curr, idx, arr) => {
+  const reducer = (acc, curr) => {
     if (strLen !== 0) {
       acc.push(curr);
       strLen--;

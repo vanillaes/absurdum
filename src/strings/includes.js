@@ -3,7 +3,7 @@
  *
  * @param {string} string input string
  * @param {string} substr candidate string to be searched for
- * @param {Number} start optional index to begin search for string
+ * @param {Number} start index to begin search for string
  * @returns {boolean} does the input string include the substring?
  *
  * @example

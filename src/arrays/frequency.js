@@ -3,7 +3,7 @@
  * to the number of items it occurs in the array.
  *
  * @param {Array} array input array
- * @returns {Object} Object of uniq values and the frequency of occurrence
+ * @returns {Object} object of uniq values and their frequency of occurrence
  *
  * @example
  * const result = arrays.frequency(['a', 'b', 'a', 'c', 'a', 'c', 'b']);

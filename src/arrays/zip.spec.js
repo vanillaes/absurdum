@@ -1,7 +1,7 @@
 import test from 'tape';
 import { arrays } from '../../index.js';
 
-test('arrays.zip(array1, array2) - should return an array with arrays of corresponding values', t => {
+test('arrays.zip(arrayA, arrayB) - should return an array with arrays of corresponding values', t => {
   const expect = [[5, 'ham'], [12, 'cheese'], [8, 'bread']];
   const result = arrays.zip([5, 12, 8], ['ham', 'cheese', 'bread']);
 
@@ -12,7 +12,7 @@ test('arrays.zip(array1, array2) - should return an array with arrays of corresp
   t.end();
 });
 
-test('arrays.zip(array1, array2) - should return an array with arrays of corresponding values, the length of the shortest array', t => {
+test('arrays.zip(arrayA, arrayB) - should return an array with arrays of corresponding values, the length of the shortest array', t => {
   const expect = [[5, 'ham'], [12, 'cheese'], [8, 'bread']];
   const result = arrays.zip([5, 12, 8, 130, 44], ['ham', 'cheese', 'bread']);
 
@@ -24,7 +24,7 @@ test('arrays.zip(array1, array2) - should return an array with arrays of corresp
   t.end();
 });
 
-test('arrays.zip(array1, array2) - should return an empty array if either of the input arrays are empty', t => {
+test('arrays.zip(arrayA, arrayB) - should return an empty array if either of the input arrays are empty', t => {
   const expect = [];
   const result = arrays.zip([], ['ham', 'cheese', 'bread']);
 
@@ -35,7 +35,7 @@ test('arrays.zip(array1, array2) - should return an empty array if either of the
   t.end();
 });
 
-test('arrays.zip(array1, array2, predicate) - should return an array with arrays of corresponding values, with the predicate applied to value pairs', t => {
+test('arrays.zip(arrayA, arrayB, func) - should return an array with arrays of corresponding values, with the func applied to value pairs', t => {
   const expect = ['15 ham', '12 cheese', '18 bread'];
   const result = arrays.zip([15, 12, 18, 40, 30], ['ham', 'cheese', 'bread'], (x, y) => x + ' ' + y);
 
@@ -47,7 +47,7 @@ test('arrays.zip(array1, array2, predicate) - should return an array with arrays
   t.end();
 });
 
-test('arrays.zip(array1, array2, predicate) - should return an array with arrays of corresponding values, with the predicate applied to value pairs', t => {
+test('arrays.zip(arrayA, arrayB, func) - should return an array with arrays of corresponding values, with the func applied to value pairs', t => {
   const expect = [{ x: 15, y: 'ham' }, { x: 12, y: 'cheese' }, { x: 18, y: 'bread' }];
   const result = arrays.zip([15, 12, 18, 40, 30], ['ham', 'cheese', 'bread'], (x, y) => ({ x, y }));
 
@@ -58,7 +58,7 @@ test('arrays.zip(array1, array2, predicate) - should return an array with arrays
   t.end();
 });
 
-test('arrays.zip(array1, array2) - should not mutate the input', t => {
+test('arrays.zip(arrayA, arrayB) - should not mutate the input', t => {
   const input = [5, 12, 8];
   const expect = [5, 12, 8];
   arrays.zip(input, ['ham', 'cheese', 'bread']);

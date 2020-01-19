@@ -8,7 +8,7 @@
  * @example
  * const result = arrays.chunk([1, 2, 3, 4, 5], 2);
  * console.log(result);
- * // > [[1, 2], [3, 4], [5]]
+ * > [[1, 2], [3, 4], [5]]
  */
 function chunk (array, size = 1) {
   let chunk = [];

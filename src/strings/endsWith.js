@@ -16,7 +16,7 @@
  * > false
  */
 function endsWith (string, substr = '') {
-  const reducer = (acc, curr, idx, arr) => {
+  const reducer = (acc, _, idx, arr) => {
     // exit early on mismatch
     if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
       arr = arr.splice(0);
