@@ -33,3 +33,13 @@ test('strings.padEnd(string, length, substr) - returns a string padded w/ substr
 
   t.end();
 });
+
+test('strings.padEnd(string, length, substr) - should not mutate the input', t => {
+  const input = 'WOLF_TIMBER';
+  const expect = 'WOLF_TIMBER';
+  strings.padEnd(input, 15, 'fun');
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

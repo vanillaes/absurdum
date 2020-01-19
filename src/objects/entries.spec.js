@@ -33,3 +33,13 @@ test('objects.entries(object) - should still return key-value pairs if the value
 
   t.end();
 });
+
+test('objects.entries(object) - should not mutate the input', t => {
+  const input = { age: 12034, name: 'Trair', state: 'Floating' };
+  const expect = { age: 12034, name: 'Trair', state: 'Floating' };
+  objects.entries(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

@@ -35,7 +35,7 @@ test('arrays.flat(array) - should remove empty slots in arrays', t => {
   t.end();
 });
 
-test('arrays.flat(array) - should flat multiple levels of nested arrays into one array as defined by depth', t => {
+test('arrays.flat(array, depth) - should flat multiple levels of nested arrays into one array as defined by depth', t => {
   const expect = [1, 2, 3, [4]];
   const result = arrays.flat([1, [2, [3, [4]]]], 2);
 
@@ -46,13 +46,23 @@ test('arrays.flat(array) - should flat multiple levels of nested arrays into one
   t.end();
 });
 
-test('arrays.flat(array) - should flat all levels of nested arrays into one array', t => {
+test('arrays.flat(array, depth) - should flat all levels of nested arrays into one array', t => {
   const expect = [1, 2, 3, 4];
   const result = arrays.flat([1, [2, [3, [4]]]], Infinity);
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
   t.equal(result.length, 4, 'output length');
   t.deepEqual(result, expect, 'output value');
+
+  t.end();
+});
+
+test('arrays.flat(array, depth) - should not mutate the input', t => {
+  const input = [1, [2, [3, [4]]]];
+  const expect = [1, [2, [3, [4]]]];
+  arrays.flat(input, 2);
+
+  t.deepEqual(input, expect, 'input mutation');
 
   t.end();
 });

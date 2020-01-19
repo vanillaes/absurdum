@@ -40,3 +40,13 @@ test('objects.values(object) - returns an empty array if there are no items in t
 
   t.end();
 });
+
+test('objects.values(object) - should not mutate the input', t => {
+  const input = { hold: 25, your: 19, horses: 4 };
+  const expect = { hold: 25, your: 19, horses: 4 };
+  objects.values(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

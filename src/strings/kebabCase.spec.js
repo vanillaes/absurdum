@@ -40,3 +40,13 @@ test('strings.kebabCase(string) - should return empty string if provided an empt
 
   t.end();
 });
+
+test('strings.kebabCase(string) - should not mutate the input', t => {
+  const input = '__WOLF_TIMBER__';
+  const expect = '__WOLF_TIMBER__';
+  strings.kebabCase(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

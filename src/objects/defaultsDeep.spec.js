@@ -70,3 +70,13 @@ test('objects.defaultsDeep(object, sources) - returns an empty object if there a
 
   t.end();
 });
+
+test('objects.defaultsDeep(object, sources) - should not mutate the input', t => {
+  const input = { a: { b: 44 } };
+  const expect = { a: { b: 44 } };
+  objects.defaultsDeep(input, { a: { b: [9, 18, 15], c: 3 } });
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

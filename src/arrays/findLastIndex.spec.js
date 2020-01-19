@@ -50,3 +50,13 @@ test('arrays.findLastIndex(array, predicate) - should return -1 if the array no 
 
   t.end();
 });
+
+test('arrays.findLastIndex(array, predicate) - should not mutate the input', t => {
+  const input = [5, 12, 8, 130, 44];
+  const expect = [5, 12, 8, 130, 44];
+  arrays.findLastIndex(input, (x) => x > 200);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

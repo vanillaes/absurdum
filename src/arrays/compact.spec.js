@@ -36,7 +36,7 @@ test('arrays.compact(array) - should return the array with 0 removed', t => {
 
 test('arrays.compact(array) - should return the array with "" removed', t => {
   const expect = [1, 3, 4];
-  const result = arrays.compact([1, 0, 3, 4]);
+  const result = arrays.compact([1, '', 3, 4]);
 
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
   t.equal(result.length, 3, 'output length');
@@ -63,6 +63,16 @@ test('arrays.compact(array) - should return the array with NaN removed', t => {
   t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
   t.equal(result.length, 3, 'output length');
   t.deepEqual(result, expect, 'output value');
+
+  t.end();
+});
+
+test('arrays.compact(array) - should not mutate the input', t => {
+  const input = [1, undefined, 3, 4];
+  const expect = [1, undefined, 3, 4];
+  arrays.compact(input);
+
+  t.deepEqual(input, expect, 'input mutation');
 
   t.end();
 });

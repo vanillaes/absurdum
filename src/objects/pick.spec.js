@@ -1,7 +1,7 @@
 import test from 'tape';
 import { objects } from '../../index.js';
 
-test('objects.pick(object) - returns an object containing selected propety', t => {
+test('objects.pick(object, paths) - returns an object containing selected propety', t => {
   const expect = { horses: 4 };
   const result = objects.pick({ hold: 25, your: 19, horses: 4 }, 'horses');
 
@@ -11,7 +11,7 @@ test('objects.pick(object) - returns an object containing selected propety', t =
   t.end();
 });
 
-test('objects.pick(object) - returns an object containing selected propeties as additional params', t => {
+test('objects.pick(object, paths) - returns an object containing selected propeties as additional params', t => {
   const expect = { 3: 'tiny', 6: 'small', 12: 'big' };
   const result = objects.pick({ 12: 'big', 9: 'medium', 6: 'small', 3: 'tiny' }, 12, '6', 3);
 
@@ -21,7 +21,7 @@ test('objects.pick(object) - returns an object containing selected propeties as 
   t.end();
 });
 
-test('objects.pick(object) - returns an object containing selected propeties as additional params', t => {
+test('objects.pick(object, paths) - returns an object containing selected propeties as additional params', t => {
   const expect = { 3: 'tiny', 6: 'small', 12: 'big' };
   const result = objects.pick({ 12: 'big', 9: 'medium', 6: 'small', 3: 'tiny' }, [3, 6, 12]);
 
@@ -37,6 +37,16 @@ test('objects.pick(object) - returns an empty object if there are no properties 
 
   t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
   t.deepEqual(result, expect, 'output value');
+
+  t.end();
+});
+
+test('objects.pick(object, paths) - should not mutate the input', t => {
+  const input = { 12: 'big', 9: 'medium', 6: 'small', 3: 'tiny' };
+  const expect = { 12: 'big', 9: 'medium', 6: 'small', 3: 'tiny' };
+  objects.pick(input, [3, 6, 12]);
+
+  t.deepEqual(input, expect, 'input mutation');
 
   t.end();
 });

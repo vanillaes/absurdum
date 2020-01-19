@@ -11,3 +11,13 @@ test('arrays.filter(array, predicate) - should filter out values based on the re
 
   t.end();
 });
+
+test('arrays.filter(array, predicate) - should not mutate the input', t => {
+  const input = [1, 2, 3, 4];
+  const expect = [1, 2, 3, 4];
+  arrays.filter(input, (x) => x % 2 === 0);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

@@ -40,3 +40,13 @@ test('objects.merge(object, sources) - returns an empty object if there are no i
 
   t.end();
 });
+
+test('objects.merge(object, sources) - should not mutate the input', t => {
+  const input = { a: 'Mix', b: 'Stretch', c: 'Band' };
+  const expect = { a: 'Mix', b: 'Stretch', c: 'Band' };
+  objects.merge(input, { hold: 25, your: 19, horses: 4 });
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

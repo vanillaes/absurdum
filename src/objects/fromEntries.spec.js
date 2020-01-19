@@ -33,3 +33,13 @@ test('objects.fromEntries(array) - should return undefined: undefined in positio
 
   t.end();
 });
+
+test('objects.fromEntries(array) - should not mutate the input', t => {
+  const input = [['age', 12034], ['name', 'Trair'], ['state', 'Floating']];
+  const expect = [['age', 12034], ['name', 'Trair'], ['state', 'Floating']];
+  objects.fromEntries(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

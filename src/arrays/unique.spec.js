@@ -11,3 +11,13 @@ test('arrays.unique(array) - should return the input array with all duplicate it
 
   t.end();
 });
+
+test('arrays.union(array) - should not mutate the input', t => {
+  const input = [4, 4, 2, 1, 1];
+  const expect = [4, 4, 2, 1, 1];
+  arrays.union(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

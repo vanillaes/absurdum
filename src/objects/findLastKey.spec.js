@@ -11,7 +11,7 @@ test('objects.findLastKey(object) - returns the last key when iterated if not pr
   t.end();
 });
 
-test('objects.findLastKey(object, predicate) - returns thee last object key that satisfies the predicate', t => {
+test('objects.findLastKey(object, predicate) - returns the last object key that satisfies the predicate', t => {
   const expect = 'rain';
   const result = objects.findLastKey({ sunny: { wet: false, temp: 90 }, sandstorm: { wet: false, temp: 35 }, rain: { wet: true, temp: 71 } }, x => x.temp > 50);
 
@@ -21,7 +21,7 @@ test('objects.findLastKey(object, predicate) - returns thee last object key that
   t.end();
 });
 
-test('objects.findLastKey(object, predicate, thisArg) - returns thee last object key that satisfies the predicate, with a substitutable thisArg', t => {
+test('objects.findLastKey(object, predicate, thisArg) - returns the last object key that satisfies the predicate, with a substitutable thisArg', t => {
   const expect = 'sandstorm';
   const result = objects.findLastKey({ sandstorm: { wet: false, temp: 35 }, rain: { wet: true, temp: 71 } }, function (x) { return x.temp === this; }, 35);
 

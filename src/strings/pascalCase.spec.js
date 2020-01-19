@@ -40,3 +40,13 @@ test('strings.pascalCase(string) - should return empty string if provided an emp
 
   t.end();
 });
+
+test('strings.pascalCase(string) - should not mutate the input', t => {
+  const input = '__WOLF_TIMBER__';
+  const expect = '__WOLF_TIMBER__';
+  strings.pascalCase(input);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

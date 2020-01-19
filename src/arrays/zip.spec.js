@@ -57,3 +57,13 @@ test('arrays.zip(array1, array2, predicate) - should return an array with arrays
 
   t.end();
 });
+
+test('arrays.zip(array1, array2) - should not mutate the input', t => {
+  const input = [5, 12, 8];
+  const expect = [5, 12, 8];
+  arrays.zip(input, ['ham', 'cheese', 'bread']);
+
+  t.deepEqual(input, expect, 'input mutation');
+
+  t.end();
+});

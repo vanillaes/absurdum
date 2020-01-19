@@ -1,7 +1,7 @@
 import test from 'tape';
 import { objects } from '../../index.js';
 
-test('objects.mapKeys(object) - returns an object with updated keys', t => {
+test('objects.mapKeys(object, func) - returns an object with updated keys', t => {
   const expect = { neat_1: 1, neat_2: 2, neat_3: 3 };
   const result = objects.mapKeys({ a: 1, b: 2, c: 3 }, value => `neat_${value}`);
 
@@ -11,7 +11,7 @@ test('objects.mapKeys(object) - returns an object with updated keys', t => {
   t.end();
 });
 
-test('objects.mapKeys(object) - returns an object with updated keys using values as an argument', t => {
+test('objects.mapKeys(object, func) - returns an object with updated keys using values as an argument', t => {
   const expect = { a_1: 1, b_2: 2, c_3: 3 };
   const result = objects.mapKeys({ a: 1, b: 2, c: 3 }, (value, key) => `${key}_${value}`);
 
@@ -27,6 +27,16 @@ test('objects.mapKeys(object) - returns the input object if no function is appli
 
   t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
   t.deepEqual(result, expect, 'output value');
+
+  t.end();
+});
+
+test('objects.mapKeys(object, func) - should not mutate the input', t => {
+  const input = { 80: 'big', 4: 'small', 9: 'small' };
+  const expect = { 80: 'big', 4: 'small', 9: 'small' };
+  objects.mapKeys(input, (value, key) => `${key}_${value}`);
+
+  t.deepEqual(input, expect, 'input mutation');
 
   t.end();
 });
