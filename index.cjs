@@ -1756,8 +1756,8 @@ function get (object, path, defaultValue) {
  * > { '1': 'c', '2': 'b' }
  */
 function invert (object) {
-  return Object.entries(object).reduce((acc, curr) => {
-    acc[curr[1]] = curr[0];
+  return Object.keys(object).reduce((acc, key) => {
+    acc[object[key]] = key;
     return acc;
   }, {});
 }
