@@ -1776,10 +1776,10 @@ function invert (object) {
  */
 function mapKeys (object, func) {
   if (typeof func !== 'function') { return object; }
-  return Object.entries(object).reduce(
-    (acc, [key, value]) => ({
+  return Object.keys(object).reduce(
+    (acc, key) => ({
       ...acc,
-      [func(value, key, object)]: value
+      [func(object[key], key, object)]: object[key]
     }),
     {}
   );
