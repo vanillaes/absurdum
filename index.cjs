@@ -1799,9 +1799,9 @@ function mapKeys (object, func) {
  */
 function mapValues (object, func) {
   if (typeof func !== 'function') { return object; }
-  return Object.entries(object).reduce((acc, [key, value]) => ({
+  return Object.keys(object).reduce((acc, key) => ({
     ...acc,
-    [key]: func(value, key, object)
+    [key]: func(object[key], key, object)
   }), {});
 }
 
