@@ -11,4 +11,4 @@
  * console.log(result);
  * > 'Moo Moo Moo '
  */
-export function repeat(string: string, count: number): string;
+export function repeat(string: string, count?: number): string;

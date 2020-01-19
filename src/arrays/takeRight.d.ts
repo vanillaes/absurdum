@@ -1,9 +1,10 @@
 /**
- * Take method returns a slice of array with 'len' number of elements beg
+ * Take method returns a slice of array with 'count' number of elements from the end of the array
  *
  * @param {Array} array input array
- * @param {Number} [len=1] optional number of elements in the slice of the array
- * @returns {Array} the slice of the array of length 'len'
+ * @param {Number} [count=1] number of elements in the slice of the array
+ * @returns {Array} the slice of the array of length 'count'
+ *
  * @example
  * const result = arrays.some(['Amy', 'Brie', 'Cam', 'Dimitri']);
  * console.log(result);
@@ -13,4 +14,4 @@
  * console.log(result);
  * > ['Brie', 'Cam', 'Dimitri']
  */
-export function takeRight(array: any[], len?: number): any[];
+export function takeRight(array: any[], count?: number): any[];

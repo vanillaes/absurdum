@@ -1,5 +1,5 @@
 /**
- * Fills items in an array with a specified value. (Optional) can start and/or end from a specific index.
+ * Fills items in an array with a specified value. Optionally, one can start and/or end from a specific index.
  *
  * @param {Array} array input array
  * @param {*} value value that fills the array

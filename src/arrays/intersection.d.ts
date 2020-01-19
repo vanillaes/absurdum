@@ -3,6 +3,7 @@
  *
  * @param {Array} arrays input array(s)
  * @returns {Array} an array containing the unique intersecting values between all input arrays
+ *
  * @example
  * const result = arrays.intersection([4, 2, 1], [2, 3, 4]));
  * console.log(result);

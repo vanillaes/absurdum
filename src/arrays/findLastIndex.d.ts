@@ -4,8 +4,9 @@
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined]
+ * @param {*} [thisArg=undefined] this argument in the function
  * @returns {*} value of element that satisfied function.
+ *
  * @example
  * const result = arrays.findLastIndex([5, 12, 8, 130, 44], (x) => x < 10);
  * console.log(result);

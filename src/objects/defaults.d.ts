@@ -3,7 +3,7 @@
  * already exists, then the existing one is kept when merged from left to right.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input source object(s)
  * @returns {object} returns new object
  *
  * @example
