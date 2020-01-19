@@ -16,8 +16,8 @@
 function transform (object, func, accumulator = {}) {
   if (typeof func === 'undefined') { return object; }
 
-  return Object.entries(object).reduce((acc, [key, value]) => {
-    func(acc, value, key, object);
+  return Object.keys(object).reduce((acc, key) => {
+    func(acc, object[key], key, object);
     return acc;
   }, accumulator);
 }
