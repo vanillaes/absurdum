@@ -1977,7 +1977,10 @@ function transform (object, func, accumulator = {}) {
  * > [25, 19, 4]
  */
 function values (object) {
-  return Object.values(object);
+  return Object.keys(object).reduce((acc, key) => {
+    acc.push(object[key]);
+    return acc;
+  }, []);
 }
 
 
