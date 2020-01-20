@@ -16,7 +16,7 @@ to the number of items it occurs in the array.
 1. `array` *(Array)*: input array
 
 #### Returns
-*(Object)*: Object of uniq values and the frequency of occurrence
+*(Object)*: object of uniq values and their frequency of occurrence
 
 #### Example
 ```js

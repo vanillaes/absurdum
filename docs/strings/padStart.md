@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="padstartstring-length-substr"><code>padStart(string, length, [substr=' '])</code></h3>
+<h3 id="padstartstring-length0-substr"><code>padStart(string, [length=0], [substr=' '])</code></h3>
 
 PadStart pads the start of of a string.
 
 #### Arguments
 1. `string` *(string)*: input string
-2. `length` *(number)*: length of the padded portion
+2. `[length=0]` *(number)*: length of the padded portion
 3. `[substr=' ']` *(string)*: substring to apply
 
 #### Returns

@@ -22,7 +22,7 @@ Splits the input array up into an subset arrays of equal size
 ```js
 const result = arrays.chunk([1, 2, 3, 4, 5], 2);
 console.log(result);
-// > [[1, 2], [3, 4], [5]]
+> [[1, 2], [3, 4], [5]]
 ```
 ---
 

@@ -13,9 +13,9 @@ Find method returns the value of first element at which a provided function is t
 or undefined if no elements in the array satisfy the function.
 
 #### Arguments
-1. `array` *(Array)*:
+1. `array` *(Array)*: input array
 2. `predicate` *(Function)*: to be run against each element of the array
-3. `[thisArg=undefined]` *(&#42;)*: of this
+3. `[thisArg=undefined]` *(&#42;)*: this argument in the function
 
 #### Returns
 *(&#42;)*: value of element that satisfied function.

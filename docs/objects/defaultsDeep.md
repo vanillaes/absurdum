@@ -14,7 +14,7 @@ being merged recursively and once a property is set, additional values of the sa
 
 #### Arguments
 1. `object` *(object)*: input object
-2. `sources` *(...object)*: input object/s
+2. `sources` *(...object): input source object(s)*
 
 #### Returns
 *(object)*: returns an object with all included object properties merged

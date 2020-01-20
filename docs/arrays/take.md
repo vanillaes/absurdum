@@ -7,16 +7,16 @@
 
 <!-- div -->
 
-<h3 id="takearray-len1"><code>take(array, [len=1])</code></h3>
+<h3 id="takearray-count1"><code>take(array, [count=1])</code></h3>
 
-Take method returns a slice of array with 'len' number of elements beg
+Take method returns a slice of array with 'count' number of elements from the beginning
 
 #### Arguments
 1. `array` *(Array)*: input array
-2. `[len=1]` *(Number)*: optional number of elements in the slice of the array
+2. `[count=1]` *(Number)*: number of elements in the slice of the array
 
 #### Returns
-*(Array)*: the slice of the array of length 'len'
+*(Array)*: the slice of the array of length 'count'
 
 #### Example
 ```js
