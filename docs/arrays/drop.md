@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="droparray-n1"><code>drop(array, [n=1])</code></h3>
+<h3 id="droparray-count1"><code>drop(array, [count=1])</code></h3>
 
 Remove N items from the beginning of the input array
 
 #### Arguments
 1. `array` *(Array)*: input array
-2. `[n=1]` *(number)*: number of items to drop
+2. `[count=1]` *(number)*: number of items to drop
 
 #### Returns
 *(Array)*: input array sans the dropped items

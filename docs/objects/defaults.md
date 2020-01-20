@@ -14,7 +14,7 @@ already exists, then the existing one is kept when merged from left to right.
 
 #### Arguments
 1. `object` *(object)*: input object
-2. `sources` *(...object)*: input object/s
+2. `sources` *(...object): input source object(s)*
 
 #### Returns
 *(object)*: returns new object

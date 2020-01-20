@@ -9,7 +9,7 @@
 
 <h3 id="fillarray-value-start0-end"><code>fill(array, value, [start=0], [end])</code></h3>
 
-Fills items in an array with a specified value. *(Optional)* can start and/or end from a specific index.
+Fills items in an array with a specified value. Optionally, one can start and/or end from a specific index.
 
 #### Arguments
 1. `array` *(Array)*: input array

@@ -12,7 +12,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @example
  * const result = arrays.chunk([1, 2, 3, 4, 5], 2);
  * console.log(result);
- * // > [[1, 2], [3, 4], [5]]
+ * > [[1, 2], [3, 4], [5]]
  */
 function chunk (array, size = 1) {
   let chunk = [];
@@ -74,7 +74,7 @@ function difference (arrayA, arrayB) {
  * Remove N items from the beginning of the input array
  *
  * @param {Array} array input array
- * @param {number} [n=1] number of items to drop
+ * @param {number} [count=1] number of items to drop
  * @returns {Array} input array sans the dropped items
  *
  * @example
@@ -82,10 +82,10 @@ function difference (arrayA, arrayB) {
  * console.log(result);
  * > [3]
  */
-function drop (array, n = 1) {
+function drop (array, count = 1) {
   return array.reduce((acc, curr) => {
-    if (n > 0) {
-      n--;
+    if (count > 0) {
+      count--;
       return acc;
     }
     acc.push(curr);
@@ -97,7 +97,7 @@ function drop (array, n = 1) {
  * Remove N items from the end of the input array
  *
  * @param {Array} array input array
- * @param {number} [n=1] number of items to drop
+ * @param {number} [count=1] number of items to drop
  * @returns {Array} input array sans the dropped items
  *
  * @example
@@ -105,10 +105,10 @@ function drop (array, n = 1) {
  * console.log(result);
  * > [1]
  */
-function dropRight (array, n = 1) {
-  return array.reduce((acc, curr, idx, arr) => {
-    if (n > 0) {
-      n--;
+function dropRight (array, count = 1) {
+  return array.reduce((acc, _, idx, arr) => {
+    if (count > 0) {
+      count--;
       return acc;
     }
     acc.unshift(arr[arr.length - idx - 1]);
@@ -117,7 +117,7 @@ function dropRight (array, n = 1) {
 }
 
 /**
- * Fills items in an array with a specified value. (Optional) can start and/or end from a specific index.
+ * Fills items in an array with a specified value. Optionally, one can start and/or end from a specific index.
  *
  * @param {Array} array input array
  * @param {*} value value that fills the array
@@ -130,11 +130,11 @@ function dropRight (array, n = 1) {
  * console.log(result)
  * > [1, 'a', 'a', 4]
  */
-function fill (array, value, start = 0, end = null) {
-  if (end === null) {
+function fill (array, value, start = 0, end) {
+  if (!end) {
     end = array.length - 1;
   }
-  return array.reduce((acc, curr, idx, arr) => {
+  return array.reduce((acc, curr, idx) => {
     if (idx >= start && idx <= end) {
       acc.push(value);
     } else {
@@ -145,7 +145,7 @@ function fill (array, value, start = 0, end = null) {
 }
 
 /**
- * Iterates over an array of values and only outputs values where `predicate = true`.
+ * Iterates over an array of values and only outputs values where `predicate is equal to true`.
  *
  * @param {Array} array input array
  * @param {Function} predicate predicate function
@@ -169,10 +169,11 @@ function filter (array, predicate) {
  * Find method returns the value of first element at which a provided function is true,
  * or undefined if no elements in the array satisfy the function.
  *
- * @param {Array} array
+ * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] of this
+ * @param {*} [thisArg=undefined] this argument in the function
  * @returns {*} value of element that satisfied function.
+ *
  * @example
  * const result = arrays.find([5, 12, 8, 130, 44], (x) => x > 10);
  * console.log(result);
@@ -202,8 +203,9 @@ function find (array, predicate, thisArg = undefined) {
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined]
+ * @param {*} [thisArg=undefined] this argument in the function
  * @returns {*} value of element that satisfied function.
+ *
  * @example
  * const result = arrays.findIndex([5, 12, 8, 130, 44], (x) => x < 10);
  * console.log(result);
@@ -230,8 +232,9 @@ function findIndex (array, predicate, thisArg = undefined) {
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined]
+ * @param {*} [thisArg=undefined] this argument in the function
  * @returns {*} value of element that satisfied function.
+ *
  * @example
  * const result = arrays.findLastIndex([5, 12, 8, 130, 44], (x) => x < 10);
  * console.log(result);
@@ -259,7 +262,7 @@ function findLastIndex (array, predicate, thisArg = undefined) {
  * Flat flattens an array of nested arrays
  *
  * @param {Array} array input array
- * @param {number} [depth=1] optional depth of array elements to flat
+ * @param {number} [depth=1] depth of array elements to flat
  * @returns {Array} the flattened array
  *
  * @example
@@ -283,7 +286,7 @@ function flat (array, depth = 1) {
  * to the number of items it occurs in the array.
  *
  * @param {Array} array input array
- * @returns {Object} Object of uniq values and the frequency of occurrence
+ * @returns {Object} object of uniq values and their frequency of occurrence
  *
  * @example
  * const result = arrays.frequency(['a', 'b', 'a', 'c', 'a', 'c', 'b']);
@@ -302,13 +305,14 @@ function frequency (array) {
  *
  * @param {Array} arrays input array(s)
  * @returns {Array} an array containing the unique intersecting values between all input arrays
+ *
  * @example
  * const result = arrays.intersection([4, 2, 1], [2, 3, 4]));
  * console.log(result);
  * > [4, 2]
  */
 function intersection (...arrays) {
-  return [...new Set(arguments[0])].reduce((acc, curr, idx) => {
+  return [...new Set(arguments[0])].reduce((acc, curr) => {
     if (arrays.slice(1).reduce((every, array, i) => {
       if (every && !new Set(array).has(curr)) return false;
       return every;
@@ -323,7 +327,7 @@ function intersection (...arrays) {
  * Map iterates over an array of values and applies a function to each value
  *
  * @param {Array} array input array
- * @param {Function} func map function
+ * @param {Function} [func] function describing how to map values
  * @returns {Array} array of mutated values
  *
  * @example
@@ -332,6 +336,7 @@ function intersection (...arrays) {
  * > [ 3, 4, 5, 6 ]
  */
 function map (array, func) {
+  if (!func) { return array; }
   return array.reduce((acc, curr) => {
     acc.push(func(curr));
     return acc;
@@ -359,11 +364,12 @@ function pull (array, ...values) {
 }
 
 /**
- * Take method returns a slice of array with 'len' number of elements beg
+ * Take method returns a slice of array with 'count' number of elements from the end of the array
  *
  * @param {Array} array input array
- * @param {Number} [len=1] optional number of elements in the slice of the array
- * @returns {Array} the slice of the array of length 'len'
+ * @param {Number} [count=1] number of elements in the slice of the array
+ * @returns {Array} the slice of the array of length 'count'
+ *
  * @example
  * const result = arrays.some(['Amy', 'Brie', 'Cam', 'Dimitri']);
  * console.log(result);
@@ -373,8 +379,8 @@ function pull (array, ...values) {
  * console.log(result);
  * > ['Brie', 'Cam', 'Dimitri']
  */
-function takeRight (array, len = 1) {
-  const start = array.length - 1 - len;
+function takeRight (array, count = 1) {
+  const start = array.length - 1 - count;
   return array.reduce((res, cur, i) => {
     if (i > start) { res.push(cur); }
     return res;
@@ -382,11 +388,12 @@ function takeRight (array, len = 1) {
 }
 
 /**
- * Take method returns a slice of array with 'len' number of elements beg
+ * Take method returns a slice of array with 'count' number of elements from the beginning
  *
  * @param {Array} array input array
- * @param {Number} [len=1] optional number of elements in the slice of the array
- * @returns {Array} the slice of the array of length 'len'
+ * @param {Number} [count=1] number of elements in the slice of the array
+ * @returns {Array} the slice of the array of length 'count'
+ *
  * @example
  * const result = arrays.take(['Amy', 'Brie', 'Cam', 'Dimitri']);
  * console.log(result);
@@ -396,9 +403,9 @@ function takeRight (array, len = 1) {
  * console.log(result);
  * > ['Amy', 'Brie', 'Cam']
  */
-function take (array, len = 1) {
+function take (array, count = 1) {
   return array.reduce((res, cur, i) => {
-    if (i < len) { res.push(cur); }
+    if (i < count) { res.push(cur); }
     return res;
   }, []);
 }
@@ -414,7 +421,7 @@ function take (array, len = 1) {
  * > [2, 1, 3]
  */
 function union (...arrays) {
-  return Array.from([...arrays].reduce((acc, curr, i) => {
+  return Array.from([...arrays].reduce((acc, curr) => {
     if (Array.isArray(curr)) {
       curr.reduce((res, cur) => {
         acc.add(cur);
@@ -430,13 +437,14 @@ function union (...arrays) {
  *
  * @param {Array} array input array
  * @returns {Array} an array of unique values
+ *
  * @example
  * const result = arrays.unique([2, 1, 2]);
  * console.log(result);
  * > [2, 1]
  */
 function unique (array) {
-  return [...array.reduce((acc, curr, i, arr) => {
+  return [...array.reduce((acc, curr) => {
     acc.add(curr);
     return acc;
   }, new Set())];
@@ -447,6 +455,7 @@ function unique (array) {
  *
  * @param {Array} array input array
  * @returns {Array} an array of unique values
+ *
  * @example
  * const result = arrays.unzip([['a', 'b', 'c'], [1, 2, 3], [true, false, true]]);
  * console.log(result);
@@ -461,8 +470,8 @@ function unzip (array) {
     res.reduce((_, __, x) => {
       acc[x] = acc[x] || [];
       acc[x].push(array[idx][x]);
-      return _;
-    }, true);
+      return null;
+    }, null);
     return acc;
   }, []);
 }
@@ -491,6 +500,7 @@ function without (array, ...values) {
  *
  * @param {...Array} arrays input arrays
  * @returns {Array} an array of unique values
+ *
  * @example
  * const result = arrays.xor(['a', 1, [5]], ['b', 1, 'a'], ['b', 'c', 5]);
  * console.log(result);
@@ -521,9 +531,9 @@ function xor (...arrays) {
  * Zip applies a specified function to the corresponding elements of two sequences,
  * producing a sequence of the results.
  *
- * @param {Array} array1 input array
- * @param {Array} array2 input array
- * @param {Function} [predicate=(a, b)=>[a, b]] to be applied to corresponding values
+ * @param {Array} arrayA input array
+ * @param {Array} ArrayB input array
+ * @param {Function} [func=(a, b)=>[a, b]] to be applied to corresponding values
  * @returns {Array} input array filled value pairs after the function has been applied
  *
  * @example
@@ -535,18 +545,18 @@ function xor (...arrays) {
  * console.log(result)
  * > [ 'ham 5', 'cheese 12', 'bread 8' ]
  */
-function zip (array1, array2, predicate = (a, b) => [a, b]) {
-  if (predicate && typeof predicate !== 'function') {
-    throw TypeError('predicate must be a function');
+function zip (arrayA, ArrayB, func = (a, b) => [a, b]) {
+  if (func && typeof func !== 'function') {
+    throw TypeError('func must be a function');
   }
-  if (array1.length <= array2.length) {
-    return array1.reduce((res, cur, i) => {
-      res[i] = predicate(cur, array2[i]);
+  if (arrayA.length <= ArrayB.length) {
+    return arrayA.reduce((res, cur, i) => {
+      res[i] = func(cur, ArrayB[i]);
       return res;
     }, []);
   } else {
-    return array2.reduce((res, cur, i) => {
-      res[i] = predicate(array1[i], cur);
+    return ArrayB.reduce((res, cur, i) => {
+      res[i] = func(arrayA[i], cur);
       return res;
     }, []);
   }
@@ -729,7 +739,7 @@ const latinMap = { À: 'A', Á: 'A', Â: 'A', Ã: 'A', Ä: 'A', Å: 'A', à: 'a'
  * > false
  */
 function endsWith (string, substr = '') {
-  const reducer = (acc, curr, idx, arr) => {
+  const reducer = (acc, _, idx, arr) => {
     // exit early on mismatch
     if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
       arr = arr.splice(0);
@@ -751,7 +761,7 @@ function endsWith (string, substr = '') {
  *
  * @param {string} string input string
  * @param {string} substr candidate string to be searched for
- * @param {Number} start optional index to begin search for string
+ * @param {Number} start index to begin search for string
  * @returns {boolean} does the input string include the substring?
  *
  * @example
@@ -810,7 +820,7 @@ function kebabCase (string = '') {
  * Pads the both ends of a string w/ repeated spaces|substrings
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -832,7 +842,7 @@ function kebabCase (string = '') {
  *  console.log(result);
  *  > 'FUNFUxyzxyzFUNFU'
  */
-function pad (string, length, substr = ' ') {
+function pad (string, length = 0, substr = ' ') {
   const strLen = string.length;
   const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen) / 2) : 0;
   return string.padStart(length - padLen, substr).padEnd(length, substr);
@@ -842,7 +852,7 @@ function pad (string, length, substr = ' ') {
  * Pads the end of a string w/ repeated spaces|substrings
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -864,13 +874,13 @@ function pad (string, length, substr = ' ') {
  *  console.log(result);
  *  > 'abcabcfunfunfunf'
  */
-function padEnd (string, length, substr = ' ') {
+function padEnd (string, length = 0, substr = ' ') {
   let strLen = string.length;
   const padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
   const stringArr = [...string, ...Array(padLen)];
 
-  const reducer = (acc, curr, idx, arr) => {
+  const reducer = (acc, curr) => {
     if (strLen !== 0) {
       acc.push(curr);
       strLen--;
@@ -888,7 +898,7 @@ function padEnd (string, length, substr = ' ') {
  * PadStart pads the start of of a string.
  *
  * @param {string} string input string
- * @param {number} length length of the padded portion
+ * @param {number} [length=0] length of the padded portion
  * @param {string} [substr=' '] substring to apply
  * @returns {string} the input padded w/ spaces|substrings
  *
@@ -910,12 +920,12 @@ function padEnd (string, length, substr = ' ') {
  * console.log(result);
  * > 'funfunfunfabcabc'
  */
-function padStart (string, length, substr = ' ') {
+function padStart (string, length = 0, substr = ' ') {
   let padLen = (length - string.length) > 0 ? length - string.length : 0;
   let substrIdx = 0;
   const stringArr = [...Array(padLen), ...string];
 
-  const reducer = (acc, curr, idx, arr) => {
+  const reducer = (acc, curr) => {
     if (padLen !== 0) {
       acc.push(substr[substrIdx]);
       substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
@@ -960,8 +970,8 @@ function pascalCase (string = '') {
  * console.log(result);
  * > 'Moo Moo Moo '
  */
-function repeat (string, count) {
-  if (string.length === 0 || count < 0) return '';
+function repeat (string, count = 0) {
+  if (string.length === 0 || count < 1) return '';
 
   return new Array(count).fill('').reduce((res) => {
     return res + string;
@@ -1289,7 +1299,7 @@ var index$1 = /*#__PURE__*/Object.freeze({
  * already exists, then it is overwritten when merged from left to right.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input source object(s)
  * @returns {object} returns new object
  *
  * @example
@@ -1330,7 +1340,8 @@ function at (object, ...paths) {
   const filterPathArray = (x) => {
     x.reduce((_, curr, i) => {
       pathArray[i] = String(curr).replace(/\[(\w+)\]/g, '.$1').split('.');
-    }, true);
+      return null;
+    }, null);
   };
 
   if (Array.isArray(paths[0])) {
@@ -1358,7 +1369,7 @@ function at (object, ...paths) {
  * already exists, then the existing one is kept when merged from left to right.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input source object(s)
  * @returns {object} returns new object
  *
  * @example
@@ -1385,7 +1396,7 @@ function defaults (object, ...sources) {
  * being merged recursively and once a property is set, additional values of the same property are ignored.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input source object(s)
  * @returns {object} returns an object with all included object properties merged
  *
  * @example
@@ -1463,12 +1474,12 @@ function entries (object) {
 }
 
 /**
- * Filter iterates over an object and applies a function to each property, for all properties
- * where the function it returns true return that property in a new object. Function is invoked
+ * Filter iterates over an object and applies a predicate to each property, for all properties
+ * where the predicate is true, return that property in a new object. Function is invoked
  * with 3 arguments (value, key, object)
  *
  * @param {Object} object input object
- * @param {Function} filter function to check what properties to include
+ * @param {Function} [filter] predicate function to check what properties to include
  * @returns {Object} object with selected properties
  *
  * @example
@@ -1491,8 +1502,8 @@ function filter$1 (object, filter) {
  * FindKey returns the key of the first property value for which a supplied function returns true
  *
  * @param {object} object input object
- * @param {function} [predicate = identity] optional function to test against object values
- * @param {*} [thisArg = undefined] optional this in a function call
+ * @param {function} [predicate] function to test against object values
+ * @param {*} [thisArg] value of this in a function call
  * @returns {string} string of the first object key whose value returns truthy against the function
  *
  * @example
@@ -1500,7 +1511,7 @@ function filter$1 (object, filter) {
  * console.log(result);
  * > 'pear'
  */
-function findKey (object, predicate = x => x, thisArg = undefined) {
+function findKey (object, predicate = x => x, thisArg) {
   const keys = Object.keys(object);
 
   if (typeof predicate === 'function') {
@@ -1530,19 +1541,19 @@ function findKey (object, predicate = x => x, thisArg = undefined) {
   }
 }
 
-const objContained = (obj1, obj2) => {
-  if (typeof (obj1) !== typeof (obj2)) { return false; }
-  if (typeof (obj1) !== 'object') { return obj1 === obj2; }
+const objContained = (objA, objB) => {
+  if (typeof (objA) !== typeof (objB)) { return false; }
+  if (typeof (objA) !== 'object') { return objA === objB; }
 
-  return Object.keys(obj2).reduce((acc, curr) => {
+  return Object.keys(objB).reduce((acc, curr) => {
     if (acc) { return acc; }
-    if (Object.prototype.hasOwnProperty.call(obj1, curr) !== Object.prototype.hasOwnProperty.call(obj2, curr)) { return false; }
-    if (typeof obj1[curr] === 'object') {
-      if (!objContained(obj1[curr], obj2[curr])) { return false; }
-    } else if (typeof obj1[curr] === 'function') {
-      if (typeof (obj2[curr]) === 'undefined' || (String(obj1[curr]) !== String(obj2[curr]))) { return false; }
+    if (Object.prototype.hasOwnProperty.call(objA, curr) !== Object.prototype.hasOwnProperty.call(objB, curr)) { return false; }
+    if (typeof objA[curr] === 'object') {
+      if (!objContained(objA[curr], objB[curr])) { return false; }
+    } else if (typeof objA[curr] === 'function') {
+      if (typeof (objB[curr]) === 'undefined' || (String(objA[curr]) !== String(objB[curr]))) { return false; }
     } else {
-      if (obj1[curr] !== obj2[curr]) { return false; }
+      if (objA[curr] !== objB[curr]) { return false; }
     }
     return true;
   }, false);
@@ -1552,8 +1563,8 @@ const objContained = (obj1, obj2) => {
  * FindLastKey returns the key of the last property value for which a supplied function returns true
  *
  * @param {object} object input object
- * @param {function} [predicate = identity] optional function to test against object values
- * @param {*} [thisArg = undefined] optional this in a function call
+ * @param {function} [predicate] function to test against object values
+ * @param {*} [thisArg] value of this in a function call
  * @returns {string} string of the first object key whose value returns truthy against the function
  *
  * @example
@@ -1561,7 +1572,7 @@ const objContained = (obj1, obj2) => {
  * console.log(result);
  * > 'grapefruit'
  */
-function findLastKey (object, predicate = x => x, thisArg = undefined) {
+function findLastKey (object, predicate = x => x, thisArg) {
   const keys = Object.keys(object);
 
   if (typeof predicate === 'function') {
@@ -1591,26 +1602,26 @@ function findLastKey (object, predicate = x => x, thisArg = undefined) {
   }
 }
 
-const objContained$1 = (obj1, obj2) => {
-  if (typeof (obj1) !== typeof (obj2)) { return false; }
-  if (typeof (obj1) !== 'object') { return obj1 === obj2; }
+const objContained$1 = (objA, objB) => {
+  if (typeof (objA) !== typeof (objB)) { return false; }
+  if (typeof (objA) !== 'object') { return objA === objB; }
 
-  return Object.keys(obj2).reduceRight((acc, curr) => {
+  return Object.keys(objB).reduceRight((acc, curr) => {
     if (acc) { return acc; }
-    if (Object.prototype.hasOwnProperty.call(obj1, curr) !== Object.prototype.hasOwnProperty.call(obj2, curr)) { return false; }
-    if (typeof obj1[curr] === 'object') {
-      if (!objContained$1(obj1[curr], obj2[curr])) { return false; }
-    } else if (typeof obj1[curr] === 'function') {
-      if (typeof (obj2[curr]) === 'undefined' || (String(obj1[curr]) !== String(obj2[curr]))) { return false; }
+    if (Object.prototype.hasOwnProperty.call(objA, curr) !== Object.prototype.hasOwnProperty.call(objB, curr)) { return false; }
+    if (typeof objA[curr] === 'object') {
+      if (!objContained$1(objA[curr], objB[curr])) { return false; }
+    } else if (typeof objA[curr] === 'function') {
+      if (typeof (objB[curr]) === 'undefined' || (String(objA[curr]) !== String(objB[curr]))) { return false; }
     } else {
-      if (obj1[curr] !== obj2[curr]) { return false; }
+      if (objA[curr] !== objB[curr]) { return false; }
     }
     return true;
   }, false);
 };
 
 /**
- * forIn Iterates over own and inherited enumerable string keyed properties of an object and invokes
+ * forIn iterates over own and inherited enumerable string keyed properties of an object and invokes
  * iteratee for each property. The iteratee is invoked with three arguments: (value, key, object)
  *
  * @param {Object} object input object
@@ -1810,7 +1821,7 @@ function mapValues (object, func) {
  * being merged recursively and other value types overridden when applied from left to right.
  *
  * @param {object} object input object
- * @param {...object} sources input object/s
+ * @param {...object} sources input object(s)
  * @returns {object} returns an object with all included object properties merged
  *
  * @example
@@ -1845,7 +1856,8 @@ const arrayMerge$1 = (current, source) => {
     } else if (current.indexOf(elem) === -1) {
       res.push(elem);
     }
-  }, true);
+    return null;
+  }, null);
   return res;
 };
 

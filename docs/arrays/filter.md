@@ -9,7 +9,7 @@
 
 <h3 id="filterarray-predicate"><code>filter(array, predicate)</code></h3>
 
-Iterates over an array of values and only outputs values where `predicate = true`.
+Iterates over an array of values and only outputs values where `predicate is equal to true`.
 
 #### Arguments
 1. `array` *(Array)*: input array

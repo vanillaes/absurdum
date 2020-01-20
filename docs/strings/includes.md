@@ -14,7 +14,7 @@ Includes determines whether one string can be found in another string
 #### Arguments
 1. `string` *(string)*: input string
 2. `substr` *(string)*: candidate string to be searched for
-3. `start` *(Number)*: optional index to begin search for string
+3. `start` *(Number)*: index to begin search for string
 
 #### Returns
 *(boolean)*: does the input string include the substring?

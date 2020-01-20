@@ -14,7 +14,7 @@ being merged recursively and other value types overridden when applied from left
 
 #### Arguments
 1. `object` *(object)*: input object
-2. `sources` *(...object)*: input object/s
+2. `sources` *(...object): input object(s)*
 
 #### Returns
 *(object)*: returns an object with all included object properties merged

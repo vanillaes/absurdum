@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="padstring-length-substr"><code>pad(string, length, [substr=' '])</code></h3>
+<h3 id="padstring-length0-substr"><code>pad(string, [length=0], [substr=' '])</code></h3>
 
 Pads the both ends of a string w/ repeated spaces|substrings
 
 #### Arguments
 1. `string` *(string)*: input string
-2. `length` *(number)*: length of the padded portion
+2. `[length=0]` *(number)*: length of the padded portion
 3. `[substr=' ']` *(string)*: substring to apply
 
 #### Returns
