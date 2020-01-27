@@ -54,6 +54,9 @@
     "semistandard": "^14.2.0",
     "tape-es": "^1.1.1"
   },
+  "engines": {
+    "node": ">=13.2"
+  },
   "semistandard": {
     "ignore": [
       "index.js",
