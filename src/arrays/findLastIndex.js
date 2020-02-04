@@ -18,7 +18,6 @@
  */
 function findLastIndex (array, predicate, thisArg = undefined) {
   if (array.length === 0) return -1;
-  if (this == null) { throw TypeError('"this" is null or not defined'); }
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
   if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1;
   if (array.length === 1) return -1;
