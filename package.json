@@ -24,7 +24,6 @@
   "repository": "https://github.com/vanillaes/absurdum",
   "license": "MIT",
   "main": "index.js",
-  "module": "dist/absurdum.cjs",
   "type": "module",
   "types": "index.d.ts",
   "scripts": {
