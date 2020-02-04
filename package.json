@@ -23,8 +23,23 @@
   ],
   "repository": "https://github.com/vanillaes/absurdum",
   "license": "MIT",
-  "main": "index.js",
   "type": "module",
+  "main": "index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    },
+    "./arrays": {
+      "import": "./src/arrays/index.js"
+    },
+    "./objects": {
+      "import": "./src/objects/index.js"
+    },
+    "./strings": {
+      "import": "./src/strings/index.js"
+    }
+  },
   "types": "index.d.ts",
   "scripts": {
     "test": "tape-es",
