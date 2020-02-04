@@ -1,42 +1,42 @@
 import test from 'tape';
-import { objects } from '../../index.js';
+import { invert } from 'absurdum/objects';
 
 test('objects.invert(object) - returns an object with key-value pairs inverted', t => {
   const expect = { 4: 'horses', 19: 'your', 25: 'hold' };
-  const result = objects.invert({ hold: 25, your: 19, horses: 4 });
+  const actual = invert({ hold: 25, your: 19, horses: 4 });
 
-  t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Object]', 'return type');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
 
 test('objects.invert(object) - returns an object with key-value pairs inverted', t => {
   const expect = { lights: '0', camera: '1', action: '2' };
-  const result = objects.invert(['lights', 'camera', 'action']);
+  const actual = invert(['lights', 'camera', 'action']);
 
-  t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Object]', 'return type');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
 
 test('objects.invert(object) - returns an object inverted with duplicate values being overwritten by the latter value', t => {
   const expect = { small: '9', big: '80' };
-  const result = objects.invert({ 80: 'big', 4: 'small', 9: 'small' });
+  const actual = invert({ 80: 'big', 4: 'small', 9: 'small' });
 
-  t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Object]', 'return type');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
 
 test('objects.invert(object) - returns an empty object if there are no items in the object', t => {
   const expect = {};
-  const result = objects.invert({});
+  const actual = invert({});
 
-  t.equal(Object.prototype.toString.call(result), '[object Object]', 'return type');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Object]', 'return type');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
@@ -44,7 +44,7 @@ test('objects.invert(object) - returns an empty object if there are no items in 
 test('objects.invert(object) - should not mutate the input', t => {
   const input = { 80: 'big', 4: 'small', 9: 'small' };
   const expect = { 80: 'big', 4: 'small', 9: 'small' };
-  objects.invert(input);
+  invert(input);
 
   t.deepEqual(input, expect, 'input mutation');
 

@@ -1,42 +1,42 @@
 import test from 'tape';
-import { strings } from '../../index.js';
+import { camelCase } from 'absurdum/strings';
 
 test('strings.camelCase(string) - should return the string formatted to camelCase', t => {
   const expect = 'helpMeWithThis';
-  const result = strings.camelCase('help me with this');
+  const actual = camelCase('help me with this');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
 
 test('strings.camelCase(string) - should return the string formatted to camelCase', t => {
   const expect = 'firmShake';
-  const result = strings.camelCase('--firm-shake--');
+  const actual = camelCase('--firm-shake--');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
 
 test('strings.camelCase(string) - should return the string formatted to camelCase', t => {
   const expect = 'wolfTimber';
-  const result = strings.camelCase('__WOLF_TIMBER__');
+  const actual = camelCase('__WOLF_TIMBER__');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
 
 test('strings.camelCase(string) - should return empty string if provided an empty string', t => {
   const expect = '';
-  const result = strings.camelCase('');
+  const actual = camelCase('');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
@@ -44,7 +44,7 @@ test('strings.camelCase(string) - should return empty string if provided an empt
 test('strings.camelCase(string) - should not mutate the input', t => {
   const input = '__WOLF_TIMBER__';
   const expect = '__WOLF_TIMBER__';
-  strings.camelCase(input);
+  camelCase(input);
 
   t.deepEqual(input, expect, 'input mutation');
 

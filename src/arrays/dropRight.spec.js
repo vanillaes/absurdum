@@ -1,46 +1,46 @@
 import test from 'tape';
-import { arrays } from '../../index.js';
+import { dropRight } from 'absurdum/arrays';
 
 test('arrays.dropRight(array) - should return an array w/ the last item dropped when count is not specified', t => {
   const expect = [1, 2];
-  const result = arrays.dropRight([1, 2, 3]);
+  const actual = dropRight([1, 2, 3]);
 
-  t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 2, 'output length');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Array]', 'return type');
+  t.equal(actual.length, 2, 'output length');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
 
 test('arrays.dropRight(array, count) - should return an array with count items dropped from the end', t => {
   const expect = [1];
-  const result = arrays.dropRight([1, 2, 3], 2);
+  const actual = dropRight([1, 2, 3], 2);
 
-  t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 1, 'output length');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Array]', 'return type');
+  t.equal(actual.length, 1, 'output length');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
 
 test('arrays.dropRight(array, count) - should return an empty array when count is larger than array.length', t => {
   const expect = [];
-  const result = arrays.dropRight([1, 2, 3], 5);
+  const actual = dropRight([1, 2, 3], 5);
 
-  t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 0, 'output length');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Array]', 'return type');
+  t.equal(actual.length, 0, 'output length');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
 
 test('arrays.dropRight(array, count) - should return the input array when count is 0', t => {
   const expect = [1, 2, 3];
-  const result = arrays.dropRight([1, 2, 3], 0);
+  const actual = dropRight([1, 2, 3], 0);
 
-  t.equal(Object.prototype.toString.call(result), '[object Array]', 'return type');
-  t.equal(result.length, 3, 'output length');
-  t.deepEqual(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object Array]', 'return type');
+  t.equal(actual.length, 3, 'output length');
+  t.deepEqual(actual, expect, 'output value');
 
   t.end();
 });
@@ -48,7 +48,7 @@ test('arrays.dropRight(array, count) - should return the input array when count 
 test('arrays.dropRight(array, count) - should not mutate the input', t => {
   const input = [1, 2, 3];
   const expect = [1, 2, 3];
-  arrays.dropRight(input, 2);
+  dropRight(input, 2);
 
   t.deepEqual(input, expect, 'input mutation');
 

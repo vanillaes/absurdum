@@ -1,42 +1,42 @@
 import test from 'tape';
-import { strings } from '../../index.js';
+import { snakeCase } from 'absurdum/strings';
 
 test('strings.snakeCase(string) - should return the string formatted to snakeCase', t => {
   const expect = 'help_me_with_this';
-  const result = strings.snakeCase('help me with this');
+  const actual = snakeCase('help me with this');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
 
 test('strings.snakeCase(string) - should return the string formatted to snakeCase', t => {
   const expect = 'firm_shake';
-  const result = strings.snakeCase('--firm--shake--');
+  const actual = snakeCase('--firm--shake--');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
 
 test('strings.snakeCase(string) - should return the string formatted to snakeCase', t => {
   const expect = 'wolf_timber';
-  const result = strings.snakeCase('__WOLF_TIMBER__');
+  const actual = snakeCase('__WOLF_TIMBER__');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
 
 test('strings.snakeCase(string) - should return empty string if provided an empty string', t => {
   const expect = '';
-  const result = strings.snakeCase('');
+  const actual = snakeCase('');
 
-  t.equal(Object.prototype.toString.call(result), '[object String]', 'return type');
-  t.equal(result, expect, 'output value');
+  t.equal(Object.prototype.toString.call(actual), '[object String]', 'return type');
+  t.equal(actual, expect, 'output value');
 
   t.end();
 });
@@ -44,7 +44,7 @@ test('strings.snakeCase(string) - should return empty string if provided an empt
 test('strings.snakeCase(string) - should not mutate the input', t => {
   const input = '__WOLF_TIMBER__';
   const expect = '__WOLF_TIMBER__';
-  strings.snakeCase(input);
+  snakeCase(input);
 
   t.deepEqual(input, expect, 'input mutation');
 
