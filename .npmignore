@@ -1,6 +1,9 @@
 .config/
 .github/
 .vscode/
+assets/
+docs/
 CONTRIBUTING.md
+*.spec.cjs
 *.spec.js
 *.tgz
