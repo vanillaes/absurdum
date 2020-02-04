@@ -4,7 +4,7 @@
 [![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 
-<div style="font-weight:bold; text-align:center;">⚠️ Notice: Node users, this library relies heavily on features that are still marked 'experimental' in Node ⚠️</div>
+<p align="center"><strong>⚠️ Notice: Node users, this library relies heavily on features that are still marked 'experimental' in Node ⚠️<strong></p>
 
 Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free functions and clear/readable modular source for tree shaking.
 
