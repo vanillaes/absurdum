@@ -29,14 +29,6 @@ console.log(output);
 // > ['d', 'c', 'b', 'a']
 ```
 
-## CommonJS
-
-A CommonJS bundle is included for backward compatibility with `node <= 13.2`
-
-```javascript
-const absurdum = require('absurdum/index.cjs');
-```
-
 ## API Documentation
 
 ### Arrays
