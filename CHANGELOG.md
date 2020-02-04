@@ -1,3 +1,8 @@
+<a id="1.1.0"></a>
+## 2020-02-04, Version 1.1.0
+
+* [[v1.1] New Entry Points](https://github.com/vanillaes/absurdum/issues/238)
+
 <a id="1.0.0"></a>
 ## 2020-01-19, Version 1.0.0
 
