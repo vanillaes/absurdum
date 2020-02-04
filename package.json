@@ -55,7 +55,7 @@
     "tape-es": "^1.1.1"
   },
   "engines": {
-    "node": ">=13.2"
+    "node": ">=13.7"
   },
   "semistandard": {
     "ignore": [
