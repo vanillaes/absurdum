@@ -4,7 +4,7 @@
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] this argument in the function
+ * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
  *
  * @example
@@ -16,7 +16,7 @@
  * console.log(result);
  * > 1
  */
-function findIndex (array, predicate, thisArg = undefined) {
+function findIndex (array, predicate, thisArg) {
   if (array.length === 0) return -1;
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
 

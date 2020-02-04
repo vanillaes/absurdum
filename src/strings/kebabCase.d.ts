@@ -1,7 +1,7 @@
 /**
  * kebabCase updates a string to kebabcase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new kebabCase string
  *
  * @example

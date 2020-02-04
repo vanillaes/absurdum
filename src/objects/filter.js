@@ -4,7 +4,7 @@
  * with 3 arguments (value, key, object)
  *
  * @param {Object} object input object
- * @param {Function} [filter] predicate function to check what properties to include
+ * @param {Function} predicate predicate function to check what properties to include
  * @returns {Object} object with selected properties
  *
  * @example
@@ -13,10 +13,10 @@
  * console.log(result);
  * > { small: "ant", big: "elephant" }
  */
-function filter (object, filter) {
-  if (typeof filter !== 'function') { return object; }
+function filter (object, predicate) {
+  if (typeof predicate !== 'function') { return object; }
   return Object.keys(object).reduce((acc, key) => {
-    if (filter(object[key], key, object) === true) {
+    if (predicate(object[key], key, object) === true) {
       acc[key] = object[key];
     }
     return acc;

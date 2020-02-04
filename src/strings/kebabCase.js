@@ -1,7 +1,7 @@
 /**
  * kebabCase updates a string to kebabcase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new kebabCase string
  *
  * @example
@@ -9,7 +9,7 @@
  * console.log(result);
  * > 'css-classes-use-kebab-case'
  */
-function kebabCase (string = '') {
+function kebabCase (string) {
   let first = true;
   return string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (word.length > 0) {

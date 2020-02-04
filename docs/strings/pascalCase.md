@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="pascalcasestring"><code>pascalCase([string=''])</code></h3>
+<h3 id="pascalcasestring"><code>pascalCase([string])</code></h3>
 
 pascalCase updates a string to pascalCase
 
 #### Arguments
-1. `[string='']` *(string)*: input string
+1. `[string]` *(string)*: input string
 
 #### Returns
 *(string)*: returns new pascalCase string

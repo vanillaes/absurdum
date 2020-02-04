@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="findindexarray-predicate-thisargundefined"><code>findIndex(array, predicate, [thisArg=undefined])</code></h3>
+<h3 id="findindexarray-predicate-thisarg"><code>findIndex(array, predicate, [thisArg])</code></h3>
 
 FindIndex method returns the value of First element at which a provided function is true,
 or `-1` if no elements in the array satisfy the function.
@@ -15,7 +15,7 @@ or `-1` if no elements in the array satisfy the function.
 #### Arguments
 1. `array` *(Array)*: input array
 2. `predicate` *(Function)*: to be run against each element of the array
-3. `[thisArg=undefined]` *(&#42;)*: this argument in the function
+3. `[thisArg]` *(&#42;)*: this argument in the function
 
 #### Returns
 *(&#42;)*: value of element that satisfied function.

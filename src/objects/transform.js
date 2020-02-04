@@ -2,8 +2,8 @@
  * Transform works like reduce, except the accumulator is implicitly returned
  *
  * @param {object} object input object
- * @param {function} [func] iteratee function
- * @param {object|Array} [accumulator = {}] custom accumulator object
+ * @param {function} func iteratee function
+ * @param {object|Array} [accumulator={}] custom accumulator object
  * @returns {object|Array} returns accumulator object after the input object has been iterated over by the function.
  *
  * @example

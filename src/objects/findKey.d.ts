@@ -2,7 +2,7 @@
  * FindKey returns the key of the first property value for which a supplied function returns true
  *
  * @param {object} object input object
- * @param {function} [predicate] function to test against object values
+ * @param {function} [predicate=(x)=>x] function to test against object values
  * @param {*} [thisArg] value of this in a function call
  * @returns {string} string of the first object key whose value returns truthy against the function
  *

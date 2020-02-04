@@ -4,7 +4,7 @@
  * @param {Array} array input array
  * @param {*} value value that fills the array
  * @param {number} [start=0] start index
- * @param {number} [end] end index
+ * @param {number} [end=array.length] end index
  * @returns {Array} input array filled w/ the value
  *
  * @example
@@ -12,10 +12,7 @@
  * console.log(result)
  * > [1, 'a', 'a', 4]
  */
-function fill (array, value, start = 0, end) {
-  if (!end) {
-    end = array.length - 1;
-  }
+function fill (array, value, start = 0, end = array.length - 1) {
   return array.reduce((acc, curr, idx) => {
     if (idx >= start && idx <= end) {
       acc.push(value);

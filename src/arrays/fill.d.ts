@@ -4,7 +4,7 @@
  * @param {Array} array input array
  * @param {*} value value that fills the array
  * @param {number} [start=0] start index
- * @param {number} [end] end index
+ * @param {number} [end=array.length] end index
  * @returns {Array} input array filled w/ the value
  *
  * @example

@@ -4,7 +4,7 @@
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] this argument in the function
+ * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
  *
  * @example

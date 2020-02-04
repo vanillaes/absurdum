@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="camelcasestring"><code>camelCase([string=''])</code></h3>
+<h3 id="camelcasestring"><code>camelCase([string])</code></h3>
 
 camelCase updates a string to camelcase
 
 #### Arguments
-1. `[string='']` *(string)*: input string
+1. `[string]` *(string)*: input string
 
 #### Returns
 *(string)*: returns new camelCase string

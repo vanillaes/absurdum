@@ -1,7 +1,7 @@
 /**
  * snakeCase updates a string to snakecase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new snakeCase string
  *
  * @example

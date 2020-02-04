@@ -4,7 +4,7 @@
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] this argument in the function
+ * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
  *
  * @example
@@ -16,7 +16,7 @@
  * console.log(result);
  * > 5
  */
-function find (array, predicate, thisArg = undefined) {
+function find (array, predicate, thisArg) {
   if (array.length === 0) return undefined;
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
   if (predicate.call(thisArg, array[0])) return array[0];

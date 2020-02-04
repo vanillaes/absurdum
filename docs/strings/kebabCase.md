@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="kebabcasestring"><code>kebabCase([string=''])</code></h3>
+<h3 id="kebabcasestring"><code>kebabCase([string])</code></h3>
 
 kebabCase updates a string to kebabcase
 
 #### Arguments
-1. `[string='']` *(string)*: input string
+1. `[string]` *(string)*: input string
 
 #### Returns
 *(string)*: returns new kebabCase string

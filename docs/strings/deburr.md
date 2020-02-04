@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="deburrstring"><code>deburr([string=''])</code></h3>
+<h3 id="deburrstring"><code>deburr([string])</code></h3>
 
 Deburrs string by converting all complex Latin characters to basic Latin letters in a string.
 
 #### Arguments
-1. `[string='']` *(string)*: input string
+1. `[string]` *(string)*: input string
 
 #### Returns
 *(string)*: returns simplified string

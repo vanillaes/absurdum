@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="snakecasestring"><code>snakeCase([string=''])</code></h3>
+<h3 id="snakecasestring"><code>snakeCase([string])</code></h3>
 
 snakeCase updates a string to snakecase
 
 #### Arguments
-1. `[string='']` *(string)*: input string
+1. `[string]` *(string)*: input string
 
 #### Returns
 *(string)*: returns new snakeCase string

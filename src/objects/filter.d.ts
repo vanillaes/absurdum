@@ -4,7 +4,7 @@
  * with 3 arguments (value, key, object)
  *
  * @param {Object} object input object
- * @param {Function} [filter] predicate function to check what properties to include
+ * @param {Function} predicate predicate function to check what properties to include
  * @returns {Object} object with selected properties
  *
  * @example
@@ -13,4 +13,4 @@
  * console.log(result);
  * > { small: "ant", big: "elephant" }
  */
-export function filter(object: any, filter?: Function): any;
+export function filter(object: any, predicate: Function): any;

@@ -122,7 +122,7 @@ function dropRight (array, count = 1) {
  * @param {Array} array input array
  * @param {*} value value that fills the array
  * @param {number} [start=0] start index
- * @param {number} [end] end index
+ * @param {number} [end=array.length] end index
  * @returns {Array} input array filled w/ the value
  *
  * @example
@@ -130,10 +130,7 @@ function dropRight (array, count = 1) {
  * console.log(result)
  * > [1, 'a', 'a', 4]
  */
-function fill (array, value, start = 0, end) {
-  if (!end) {
-    end = array.length - 1;
-  }
+function fill (array, value, start = 0, end = array.length - 1) {
   return array.reduce((acc, curr, idx) => {
     if (idx >= start && idx <= end) {
       acc.push(value);
@@ -171,7 +168,7 @@ function filter (array, predicate) {
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] this argument in the function
+ * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
  *
  * @example
@@ -183,7 +180,7 @@ function filter (array, predicate) {
  * console.log(result);
  * > 5
  */
-function find (array, predicate, thisArg = undefined) {
+function find (array, predicate, thisArg) {
   if (array.length === 0) return undefined;
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
   if (predicate.call(thisArg, array[0])) return array[0];
@@ -202,7 +199,7 @@ function find (array, predicate, thisArg = undefined) {
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] this argument in the function
+ * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
  *
  * @example
@@ -214,7 +211,7 @@ function find (array, predicate, thisArg = undefined) {
  * console.log(result);
  * > 1
  */
-function findIndex (array, predicate, thisArg = undefined) {
+function findIndex (array, predicate, thisArg) {
   if (array.length === 0) return -1;
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
 
@@ -230,7 +227,7 @@ function findIndex (array, predicate, thisArg = undefined) {
  *
  * @param {Array} array input array
  * @param {Function} predicate to be run against each element of the array
- * @param {*} [thisArg=undefined] this argument in the function
+ * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
  *
  * @example
@@ -242,7 +239,7 @@ function findIndex (array, predicate, thisArg = undefined) {
  * console.log(result);
  * > 3
  */
-function findLastIndex (array, predicate, thisArg = undefined) {
+function findLastIndex (array, predicate, thisArg) {
   if (array.length === 0) return -1;
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
   if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1;
@@ -324,7 +321,7 @@ function intersection (...arrays) {
  * Map iterates over an array of values and applies a function to each value
  *
  * @param {Array} array input array
- * @param {Function} [func] function describing how to map values
+ * @param {Function} func function describing how to map values
  * @returns {Array} array of mutated values
  *
  * @example
@@ -591,7 +588,7 @@ var index = /*#__PURE__*/Object.freeze({
 /**
  * camelCase updates a string to camelcase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new camelCase string
  *
  * @example
@@ -599,7 +596,7 @@ var index = /*#__PURE__*/Object.freeze({
  * console.log(result);
  * > 'bestFriend'
  */
-function camelCase (string = '') {
+function camelCase (string) {
   let first = true;
   const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (first && word.length > 0) {
@@ -686,7 +683,7 @@ function chomp (string, separator) {
 /**
  * Deburrs string by converting all complex Latin characters to basic Latin letters in a string.
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns simplified string
  *
  * @example
@@ -790,7 +787,7 @@ function includes (string, substr, start = 0) {
 /**
  * kebabCase updates a string to kebabcase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new kebabCase string
  *
  * @example
@@ -798,7 +795,7 @@ function includes (string, substr, start = 0) {
  * console.log(result);
  * > 'css-classes-use-kebab-case'
  */
-function kebabCase (string = '') {
+function kebabCase (string) {
   let first = true;
   return string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (word.length > 0) {
@@ -939,7 +936,7 @@ function padStart (string, length = 0, substr = ' ') {
 /**
  * pascalCase updates a string to pascalCase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new pascalCase string
  *
  * @example
@@ -947,7 +944,7 @@ function padStart (string, length = 0, substr = ' ') {
  * console.log(result);
  * > 'ClassesUsePascalCase'
  */
-function pascalCase (string = '') {
+function pascalCase (string) {
   const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     return acc + word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }, '');
@@ -995,7 +992,7 @@ function reverse (string) {
 /**
  * snakeCase updates a string to snakecase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new snakeCase string
  *
  * @example
@@ -1003,7 +1000,7 @@ function reverse (string) {
  * console.log(result);
  * > 'best_friend'
  */
-function snakeCase (string = '') {
+function snakeCase (string) {
   let first = true;
   return string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (word.length > 0) {
@@ -1058,7 +1055,7 @@ function startsWith (string, substr) {
 /**
  * TrimStart trims any whitespace or the selected characters from the beginning of the string
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @param {string} [chars=' '] characters to remove from beginning of string
  * @returns {string} string with the characters removed from beginning
  *
@@ -1067,7 +1064,7 @@ function startsWith (string, substr) {
  * console.log(result);
  * > 'abc-_-'
  */
-function trimStart (string = '', chars = ' ') {
+function trimStart (string, chars = ' ') {
   const testChars = new Set([...chars]);
   let first = true;
   return [...string].reduce((acc, curr) => {
@@ -1087,7 +1084,7 @@ function trimStart (string = '', chars = ' ') {
 /**
  * TrimEnd trims any whitespace or the selected characters from the end of the string
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @param {string} [chars=' '] characters to remove from end of the string
  * @returns {string} string with the characters removed from end of the string
  *
@@ -1096,7 +1093,7 @@ function trimStart (string = '', chars = ' ') {
  * console.log(result);
  * > '-_-abc'
  */
-function trimEnd (string = '', chars = ' ') {
+function trimEnd (string, chars = ' ') {
   const testChars = new Set([...chars]);
   let end = true;
   return [...string].reduceRight((acc, curr) => {
@@ -1117,7 +1114,7 @@ function trimEnd (string = '', chars = ' ') {
  * Truncates string if it's longer than the given maximum string length. The last characters
  * of the truncated string are replaced with the omission string which defaults to "...".
  *
- * @param {string} [string=''] string to truncate
+ * @param {string} [string] string to truncate
  * @param {Object} [options={}] object containing options
  * @param {number} [options.length=30] Max length of truncated string
  * @param {string} [options.omission='...'] string to indicate omitted text
@@ -1129,7 +1126,7 @@ function trimEnd (string = '', chars = ' ') {
  * console.log(result);
  * > true
  **/
-function truncate (string = '', options) {
+function truncate (string, options) {
   let length = 30;
   let omission = '...';
   let separator;
@@ -1181,7 +1178,7 @@ function truncate (string = '', options) {
 /**
  * Splits `string` into an array of its words.
  *
- * @param {string} [string=''] string to inspect for words
+ * @param {string} [string] string to inspect for words
  * @param {RegExp|string} [pattern] regex pattern to match words or string of characters to split words by.
  * @returns {Array} Returns an array of words
  *
@@ -1476,7 +1473,7 @@ function entries (object) {
  * with 3 arguments (value, key, object)
  *
  * @param {Object} object input object
- * @param {Function} [filter] predicate function to check what properties to include
+ * @param {Function} predicate predicate function to check what properties to include
  * @returns {Object} object with selected properties
  *
  * @example
@@ -1485,10 +1482,10 @@ function entries (object) {
  * console.log(result);
  * > { small: "ant", big: "elephant" }
  */
-function filter$1 (object, filter) {
-  if (typeof filter !== 'function') { return object; }
+function filter$1 (object, predicate) {
+  if (typeof predicate !== 'function') { return object; }
   return Object.keys(object).reduce((acc, key) => {
-    if (filter(object[key], key, object) === true) {
+    if (predicate(object[key], key, object) === true) {
       acc[key] = object[key];
     }
     return acc;
@@ -1499,7 +1496,7 @@ function filter$1 (object, filter) {
  * FindKey returns the key of the first property value for which a supplied function returns true
  *
  * @param {object} object input object
- * @param {function} [predicate] function to test against object values
+ * @param {function} [predicate=(x)=>x] function to test against object values
  * @param {*} [thisArg] value of this in a function call
  * @returns {string} string of the first object key whose value returns truthy against the function
  *
@@ -1560,7 +1557,7 @@ const objContained = (objA, objB) => {
  * FindLastKey returns the key of the last property value for which a supplied function returns true
  *
  * @param {object} object input object
- * @param {function} [predicate] function to test against object values
+ * @param {function} [predicate=(x)=>x] function to test against object values
  * @param {*} [thisArg] value of this in a function call
  * @returns {string} string of the first object key whose value returns truthy against the function
  *
@@ -1954,8 +1951,8 @@ function result (object, path, defaultValue) {
  * Transform works like reduce, except the accumulator is implicitly returned
  *
  * @param {object} object input object
- * @param {function} [func] iteratee function
- * @param {object|Array} [accumulator = {}] custom accumulator object
+ * @param {function} func iteratee function
+ * @param {object|Array} [accumulator={}] custom accumulator object
  * @returns {object|Array} returns accumulator object after the input object has been iterated over by the function.
  *
  * @example

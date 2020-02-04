@@ -7,12 +7,12 @@
 
 <!-- div -->
 
-<h3 id="wordsstring-pattern"><code>words([string=''], [pattern])</code></h3>
+<h3 id="wordsstring-pattern"><code>words([string], [pattern])</code></h3>
 
 Splits `string` into an array of its words.
 
 #### Arguments
-1. `[string='']` *(string)*: string to inspect for words
+1. `[string]` *(string)*: string to inspect for words
 2. `[pattern]` *(RegExp|string)*: regex pattern to match words or string of characters to split words by.
 
 #### Returns

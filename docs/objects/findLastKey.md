@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="findlastkeyobject-predicate-thisarg"><code>findLastKey(object, [predicate], [thisArg])</code></h3>
+<h3 id="findlastkeyobject-predicatex-thisarg"><code>findLastKey(object, [predicate=(x)], [thisArg])</code></h3>
 
 FindLastKey returns the key of the last property value for which a supplied function returns true
 
 #### Arguments
 1. `object` *(object)*: input object
-2. `[predicate]` *(function)*: function to test against object values
+2. `[predicate=(x)]` *(function)*: function to test against object values
 3. `[thisArg]` *(&#42;)*: value of this in a function call
 
 #### Returns

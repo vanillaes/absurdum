@@ -1,7 +1,7 @@
 /**
  * camelCase updates a string to camelcase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new camelCase string
  *
  * @example

@@ -2,7 +2,7 @@
  * Map iterates over an array of values and applies a function to each value
  *
  * @param {Array} array input array
- * @param {Function} [func] function describing how to map values
+ * @param {Function} func function describing how to map values
  * @returns {Array} array of mutated values
  *
  * @example

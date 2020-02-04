@@ -1,7 +1,7 @@
 /**
  * Deburrs string by converting all complex Latin characters to basic Latin letters in a string.
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns simplified string
  *
  * @example

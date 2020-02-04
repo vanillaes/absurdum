@@ -1,7 +1,7 @@
 /**
  * camelCase updates a string to camelcase
  *
- * @param {string} [string=''] input string
+ * @param {string} [string] input string
  * @returns {string} returns new camelCase string
  *
  * @example
@@ -9,7 +9,7 @@
  * console.log(result);
  * > 'bestFriend'
  */
-function camelCase (string = '') {
+function camelCase (string) {
   let first = true;
   const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (first && word.length > 0) {
