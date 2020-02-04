@@ -4,30 +4,84 @@
 [![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 
+<div style="font-weight:bold; text-align:center;">⚠️ Notice: Node users, this library relies heavily on features that are still marked 'experimental' in Node ⚠️</div>
+
 Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free functions and clear/readable modular source for tree shaking.
 
 ## Features
 
-- Exploration of the flexibility of Reduce
-- Source of functions is viewable in one file
-- CommonJS and ES2015 module support
-- All functions are side-effect free
-- Polyfills for older environments
-- Executes on VanillaJS data structures
-- Small footprint (15K minified)
+- Explores the flexibility of Reduce
+- Abstraction Free -> tree-shake friendly
+- Functional -> all operators are side-effect free
+- Polyfills -> includes operator polyfills for older browsers
+- Modern -> works transparently with ESM *and* CJS
+- Typescript -> typings are provided for all operators
+- Intellisense -> supports code completions + inline documentation
+- Well Tested -> includes 600+ tests covering every aspect
+- Small Footprint -> 15K minified
+
+## Imports
+
+This package provides a variety of entry-points for all JS platforms
+
+### Browsers
+
+All top-level operator namespaces (ie `[arrays, objects, strings]`) can be imported from the index
+
+```javascript
+import { arrays, objects, strings } from 'path/to/absurdum/index.js';
+```
+
+The minified version can be imported from
+
+```javascript
+import { arrays, objects, strings } from 'path/to/absurdum/index.min.js';
+```
+
+### Node/Bundlers (ESM)
+
+Top-level ES module namespaces are provided for Node/Bundlers
+
+```javascript
+import { arrays, objects, strings } from 'absurdum';
+```
+
+Individual operators can be imported from their parent namespaces
+
+```javascript
+import { chunk, find } from 'absurdum/arrays';
+import { assign, invert } from 'absurdum/objects';
+import { camelCase, repeat } from 'absurdum/strings';
+```
+
+*Note: Webpack's tree-shaking algorithm doesn't handle multi-layered exports. To optimize bundle size, prefer individual operator imports.*
+
+### Node/Legacy (CJS)
+
+For Node users who rely on CommonJS, top-level namespaces are provided
+
+```javascript
+const arrays = require('absurdum').arrays;
+const objects = require('absurdum').objects;
+const strings = require('absurdum').strings;
+```
+
+*Note: CJS entry-points are backward-compatible with all non-EOL versions of Node*
 
 ## Usage
 
-Import the desired namespace then call the operator from it
+Import an operator and feed it some inputs
 
 ```javascript
-import { arrays } from 'absurdum';
+import { reverse } from 'absurdum/arrays';
 
 const input = ['a', 'b', 'c', 'd'];
-const output = arrays.reverse(input);
+const output = reverse(input);
 console.log(output);
 // > ['d', 'c', 'b', 'a']
 ```
+
+*Tip: For VSCode users. Input type-checking, intellisense, and inline documentation are all supported.*
 
 ## API Documentation
 
@@ -250,9 +304,3 @@ console.log(output);
 [String.prototype.startsWith]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
 [String.prototype.trimEnd]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 [String.prototype.trimStart]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
-
-[Array.prototype.reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-[wikipedia]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
-[operator]: https://github.com/evanplaice/absurdum/issues/new?title=Operator([operator])&template=OPERATOR_TEMPLATE.md&labels=enhancement,operator
-[type]: https://github.com/evanplaice/absurdum/issues/new?title=Type([typ])&template=TYPE_TEMPLATE.md&labels=enhancement,type
-[feature-workflow]:https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
