@@ -5,7 +5,7 @@
 [![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 
-<p align="center"><strong>⚠️ Notice: Node users, this library relies heavily on features that are still marked 'experimental' in Node ⚠️<strong></p>
+<p align="center"><strong>⚠️ Notice: EcmaScript Module Support in Node is Experimental ⚠️<strong></p>
 
 Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free functions and clear/readable modular source for tree shaking.
 
@@ -19,7 +19,6 @@ Absurdum is a Javascript utility library built with a focus on providing idempot
 - Typescript -> typings are provided for all operators
 - Intellisense -> supports code completions + inline documentation
 - Well Tested -> includes 600+ tests covering every aspect
-- Small Footprint -> 15K minified
 
 ## Imports
 
