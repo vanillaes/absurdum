@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vanillaes/absurdum/master/assets/Logo-banner%20[150x300].png" alt="Absurdum Logo">
+</p>
+
+-----
+
+Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free 
+functions and clear/readable modular source for tree shaking.
+
 [![GitHub Releases](https://badgen.net/github/tag/vanillaes/absurdum)](https://github.com/vanillaes/absurdum/releases)
 [![NPM Release](https://badgen.net/npm/v/absurdum)](https://www.npmjs.com/package/absurdum)
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/absurdum)](https://bundlephobia.com/result?p=absurdum)
@@ -6,8 +15,6 @@
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 
 <p align="center"><strong>⚠️ Notice: EcmaScript Module Support in Node is Experimental ⚠️<strong></p>
-
-Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free functions and clear/readable modular source for tree shaking.
 
 ## Features
 
