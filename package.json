@@ -67,7 +67,7 @@
     "glob": "^7.1.4",
     "rollup-plugin-terser": "^5.2.0",
     "semistandard": "^14.2.0",
-    "tape-es": "^1.1.1"
+    "tape-es": "^1.2.3"
   },
   "engines": {
     "node": ">=13.7"
