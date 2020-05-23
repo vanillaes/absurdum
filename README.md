@@ -8,8 +8,8 @@ Absurdum is a Javascript utility library built with a focus on providing idempot
 functions and clear/readable modular source for tree shaking.
 
 [![GitHub Releases](https://badgen.net/github/tag/vanillaes/absurdum)](https://github.com/vanillaes/absurdum/releases)
-[![NPM Release](https://badgen.net/npm/v/absurdum)](https://www.npmjs.com/package/absurdum)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/absurdum)](https://bundlephobia.com/result?p=absurdum)
+[![NPM Release](https://badgen.net/npm/v/absurdum)](https://www.npmjs.com/package/@vanillaes/absurdum)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/absurdum)](https://bundlephobia.com/result?p=@vanillaes/absurdum)
 [![MIT License](https://badgen.net/github/license/vanillaes/absurdum)](https://raw.githubusercontent.com/vanillaes/absurdum/master/LICENSE)
 [![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
@@ -48,15 +48,15 @@ import { arrays, objects, strings } from 'path/to/absurdum/index.min.js';
 Top-level ES module namespaces are provided for Node/Bundlers
 
 ```javascript
-import { arrays, objects, strings } from 'absurdum';
+import { arrays, objects, strings } from '@vanillaes/absurdum';
 ```
 
 Individual operators can be imported from their parent namespaces
 
 ```javascript
-import { chunk, find } from 'absurdum/arrays';
-import { assign, invert } from 'absurdum/objects';
-import { camelCase, repeat } from 'absurdum/strings';
+import { chunk, find } from '@vanillaes/absurdum/arrays';
+import { assign, invert } from '@vanillaes/absurdum/objects';
+import { camelCase, repeat } from '@vanillaes/absurdum/strings';
 ```
 
 *Note: Webpack's tree-shaking algorithm doesn't handle multi-layered exports. To optimize bundle size, prefer individual operator imports.*
@@ -66,9 +66,9 @@ import { camelCase, repeat } from 'absurdum/strings';
 For Node users who rely on CommonJS, top-level namespaces are provided
 
 ```javascript
-const arrays = require('absurdum').arrays;
-const objects = require('absurdum').objects;
-const strings = require('absurdum').strings;
+const arrays = require('@vanillaes/absurdum').arrays;
+const objects = require('@vanillaes/absurdum').objects;
+const strings = require('@vanillaes/absurdum').strings;
 ```
 
 *Note: CJS entry-points are backward-compatible with all non-EOL versions of Node*
@@ -78,7 +78,7 @@ const strings = require('absurdum').strings;
 Import an operator and feed it some inputs
 
 ```javascript
-import { reverse } from 'absurdum/arrays';
+import { reverse } from '@vanillaes/absurdum/arrays';
 
 const input = ['a', 'b', 'c', 'd'];
 const output = reverse(input);
