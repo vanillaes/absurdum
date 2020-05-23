@@ -8,8 +8,8 @@ Absurdum is a Javascript utility library built with a focus on providing idempot
 functions and clear/readable modular source for tree shaking.
 
 [![GitHub Releases](https://badgen.net/github/tag/vanillaes/absurdum)](https://github.com/vanillaes/absurdum/releases)
-[![NPM Release](https://badgen.net/npm/v/absurdum)](https://www.npmjs.com/package/@vanillaes/absurdum)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/absurdum)](https://bundlephobia.com/result?p=@vanillaes/absurdum)
+[![NPM Release](https://badgen.net/npm/v/@vanillaes/absurdum)](https://www.npmjs.com/package/@vanillaes/absurdum)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@vanillaes/absurdum)](https://bundlephobia.com/result?p=@vanillaes/absurdum)
 [![MIT License](https://badgen.net/github/license/vanillaes/absurdum)](https://raw.githubusercontent.com/vanillaes/absurdum/master/LICENSE)
 [![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
 [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
