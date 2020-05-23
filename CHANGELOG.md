@@ -1,6 +1,7 @@
-<a id="1.1.0"></a>
-## 2020-02-04, Version 1.1.0
+<!-- <a id="2.0.0"></a>
+## TBD, Version 2.0.0 -->
 
+* [[v1.2] Migrate absurdum -> @vanillaes/absurdum](https://github.com/vanillaes/absurdum/releases/tag/v1.2.0)
 * [[v1.1] New Entry Points](https://github.com/vanillaes/absurdum/issues/238)
 
 <a id="1.0.0"></a>
