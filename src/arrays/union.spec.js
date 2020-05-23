@@ -1,5 +1,5 @@
 import test from 'tape';
-import { union } from 'absurdum/arrays';
+import { union } from '@vanillaes/absurdum/arrays';
 
 test('arrays.union(...arrays) - should return an array of unique elements from all given arrays in order encountered', t => {
   const expect = [2, 1, 3];

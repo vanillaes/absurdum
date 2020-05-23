@@ -1,5 +1,5 @@
 import test from 'tape';
-import { mapKeys } from 'absurdum/objects';
+import { mapKeys } from '@vanillaes/absurdum/objects';
 
 test('objects.mapKeys(object, func) - returns an object with updated keys', t => {
   const expect = { neat_1: 1, neat_2: 2, neat_3: 3 };

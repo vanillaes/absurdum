@@ -1,5 +1,5 @@
 import test from 'tape';
-import { flat } from 'absurdum/arrays';
+import { flat } from '@vanillaes/absurdum/arrays';
 
 test('arrays.flat(array) - should return an empty array if the input is empty', t => {
   const expect = [];

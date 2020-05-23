@@ -1,5 +1,5 @@
 import test from 'tape';
-import { pascalCase } from 'absurdum/strings';
+import { pascalCase } from '@vanillaes/absurdum/strings';
 
 test('strings.pascalCase(string) - should return the string formatted to pascalCase', t => {
   const expect = 'ClassesUsePascalCase';

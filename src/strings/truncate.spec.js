@@ -1,5 +1,5 @@
 import test from 'tape';
-import { truncate } from 'absurdum/strings';
+import { truncate } from '@vanillaes/absurdum/strings';
 
 test('strings.truncate(string) - should return the truncated string', t => {
   const expect = 'If you want to lift yoursel...';

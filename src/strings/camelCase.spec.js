@@ -1,5 +1,5 @@
 import test from 'tape';
-import { camelCase } from 'absurdum/strings';
+import { camelCase } from '@vanillaes/absurdum/strings';
 
 test('strings.camelCase(string) - should return the string formatted to camelCase', t => {
   const expect = 'helpMeWithThis';

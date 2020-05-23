@@ -1,9 +1,9 @@
 const test = require('tape');
-const arrays = require('absurdum').arrays;
+const arrays = require('@vanillaes/absurdum').arrays;
 const chunk = arrays.chunk;
-const objects = require('absurdum').objects;
+const objects = require('@vanillaes/absurdum').objects;
 const assign = objects.assign;
-const strings = require('absurdum').strings;
+const strings = require('@vanillaes/absurdum').strings;
 const camelCase = strings.camelCase;
 
 test('arrays operators - should be require-able via CommonJS', t => {

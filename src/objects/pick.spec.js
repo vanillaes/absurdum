@@ -1,5 +1,5 @@
 import test from 'tape';
-import { pick } from 'absurdum/objects';
+import { pick } from '@vanillaes/absurdum/objects';
 
 test('objects.pick(object, paths) - returns an object containing selected property', t => {
   const expect = { horses: 4 };

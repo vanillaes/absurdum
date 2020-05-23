@@ -1,5 +1,5 @@
 import test from 'tape';
-import { unique } from 'absurdum/arrays';
+import { unique } from '@vanillaes/absurdum/arrays';
 
 test('arrays.unique(array) - should return the input array with all duplicate items removed', t => {
   const expect = [4, 2, 1];

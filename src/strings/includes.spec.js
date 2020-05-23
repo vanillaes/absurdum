@@ -1,5 +1,5 @@
 import test from 'tape';
-import { includes } from 'absurdum/strings';
+import { includes } from '@vanillaes/absurdum/strings';
 
 test('strings.includes(string, substr) - returns truthy when the string includes the substring', t => {
   const expect = true;

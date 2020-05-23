@@ -1,5 +1,5 @@
 import test from 'tape';
-import { reverse } from 'absurdum/strings';
+import { reverse } from '@vanillaes/absurdum/strings';
 
 test('strings.reverse(string) - returns the input string reversed', t => {
   const expect = 'gnirts tupni na si siht';

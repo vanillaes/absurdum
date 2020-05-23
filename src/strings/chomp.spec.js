@@ -1,5 +1,5 @@
 import test from 'tape';
-import { chomp } from 'absurdum/strings';
+import { chomp } from '@vanillaes/absurdum/strings';
 
 test('strings.chomp(string) - returns a string equal to the original string if nothing fits chomp criteria', t => {
   const expect = 'water';

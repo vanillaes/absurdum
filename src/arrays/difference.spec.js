@@ -1,5 +1,5 @@
 import test from 'tape';
-import { difference } from 'absurdum/arrays';
+import { difference } from '@vanillaes/absurdum/arrays';
 
 test('arrays.difference(arrayA, arrayB) - should return the difference between the input array and included values', t => {
   const expect = [1];

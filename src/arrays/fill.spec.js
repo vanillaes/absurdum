@@ -1,5 +1,5 @@
 import test from 'tape';
-import { fill } from 'absurdum/arrays';
+import { fill } from '@vanillaes/absurdum/arrays';
 
 test('arrays.fill(array, value) - should fill the array with the value', t => {
   const expect = ['a', 'a', 'a', 'a'];

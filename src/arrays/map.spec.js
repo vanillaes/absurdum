@@ -1,5 +1,5 @@
 import test from 'tape';
-import { map } from 'absurdum/arrays';
+import { map } from '@vanillaes/absurdum/arrays';
 
 test('arrays.map(array, func) - should map over and apply the function to each value', t => {
   const expect = [3, 4, 5, 6];

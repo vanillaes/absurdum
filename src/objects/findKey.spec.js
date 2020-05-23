@@ -1,5 +1,5 @@
 import test from 'tape';
-import { findKey } from 'absurdum/objects';
+import { findKey } from '@vanillaes/absurdum/objects';
 
 test('objects.findKey(object) - returns a first key when iterated if not provided a predicate', t => {
   const expect = 'sun';

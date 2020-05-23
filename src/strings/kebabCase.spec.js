@@ -1,5 +1,5 @@
 import test from 'tape';
-import { kebabCase } from 'absurdum/strings';
+import { kebabCase } from '@vanillaes/absurdum/strings';
 
 test('strings.kebabCase(string) - should return the string formatted to kebabCase', t => {
   const expect = 'css-classes-use-kebab-case';

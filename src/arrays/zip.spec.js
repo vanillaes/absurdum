@@ -1,5 +1,5 @@
 import test from 'tape';
-import { zip } from 'absurdum/arrays';
+import { zip } from '@vanillaes/absurdum/arrays';
 
 test('arrays.zip(arrayA, arrayB) - should return an array with arrays of corresponding values', t => {
   const expect = [[5, 'ham'], [12, 'cheese'], [8, 'bread']];

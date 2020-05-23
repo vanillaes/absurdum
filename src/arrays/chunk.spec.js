@@ -1,5 +1,5 @@
 import test from 'tape';
-import { chunk } from 'absurdum/arrays';
+import { chunk } from '@vanillaes/absurdum/arrays';
 
 test('arrays.chunk(array) - should return a chunk for each item in the array', t => {
   const expect = [[1], [2], [3], [4]];

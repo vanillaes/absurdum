@@ -1,5 +1,5 @@
 import test from 'tape';
-import { findLastIndex } from 'absurdum/arrays';
+import { findLastIndex } from '@vanillaes/absurdum/arrays';
 
 test('arrays.findLastIndex(array, predicate) - should return the index of last element at which a provided function is true', t => {
   const expect = 4;

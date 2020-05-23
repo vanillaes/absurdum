@@ -1,5 +1,5 @@
 import test from 'tape';
-import { endsWith } from 'absurdum/strings';
+import { endsWith } from '@vanillaes/absurdum/strings';
 
 test('strings.endsWith(string, substr) - returns truthy if the string ends with the substring', t => {
   const expect = true;

@@ -1,5 +1,5 @@
 import test from 'tape';
-import { takeRight } from 'absurdum/arrays';
+import { takeRight } from '@vanillaes/absurdum/arrays';
 
 test('arrays.takeRight(array) - should return a slice of the array containing the last element of the array', t => {
   const expect = ['Dimitri'];

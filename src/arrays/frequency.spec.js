@@ -1,5 +1,5 @@
 import test from 'tape';
-import { frequency } from 'absurdum/arrays';
+import { frequency } from '@vanillaes/absurdum/arrays';
 
 test('arrays.frequency(array) - should return an empty object if the input is empty', t => {
   const expect = {};

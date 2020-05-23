@@ -1,5 +1,5 @@
 import test from 'tape';
-import { intersection } from 'absurdum/arrays';
+import { intersection } from '@vanillaes/absurdum/arrays';
 
 test('arrays.intersection(...arrays) - should return an array containing the unique intersecting values between all input arrays', t => {
   const expect = [2];

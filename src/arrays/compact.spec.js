@@ -1,5 +1,5 @@
 import test from 'tape';
-import { compact } from 'absurdum/arrays';
+import { compact } from '@vanillaes/absurdum/arrays';
 
 test('arrays.compact(array) - should return the array with false removed', t => {
   const expect = [1, 3, 4];

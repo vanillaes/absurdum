@@ -1,5 +1,5 @@
 import test from 'tape';
-import { without } from 'absurdum/arrays';
+import { without } from '@vanillaes/absurdum/arrays';
 
 test('arrays.without(array, values) - should return a copy of the input array without any of the input values', t => {
   const expect = ['down', 'left'];

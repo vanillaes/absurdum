@@ -1,5 +1,5 @@
 import test from 'tape';
-import { take } from 'absurdum/arrays';
+import { take } from '@vanillaes/absurdum/arrays';
 
 test('arrays.take(array) - should return a slice of the array containing the first element of the array', t => {
   const expect = ['Amy'];

@@ -1,5 +1,5 @@
 import test from 'tape';
-import { result } from 'absurdum/objects';
+import { result } from '@vanillaes/absurdum/objects';
 
 test('objects.result(object, path) - returns value if a value exists at the choosen path', t => {
   const expect = 0;

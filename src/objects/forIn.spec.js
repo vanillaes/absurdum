@@ -1,5 +1,5 @@
 import test from 'tape';
-import { forIn } from 'absurdum/objects';
+import { forIn } from '@vanillaes/absurdum/objects';
 
 const consoleLog = console.log;
 let logOutput = [];

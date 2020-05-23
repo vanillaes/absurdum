@@ -1,5 +1,5 @@
 import test from 'tape';
-import { dropRight } from 'absurdum/arrays';
+import { dropRight } from '@vanillaes/absurdum/arrays';
 
 test('arrays.dropRight(array) - should return an array w/ the last item dropped when count is not specified', t => {
   const expect = [1, 2];

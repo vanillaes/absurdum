@@ -1,5 +1,5 @@
 import test from 'tape';
-import { trimStart } from 'absurdum/strings';
+import { trimStart } from '@vanillaes/absurdum/strings';
 
 test('strings.trimStart(string) - returns the string with all spaces removed from the beginning', t => {
   const expect = 'Learned to surf   ';

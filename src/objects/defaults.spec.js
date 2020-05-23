@@ -1,5 +1,5 @@
 import test from 'tape';
-import { defaults } from 'absurdum/objects';
+import { defaults } from '@vanillaes/absurdum/objects';
 
 test('objects.defaults(object, sources) - returns the object if no source objects to merge are provided', t => {
   const expect = { hold: 25, your: 19, horses: 4 };

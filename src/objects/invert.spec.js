@@ -1,5 +1,5 @@
 import test from 'tape';
-import { invert } from 'absurdum/objects';
+import { invert } from '@vanillaes/absurdum/objects';
 
 test('objects.invert(object) - returns an object with key-value pairs inverted', t => {
   const expect = { 4: 'horses', 19: 'your', 25: 'hold' };

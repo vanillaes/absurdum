@@ -1,5 +1,5 @@
 import test from 'tape';
-import { trimEnd } from 'absurdum/strings';
+import { trimEnd } from '@vanillaes/absurdum/strings';
 
 test('strings.trimEnd(string) - returns the string with all spaces removed from the end of the string', t => {
   const expect = '   Learned to surf';

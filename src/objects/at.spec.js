@@ -1,5 +1,5 @@
 import test from 'tape';
-import { at } from 'absurdum/objects';
+import { at } from '@vanillaes/absurdum/objects';
 
 test('objects.at(object, paths) - returns an array containing selected property value from path described by string', t => {
   const expect = ['b'];

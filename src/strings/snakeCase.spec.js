@@ -1,5 +1,5 @@
 import test from 'tape';
-import { snakeCase } from 'absurdum/strings';
+import { snakeCase } from '@vanillaes/absurdum/strings';
 
 test('strings.snakeCase(string) - should return the string formatted to snakeCase', t => {
   const expect = 'help_me_with_this';

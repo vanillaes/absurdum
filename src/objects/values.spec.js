@@ -1,5 +1,5 @@
 import test from 'tape';
-import { values } from 'absurdum/objects';
+import { values } from '@vanillaes/absurdum/objects';
 
 test('objects.values(object) - returns an array of object values', t => {
   const expect = [25, 19, 4];

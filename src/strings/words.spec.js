@@ -1,5 +1,5 @@
 import test from 'tape';
-import { words } from 'absurdum/strings';
+import { words } from '@vanillaes/absurdum/strings';
 
 test('strings.words(string) - should return an array of words from the string', t => {
   const expect = ['I', 'can', 'I', 'should', 'I', 'will'];

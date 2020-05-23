@@ -1,6 +1,6 @@
 /* eslint no-sparse-arrays: 0 */
 import test from 'tape';
-import { unzip } from 'absurdum/arrays';
+import { unzip } from '@vanillaes/absurdum/arrays';
 
 test('arrays.unzip(array) - should return an array with arrays of corresponding values', t => {
   const expect = [[5, 12, 8], ['ham', 'cheese', 'bread']];

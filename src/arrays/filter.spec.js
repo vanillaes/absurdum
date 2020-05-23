@@ -1,5 +1,5 @@
 import test from 'tape';
-import { filter } from 'absurdum/arrays';
+import { filter } from '@vanillaes/absurdum/arrays';
 
 test('arrays.filter(array, predicate) - should filter out values based on the result of the predicate', t => {
   const expect = [2, 4];

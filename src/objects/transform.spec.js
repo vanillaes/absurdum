@@ -1,5 +1,5 @@
 import test from 'tape';
-import { transform } from 'absurdum/objects';
+import { transform } from '@vanillaes/absurdum/objects';
 
 test('objects.transform(object, func) - returns an object with updated values, ', t => {
   const expect = { 1: ['a', 'c'], 2: ['b'] };

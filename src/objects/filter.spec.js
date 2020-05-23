@@ -1,5 +1,5 @@
 import test from 'tape';
-import { filter } from 'absurdum/objects';
+import { filter } from '@vanillaes/absurdum/objects';
 
 test('objects.filter(object) - returns the object if no filter function is provided', t => {
   const expect = { small: 'ant', medium: 'dog', big: 'elephant' };

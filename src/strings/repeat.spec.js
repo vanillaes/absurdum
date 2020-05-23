@@ -1,5 +1,5 @@
 import test from 'tape';
-import { repeat } from 'absurdum/strings';
+import { repeat } from '@vanillaes/absurdum/strings';
 
 test('strings.repeat(string, count) - returns a string with input string repeated set number of times', t => {
   const expect = 'Cow Cow Cow Cow ';

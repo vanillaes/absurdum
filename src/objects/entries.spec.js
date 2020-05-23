@@ -1,5 +1,5 @@
 import test from 'tape';
-import { entries } from 'absurdum/objects';
+import { entries } from '@vanillaes/absurdum/objects';
 
 test('objects.entries(object) - should return an empty array if the input is empty', t => {
   const expect = [];

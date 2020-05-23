@@ -1,5 +1,5 @@
 import test from 'tape';
-import { drop } from 'absurdum/arrays';
+import { drop } from '@vanillaes/absurdum/arrays';
 
 test('arrays.drop(array) - should return an array w/ the first item dropped when n is not specified', t => {
   const expect = [2, 3];

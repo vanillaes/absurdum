@@ -1,5 +1,5 @@
 import test from 'tape';
-import { startsWith } from 'absurdum/strings';
+import { startsWith } from '@vanillaes/absurdum/strings';
 
 test('strings.startsWith(string, substr) - returns truthy when the string starts with the substring', t => {
   const expect = true;

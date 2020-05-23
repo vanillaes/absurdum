@@ -1,5 +1,5 @@
 import test from 'tape';
-import { pull } from 'absurdum/arrays';
+import { pull } from '@vanillaes/absurdum/arrays';
 
 test('arrays.pull(array) - should return the input array if there are no input values', t => {
   const expect = ['ham', 'bread'];

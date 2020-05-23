@@ -1,5 +1,5 @@
 import test from 'tape';
-import { findLastKey } from 'absurdum/objects';
+import { findLastKey } from '@vanillaes/absurdum/objects';
 
 test('objects.findLastKey(object) - returns the last key when iterated if not provided a predicate', t => {
   const expect = 'rain';

@@ -1,5 +1,5 @@
 import test from 'tape';
-import { xor } from 'absurdum/arrays';
+import { xor } from '@vanillaes/absurdum/arrays';
 
 test('arrays.xor(...arrays) - should return an array unique values that is the symmetric difference of the given arrays', t => {
   const expect = [[5], 'c', 5];

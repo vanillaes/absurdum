@@ -1,5 +1,5 @@
 import test from 'tape';
-import { find } from 'absurdum/arrays';
+import { find } from '@vanillaes/absurdum/arrays';
 
 test('arrays.find(array, predicate) - should return the value of first element at which a provided function is true', t => {
   const expect = 12;

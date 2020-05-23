@@ -1,5 +1,5 @@
 import test from 'tape';
-import { deburr } from 'absurdum/strings';
+import { deburr } from '@vanillaes/absurdum/strings';
 
 test('strings.deburr(string) - should return the string converting to basic Latin letters', t => {
   const expect = 'aeNaThsЄL,';

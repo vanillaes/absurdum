@@ -1,5 +1,5 @@
 import test from 'tape';
-import { pad } from 'absurdum/strings';
+import { pad } from '@vanillaes/absurdum/strings';
 
 test('strings.pad(string, length) - returns a string padded w/ spaces', t => {
   const expect = ' abcabc  ';
