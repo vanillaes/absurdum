@@ -45,7 +45,7 @@
     "test": "tape-es",
     "test:watch": "tape-watch-es",
     "test:compat": "node src/compat.spec.cjs",
-    "lint": "semistandard",
+    "lint": "esmtk lint",
     "types": "npx tsc -p .config/jsconfig.json",
     "build": "npm run build:cjs && npm run build:min && npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
@@ -60,12 +60,11 @@
     "preversion": "npm test && npm run test:compat && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
   },
-  "dependencies": {},
   "devDependencies": {
     "docdown": "github:evanplaice/docdown",
+    "esmtk": "^0.1.1",
     "glob": "^7.1.4",
     "rollup-plugin-terser": "^5.2.0",
-    "semistandard": "^14.2.0",
     "tape-es": "^1.2.5"
   },
   "engines": {
@@ -74,9 +73,7 @@
   "semistandard": {
     "ignore": [
       "index.js",
-      "docs.config.js",
-      "*.esm.js",
-      "*.cjs"
+      "docs.config.js"
     ]
   }
 }
