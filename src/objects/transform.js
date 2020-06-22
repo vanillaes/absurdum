@@ -14,12 +14,12 @@
  * > { harmony: '7_0', daft: '9_1', stripes: '11_2' }
  */
 function transform (object, func, accumulator = {}) {
-  if (typeof func === 'undefined') { return object; }
+  if (typeof func === 'undefined') { return object }
 
   return Object.keys(object).reduce((acc, key) => {
-    func(acc, object[key], key, object);
-    return acc;
-  }, accumulator);
+    func(acc, object[key], key, object)
+    return acc
+  }, accumulator)
 }
 
-export { transform };
+export { transform }

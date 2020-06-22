@@ -11,20 +11,20 @@
  * > 'abc-_-'
  */
 function trimStart (string, chars = ' ') {
-  const testChars = new Set([...chars]);
-  let first = true;
+  const testChars = new Set([...chars])
+  let first = true
   return [...string].reduce((acc, curr) => {
     if (first) {
       if (testChars.has(curr)) {
-        return acc;
+        return acc
       } else {
-        first = false;
-        return acc + curr;
+        first = false
+        return acc + curr
       }
     } else {
-      return acc + curr;
+      return acc + curr
     }
-  }, '');
+  }, '')
 }
 
-export { trimStart };
+export { trimStart }

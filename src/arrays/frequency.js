@@ -12,9 +12,9 @@
  */
 function frequency (array) {
   return array.reduce((acc, curr) => {
-    acc[curr] = acc[curr] ? ++acc[curr] : 1;
-    return acc;
-  }, {});
+    acc[curr] = acc[curr] ? ++acc[curr] : 1
+    return acc
+  }, {})
 }
 
-export { frequency };
+export { frequency }

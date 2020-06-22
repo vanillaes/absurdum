@@ -17,16 +17,16 @@
  * > 3
  */
 function findLastIndex (array, predicate, thisArg) {
-  if (array.length === 0) return -1;
-  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
-  if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1;
-  if (array.length === 1) return -1;
+  if (array.length === 0) return -1
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
+  if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1
+  if (array.length === 1) return -1
 
   return array.reduceRight((res, cur, i) => {
-    if (i === array.length - 2) return predicate.call(thisArg, cur) ? i : -1;
-    if (res < 0 && predicate.call(thisArg, cur)) return i;
-    return res;
-  });
+    if (i === array.length - 2) return predicate.call(thisArg, cur) ? i : -1
+    if (res < 0 && predicate.call(thisArg, cur)) return i
+    return res
+  })
 }
 
-export { findLastIndex };
+export { findLastIndex }

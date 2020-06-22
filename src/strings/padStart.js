@@ -25,22 +25,22 @@
  * > 'funfunfunfabcabc'
  */
 function padStart (string, length = 0, substr = ' ') {
-  let padLen = (length - string.length) > 0 ? length - string.length : 0;
-  let substrIdx = 0;
-  const stringArr = [...Array(padLen), ...string];
+  let padLen = (length - string.length) > 0 ? length - string.length : 0
+  let substrIdx = 0
+  const stringArr = [...Array(padLen), ...string]
 
   const reducer = (acc, curr) => {
     if (padLen !== 0) {
-      acc.push(substr[substrIdx]);
-      substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
-      padLen--;
-      return acc;
+      acc.push(substr[substrIdx])
+      substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0
+      padLen--
+      return acc
     }
-    acc.push(curr);
-    return acc;
-  };
+    acc.push(curr)
+    return acc
+  }
 
-  return stringArr.reduce(reducer, []).join('');
+  return stringArr.reduce(reducer, []).join('')
 }
 
-export { padStart };
+export { padStart }

@@ -17,16 +17,16 @@
  * > 5
  */
 function find (array, predicate, thisArg) {
-  if (array.length === 0) return undefined;
-  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
-  if (predicate.call(thisArg, array[0])) return array[0];
-  if (array.length === 1) return undefined;
+  if (array.length === 0) return undefined
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
+  if (predicate.call(thisArg, array[0])) return array[0]
+  if (array.length === 1) return undefined
 
   return array.reduce((res, cur, i) => {
-    if (i === 1) return predicate.call(thisArg, cur) ? cur : undefined;
-    if (!res && predicate.call(thisArg, cur)) return cur;
-    return res;
-  });
+    if (i === 1) return predicate.call(thisArg, cur) ? cur : undefined
+    if (!res && predicate.call(thisArg, cur)) return cur
+    return res
+  })
 }
 
-export { find };
+export { find }

@@ -18,19 +18,19 @@
  */
 function zip (arrayA, ArrayB, func = (a, b) => [a, b]) {
   if (func && typeof func !== 'function') {
-    throw TypeError('func must be a function');
+    throw TypeError('func must be a function')
   }
   if (arrayA.length <= ArrayB.length) {
     return arrayA.reduce((res, cur, i) => {
-      res[i] = func(cur, ArrayB[i]);
-      return res;
-    }, []);
+      res[i] = func(cur, ArrayB[i])
+      return res
+    }, [])
   } else {
     return ArrayB.reduce((res, cur, i) => {
-      res[i] = func(arrayA[i], cur);
-      return res;
-    }, []);
+      res[i] = func(arrayA[i], cur)
+      return res
+    }, [])
   }
 }
 
-export { zip };
+export { zip }

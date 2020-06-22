@@ -11,14 +11,14 @@
  * > [1]
  */
 function difference (arrayA, arrayB) {
-  const uniqueValues = new Set(arrayB);
+  const uniqueValues = new Set(arrayB)
 
   return arrayA.reduce((acc, curr) => {
     if (!uniqueValues.has(curr)) {
-      acc.push(curr);
+      acc.push(curr)
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
-export { difference };
+export { difference }

@@ -11,11 +11,11 @@
  * > [1, 3]
  */
 function pull (array, ...values) {
-  const valueSet = new Set(values);
+  const valueSet = new Set(values)
   return array.reduce((acc, curr) => {
-    if (!valueSet.has(curr)) { acc.push(curr); }
-    return acc;
-  }, []);
+    if (!valueSet.has(curr)) { acc.push(curr) }
+    return acc
+  }, [])
 }
 
-export { pull };
+export { pull }

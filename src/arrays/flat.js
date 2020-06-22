@@ -13,12 +13,12 @@
 function flat (array, depth = 1) {
   return array.reduce((acc, curr) => {
     if (Array.isArray(curr) && depth > 0) {
-      acc.push(...flat(curr, depth - 1));
+      acc.push(...flat(curr, depth - 1))
     } else {
-      acc.push(curr);
+      acc.push(curr)
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
-export { flat };
+export { flat }

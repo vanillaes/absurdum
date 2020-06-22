@@ -12,9 +12,9 @@
  */
 function invert (object) {
   return Object.keys(object).reduce((acc, key) => {
-    acc[object[key]] = key;
-    return acc;
-  }, {});
+    acc[object[key]] = key
+    return acc
+  }, {})
 }
 
-export { invert };
+export { invert }

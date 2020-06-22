@@ -11,9 +11,9 @@
  */
 function entries (object) {
   return Object.keys(object).reduce((acc, key) => {
-    acc.push([key, object[key]]);
-    return acc;
-  }, []);
+    acc.push([key, object[key]])
+    return acc
+  }, [])
 }
 
-export { entries };
+export { entries }

@@ -11,9 +11,9 @@
  */
 function pascalCase (string) {
   const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
-    return acc + word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-  }, '');
-  return res;
+    return acc + word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  }, '')
+  return res
 }
 
-export { pascalCase };
+export { pascalCase }

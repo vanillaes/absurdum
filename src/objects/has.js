@@ -16,23 +16,23 @@
  * > true
  */
 function has (object, path) {
-  if (typeof path === 'undefined') { return false; }
-  let pathArray;
+  if (typeof path === 'undefined') { return false }
+  let pathArray
 
   if (Array.isArray(path)) {
-    pathArray = path;
+    pathArray = path
   } else {
-    pathArray = String(path).replace(/\[(\w+)\]/g, '.$1').split('.');
+    pathArray = String(path).replace(/\[(\w+)\]/g, '.$1').split('.')
   }
 
   return undefined !== pathArray.reduce((result, search) => {
-    if (result === undefined) { return undefined; }
+    if (result === undefined) { return undefined }
     if (Object.prototype.hasOwnProperty.call(result, search)) {
-      return result[search];
+      return result[search]
     } else {
-      return undefined;
+      return undefined
     }
-  }, object);
+  }, object)
 }
 
-export { has };
+export { has }

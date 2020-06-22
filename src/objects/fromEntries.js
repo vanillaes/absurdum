@@ -12,9 +12,9 @@
  */
 function fromEntries (array) {
   return array.reduce((acc, curr) => {
-    acc[curr[0]] = curr[1];
-    return acc;
-  }, {});
+    acc[curr[0]] = curr[1]
+    return acc
+  }, {})
 }
 
-export { fromEntries };
+export { fromEntries }

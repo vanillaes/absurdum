@@ -11,17 +11,17 @@
  */
 function unzip (array) {
   const res = new Array(array.reduce((acc, curr) => {
-    return curr.length > acc ? curr.length : acc;
-  }, 0)).fill(undefined);
+    return curr.length > acc ? curr.length : acc
+  }, 0)).fill(undefined)
 
   return array.reduce((acc, _, idx) => {
     res.reduce((_, __, x) => {
-      acc[x] = acc[x] || [];
-      acc[x].push(array[idx][x]);
-      return null;
-    }, null);
-    return acc;
-  }, []);
+      acc[x] = acc[x] || []
+      acc[x].push(array[idx][x])
+      return null
+    }, null)
+    return acc
+  }, [])
 }
 
-export { unzip };
+export { unzip }

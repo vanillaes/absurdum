@@ -11,8 +11,8 @@
  */
 function reverse (string) {
   return string.split('').reduce((acc, curr) => {
-    return curr + acc;
-  }, '');
+    return curr + acc
+  }, '')
 }
 
-export { reverse };
+export { reverse }

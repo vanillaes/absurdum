@@ -10,18 +10,18 @@
  * > 'css-classes-use-kebab-case'
  */
 function kebabCase (string) {
-  let first = true;
+  let first = true
   return string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
     if (word.length > 0) {
       if (first) {
-        first = false;
-        return word.toLowerCase();
+        first = false
+        return word.toLowerCase()
       } else {
-        return acc + '-' + word.toLowerCase();
+        return acc + '-' + word.toLowerCase()
       }
     }
-    return acc;
-  }, '');
+    return acc
+  }, '')
 }
 
-export { kebabCase };
+export { kebabCase }

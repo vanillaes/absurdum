@@ -25,8 +25,8 @@ function chunk (array, size = 1) {
     if (chunk.length > 0 && idx === arr.length - 1) {
       acc.push(chunk);
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -43,8 +43,8 @@ function chunk (array, size = 1) {
 function compact (array) {
   return array.reduce((acc, curr) => {
     if (curr) { acc.push(curr); }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -66,8 +66,8 @@ function difference (arrayA, arrayB) {
     if (!uniqueValues.has(curr)) {
       acc.push(curr);
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -86,11 +86,11 @@ function drop (array, count = 1) {
   return array.reduce((acc, curr) => {
     if (count > 0) {
       count--;
-      return acc;
+      return acc
     }
     acc.push(curr);
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -109,11 +109,11 @@ function dropRight (array, count = 1) {
   return array.reduce((acc, _, idx, arr) => {
     if (count > 0) {
       count--;
-      return acc;
+      return acc
     }
     acc.unshift(arr[arr.length - idx - 1]);
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -137,8 +137,8 @@ function fill (array, value, start = 0, end = array.length - 1) {
     } else {
       acc.push(curr);
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -158,8 +158,8 @@ function filter (array, predicate) {
     if (predicate(curr)) {
       acc.push(curr);
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -181,16 +181,16 @@ function filter (array, predicate) {
  * > 5
  */
 function find (array, predicate, thisArg) {
-  if (array.length === 0) return undefined;
-  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
-  if (predicate.call(thisArg, array[0])) return array[0];
-  if (array.length === 1) return undefined;
+  if (array.length === 0) return undefined
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
+  if (predicate.call(thisArg, array[0])) return array[0]
+  if (array.length === 1) return undefined
 
   return array.reduce((res, cur, i) => {
-    if (i === 1) return predicate.call(thisArg, cur) ? cur : undefined;
-    if (!res && predicate.call(thisArg, cur)) return cur;
-    return res;
-  });
+    if (i === 1) return predicate.call(thisArg, cur) ? cur : undefined
+    if (!res && predicate.call(thisArg, cur)) return cur
+    return res
+  })
 }
 
 /**
@@ -212,13 +212,13 @@ function find (array, predicate, thisArg) {
  * > 1
  */
 function findIndex (array, predicate, thisArg) {
-  if (array.length === 0) return -1;
-  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
+  if (array.length === 0) return -1
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
 
   return array.reduce((res, cur, i) => {
-    if (res < 0 && predicate.call(thisArg, cur)) return i;
-    return res;
-  }, -1);
+    if (res < 0 && predicate.call(thisArg, cur)) return i
+    return res
+  }, -1)
 }
 
 /**
@@ -240,16 +240,16 @@ function findIndex (array, predicate, thisArg) {
  * > 3
  */
 function findLastIndex (array, predicate, thisArg) {
-  if (array.length === 0) return -1;
-  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
-  if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1;
-  if (array.length === 1) return -1;
+  if (array.length === 0) return -1
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
+  if (predicate.call(thisArg, array[array.length - 1])) return array.length - 1
+  if (array.length === 1) return -1
 
   return array.reduceRight((res, cur, i) => {
-    if (i === array.length - 2) return predicate.call(thisArg, cur) ? i : -1;
-    if (res < 0 && predicate.call(thisArg, cur)) return i;
-    return res;
-  });
+    if (i === array.length - 2) return predicate.call(thisArg, cur) ? i : -1
+    if (res < 0 && predicate.call(thisArg, cur)) return i
+    return res
+  })
 }
 
 /**
@@ -271,8 +271,8 @@ function flat (array, depth = 1) {
     } else {
       acc.push(curr);
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -290,8 +290,8 @@ function flat (array, depth = 1) {
 function frequency (array) {
   return array.reduce((acc, curr) => {
     acc[curr] = acc[curr] ? ++acc[curr] : 1;
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -308,13 +308,13 @@ function frequency (array) {
 function intersection (...arrays) {
   return [...new Set(arguments[0])].reduce((acc, curr) => {
     if (arrays.slice(1).reduce((every, array, i) => {
-      if (every && !new Set(array).has(curr)) return false;
-      return every;
+      if (every && !new Set(array).has(curr)) return false
+      return every
     }, true)) {
       acc.push(curr);
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -330,11 +330,11 @@ function intersection (...arrays) {
  * > [ 3, 4, 5, 6 ]
  */
 function map (array, func) {
-  if (!func) { return array; }
+  if (!func) { return array }
   return array.reduce((acc, curr) => {
     acc.push(func(curr));
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -353,8 +353,8 @@ function pull (array, ...values) {
   const valueSet = new Set(values);
   return array.reduce((acc, curr) => {
     if (!valueSet.has(curr)) { acc.push(curr); }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -377,8 +377,8 @@ function takeRight (array, count = 1) {
   const start = array.length - 1 - count;
   return array.reduce((res, cur, i) => {
     if (i > start) { res.push(cur); }
-    return res;
-  }, []);
+    return res
+  }, [])
 }
 
 /**
@@ -400,8 +400,8 @@ function takeRight (array, count = 1) {
 function take (array, count = 1) {
   return array.reduce((res, cur, i) => {
     if (i < count) { res.push(cur); }
-    return res;
-  }, []);
+    return res
+  }, [])
 }
 
 /**
@@ -419,11 +419,11 @@ function union (...arrays) {
     if (Array.isArray(curr)) {
       curr.reduce((res, cur) => {
         acc.add(cur);
-        return res;
+        return res
       }, '');
     }
-    return acc;
-  }, new Set()));
+    return acc
+  }, new Set()))
 }
 
 /**
@@ -440,8 +440,8 @@ function union (...arrays) {
 function unique (array) {
   return [...array.reduce((acc, curr) => {
     acc.add(curr);
-    return acc;
-  }, new Set())];
+    return acc
+  }, new Set())]
 }
 
 /**
@@ -457,17 +457,17 @@ function unique (array) {
  */
 function unzip (array) {
   const res = new Array(array.reduce((acc, curr) => {
-    return curr.length > acc ? curr.length : acc;
+    return curr.length > acc ? curr.length : acc
   }, 0)).fill(undefined);
 
   return array.reduce((acc, _, idx) => {
     res.reduce((_, __, x) => {
       acc[x] = acc[x] || [];
       acc[x].push(array[idx][x]);
-      return null;
+      return null
     }, null);
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -485,8 +485,8 @@ function without (array, ...values) {
   const toExclude = new Set(values);
   return array.reduce((acc, curr) => {
     if (!toExclude.has(curr)) { acc.push(curr); }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -502,23 +502,23 @@ function without (array, ...values) {
  */
 function xor (...arrays) {
   if (arrays.length < 2) {
-    if (arrays.length === 0) { return []; }
-    return arrays[0];
+    if (arrays.length === 0) { return [] }
+    return arrays[0]
   }
 
   const duplicates = new Set();
   const allUniq = arrays.reduce((collect, array) => {
     const checker = array.reduce((acc, curr) => {
       if (collect.has(curr)) { acc.push(curr); }
-      return acc;
+      return acc
     }, []);
     checker.forEach(val => duplicates.add(val));
     array.forEach(val => collect.add(val));
-    return collect;
+    return collect
   }, new Set());
 
   duplicates.forEach(val => allUniq.delete(val));
-  return [...allUniq];
+  return [...allUniq]
 }
 
 /**
@@ -541,18 +541,18 @@ function xor (...arrays) {
  */
 function zip (arrayA, ArrayB, func = (a, b) => [a, b]) {
   if (func && typeof func !== 'function') {
-    throw TypeError('func must be a function');
+    throw TypeError('func must be a function')
   }
   if (arrayA.length <= ArrayB.length) {
     return arrayA.reduce((res, cur, i) => {
       res[i] = func(cur, ArrayB[i]);
-      return res;
-    }, []);
+      return res
+    }, [])
   } else {
     return ArrayB.reduce((res, cur, i) => {
       res[i] = func(arrayA[i], cur);
-      return res;
-    }, []);
+      return res
+    }, [])
   }
 }
 
@@ -603,9 +603,9 @@ function camelCase (string) {
     } else {
       word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
     }
-    return acc + word;
+    return acc + word
   }, '');
-  return res;
+  return res
 }
 
 /**
@@ -633,32 +633,32 @@ function chomp (string, separator) {
       if (i === res.length - 1) {
         if (curr === '\n') {
           windows = true;
-          return acc;
+          return acc
         } else if (curr === '\r') {
-          return acc;
+          return acc
         }
       } else if (windows && i === res.length - 2 && curr === '\r') {
-        return acc;
+        return acc
       }
-      return curr + acc;
-    }, '');
+      return curr + acc
+    }, '')
   } else if (separator === '') {
     let endOf = true;
     return res.reduceRight((acc, curr, i) => {
       if (endOf && windows && curr === '\r') {
         windows = false;
-        return acc;
+        return acc
       } else if (endOf) {
         if (curr === '\n') {
           windows = true;
-          return acc;
+          return acc
         } else if (curr === '\r') {
           endOf = false;
-          return curr + acc;
+          return curr + acc
         }
       }
-      return curr + acc;
-    }, '');
+      return curr + acc
+    }, '')
   } else {
     const diff = res.length - separator.length;
     let match = true;
@@ -668,13 +668,13 @@ function chomp (string, separator) {
         temp = temp + curr;
         if (curr !== separator[i - diff]) { match = false; }
         if (i === res.length - 1) {
-          return match ? acc : acc + temp;
+          return match ? acc : acc + temp
         }
-        return acc;
+        return acc
       } else {
-        return acc + curr;
+        return acc + curr
       }
-    }, '');
+    }, '')
   }
 }
 
@@ -695,15 +695,15 @@ function deburr (string) {
   if (found) {
     result = found.reduce((res, curr) => {
       if (curr.length === 1) {
-        return Object.prototype.hasOwnProperty.call(latinMap, curr) ? res + latinMap[curr] : res + curr;
+        return Object.prototype.hasOwnProperty.call(latinMap, curr) ? res + latinMap[curr] : res + curr
       } else {
-        return res + curr;
+        return res + curr
       }
     }, '');
   } else {
     result = string;
   }
-  return result.replace(diacriticalMarks, '');
+  return result.replace(diacriticalMarks, '')
 }
 
 // eslint-disable-next-line no-misleading-character-class
@@ -735,17 +735,17 @@ function endsWith (string, substr = '') {
     // exit early on mismatch
     if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
       arr = arr.splice(0);
-      return false;
+      return false
     }
     // exit early on match
     if (idx === substr.length - 1) {
       arr = arr.splice(0);
-      return true;
+      return true
     }
-    return acc;
+    return acc
   };
 
-  return string.split('').reduce(reducer, null);
+  return string.split('').reduce(reducer, null)
 }
 
 /**
@@ -766,20 +766,20 @@ function endsWith (string, substr = '') {
  * > false
  */
 function includes (string, substr, start = 0) {
-  if (string.length === 0) return false;
+  if (string.length === 0) return false
   const len = substr.length;
   const first = substr.charAt(0);
-  if (start === 0 && string.substring(0, len) === substr) return true;
+  if (start === 0 && string.substring(0, len) === substr) return true
 
   return string.split('').reduce((res, cur, i) => {
     if (i >= start) {
-      if (res) return res;
+      if (res) return res
       if (cur === first) {
-        return string.substring(i, i + len) === substr;
+        return string.substring(i, i + len) === substr
       }
     }
-    return false;
-  }, false);
+    return false
+  }, false)
 }
 
 /**
@@ -799,13 +799,13 @@ function kebabCase (string) {
     if (word.length > 0) {
       if (first) {
         first = false;
-        return word.toLowerCase();
+        return word.toLowerCase()
       } else {
-        return acc + '-' + word.toLowerCase();
+        return acc + '-' + word.toLowerCase()
       }
     }
-    return acc;
-  }, '');
+    return acc
+  }, '')
 }
 
 /**
@@ -837,7 +837,7 @@ function kebabCase (string) {
 function pad (string, length = 0, substr = ' ') {
   const strLen = string.length;
   const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen) / 2) : 0;
-  return string.padStart(length - padLen, substr).padEnd(length, substr);
+  return string.padStart(length - padLen, substr).padEnd(length, substr)
 }
 
 /**
@@ -876,14 +876,14 @@ function padEnd (string, length = 0, substr = ' ') {
     if (strLen !== 0) {
       acc.push(curr);
       strLen--;
-      return acc;
+      return acc
     }
     acc.push(substr[substrIdx]);
     substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
-    return acc;
+    return acc
   };
 
-  return stringArr.reduce(reducer, []).join('');
+  return stringArr.reduce(reducer, []).join('')
 }
 
 /**
@@ -922,13 +922,13 @@ function padStart (string, length = 0, substr = ' ') {
       acc.push(substr[substrIdx]);
       substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
       padLen--;
-      return acc;
+      return acc
     }
     acc.push(curr);
-    return acc;
+    return acc
   };
 
-  return stringArr.reduce(reducer, []).join('');
+  return stringArr.reduce(reducer, []).join('')
 }
 
 /**
@@ -944,9 +944,9 @@ function padStart (string, length = 0, substr = ' ') {
  */
 function pascalCase (string) {
   const res = string.replace(/[\u2019']/, '').split(/[\u002D\u2014\-_\s]+/).reduce((acc, word) => {
-    return acc + word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    return acc + word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
   }, '');
-  return res;
+  return res
 }
 
 /**
@@ -963,11 +963,11 @@ function pascalCase (string) {
  * > 'Moo Moo Moo '
  */
 function repeat (string, count = 0) {
-  if (string.length === 0 || count < 1) return '';
+  if (string.length === 0 || count < 1) return ''
 
   return new Array(count).fill('').reduce((res) => {
-    return res + string;
-  }, '');
+    return res + string
+  }, '')
 }
 
 /**
@@ -983,8 +983,8 @@ function repeat (string, count = 0) {
  */
 function reverse (string) {
   return string.split('').reduce((acc, curr) => {
-    return curr + acc;
-  }, '');
+    return curr + acc
+  }, '')
 }
 
 /**
@@ -1004,13 +1004,13 @@ function snakeCase (string) {
     if (word.length > 0) {
       if (first) {
         first = false;
-        return word.toLowerCase();
+        return word.toLowerCase()
       } else {
-        return acc + '_' + word.toLowerCase();
+        return acc + '_' + word.toLowerCase()
       }
     }
-    return acc;
-  }, '');
+    return acc
+  }, '')
 }
 
 /**
@@ -1037,17 +1037,17 @@ function startsWith (string, substr) {
     // exit early on mismatch
     if (curr !== substr[idx]) {
       chars = arr.splice(0);
-      return false;
+      return false
     }
     // exit early on match
     if (idx === substr.length - 1) {
       chars = arr.splice(0);
-      return true;
+      return true
     }
-    return acc;
+    return acc
   };
 
-  return chars.reduce(reducer, null);
+  return chars.reduce(reducer, null)
 }
 
 /**
@@ -1068,15 +1068,15 @@ function trimStart (string, chars = ' ') {
   return [...string].reduce((acc, curr) => {
     if (first) {
       if (testChars.has(curr)) {
-        return acc;
+        return acc
       } else {
         first = false;
-        return acc + curr;
+        return acc + curr
       }
     } else {
-      return acc + curr;
+      return acc + curr
     }
-  }, '');
+  }, '')
 }
 
 /**
@@ -1097,15 +1097,15 @@ function trimEnd (string, chars = ' ') {
   return [...string].reduceRight((acc, curr) => {
     if (end) {
       if (testChars.has(curr)) {
-        return acc;
+        return acc
       } else {
         end = false;
-        return curr + acc;
+        return curr + acc
       }
     } else {
-      return curr + acc;
+      return curr + acc
     }
-  }, '');
+  }, '')
 }
 
 /**
@@ -1134,12 +1134,12 @@ function truncate (string, options) {
     if (options.separator !== undefined) { separator = options.separator; }
   }
 
-  if (length >= string.length) { return string; }
+  if (length >= string.length) { return string }
   const end = length - omission.length;
-  if (end < 1) { return omission; }
+  if (end < 1) { return omission }
 
   let result = string.slice(0, end);
-  if (separator === undefined) { return result + omission; }
+  if (separator === undefined) { return result + omission }
 
   let strSeparator;
   let regexSeparator;
@@ -1170,7 +1170,7 @@ function truncate (string, options) {
       result = result.slice(0, index);
     }
   }
-  return result + omission;
+  return result + omission
 }
 
 /**
@@ -1196,11 +1196,11 @@ function truncate (string, options) {
  * // => ['I', 'can', 'I', 'should', '&', 'I', 'will']
  */
 function words (string, pattern) {
-  if (pattern === undefined) { return string.match(reUnicodeWords) || []; }
+  if (pattern === undefined) { return string.match(reUnicodeWords) || [] }
   if (typeof pattern === 'string') {
-    return string.match(new RegExp('[^' + pattern + ']+', 'g')) || [];
+    return string.match(new RegExp('[^' + pattern + ']+', 'g')) || []
   } else {
-    return string.match(pattern) || [];
+    return string.match(pattern) || []
   }
 }
 
@@ -1299,16 +1299,16 @@ var index$1 = /*#__PURE__*/Object.freeze({
  * > { hold: 25, fast: 14, your: 19, horses: 4 }
  */
 function assign (object, ...sources) {
-  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources];
 
   return result.reduce((acc, curr) => {
     Object.keys(curr).reduce((_, key) => {
       acc[key] = curr[key];
-      return null;
+      return null
     }, null);
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -1324,13 +1324,13 @@ function assign (object, ...sources) {
  * > [64]
  */
 function at (object, ...paths) {
-  if (paths.length === 0) { return []; }
+  if (paths.length === 0) { return [] }
 
   const pathArray = [];
   const filterPathArray = (x) => {
     x.reduce((_, curr, i) => {
       pathArray[i] = String(curr).replace(/\[(\w+)\]/g, '.$1').split('.');
-      return null;
+      return null
     }, null);
   };
 
@@ -1342,16 +1342,16 @@ function at (object, ...paths) {
 
   return pathArray.reduce((acc, curr) => {
     const result = curr.reduce((result, search) => {
-      if (typeof result === 'undefined') { return undefined; }
+      if (typeof result === 'undefined') { return undefined }
       if (Object.prototype.hasOwnProperty.call(result, search)) {
-        return result[search];
+        return result[search]
       } else {
-        return undefined;
+        return undefined
       }
     }, object);
     acc.push(result);
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -1369,16 +1369,16 @@ function at (object, ...paths) {
  * > { hold: 44, your: 19, horses: 4 }
  */
 function defaults (object, ...sources) {
-  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources];
 
   return result.reduce((acc, curr) => {
     Object.keys(curr).reduce((_, key) => {
       if (typeof acc[key] === 'undefined') { acc[key] = curr[key]; }
-      return null;
+      return null
     }, null);
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -1395,19 +1395,19 @@ function defaults (object, ...sources) {
  * > { a: { b: [ 3, 4, 15 ], c: 3 } }
  */
 function defaultsDeep (object, ...sources) {
-  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources];
 
   return result.reduce((prev, next) => {
-    return deepMerge(prev, next);
-  });
+    return deepMerge(prev, next)
+  })
 }
 
 const deepMerge = (object, next) => {
   if (Array.isArray(next)) {
-    return Array.isArray(object) ? arrayMerge(object, next) : object;
+    return Array.isArray(object) ? arrayMerge(object, next) : object
   } else {
-    return objectMerge(object, next);
+    return objectMerge(object, next)
   }
 };
 
@@ -1419,9 +1419,9 @@ const arrayMerge = (current, source) => {
     } else if (typeof elem === 'object') {
       res[idx] = deepMerge(current[idx], elem);
     }
-    return null;
+    return null
   }, null);
-  return res;
+  return res
 };
 
 const objectMerge = (current, source) => {
@@ -1429,10 +1429,10 @@ const objectMerge = (current, source) => {
   if (typeof current === 'object') {
     Object.keys(current).reduce((_, key) => {
       if (typeof res[key] === 'undefined') { res[key] = current[key]; }
-      return null;
+      return null
     }, null);
   } else {
-    return current;
+    return current
   }
   Object.keys(source).reduce((_, key) => {
     if (typeof source[key] !== 'object' || !current[key]) {
@@ -1440,9 +1440,9 @@ const objectMerge = (current, source) => {
     } else {
       res[key] = deepMerge(current[key], source[key]);
     }
-    return null;
+    return null
   }, null);
-  return res;
+  return res
 };
 
 /**
@@ -1459,8 +1459,8 @@ const objectMerge = (current, source) => {
 function entries (object) {
   return Object.keys(object).reduce((acc, key) => {
     acc.push([key, object[key]]);
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 /**
@@ -1479,13 +1479,13 @@ function entries (object) {
  * > { small: "ant", big: "elephant" }
  */
 function filter$1 (object, predicate) {
-  if (typeof predicate !== 'function') { return object; }
+  if (typeof predicate !== 'function') { return object }
   return Object.keys(object).reduce((acc, key) => {
     if (predicate(object[key], key, object) === true) {
       acc[key] = object[key];
     }
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -1506,47 +1506,47 @@ function findKey (object, predicate = x => x, thisArg) {
 
   if (typeof predicate === 'function') {
     return keys.reduce((acc, curr) => {
-      if (acc) { return acc; }
-      if (predicate.call(thisArg, object[curr])) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (predicate.call(thisArg, object[curr])) { return curr }
+      return acc
+    }, undefined)
   } else if (Array.isArray(predicate)) {
     return keys.reduce((acc, curr) => {
-      if (acc) { return acc; }
-      if (object[curr][predicate[0]] === predicate[1]) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (object[curr][predicate[0]] === predicate[1]) { return curr }
+      return acc
+    }, undefined)
   } else if (typeof predicate === 'object') {
     return keys.reduce((acc, curr) => {
-      if (acc) { return acc; }
-      if (objContained(object[curr], predicate)) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (objContained(object[curr], predicate)) { return curr }
+      return acc
+    }, undefined)
   } else {
     return keys.reduce((acc, curr) => {
-      if (acc) { return acc; }
-      if (object[curr][predicate]) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (object[curr][predicate]) { return curr }
+      return acc
+    }, undefined)
   }
 }
 
 const objContained = (objA, objB) => {
-  if (typeof (objA) !== typeof (objB)) { return false; }
-  if (typeof (objA) !== 'object') { return objA === objB; }
+  if (typeof (objA) !== typeof (objB)) { return false }
+  if (typeof (objA) !== 'object') { return objA === objB }
 
   return Object.keys(objB).reduce((acc, curr) => {
-    if (acc) { return acc; }
-    if (Object.prototype.hasOwnProperty.call(objA, curr) !== Object.prototype.hasOwnProperty.call(objB, curr)) { return false; }
+    if (acc) { return acc }
+    if (Object.prototype.hasOwnProperty.call(objA, curr) !== Object.prototype.hasOwnProperty.call(objB, curr)) { return false }
     if (typeof objA[curr] === 'object') {
-      if (!objContained(objA[curr], objB[curr])) { return false; }
+      if (!objContained(objA[curr], objB[curr])) { return false }
     } else if (typeof objA[curr] === 'function') {
-      if (typeof (objB[curr]) === 'undefined' || (String(objA[curr]) !== String(objB[curr]))) { return false; }
+      if (typeof (objB[curr]) === 'undefined' || (String(objA[curr]) !== String(objB[curr]))) { return false }
     } else {
-      if (objA[curr] !== objB[curr]) { return false; }
+      if (objA[curr] !== objB[curr]) { return false }
     }
-    return true;
-  }, false);
+    return true
+  }, false)
 };
 
 /**
@@ -1567,47 +1567,47 @@ function findLastKey (object, predicate = x => x, thisArg) {
 
   if (typeof predicate === 'function') {
     return keys.reduceRight((acc, curr) => {
-      if (acc) { return acc; }
-      if (predicate.call(thisArg, object[curr])) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (predicate.call(thisArg, object[curr])) { return curr }
+      return acc
+    }, undefined)
   } else if (Array.isArray(predicate)) {
     return keys.reduceRight((acc, curr) => {
-      if (acc) { return acc; }
-      if (object[curr][predicate[0]] === predicate[1]) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (object[curr][predicate[0]] === predicate[1]) { return curr }
+      return acc
+    }, undefined)
   } else if (typeof predicate === 'object') {
     return keys.reduceRight((acc, curr) => {
-      if (acc) { return acc; }
-      if (objContained$1(object[curr], predicate)) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (objContained$1(object[curr], predicate)) { return curr }
+      return acc
+    }, undefined)
   } else {
     return keys.reduceRight((acc, curr) => {
-      if (acc) { return acc; }
-      if (object[curr][predicate]) { return curr; }
-      return acc;
-    }, undefined);
+      if (acc) { return acc }
+      if (object[curr][predicate]) { return curr }
+      return acc
+    }, undefined)
   }
 }
 
 const objContained$1 = (objA, objB) => {
-  if (typeof (objA) !== typeof (objB)) { return false; }
-  if (typeof (objA) !== 'object') { return objA === objB; }
+  if (typeof (objA) !== typeof (objB)) { return false }
+  if (typeof (objA) !== 'object') { return objA === objB }
 
   return Object.keys(objB).reduceRight((acc, curr) => {
-    if (acc) { return acc; }
-    if (Object.prototype.hasOwnProperty.call(objA, curr) !== Object.prototype.hasOwnProperty.call(objB, curr)) { return false; }
+    if (acc) { return acc }
+    if (Object.prototype.hasOwnProperty.call(objA, curr) !== Object.prototype.hasOwnProperty.call(objB, curr)) { return false }
     if (typeof objA[curr] === 'object') {
-      if (!objContained$1(objA[curr], objB[curr])) { return false; }
+      if (!objContained$1(objA[curr], objB[curr])) { return false }
     } else if (typeof objA[curr] === 'function') {
-      if (typeof (objB[curr]) === 'undefined' || (String(objA[curr]) !== String(objB[curr]))) { return false; }
+      if (typeof (objB[curr]) === 'undefined' || (String(objA[curr]) !== String(objB[curr]))) { return false }
     } else {
-      if (objA[curr] !== objB[curr]) { return false; }
+      if (objA[curr] !== objB[curr]) { return false }
     }
-    return true;
-  }, false);
+    return true
+  }, false)
 };
 
 /**
@@ -1637,15 +1637,15 @@ function forIn (object, func) {
 
   Object.keys(object).reduce((_, key) => {
     func(object[key], key, object);
-    return null;
+    return null
   }, null);
 
   proto.reduce((_, key) => {
     func(objProto[key], key, object);
-    return null;
+    return null
   }, null);
 
-  return object;
+  return object
 }
 
 /**
@@ -1663,8 +1663,8 @@ function forIn (object, func) {
 function fromEntries (array) {
   return array.reduce((acc, curr) => {
     acc[curr[0]] = curr[1];
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -1685,7 +1685,7 @@ function fromEntries (array) {
  * > true
  */
 function has (object, path) {
-  if (typeof path === 'undefined') { return false; }
+  if (typeof path === 'undefined') { return false }
   let pathArray;
 
   if (Array.isArray(path)) {
@@ -1695,13 +1695,13 @@ function has (object, path) {
   }
 
   return undefined !== pathArray.reduce((result, search) => {
-    if (result === undefined) { return undefined; }
+    if (result === undefined) { return undefined }
     if (Object.prototype.hasOwnProperty.call(result, search)) {
-      return result[search];
+      return result[search]
     } else {
-      return undefined;
+      return undefined
     }
-  }, object);
+  }, object)
 }
 
 /**
@@ -1723,7 +1723,7 @@ function has (object, path) {
  * > 'no value here'
  */
 function get (object, path, defaultValue) {
-  if (typeof path === 'undefined') { return undefined; }
+  if (typeof path === 'undefined') { return undefined }
   let pathArray;
 
   if (Array.isArray(path)) {
@@ -1733,15 +1733,15 @@ function get (object, path, defaultValue) {
   }
 
   const result = pathArray.reduce((result, search) => {
-    if (result === undefined) { return undefined; }
+    if (result === undefined) { return undefined }
     if (Object.prototype.hasOwnProperty.call(result, search)) {
-      return result[search];
+      return result[search]
     } else {
-      return undefined;
+      return undefined
     }
   }, object);
 
-  return result !== undefined ? result : defaultValue;
+  return result !== undefined ? result : defaultValue
 }
 
 /**
@@ -1759,8 +1759,8 @@ function get (object, path, defaultValue) {
 function invert (object) {
   return Object.keys(object).reduce((acc, key) => {
     acc[object[key]] = key;
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -1776,14 +1776,14 @@ function invert (object) {
  * > { neat_1: 1, neat_2: 2, neat_3: 3 }
  */
 function mapKeys (object, func) {
-  if (typeof func !== 'function') { return object; }
+  if (typeof func !== 'function') { return object }
   return Object.keys(object).reduce(
     (acc, key) => ({
       ...acc,
       [func(object[key], key, object)]: object[key]
     }),
     {}
-  );
+  )
 }
 
 /**
@@ -1799,11 +1799,11 @@ function mapKeys (object, func) {
  * > { a: neat_1, b: neat_2, c: neat_3 }
  */
 function mapValues (object, func) {
-  if (typeof func !== 'function') { return object; }
+  if (typeof func !== 'function') { return object }
   return Object.keys(object).reduce((acc, key) => ({
     ...acc,
     [key]: func(object[key], key, object)
-  }), {});
+  }), {})
 }
 
 /**
@@ -1820,19 +1820,19 @@ function mapValues (object, func) {
  * > { a: 1, b: 2, hold: 25, your: 19 }
  */
 function merge (object, ...sources) {
-  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources];
 
   return result.reduce((prev, next) => {
-    return deepMerge$1(prev, next);
-  });
+    return deepMerge$1(prev, next)
+  })
 }
 
 const deepMerge$1 = (object, next) => {
   if (Array.isArray(next)) {
-    return Array.isArray(object) ? arrayMerge$1(object, next) : next;
+    return Array.isArray(object) ? arrayMerge$1(object, next) : next
   } else {
-    return objectMerge$1(object, next);
+    return objectMerge$1(object, next)
   }
 };
 
@@ -1846,9 +1846,9 @@ const arrayMerge$1 = (current, source) => {
     } else if (current.indexOf(elem) === -1) {
       res.push(elem);
     }
-    return null;
+    return null
   }, null);
-  return res;
+  return res
 };
 
 const objectMerge$1 = (current, source) => {
@@ -1856,7 +1856,7 @@ const objectMerge$1 = (current, source) => {
   if (typeof current === 'object') {
     Object.keys(current).reduce((_, key) => {
       res[key] = current[key];
-      return null;
+      return null
     }, null);
   }
   Object.keys(source).reduce((_, key) => {
@@ -1865,9 +1865,9 @@ const objectMerge$1 = (current, source) => {
     } else {
       res[key] = deepMerge$1(current[key], source[key]);
     }
-    return null;
+    return null
   }, null);
-  return res;
+  return res
 };
 
 /**
@@ -1883,7 +1883,7 @@ const objectMerge$1 = (current, source) => {
  * > { 45: 'pasta', a: 'mixed' }
  */
 function pick (object, ...paths) {
-  if (paths.length === 0) { return {}; }
+  if (paths.length === 0) { return {} }
   const args = new Set();
 
   if (Array.isArray(paths[0])) {
@@ -1894,8 +1894,8 @@ function pick (object, ...paths) {
 
   return Object.keys(object).reduce((acc, curr) => {
     if (args.has(curr)) { acc[curr] = object[curr]; }
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
 /**
@@ -1918,7 +1918,7 @@ function pick (object, ...paths) {
  * > 10
  */
 function result (object, path, defaultValue) {
-  if (typeof path === 'undefined') { return undefined; }
+  if (typeof path === 'undefined') { return undefined }
   let pathArray;
 
   if (Array.isArray(path)) {
@@ -1928,18 +1928,18 @@ function result (object, path, defaultValue) {
   }
 
   const result = pathArray.reduce((result, search) => {
-    if (result === undefined) { return undefined; }
+    if (result === undefined) { return undefined }
     if (Object.prototype.hasOwnProperty.call(result, search)) {
-      return typeof result[search] === 'function' ? result[search]() : result[search];
+      return typeof result[search] === 'function' ? result[search]() : result[search]
     } else {
-      return undefined;
+      return undefined
     }
   }, object);
 
   if (result !== undefined) {
-    return result;
+    return result
   } else {
-    return typeof defaultValue === 'function' ? defaultValue() : defaultValue;
+    return typeof defaultValue === 'function' ? defaultValue() : defaultValue
   }
 }
 
@@ -1959,12 +1959,12 @@ function result (object, path, defaultValue) {
  * > { harmony: '7_0', daft: '9_1', stripes: '11_2' }
  */
 function transform (object, func, accumulator = {}) {
-  if (typeof func === 'undefined') { return object; }
+  if (typeof func === 'undefined') { return object }
 
   return Object.keys(object).reduce((acc, key) => {
     func(acc, object[key], key, object);
-    return acc;
-  }, accumulator);
+    return acc
+  }, accumulator)
 }
 
 /**
@@ -1981,8 +1981,8 @@ function transform (object, func, accumulator = {}) {
 function values (object) {
   return Object.keys(object).reduce((acc, key) => {
     acc.push(object[key]);
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
 var index$2 = /*#__PURE__*/Object.freeze({

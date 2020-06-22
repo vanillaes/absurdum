@@ -11,20 +11,20 @@
  * > '-_-abc'
  */
 function trimEnd (string, chars = ' ') {
-  const testChars = new Set([...chars]);
-  let end = true;
+  const testChars = new Set([...chars])
+  let end = true
   return [...string].reduceRight((acc, curr) => {
     if (end) {
       if (testChars.has(curr)) {
-        return acc;
+        return acc
       } else {
-        end = false;
-        return curr + acc;
+        end = false
+        return curr + acc
       }
     } else {
-      return curr + acc;
+      return curr + acc
     }
-  }, '');
+  }, '')
 }
 
-export { trimEnd };
+export { trimEnd }

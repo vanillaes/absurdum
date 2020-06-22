@@ -10,11 +10,11 @@
  * > ['a', 'c', ['d']]
  */
 function without (array, ...values) {
-  const toExclude = new Set(values);
+  const toExclude = new Set(values)
   return array.reduce((acc, curr) => {
-    if (!toExclude.has(curr)) { acc.push(curr); }
-    return acc;
-  }, []);
+    if (!toExclude.has(curr)) { acc.push(curr) }
+    return acc
+  }, [])
 }
 
-export { without };
+export { without }

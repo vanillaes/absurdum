@@ -13,16 +13,16 @@
  * > { hold: 25, fast: 14, your: 19, horses: 4 }
  */
 function assign (object, ...sources) {
-  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
-  const result = [object, ...sources];
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
+  const result = [object, ...sources]
 
   return result.reduce((acc, curr) => {
     Object.keys(curr).reduce((_, key) => {
-      acc[key] = curr[key];
-      return null;
-    }, null);
-    return acc;
-  }, {});
+      acc[key] = curr[key]
+      return null
+    }, null)
+    return acc
+  }, {})
 }
 
-export { assign };
+export { assign }

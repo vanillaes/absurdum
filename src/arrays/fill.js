@@ -15,12 +15,12 @@
 function fill (array, value, start = 0, end = array.length - 1) {
   return array.reduce((acc, curr, idx) => {
     if (idx >= start && idx <= end) {
-      acc.push(value);
+      acc.push(value)
     } else {
-      acc.push(curr);
+      acc.push(curr)
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
-export { fill };
+export { fill }

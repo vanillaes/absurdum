@@ -11,9 +11,9 @@
  */
 function unique (array) {
   return [...array.reduce((acc, curr) => {
-    acc.add(curr);
-    return acc;
-  }, new Set())];
+    acc.add(curr)
+    return acc
+  }, new Set())]
 }
 
-export { unique };
+export { unique }

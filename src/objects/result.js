@@ -18,29 +18,29 @@
  * > 10
  */
 function result (object, path, defaultValue) {
-  if (typeof path === 'undefined') { return undefined; }
-  let pathArray;
+  if (typeof path === 'undefined') { return undefined }
+  let pathArray
 
   if (Array.isArray(path)) {
-    pathArray = path;
+    pathArray = path
   } else {
-    pathArray = String(path).replace(/\[(\w+)\]/g, '.$1').split('.');
+    pathArray = String(path).replace(/\[(\w+)\]/g, '.$1').split('.')
   }
 
   const result = pathArray.reduce((result, search) => {
-    if (result === undefined) { return undefined; }
+    if (result === undefined) { return undefined }
     if (Object.prototype.hasOwnProperty.call(result, search)) {
-      return typeof result[search] === 'function' ? result[search]() : result[search];
+      return typeof result[search] === 'function' ? result[search]() : result[search]
     } else {
-      return undefined;
+      return undefined
     }
-  }, object);
+  }, object)
 
   if (result !== undefined) {
-    return result;
+    return result
   } else {
-    return typeof defaultValue === 'function' ? defaultValue() : defaultValue;
+    return typeof defaultValue === 'function' ? defaultValue() : defaultValue
   }
 }
 
-export { result };
+export { result }

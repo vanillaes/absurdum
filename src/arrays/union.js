@@ -12,12 +12,12 @@ function union (...arrays) {
   return Array.from([...arrays].reduce((acc, curr) => {
     if (Array.isArray(curr)) {
       curr.reduce((res, cur) => {
-        acc.add(cur);
-        return res;
-      }, '');
+        acc.add(cur)
+        return res
+      }, '')
     }
-    return acc;
-  }, new Set()));
+    return acc
+  }, new Set()))
 }
 
-export { union };
+export { union }

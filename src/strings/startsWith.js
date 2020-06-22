@@ -16,23 +16,23 @@
  * > false
  */
 function startsWith (string, substr) {
-  let chars = string.split('');
+  let chars = string.split('')
 
   const reducer = (acc, curr, idx, arr) => {
     // exit early on mismatch
     if (curr !== substr[idx]) {
-      chars = arr.splice(0);
-      return false;
+      chars = arr.splice(0)
+      return false
     }
     // exit early on match
     if (idx === substr.length - 1) {
-      chars = arr.splice(0);
-      return true;
+      chars = arr.splice(0)
+      return true
     }
-    return acc;
-  };
+    return acc
+  }
 
-  return chars.reduce(reducer, null);
+  return chars.reduce(reducer, null)
 }
 
-export { startsWith };
+export { startsWith }

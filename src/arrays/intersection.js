@@ -12,13 +12,13 @@
 function intersection (...arrays) {
   return [...new Set(arguments[0])].reduce((acc, curr) => {
     if (arrays.slice(1).reduce((every, array, i) => {
-      if (every && !new Set(array).has(curr)) return false;
-      return every;
+      if (every && !new Set(array).has(curr)) return false
+      return every
     }, true)) {
-      acc.push(curr);
+      acc.push(curr)
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
-export { intersection };
+export { intersection }

@@ -19,18 +19,18 @@ function endsWith (string, substr = '') {
   const reducer = (acc, _, idx, arr) => {
     // exit early on mismatch
     if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
-      arr = arr.splice(0);
-      return false;
+      arr = arr.splice(0)
+      return false
     }
     // exit early on match
     if (idx === substr.length - 1) {
-      arr = arr.splice(0);
-      return true;
+      arr = arr.splice(0)
+      return true
     }
-    return acc;
-  };
+    return acc
+  }
 
-  return string.split('').reduce(reducer, null);
+  return string.split('').reduce(reducer, null)
 }
 
-export { endsWith };
+export { endsWith }

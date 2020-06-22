@@ -11,23 +11,23 @@
  */
 function xor (...arrays) {
   if (arrays.length < 2) {
-    if (arrays.length === 0) { return []; }
-    return arrays[0];
+    if (arrays.length === 0) { return [] }
+    return arrays[0]
   }
 
-  const duplicates = new Set();
+  const duplicates = new Set()
   const allUniq = arrays.reduce((collect, array) => {
     const checker = array.reduce((acc, curr) => {
-      if (collect.has(curr)) { acc.push(curr); }
-      return acc;
-    }, []);
-    checker.forEach(val => duplicates.add(val));
-    array.forEach(val => collect.add(val));
-    return collect;
-  }, new Set());
+      if (collect.has(curr)) { acc.push(curr) }
+      return acc
+    }, [])
+    checker.forEach(val => duplicates.add(val))
+    array.forEach(val => collect.add(val))
+    return collect
+  }, new Set())
 
-  duplicates.forEach(val => allUniq.delete(val));
-  return [...allUniq];
+  duplicates.forEach(val => allUniq.delete(val))
+  return [...allUniq]
 }
 
-export { xor };
+export { xor }

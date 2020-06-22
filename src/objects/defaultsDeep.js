@@ -12,54 +12,54 @@
  * > { a: { b: [ 3, 4, 15 ], c: 3 } }
  */
 function defaultsDeep (object, ...sources) {
-  if (arguments.length < 2) { return arguments.length === 1 ? object : {}; }
-  const result = [object, ...sources];
+  if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
+  const result = [object, ...sources]
 
   return result.reduce((prev, next) => {
-    return deepMerge(prev, next);
-  });
+    return deepMerge(prev, next)
+  })
 }
 
 const deepMerge = (object, next) => {
   if (Array.isArray(next)) {
-    return Array.isArray(object) ? arrayMerge(object, next) : object;
+    return Array.isArray(object) ? arrayMerge(object, next) : object
   } else {
-    return objectMerge(object, next);
+    return objectMerge(object, next)
   }
-};
+}
 
 const arrayMerge = (current, source) => {
-  const res = [...current];
+  const res = [...current]
   source.reduce((_, elem, idx) => {
     if (typeof current[idx] === 'undefined') {
-      res[idx] = elem;
+      res[idx] = elem
     } else if (typeof elem === 'object') {
-      res[idx] = deepMerge(current[idx], elem);
+      res[idx] = deepMerge(current[idx], elem)
     }
-    return null;
-  }, null);
-  return res;
-};
+    return null
+  }, null)
+  return res
+}
 
 const objectMerge = (current, source) => {
-  const res = {};
+  const res = {}
   if (typeof current === 'object') {
     Object.keys(current).reduce((_, key) => {
-      if (typeof res[key] === 'undefined') { res[key] = current[key]; }
-      return null;
-    }, null);
+      if (typeof res[key] === 'undefined') { res[key] = current[key] }
+      return null
+    }, null)
   } else {
-    return current;
+    return current
   }
   Object.keys(source).reduce((_, key) => {
     if (typeof source[key] !== 'object' || !current[key]) {
-      if (typeof res[key] === 'undefined') { res[key] = source[key]; }
+      if (typeof res[key] === 'undefined') { res[key] = source[key] }
     } else {
-      res[key] = deepMerge(current[key], source[key]);
+      res[key] = deepMerge(current[key], source[key])
     }
-    return null;
-  }, null);
-  return res;
-};
+    return null
+  }, null)
+  return res
+}
 
-export { defaultsDeep };
+export { defaultsDeep }

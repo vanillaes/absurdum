@@ -11,34 +11,34 @@
  * > [64]
  */
 function at (object, ...paths) {
-  if (paths.length === 0) { return []; }
+  if (paths.length === 0) { return [] }
 
-  const pathArray = [];
+  const pathArray = []
   const filterPathArray = (x) => {
     x.reduce((_, curr, i) => {
-      pathArray[i] = String(curr).replace(/\[(\w+)\]/g, '.$1').split('.');
-      return null;
-    }, null);
-  };
+      pathArray[i] = String(curr).replace(/\[(\w+)\]/g, '.$1').split('.')
+      return null
+    }, null)
+  }
 
   if (Array.isArray(paths[0])) {
-    filterPathArray(paths[0]);
+    filterPathArray(paths[0])
   } else {
-    filterPathArray(paths);
+    filterPathArray(paths)
   }
 
   return pathArray.reduce((acc, curr) => {
     const result = curr.reduce((result, search) => {
-      if (typeof result === 'undefined') { return undefined; }
+      if (typeof result === 'undefined') { return undefined }
       if (Object.prototype.hasOwnProperty.call(result, search)) {
-        return result[search];
+        return result[search]
       } else {
-        return undefined;
+        return undefined
       }
-    }, object);
-    acc.push(result);
-    return acc;
-  }, []);
+    }, object)
+    acc.push(result)
+    return acc
+  }, [])
 }
 
-export { at };
+export { at }

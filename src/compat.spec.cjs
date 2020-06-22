@@ -1,34 +1,34 @@
-const test = require('tape');
-const arrays = require('@vanillaes/absurdum').arrays;
-const chunk = arrays.chunk;
-const objects = require('@vanillaes/absurdum').objects;
-const assign = objects.assign;
-const strings = require('@vanillaes/absurdum').strings;
-const camelCase = strings.camelCase;
+const test = require('tape')
+const arrays = require('@vanillaes/absurdum').arrays
+const chunk = arrays.chunk
+const objects = require('@vanillaes/absurdum').objects
+const assign = objects.assign
+const strings = require('@vanillaes/absurdum').strings
+const camelCase = strings.camelCase
 
 test('arrays operators - should be require-able via CommonJS', t => {
-  const expect = [[1], [2], [3], [4]];
-  const actual = chunk([1, 2, 3, 4]);
+  const expect = [[1], [2], [3], [4]]
+  const actual = chunk([1, 2, 3, 4])
 
-  t.deepEqual(actual, expect, 'arrays import');
+  t.deepEqual(actual, expect, 'arrays import')
 
-  t.end();
-});
+  t.end()
+})
 
 test('objects operators - should be require-able via CommonJS', t => {
-  const expect = { hold: 25, your: 19, horses: 4 };
-  const actual = assign({ hold: 25, your: 19, horses: 4 });
+  const expect = { hold: 25, your: 19, horses: 4 }
+  const actual = assign({ hold: 25, your: 19, horses: 4 })
 
-  t.deepEqual(actual, expect, 'objects import');
+  t.deepEqual(actual, expect, 'objects import')
 
-  t.end();
-});
+  t.end()
+})
 
 test('strings operators - should be require-able via CommonJS', t => {
-  const expect = 'helpMeWithThis';
-  const actual = camelCase('help me with this');
+  const expect = 'helpMeWithThis'
+  const actual = camelCase('help me with this')
 
-  t.equal(actual, expect, 'strings import');
+  t.equal(actual, expect, 'strings import')
 
-  t.end();
-});
+  t.end()
+})

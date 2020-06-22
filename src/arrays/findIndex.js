@@ -17,13 +17,13 @@
  * > 1
  */
 function findIndex (array, predicate, thisArg) {
-  if (array.length === 0) return -1;
-  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function'); }
+  if (array.length === 0) return -1
+  if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
 
   return array.reduce((res, cur, i) => {
-    if (res < 0 && predicate.call(thisArg, cur)) return i;
-    return res;
-  }, -1);
+    if (res < 0 && predicate.call(thisArg, cur)) return i
+    return res
+  }, -1)
 }
 
-export { findIndex };
+export { findIndex }

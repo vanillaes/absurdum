@@ -25,23 +25,23 @@
  *  > 'abcabcfunfunfunf'
  */
 function padEnd (string, length = 0, substr = ' ') {
-  let strLen = string.length;
-  const padLen = (length - string.length) > 0 ? length - string.length : 0;
-  let substrIdx = 0;
-  const stringArr = [...string, ...Array(padLen)];
+  let strLen = string.length
+  const padLen = (length - string.length) > 0 ? length - string.length : 0
+  let substrIdx = 0
+  const stringArr = [...string, ...Array(padLen)]
 
   const reducer = (acc, curr) => {
     if (strLen !== 0) {
-      acc.push(curr);
-      strLen--;
-      return acc;
+      acc.push(curr)
+      strLen--
+      return acc
     }
-    acc.push(substr[substrIdx]);
-    substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0;
-    return acc;
-  };
+    acc.push(substr[substrIdx])
+    substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0
+    return acc
+  }
 
-  return stringArr.reduce(reducer, []).join('');
+  return stringArr.reduce(reducer, []).join('')
 }
 
-export { padEnd };
+export { padEnd }

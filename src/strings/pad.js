@@ -25,9 +25,9 @@
  *  > 'FUNFUxyzxyzFUNFU'
  */
 function pad (string, length = 0, substr = ' ') {
-  const strLen = string.length;
-  const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen) / 2) : 0;
-  return string.padStart(length - padLen, substr).padEnd(length, substr);
+  const strLen = string.length
+  const padLen = (length - strLen) > 0 ? Math.ceil((length - strLen) / 2) : 0
+  return string.padStart(length - padLen, substr).padEnd(length, substr)
 }
 
-export { pad };
+export { pad }

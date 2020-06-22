@@ -11,11 +11,11 @@
  * > { a: neat_1, b: neat_2, c: neat_3 }
  */
 function mapValues (object, func) {
-  if (typeof func !== 'function') { return object; }
+  if (typeof func !== 'function') { return object }
   return Object.keys(object).reduce((acc, key) => ({
     ...acc,
     [key]: func(object[key], key, object)
-  }), {});
+  }), {})
 }
 
-export { mapValues };
+export { mapValues }

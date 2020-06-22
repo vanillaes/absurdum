@@ -16,9 +16,9 @@
  */
 function take (array, count = 1) {
   return array.reduce((res, cur, i) => {
-    if (i < count) { res.push(cur); }
-    return res;
-  }, []);
+    if (i < count) { res.push(cur) }
+    return res
+  }, [])
 }
 
-export { take };
+export { take }

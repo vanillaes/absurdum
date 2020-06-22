@@ -12,11 +12,11 @@
  * > 'Moo Moo Moo '
  */
 function repeat (string, count = 0) {
-  if (string.length === 0 || count < 1) return '';
+  if (string.length === 0 || count < 1) return ''
 
   return new Array(count).fill('').reduce((res) => {
-    return res + string;
-  }, '');
+    return res + string
+  }, '')
 }
 
-export { repeat };
+export { repeat }

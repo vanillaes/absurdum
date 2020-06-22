@@ -11,19 +11,19 @@
  * > { 45: 'pasta', a: 'mixed' }
  */
 function pick (object, ...paths) {
-  if (paths.length === 0) { return {}; }
-  const args = new Set();
+  if (paths.length === 0) { return {} }
+  const args = new Set()
 
   if (Array.isArray(paths[0])) {
-    paths[0].forEach(val => args.add(String(val)));
+    paths[0].forEach(val => args.add(String(val)))
   } else {
-    paths.forEach(val => args.add(String(val)));
+    paths.forEach(val => args.add(String(val)))
   }
 
   return Object.keys(object).reduce((acc, curr) => {
-    if (args.has(curr)) { acc[curr] = object[curr]; }
-    return acc;
-  }, {});
+    if (args.has(curr)) { acc[curr] = object[curr] }
+    return acc
+  }, {})
 }
 
-export { pick };
+export { pick }

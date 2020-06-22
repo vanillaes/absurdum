@@ -13,12 +13,12 @@
 function drop (array, count = 1) {
   return array.reduce((acc, curr) => {
     if (count > 0) {
-      count--;
-      return acc;
+      count--
+      return acc
     }
-    acc.push(curr);
-    return acc;
-  }, []);
+    acc.push(curr)
+    return acc
+  }, [])
 }
 
-export { drop };
+export { drop }

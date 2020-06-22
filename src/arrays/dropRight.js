@@ -13,12 +13,12 @@
 function dropRight (array, count = 1) {
   return array.reduce((acc, _, idx, arr) => {
     if (count > 0) {
-      count--;
-      return acc;
+      count--
+      return acc
     }
-    acc.unshift(arr[arr.length - idx - 1]);
-    return acc;
-  }, []);
+    acc.unshift(arr[arr.length - idx - 1])
+    return acc
+  }, [])
 }
 
-export { dropRight };
+export { dropRight }

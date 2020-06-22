@@ -14,13 +14,13 @@
  * > { small: "ant", big: "elephant" }
  */
 function filter (object, predicate) {
-  if (typeof predicate !== 'function') { return object; }
+  if (typeof predicate !== 'function') { return object }
   return Object.keys(object).reduce((acc, key) => {
     if (predicate(object[key], key, object) === true) {
-      acc[key] = object[key];
+      acc[key] = object[key]
     }
-    return acc;
-  }, {});
+    return acc
+  }, {})
 }
 
-export { filter };
+export { filter }

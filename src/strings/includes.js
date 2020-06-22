@@ -16,20 +16,20 @@
  * > false
  */
 function includes (string, substr, start = 0) {
-  if (string.length === 0) return false;
-  const len = substr.length;
-  const first = substr.charAt(0);
-  if (start === 0 && string.substring(0, len) === substr) return true;
+  if (string.length === 0) return false
+  const len = substr.length
+  const first = substr.charAt(0)
+  if (start === 0 && string.substring(0, len) === substr) return true
 
   return string.split('').reduce((res, cur, i) => {
     if (i >= start) {
-      if (res) return res;
+      if (res) return res
       if (cur === first) {
-        return string.substring(i, i + len) === substr;
+        return string.substring(i, i + len) === substr
       }
     }
-    return false;
-  }, false);
+    return false
+  }, false)
 }
 
-export { includes };
+export { includes }

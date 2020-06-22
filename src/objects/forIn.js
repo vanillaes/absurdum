@@ -20,20 +20,20 @@
  * > { a: 5, b: 10 }
  */
 function forIn (object, func) {
-  const objProto = Object.getPrototypeOf(object);
-  const proto = objProto ? Object.keys(objProto) : [];
+  const objProto = Object.getPrototypeOf(object)
+  const proto = objProto ? Object.keys(objProto) : []
 
   Object.keys(object).reduce((_, key) => {
-    func(object[key], key, object);
-    return null;
-  }, null);
+    func(object[key], key, object)
+    return null
+  }, null)
 
   proto.reduce((_, key) => {
-    func(objProto[key], key, object);
-    return null;
-  }, null);
+    func(objProto[key], key, object)
+    return null
+  }, null)
 
-  return object;
+  return object
 }
 
-export { forIn };
+export { forIn }

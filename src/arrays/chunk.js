@@ -11,18 +11,18 @@
  * > [[1, 2], [3, 4], [5]]
  */
 function chunk (array, size = 1) {
-  let chunk = [];
+  let chunk = []
   return array.reduce((acc, curr, idx, arr) => {
-    chunk.push(curr);
+    chunk.push(curr)
     if (chunk.length === size) {
-      acc.push(chunk);
-      chunk = [];
+      acc.push(chunk)
+      chunk = []
     }
     if (chunk.length > 0 && idx === arr.length - 1) {
-      acc.push(chunk);
+      acc.push(chunk)
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 }
 
-export { chunk };
+export { chunk }
