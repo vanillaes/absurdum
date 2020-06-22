@@ -70,9 +70,10 @@
   "engines": {
     "node": "~14"
   },
-  "semistandard": {
+  "standard": {
     "ignore": [
       "index.js",
+      "index.cjs",
       "docs.config.js"
     ]
   }
