@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vanillaes/absurdum/master/assets/Logo-banner%20[150x300].png" alt="Absurdum Logo">
+  <img src="https://raw.githubusercontent.com/vanillaes/absurdum/main/assets/Logo-banner%20[150x300].png" alt="Absurdum Logo">
 </p>
 
 -----
