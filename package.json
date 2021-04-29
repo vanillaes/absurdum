@@ -62,13 +62,13 @@
   },
   "devDependencies": {
     "docdown": "github:evanplaice/docdown",
-    "esmtk": "^0.1.1",
+    "esmtk": "^0.5.1",
     "glob": "^7.1.4",
     "rollup-plugin-terser": "^5.2.0",
     "tape-es": "^1.2.5"
   },
   "engines": {
-    "node": "~14"
+    "node": ">=14"
   },
   "standard": {
     "ignore": [
