@@ -27,7 +27,7 @@
   "main": "index.cjs",
   "exports": {
     ".": {
-      "import": "./index.min.js",
+      "import": "./index.js",
       "require": "./index.cjs"
     },
     "./arrays": {
