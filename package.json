@@ -27,7 +27,7 @@
   "main": "index.cjs",
   "exports": {
     ".": {
-      "import": "./index.js",
+      "import": "./index.min.js",
       "require": "./index.cjs"
     },
     "./arrays": {
@@ -49,8 +49,8 @@
     "types": "npx tsc -p .config/jsconfig.json",
     "build": "npm run build:cjs && npm run build:min && npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
-    "build:cjs": "npx rollup --config .config/cjs.config.js",
-    "build:min": "npx rollup --config .config/min.config.js",
+    "build:cjs": "esmtk commonjs index.js index.cjs",
+    "build:min": "esmtk minify index.js index.min.js",
     "build:typings": "npx tsc -p .config/tsconfig.json",
     "clean": "npm run clean:docs && npm run clean:builds && npm run clean:typings",
     "clean:docs": "npx rimraf docs/**/*.md",
@@ -64,7 +64,6 @@
     "docdown": "github:evanplaice/docdown",
     "esmtk": "^0.5.3",
     "glob": "^7.1.6",
-    "rollup-plugin-terser": "^5.3.1",
     "tape-es": "^1.2.13"
   },
   "engines": {
