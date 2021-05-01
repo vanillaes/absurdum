@@ -7,12 +7,13 @@
 Absurdum is a Javascript utility library built with a focus on providing idempotent side-effect free 
 functions and clear/readable modular source for tree shaking.
 
-[![GitHub Releases](https://badgen.net/github/tag/vanillaes/absurdum)](https://github.com/vanillaes/absurdum/releases)
-[![NPM Release](https://badgen.net/npm/v/@vanillaes/absurdum)](https://www.npmjs.com/package/@vanillaes/absurdum)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@vanillaes/absurdum)](https://bundlephobia.com/result?p=@vanillaes/absurdum)
-[![MIT License](https://badgen.net/github/license/vanillaes/absurdum)](https://raw.githubusercontent.com/vanillaes/absurdum/master/LICENSE)
-[![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
-[![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions)
+<div align="center">
+  <a href="https://github.com/vanillaes/absurdum/releases"><img src="https://badgen.net/github/tag/vanillaes/absurdum" alt="GitHub Release"></a>
+  <a href="https://www.npmjs.com/package/@vanillaes/absurdum"><img src="https://badgen.net/npm/v/@vanillaes/absurdum" alt="NPM Release"></a>
+  <a href="https://bundlephobia.com/result?p=@vanillaes/absurdum"><img src="https://badgen.net/bundlephobia/minzip/@vanillaes/absurdum" alt="Bundlephobia"></a>
+  <a href="https://github.com/vanillaes/absurdum/actions"><img src="https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg" alt="Latest Status"></a>
+  <a href="https://github.com/vanillaes/absurdum/actions"><img src="https://github.com/vanillaes/absurdum/workflows/Release/badge.svg" alt="Release Status"></a>
+</div>
 
 ## Features
 
