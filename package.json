@@ -24,7 +24,6 @@
   "repository": "https://github.com/vanillaes/absurdum",
   "license": "MIT",
   "type": "module",
-  "main": "index.cjs",
   "exports": {
     ".": {
       "import": "./index.js",
