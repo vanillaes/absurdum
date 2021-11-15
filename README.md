@@ -81,8 +81,6 @@ import { camelCase, repeat } from '@vanillaes/absurdum/strings';
 Import an operator and feed it some inputs
 
 ```javascript
-import { reverse } from '@vanillaes/absurdum/arrays';
-
 const input = ['a', 'b', 'c', 'd'];
 const output = reverse(input);
 console.log(output);
