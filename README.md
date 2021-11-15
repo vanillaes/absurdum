@@ -34,16 +34,22 @@ This package works isomorphically in browsers and server-side JavaScript runtime
 
 ### Browsers
 
+Import directly from the local path or a CDN
+
 Top-level operator namespaces (ie `[arrays, objects, strings]`) can be imported from the index
 
-```javascript
-import { arrays, objects, strings } from 'path/to/absurdum/index.js';
+```html
+<script type="module">
+import { arrays, objects, strings } from 'path/to/absurdum/index.js'
+</script>
 ```
 
 The minified version can be imported from
 
-```javascript
-import { arrays, objects, strings } from 'path/to/absurdum/index.min.js';
+```html
+<script type="module">
+import { arrays, objects, strings } from 'path/to/absurdum/index.min.js'
+</script>
 ```
 
 ### Node
