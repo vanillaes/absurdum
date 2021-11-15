@@ -27,7 +27,6 @@
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs",
       "browser": "./index.min.js"
     },
     "./arrays": {
@@ -44,20 +43,18 @@
   "scripts": {
     "test": "tape-es",
     "test:watch": "tape-watch-es",
-    "test:compat": "node src/compat.spec.cjs",
     "lint": "esmtk lint",
     "types": "npx -p typescript tsc index.js  -t esnext --allowJS --checkJS --skipLibCheck --noEmit",
-    "build": "npm run build:cjs && npm run build:min && npm run build:docs && npm run build:typings",
+    "build": "npm run build:min && npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
-    "build:cjs": "esmtk commonjs index.js index.cjs",
     "build:min": "esmtk minify index.js index.min.js",
     "build:typings": "npx -p typescript tsc index.js  -t esnext --allowJS --checkJS --skipLibCheck --declaration --emitDeclarationOnly --noEmitOnError",
     "clean": "npm run clean:docs && npm run clean:builds && npm run clean:typings",
     "clean:docs": "npx rimraf docs/**/*.md",
-    "clean:builds": "npx rimraf index.cjs && npx rimraf index.min.js",
+    "clean:builds": "npx rimraf index.min.js",
     "clean:typings": "npx rimraf src/**/*.d.ts",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
-    "preversion": "npm test && npm run test:compat && npm run lint && npm run types",
+    "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {
@@ -72,7 +69,6 @@
   "standard": {
     "ignore": [
       "index.js",
-      "index.cjs",
       "docs.config.js"
     ]
   }

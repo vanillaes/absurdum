@@ -23,18 +23,18 @@ functions and clear/readable modular source for tree shaking.
 - Abstraction Free -> tree-shake friendly
 - Functional -> all operators are side-effect free
 - Polyfills -> includes operator polyfills for older browsers
-- Modern -> works transparently with ESM *and* CJS
+- Isomorphic -> works consistently across all JS runtimes 
 - Typescript -> typings are provided for all operators
 - Intellisense -> supports code completions + inline documentation
 - Well Tested -> includes 600+ tests covering every aspect
 
 ## Imports
 
-This package provides a variety of entry-points for all JS platforms
+This package works isomorphically in browsers and server-side JavaScript runtimes
 
 ### Browsers
 
-All top-level operator namespaces (ie `[arrays, objects, strings]`) can be imported from the index
+Top-level operator namespaces (ie `[arrays, objects, strings]`) can be imported from the index
 
 ```javascript
 import { arrays, objects, strings } from 'path/to/absurdum/index.js';
@@ -46,15 +46,21 @@ The minified version can be imported from
 import { arrays, objects, strings } from 'path/to/absurdum/index.min.js';
 ```
 
-### Node/Bundlers (ESM)
+### Node
 
-Top-level ES module namespaces are provided for Node/Bundlers
+Install the package
+
+```sh
+npm install @vanillaes/absurdum
+```
+
+Top-level operator namespaces are provided
 
 ```javascript
 import { arrays, objects, strings } from '@vanillaes/absurdum';
 ```
 
-Individual operators can be imported from their parent namespaces
+Individual operators can also be imported from their parent namespaces
 
 ```javascript
 import { chunk, find } from '@vanillaes/absurdum/arrays';
@@ -62,19 +68,7 @@ import { assign, invert } from '@vanillaes/absurdum/objects';
 import { camelCase, repeat } from '@vanillaes/absurdum/strings';
 ```
 
-*Note: Webpack's tree-shaking algorithm doesn't handle multi-layered exports. To optimize bundle size, prefer individual operator imports.*
-
-### Node/Legacy (CJS)
-
-For Node users who rely on CommonJS, top-level namespaces are provided
-
-```javascript
-const arrays = require('@vanillaes/absurdum').arrays;
-const objects = require('@vanillaes/absurdum').objects;
-const strings = require('@vanillaes/absurdum').strings;
-```
-
-*Note: CJS entry-points are backward-compatible with all non-EOL versions of Node*
+*Note: Webpack's tree-shaking algorithm doesn't work with multi-layered exports. To optimize bundle size, prefer individual operator imports.*
 
 ## Usage
 
