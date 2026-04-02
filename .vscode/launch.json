@@ -6,6 +6,18 @@
       "type": "node",
       "request": "launch",
       "program": "${file}"
-    }
+    },
+    {
+      "name": "Test",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/node_modules/.bin/esmtk",
+      "cwd": "${workspaceFolder}",
+      "args": ["test"],
+      "console": "integratedTerminal",
+    },
   ]
 }
