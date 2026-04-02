@@ -24,7 +24,7 @@ test('objects.fromEntries(array) - should return an object composed from key-val
 })
 
 test('objects.fromEntries(array) - should return undefined: undefined in positions where key value pair is malformed', t => {
-  const expect = { timber: 'wooden', undefined: undefined }
+  const expect = { timber: 'wooden', undefined }
   const actual = fromEntries([['timber', 'wooden'], 4])
 
   t.equal(Object.prototype.toString.call(actual), '[object Object]', 'return type')

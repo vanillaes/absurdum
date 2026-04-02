@@ -16,6 +16,7 @@ test('objects.forIn(object, func) - returns input object', t => {
 
 test('objects.forIn(object, func) - returns input object and function return is ignored', t => {
   const expect = { a: 1, b: 2 }
+  /** @private */
   function TestObj () {
     this.a = 1
     this.b = 2
@@ -31,6 +32,7 @@ test('objects.forIn(object, func) - returns input object and function return is 
 
 test('objects.forIn(object, func) - returns input object, logs to console as it iterates', t => {
   const expect = ['1a', '2b', '3c']
+  /** @private */
   function TestObj () {
     this.a = 1
     this.b = 2

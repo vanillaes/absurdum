@@ -1,11 +1,11 @@
+/* eslint-disable jsdoc/reject-function-type */
+
 /**
  * Transform works like reduce, except the accumulator is implicitly returned
- *
  * @param {object} object input object
- * @param {function} func iteratee function
- * @param {object|Array} [accumulator={}] custom accumulator object
+ * @param {Function} func iteratee function
+ * @param {object|Array} [accumulator] custom accumulator object (default {})
  * @returns {object|Array} returns accumulator object after the input object has been iterated over by the function.
- *
  * @example
  * const result = objects.transform({ harmony: 2, daft: 4, stripes: 6 }, function(acc, val, key) {
  *   acc[key] = val + 5 + '_' + idx;

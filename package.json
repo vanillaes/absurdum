@@ -42,6 +42,7 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "esmtk test",
+    "lint": "esmtk lint",
     "type": "esmtk type index.js",
     "build": "npm run build:min && npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
@@ -52,18 +53,12 @@
     "clean:min": "esmtk clean --minify",
     "clean:typings": "esmtk clean --typings",
     "preview": "esmtk preview",
-    "preversion": "npm test && npm run type",
+    "preversion": "npm test && npm run lint && npm run type",
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.2.0"
-  },
-  "standard": {
-    "ignore": [
-      "index.js",
-      "docs.config.js"
-    ]
   },
   "dependencies": {
     "@vanillaes/esmtk": "^1.2.3"

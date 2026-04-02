@@ -1,11 +1,9 @@
 /**
  * Includes determines whether one string can be found in another string
- *
  * @param {string} string input string
  * @param {string} substr candidate string to be searched for
- * @param {Number} start index to begin search for string
+ * @param {number} start index to begin search for string
  * @returns {boolean} does the input string include the substring?
- *
  * @example
  * const result = strings.includes('This Lovely Life', 'Love');
  * console.log(result);
