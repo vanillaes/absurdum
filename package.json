@@ -27,19 +27,25 @@
   "exports": {
     ".": {
       "import": "./index.js",
+      "types": "./index.d.ts",
       "browser": "./index.min.js"
     },
     "./arrays": {
-      "import": "./src/arrays/index.js"
+      "import": "./src/arrays/index.js",
+      "types": "./src/arrays/index.d.ts",
+      "browser": "./src/arrays/index.min.js"
     },
     "./objects": {
-      "import": "./src/objects/index.js"
+      "import": "./src/objects/index.js",
+      "types": "./src/objects/index.d.ts",
+      "browser": "./src/objects/index.min.js"
     },
     "./strings": {
-      "import": "./src/strings/index.js"
+      "import": "./src/strings/index.js",
+      "types": "./src/strings/index.d.ts",
+      "browser": "./src/strings/index.min.js"
     }
   },
-  "types": "index.d.ts",
   "scripts": {
     "test": "esmtk test",
     "lint": "esmtk lint",
