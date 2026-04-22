@@ -26,9 +26,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "types": "./index.d.ts",
-      "browser": "./index.min.js"
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts",
+      "browser": "./src/index.min.js"
     },
     "./arrays": {
       "import": "./src/arrays/index.js",

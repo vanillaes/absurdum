@@ -3,7 +3,7 @@
   "version": "2.0.12",
   "license": "MIT",
   "exports": {
-    ".": "./index.js"
+    ".": "./src/index.js"
   },
   "publish": {
     "include": [

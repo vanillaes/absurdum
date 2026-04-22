@@ -43,7 +43,7 @@ function createDoc (baseConfig, path) {
 }
 
 (async () => {
-  const files = await match('**/!(*.spec|index).js');
+  const files = await match('**/!(*.spec|index|index.min).js');
   files.forEach(file => createDoc(baseConfig, file));
 })().catch(e => {
   console.error(e);
