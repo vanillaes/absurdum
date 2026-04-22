@@ -6,3 +6,4 @@ docs/
 CHANGELOG.md
 CONTRIBUTING.md
 *.spec.js
+jsr.json

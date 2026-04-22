@@ -1,6 +1,6 @@
 {
   "name": "@vanillaes/absurdum",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Absurdum - The Ridiculous Application of Reduce",
   "keywords": [
     "esm",
@@ -51,9 +51,10 @@
     "lint": "esmtk lint",
     "type": "esmtk type",
     "build": "esmtk minify && esmtk typings && node .config/docs.config.js",
-    "clean": "esmtk clean --minify --typings && esmtk clean --custom docs/**/*.md",
+    "clean": "esmtk clean --minify --typings",
     "preview": "esmtk preview",
     "preversion": "npm test && npm run lint && npm run type",
+    "version": "npm run clean && npm run build && git add -f **/*.d.ts **/*.min.js",
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {

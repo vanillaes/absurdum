@@ -9,9 +9,9 @@ functions and clear/readable modular source for tree shaking.
 
 <div align="center">
   <a href="https://github.com/vanillaes/absurdum/releases"><img src="https://badgen.net/github/tag/vanillaes/absurdum?cache-control=no-cache" alt="GitHub Release"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/absurdum"><img src="https://badgen.net/npm/v/@vanillaes/absurdum?icon=npm" alt="NPM Version"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/absurdum"><img src="https://badgen.net/npm/dm/@vanillaes/absurdum?icon=npm" alt="NPM Downloads"></a>
-  <a href="https://bundlephobia.com/result?p=@vanillaes/absurdum"><img src="https://badgen.net/bundlephobia/minzip/@vanillaes/absurdum" alt="Bundlephobia"></a>
+  <a href="https://npmjs.com/package/@vanillaes/absurdum"><img src="https://badgen.net/npm/dw/@vanillaes/absurdum?icon=npm" alt="NPM Weekly Downloads"></a>
+  <a href="https://jsr.io/@vanillaes/absurdum"><img src="https://jsr.io/badges/@vanillaes/absurdum/weekly-downloads" alt="JSR Weekly Downloads"></a>
+  <a href="https://jsr.io/@vanillaes/absurdum"><img src="https://jsr.io/badges/@vanillaes/absurdum/score" alt="JSR Score"></a>
   <a href="https://github.com/vanillaes/absurdum/actions"><img src="https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg" alt="Latest Status"></a>
   <a href="https://github.com/vanillaes/absurdum/actions"><img src="https://github.com/vanillaes/absurdum/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>
