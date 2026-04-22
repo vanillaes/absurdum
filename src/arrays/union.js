@@ -1,12 +1,13 @@
 /**
  * Union creates an array of unique elements from all given arrays in order encountered
- * @param {Array} arrays input arrays
- * @returns {Array} an array of unique elements from all given arrays
+ * @template T
+ * @param {T[]} arrays input arrays
+ * @returns {T[]} an array of unique elements from all given arrays
  * @example
  * const result = arrays.union([2], [1, 2, 3, 1]);
  * > [2, 1, 3]
  */
-function union (...arrays) {
+export function union (...arrays) {
   return Array.from([...arrays].reduce((acc, curr) => {
     if (Array.isArray(curr)) {
       curr.reduce((res, cur) => {
@@ -17,5 +18,3 @@ function union (...arrays) {
     return acc
   }, new Set()))
 }
-
-export { union }

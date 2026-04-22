@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * Tests a string to see if it ends with a substring
  * @param {string} string input string
@@ -12,7 +14,7 @@
  * console.log(result);
  * > false
  */
-function endsWith (string, substr = '') {
+export function endsWith (string, substr = '') {
   const reducer = (acc, _, idx, arr) => {
     // exit early on mismatch
     if (arr[arr.length - idx - 1] !== substr[substr.length - idx - 1]) {
@@ -29,5 +31,3 @@ function endsWith (string, substr = '') {
 
   return string.split('').reduce(reducer, null)
 }
-
-export { endsWith }

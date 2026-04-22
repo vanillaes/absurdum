@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-any-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /**
  * Get, creates an array of values corresponding to paths of the object
@@ -15,7 +16,7 @@
  * console.log(result, ['front', 5], "no value here");
  * > 'no value here'
  */
-function get (object, path, defaultValue) {
+export function get (object, path, defaultValue) {
   if (typeof path === 'undefined') { return undefined }
   let pathArray
 
@@ -36,5 +37,3 @@ function get (object, path, defaultValue) {
 
   return result !== undefined ? result : defaultValue
 }
-
-export { get }

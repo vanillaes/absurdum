@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="startswithstring-substr"><code>startsWith(string, substr)</code></h3>
+<h3 id="exportfunctionstartswithstringstring-substr"><code>export function startsWith *(string(string, substr)*</code></h3>
 
 StartsWith tests a string to see if it starts with a substring
 

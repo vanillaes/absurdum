@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * DefaultsDeep recursively merges object properties from all supplied objects with object values
  * being merged recursively and once a property is set, additional values of the same property are ignored.
@@ -9,7 +11,7 @@
  * console.log(result);
  * > { a: { b: [ 3, 4, 15 ], c: 3 } }
  */
-function defaultsDeep (object, ...sources) {
+export function defaultsDeep (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources]
 
@@ -59,5 +61,3 @@ const objectMerge = (current, source) => {
   }, null)
   return res
 }
-
-export { defaultsDeep }

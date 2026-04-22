@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="hasobject-path"><code>has(object, path)</code></h3>
+<h3 id="exportfunctionhasobjectobject-path"><code>export function has *(object(object, path)*</code></h3>
 
 Has, creates an array of values corresponding to paths of the object
 

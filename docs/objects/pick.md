@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="pickobject-paths"><code>pick(object, paths)</code></h3>
+<h3 id="exportfunctionpickobjectobject-paths"><code>export function pick *(object(object, paths)*</code></h3>
 
 Pick returns a new object composed from the selected object properties.
 

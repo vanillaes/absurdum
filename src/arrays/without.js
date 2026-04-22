@@ -2,20 +2,19 @@
 
 /**
  * Without, returns an array with all values parameters removed from the input array
- * @param {Array} array input array
+ * @template T
+ * @param {T[]} array input array
  * @param {...*} values input values
- * @returns {Array} an array of unique values
+ * @returns {T[]} an array of unique values
  * @example
  * const result = arrays.without(['a', 'b', 'c', ['d']], 'b', ['d']);
  * console.log(result);
  * > ['a', 'c', ['d']]
  */
-function without (array, ...values) {
+export function without (array, ...values) {
   const toExclude = new Set(values)
-  return array.reduce((acc, curr) => {
+  return array.reduce((/** @type {T[]} */ acc, curr) => {
     if (!toExclude.has(curr)) { acc.push(curr) }
     return acc
   }, [])
 }
-
-export { without }

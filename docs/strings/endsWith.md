@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="endswithstring-substr"><code>endsWith(string, [substr=''])</code></h3>
+<h3 id="exportfunctionendswithstringstring-substr"><code>export function endsWith *(string(string, [substr])*</code></h3>
 
 Tests a string to see if it ends with a substring
 
 #### Arguments
 1. `string` *(string)*: input string
-2. `[substr='']` *(string)*: substring to test
+2. `[substr]` *(string): substring to test &#42;(default '')*&#42;
 
 #### Returns
 *(boolean)*: does the input end with the substring?

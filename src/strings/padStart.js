@@ -20,12 +20,12 @@
  * console.log(result);
  * > 'funfunfunfabcabc'
  */
-function padStart (string, length = 0, substr = ' ') {
+export function padStart (string, length = 0, substr = ' ') {
   let padLen = (length - string.length) > 0 ? length - string.length : 0
   let substrIdx = 0
   const stringArr = [...Array(padLen), ...string]
 
-  const reducer = (acc, curr) => {
+  const reducer = (/** @type {string[]} */ acc, /** @type {string} */ curr) => {
     if (padLen !== 0) {
       acc.push(substr[substrIdx])
       substrIdx = (substrIdx + 1 < substr.length) ? substrIdx + 1 : 0
@@ -38,5 +38,3 @@ function padStart (string, length = 0, substr = ' ') {
 
   return stringArr.reduce(reducer, []).join('')
 }
-
-export { padStart }

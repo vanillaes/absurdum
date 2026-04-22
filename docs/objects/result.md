@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="resultobject-path-defaultvalue"><code>result(object, path, [defaultValue])</code></h3>
+<h3 id="exportfunctionresultobjectobject-path-defaultvalue"><code>export function result *(object(object, path, [defaultValue])*</code></h3>
 
 Result, creates an array of values corresponding to paths of the object. If value is a function, returns result of calling function
 

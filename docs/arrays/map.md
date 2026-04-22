@@ -7,16 +7,31 @@
 
 <!-- div -->
 
-<h3 id="maparray-func"><code>map(array, func)</code></h3>
+<h3 id="acc"><code>acc</code></h3>
+
+
+
+---
+
+<!-- /div -->
+
+<!-- /div -->
+
+<!-- div -->
+
+
+<!-- div -->
+
+<h3 id="exportfunctionmaparrayarray-func"><code>export function map *(array(array, func)*</code></h3>
 
 Map iterates over an array of values and applies a function to each value
 
 #### Arguments
-1. `array` *(Array)*: input array
+1. `array` *(T&#91;&#93;)*: input array
 2. `func` *(Function)*: function describing how to map values
 
 #### Returns
-*(Array)*: array of mutated values
+*(&#42;)*: array of mutated values
 
 #### Example
 ```js

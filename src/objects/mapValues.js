@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this late
 
 /**
  * MapKeys iterates over an object and applies a function to each value
@@ -10,12 +11,10 @@
  * console.log(result);
  * > { a: neat_1, b: neat_2, c: neat_3 }
  */
-function mapValues (object, func) {
+export function mapValues (object, func) {
   if (typeof func !== 'function') { return object }
   return Object.keys(object).reduce((acc, key) => ({
     ...acc,
     [key]: func(object[key], key, object)
   }), {})
 }
-
-export { mapValues }

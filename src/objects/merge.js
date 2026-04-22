@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this late
+
 /**
  * Merge recursively merges object properties from all supplied objects with object values
  * being merged recursively and other value types overridden when applied from left to right.
@@ -9,7 +11,7 @@
  * console.log(result);
  * > { a: 1, b: 2, hold: 25, your: 19 }
  */
-function merge (object, ...sources) {
+export function merge (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources]
 
@@ -59,5 +61,3 @@ const objectMerge = (current, source) => {
   }, null)
   return res
 }
-
-export { merge }

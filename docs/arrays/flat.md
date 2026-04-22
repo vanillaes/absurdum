@@ -7,16 +7,31 @@
 
 <!-- div -->
 
-<h3 id="flatarray-depth1"><code>flat(array, [depth=1])</code></h3>
+<h3 id="acc"><code>acc</code></h3>
+
+
+
+---
+
+<!-- /div -->
+
+<!-- /div -->
+
+<!-- div -->
+
+
+<!-- div -->
+
+<h3 id="exportfunctionflatarrayarray-depth"><code>export function flat *(array(array, [depth])*</code></h3>
 
 Flat flattens an array of nested arrays
 
 #### Arguments
-1. `array` *(Array)*: input array
-2. `[depth=1]` *(number)*: depth of array elements to flat
+1. `array` *(T&#91;&#93;)*: input array
+2. `[depth]` *(number): depth of array elements to flat &#42;(default `1`)*&#42;
 
 #### Returns
-*(Array)*: the flattened array
+*(&#42;)*: the flattened array
 
 #### Example
 ```js

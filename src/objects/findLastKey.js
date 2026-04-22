@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-any-type,jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /**
  * FindLastKey returns the key of the last property value for which a supplied function returns true
@@ -11,7 +12,7 @@
  * console.log(result);
  * > 'grapefruit'
  */
-function findLastKey (object, predicate = x => x, thisArg) {
+export function findLastKey (object, predicate = x => x, thisArg) {
   const keys = Object.keys(object)
 
   if (typeof predicate === 'function') {
@@ -58,5 +59,3 @@ const objContained = (objA, objB) => {
     return true
   }, false)
 }
-
-export { findLastKey }

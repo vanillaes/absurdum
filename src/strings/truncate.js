@@ -1,7 +1,7 @@
 /**
  * Truncates string if it's longer than the given maximum string length. The last characters
  * of the truncated string are replaced with the omission string which defaults to "...".
- * @param {string} [string] string to truncate
+ * @param {string} string string to truncate
  * @param {object} [options] object containing options (default {})
  * @param {number} [options.length] Max length of truncated string (default 30)
  * @param {string} [options.omission] string to indicate omitted text (default '...')
@@ -12,7 +12,7 @@
  * console.log(result);
  * > true
  */
-function truncate (string, options = {}) {
+export function truncate (string, options = {}) {
   let length = 30
   let omission = '...'
   let separator
@@ -29,7 +29,7 @@ function truncate (string, options = {}) {
   let result = string.slice(0, end)
   if (separator === undefined) { return result + omission }
 
-  let strSeparator
+  let strSeparator = ''
   let regexSeparator
   if (typeof separator === 'string') {
     strSeparator = separator
@@ -60,5 +60,3 @@ function truncate (string, options = {}) {
   }
   return result + omission
 }
-
-export { truncate }

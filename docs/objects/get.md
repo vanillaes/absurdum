@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="getobject-path-defaultvalue"><code>get(object, path, [defaultValue])</code></h3>
+<h3 id="exportfunctiongetobjectobject-path-defaultvalue"><code>export function get *(object(object, path, [defaultValue])*</code></h3>
 
 Get, creates an array of values corresponding to paths of the object
 

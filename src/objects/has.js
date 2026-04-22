@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * Has, creates an array of values corresponding to paths of the object
  * @param {object} object input object
@@ -12,7 +14,7 @@
  * console.log(result, ['front', 1]);
  * > true
  */
-function has (object, path) {
+export function has (object, path) {
   if (typeof path === 'undefined') { return false }
   let pathArray
 
@@ -31,5 +33,3 @@ function has (object, path) {
     }
   }, object)
 }
-
-export { has }

@@ -1,15 +1,16 @@
 /**
  * Flat flattens an array of nested arrays
- * @param {Array} array input array
+ * @template T
+ * @param {T[]} array input array
  * @param {number} [depth] depth of array elements to flat (default 1)
- * @returns {Array} the flattened array
+ * @returns {T[]} the flattened array
  * @example
  * const result = arrays.flat([1, [2, [3, [4]]]]);
  * console.log(result);
  * > [1, 2, [3, [4]]]
  */
-function flat (array, depth = 1) {
-  return array.reduce((acc, curr) => {
+export function flat (array, depth = 1) {
+  return array.reduce((/** @type {T[]} */ acc, curr) => {
     if (Array.isArray(curr) && depth > 0) {
       acc.push(...flat(curr, depth - 1))
     } else {
@@ -18,5 +19,3 @@ function flat (array, depth = 1) {
     return acc
   }, [])
 }
-
-export { flat }

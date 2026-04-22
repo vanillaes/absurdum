@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="atobject-paths"><code>at(object, paths)</code></h3>
+<h3 id="exportfunctionatobjectobject-paths"><code>export function at *(object(object, paths)*</code></h3>
 
 At, creates an array of values corresponding to paths of the object
 
@@ -16,7 +16,7 @@ At, creates an array of values corresponding to paths of the object
 2. `paths` *(...(string|string&#91;&#93;))*: strings describing paths to be returned from an object
 
 #### Returns
-*(array)*: array of values found by object paths in object
+*(Array)*: array of values found by object paths in object
 
 #### Example
 ```js

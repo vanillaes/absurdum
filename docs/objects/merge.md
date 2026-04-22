@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="mergeobject-sources"><code>merge(object, sources)</code></h3>
+<h3 id="exportfunctionmergeobjectobject-sources"><code>export function merge *(object(object, sources)*</code></h3>
 
 Merge recursively merges object properties from all supplied objects with object values
 being merged recursively and other value types overridden when applied from left to right.

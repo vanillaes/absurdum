@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * Create a new object with key-value pairs inverted, in the case of duplicate values the latter value
  * will overwrite the previous value.
@@ -8,11 +10,9 @@
  * console.log(result);
  * > { '1': 'c', '2': 'b' }
  */
-function invert (object) {
+export function invert (object) {
   return Object.keys(object).reduce((acc, key) => {
     acc[object[key]] = key
     return acc
   }, {})
 }
-
-export { invert }

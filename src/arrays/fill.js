@@ -2,18 +2,19 @@
 
 /**
  * Fills items in an array with a specified value. Optionally, one can start and/or end from a specific index.
- * @param {Array} array input array
+ * @template T
+ * @param {T[]} array input array
  * @param {*} value value that fills the array
  * @param {number} [start] start index (default 0)
  * @param {number} [end] end index (default array.length)
- * @returns {Array} input array filled w/ the value
+ * @returns {T[]} input array filled w/ the value
  * @example
  * const result = arrays.fill([1, 2, 3, 4], 'a', 1, 2);
  * console.log(result)
  * > [1, 'a', 'a', 4]
  */
-function fill (array, value, start = 0, end = array.length - 1) {
-  return array.reduce((acc, curr, idx) => {
+export function fill (array, value, start = 0, end = array.length - 1) {
+  return array.reduce((/** @type {T[]} */ acc, curr, idx) => {
     if (idx >= start && idx <= end) {
       acc.push(value)
     } else {
@@ -22,5 +23,3 @@ function fill (array, value, start = 0, end = array.length - 1) {
     return acc
   }, [])
 }
-
-export { fill }

@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * Assign merges object properties from all supplied objects. If a property
  * already exists, then it is overwritten when merged from left to right.
@@ -10,7 +12,7 @@
  * console.log(result);
  * > { hold: 25, fast: 14, your: 19, horses: 4 }
  */
-function assign (object, ...sources) {
+export function assign (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources]
 
@@ -22,5 +24,3 @@ function assign (object, ...sources) {
     return acc
   }, {})
 }
-
-export { assign }

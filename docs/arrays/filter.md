@@ -7,16 +7,31 @@
 
 <!-- div -->
 
-<h3 id="filterarray-predicate"><code>filter(array, predicate)</code></h3>
+<h3 id="acc"><code>acc</code></h3>
+
+
+
+---
+
+<!-- /div -->
+
+<!-- /div -->
+
+<!-- div -->
+
+
+<!-- div -->
+
+<h3 id="exportfunctionfilterarrayarray-predicate"><code>export function filter *(array(array, predicate)*</code></h3>
 
 Iterates over an array of values and only outputs values where `predicate is equal to true`.
 
 #### Arguments
-1. `array` *(Array)*: input array
+1. `array` *(T&#91;&#93;)*: input array
 2. `predicate` *(Function)*: predicate function
 
 #### Returns
-*(Array)*: the input array w/ unwanted values removed
+*(&#42;)*: the input array w/ unwanted values removed
 
 #### Example
 ```js

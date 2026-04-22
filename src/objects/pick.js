@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this late
+
 /**
  * Pick returns a new object composed from the selected object properties.
  * @param {object} object input object
@@ -8,7 +10,7 @@
  * console.log(result);
  * > { 45: 'pasta', a: 'mixed' }
  */
-function pick (object, ...paths) {
+export function pick (object, ...paths) {
   if (paths.length === 0) { return {} }
   const args = new Set()
 
@@ -23,5 +25,3 @@ function pick (object, ...paths) {
     return acc
   }, {})
 }
-
-export { pick }

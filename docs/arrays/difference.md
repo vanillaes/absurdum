@@ -7,16 +7,31 @@
 
 <!-- div -->
 
-<h3 id="differencearraya-arrayb"><code>difference(arrayA, arrayB)</code></h3>
+<h3 id="acc"><code>acc</code></h3>
+
+
+
+---
+
+<!-- /div -->
+
+<!-- /div -->
+
+<!-- div -->
+
+
+<!-- div -->
+
+<h3 id="exportfunctiondifferencearrayaarraya-arrayb"><code>export function difference *(arrayA(arrayA, arrayB)*</code></h3>
 
 Finds the difference of two arrays
 
 #### Arguments
-1. `arrayA` *(Array)*: first input array
-2. `arrayB` *(Array)*: second input array
+1. `arrayA` *(T&#91;&#93;)*: first input array
+2. `arrayB` *(T&#91;&#93;)*: second input array
 
 #### Returns
-*(Array)*: an array containing the difference
+*(&#42;)*: an array containing the difference
 
 #### Example
 ```js

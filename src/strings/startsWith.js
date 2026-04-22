@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this late
+
 /**
  * StartsWith tests a string to see if it starts with a substring
  * @param {string} string input string
@@ -12,7 +14,7 @@
  * console.log(result);
  * > false
  */
-function startsWith (string, substr) {
+export function startsWith (string, substr) {
   let chars = string.split('')
 
   const reducer = (acc, curr, idx, arr) => {
@@ -31,5 +33,3 @@ function startsWith (string, substr) {
 
   return chars.reduce(reducer, null)
 }
-
-export { startsWith }

@@ -1,12 +1,12 @@
 /**
  * Without, returns an array with all values parameters removed from the input array
- *
- * @param {Array} array input array
+ * @template T
+ * @param {T[]} array input array
  * @param {...*} values input values
- * @returns {Array} an array of unique values
+ * @returns {T[]} an array of unique values
  * @example
  * const result = arrays.without(['a', 'b', 'c', ['d']], 'b', ['d']);
  * console.log(result);
  * > ['a', 'c', ['d']]
  */
-export function without(array: any[], ...values: any[]): any[];
+export function without<T>(array: T[], ...values: any[]): T[];

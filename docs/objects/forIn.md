@@ -7,17 +7,17 @@
 
 <!-- div -->
 
-<h3 id="forinobject-func"><code>forIn(object, func)</code></h3>
+<h3 id="exportfunctionforinobjectobject-func"><code>export function forIn *(object(object, func)*</code></h3>
 
 forIn iterates over own and inherited enumerable string keyed properties of an object and invokes
 iteratee for each property. The iteratee is invoked with three arguments: *(value, key, object)*
 
 #### Arguments
-1. `object` *(Object)*: input object
+1. `object` *(object)*: input object
 2. `func` *(Function)*: function invoked per iteration
 
 #### Returns
-*(Object)*: original object
+*(object)*: original object
 
 #### Example
 ```js

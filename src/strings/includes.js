@@ -13,7 +13,7 @@
  * console.log(result);
  * > false
  */
-function includes (string, substr, start = 0) {
+export function includes (string, substr, start = 0) {
   if (string.length === 0) return false
   const len = substr.length
   const first = substr.charAt(0)
@@ -29,5 +29,3 @@ function includes (string, substr, start = 0) {
     return false
   }, false)
 }
-
-export { includes }

@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /**
  * Filter iterates over an object and applies a predicate to each property, for all properties
@@ -13,7 +14,7 @@
  * console.log(result);
  * > { small: "ant", big: "elephant" }
  */
-function filter (object, predicate) {
+export function filter (object, predicate) {
   if (typeof predicate !== 'function') { return object }
   return Object.keys(object).reduce((acc, key) => {
     if (predicate(object[key], key, object) === true) {
@@ -22,5 +23,3 @@ function filter (object, predicate) {
     return acc
   }, {})
 }
-
-export { filter }

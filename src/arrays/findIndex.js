@@ -3,7 +3,8 @@
 /**
  * FindIndex method returns the value of First element at which a provided function is true,
  * or -1 if no elements in the array satisfy the function.
- * @param {Array} array input array
+ * @template T
+ * @param {T[]} array input array
  * @param {Function} predicate to be run against each element of the array
  * @param {*} [thisArg] this argument in the function
  * @returns {*} value of element that satisfied function.
@@ -16,7 +17,7 @@
  * console.log(result);
  * > 1
  */
-function findIndex (array, predicate, thisArg) {
+export function findIndex (array, predicate, thisArg) {
   if (array.length === 0) return -1
   if (typeof predicate !== 'function') { throw TypeError('predicate must be a function') }
 
@@ -25,5 +26,3 @@ function findIndex (array, predicate, thisArg) {
     return res
   }, -1)
 }
-
-export { findIndex }

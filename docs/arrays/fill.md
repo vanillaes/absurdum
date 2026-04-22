@@ -7,18 +7,33 @@
 
 <!-- div -->
 
-<h3 id="fillarray-value-start0-endarraylength"><code>fill(array, value, [start=0], [end=array.length])</code></h3>
+<h3 id="acc"><code>acc</code></h3>
+
+
+
+---
+
+<!-- /div -->
+
+<!-- /div -->
+
+<!-- div -->
+
+
+<!-- div -->
+
+<h3 id="exportfunctionfillarrayarray-value-start-end"><code>export function fill *(array(array, value, [start], [end])*</code></h3>
 
 Fills items in an array with a specified value. Optionally, one can start and/or end from a specific index.
 
 #### Arguments
-1. `array` *(Array)*: input array
+1. `array` *(T&#91;&#93;)*: input array
 2. `value` *(&#42;)*: value that fills the array
-3. `[start=0]` *(number)*: start index
-4. `[end=array.length]` *(number)*: end index
+3. `[start]` *(number): start index &#42;(default `0`)*&#42;
+4. `[end]` *(number): end index &#42;(default array.length)*&#42;
 
 #### Returns
-*(Array)*: input array filled w/ the value
+*(&#42;)*: input array filled w/ the value
 
 #### Example
 ```js

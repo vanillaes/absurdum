@@ -12,7 +12,7 @@
  * console.log(result);
  * > 'Sau'
  */
-function chomp (string, separator) {
+export function chomp (string, separator) {
   const res = string.split('')
   let windows = false
   if (separator === undefined) {
@@ -64,5 +64,3 @@ function chomp (string, separator) {
     }, '')
   }
 }
-
-export { chomp }

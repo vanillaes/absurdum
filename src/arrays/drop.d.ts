@@ -1,13 +1,12 @@
 /**
  * Remove N items from the beginning of the input array
- *
- * @param {Array} array input array
- * @param {number} [count=1] number of items to drop
- * @returns {Array} input array sans the dropped items
- *
+ * @template T
+ * @param {T[]} array input array
+ * @param {number} [count] number of items to drop (default 1)
+ * @returns {T[]} input array sans the dropped items
  * @example
  * const result = arrays.drop([1, 2, 3], 2);
  * console.log(result);
  * > [3]
  */
-export function drop(array: any[], count?: number): any[];
+export function drop<T>(array: T[], count?: number): T[];

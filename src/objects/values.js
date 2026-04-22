@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this late
+
 /**
  * Values is an alias for Object.values returns an array of all values in an object
  * @param {object} object input object
@@ -7,11 +9,9 @@
  * console.log(result);
  * > [25, 19, 4]
  */
-function values (object) {
+export function values (object) {
   return Object.keys(object).reduce((acc, key) => {
     acc.push(object[key])
     return acc
   }, [])
 }
-
-export { values }

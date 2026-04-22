@@ -7,16 +7,16 @@
 
 <!-- div -->
 
-<h3 id="mapvaluesobject-func"><code>mapValues(object, func)</code></h3>
+<h3 id="exportfunctionmapvaluesobjectobject-func"><code>export function mapValues *(object(object, func)*</code></h3>
 
 MapKeys iterates over an object and applies a function to each value
 
 #### Arguments
-1. `object` *(Object)*: input object
+1. `object` *(object)*: input object
 2. `func` *(Function)*: map function
 
 #### Returns
-*(Object)*: object with mutated values
+*(object)*: object with mutated values
 
 #### Example
 ```js

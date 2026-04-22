@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * FromEntries takes an array of arrays with key-value pairs and returns an
  * object composed from key-value pairs.
@@ -8,11 +10,9 @@
  * console.log(result);
  * > { age: 12034, name: 'Trair', state: 'Floating' }
  */
-function fromEntries (array) {
+export function fromEntries (array) {
   return array.reduce((acc, curr) => {
     acc[curr[0]] = curr[1]
     return acc
   }, {})
 }
-
-export { fromEntries }

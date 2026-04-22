@@ -7,10 +7,8 @@
  * console.log(result);
  * > desrever eb lliw gnirts sihT
  */
-function reverse (string) {
+export function reverse (string) {
   return string.split('').reduce((acc, curr) => {
     return curr + acc
   }, '')
 }
-
-export { reverse }

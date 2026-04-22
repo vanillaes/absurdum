@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="assignobject-sources"><code>assign(object, sources)</code></h3>
+<h3 id="exportfunctionassignobjectobject-sources"><code>export function assign *(object(object, sources)*</code></h3>
 
 Assign merges object properties from all supplied objects. If a property
 already exists, then it is overwritten when merged from left to right.

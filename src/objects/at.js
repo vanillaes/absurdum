@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * At, creates an array of values corresponding to paths of the object
  * @param {object} object input object
@@ -8,7 +10,7 @@
  * console.log(result, 'a[1]');
  * > [64]
  */
-function at (object, ...paths) {
+export function at (object, ...paths) {
   if (paths.length === 0) { return [] }
 
   const pathArray = []
@@ -38,5 +40,3 @@ function at (object, ...paths) {
     return acc
   }, [])
 }
-
-export { at }

@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="trimstartstring-chars"><code>trimStart([string], [chars=' '])</code></h3>
+<h3 id="exportfunctiontrimstartstringstring-chars"><code>export function trimStart *(string(string, [chars])*</code></h3>
 
 TrimStart trims any whitespace or the selected characters from the beginning of the string
 
 #### Arguments
-1. `[string]` *(string)*: input string
-2. `[chars=' ']` *(string)*: characters to remove from beginning of string
+1. `string` *(string)*: input string
+2. `[chars]` *(string): characters to remove from beginning of string &#42;(default ' ')*&#42;
 
 #### Returns
 *(string)*: string with the characters removed from beginning

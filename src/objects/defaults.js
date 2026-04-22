@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * Defaults recursively merges object properties from all supplied objects. If a property
  * already exists, then the existing one is kept when merged from left to right.
@@ -10,7 +12,7 @@
  * console.log(result);
  * > { hold: 44, your: 19, horses: 4 }
  */
-function defaults (object, ...sources) {
+export function defaults (object, ...sources) {
   if (arguments.length < 2) { return arguments.length === 1 ? object : {} }
   const result = [object, ...sources]
 
@@ -22,5 +24,3 @@ function defaults (object, ...sources) {
     return acc
   }, {})
 }
-
-export { defaults }

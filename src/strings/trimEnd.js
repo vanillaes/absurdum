@@ -1,6 +1,6 @@
 /**
  * TrimEnd trims any whitespace or the selected characters from the end of the string
- * @param {string} [string] input string
+ * @param {string} string input string
  * @param {string} [chars] characters to remove from end of the string (default ' ')
  * @returns {string} string with the characters removed from end of the string
  * @example
@@ -8,7 +8,7 @@
  * console.log(result);
  * > '-_-abc'
  */
-function trimEnd (string, chars = ' ') {
+export function trimEnd (string, chars = ' ') {
   const testChars = new Set([...chars])
   let end = true
   return [...string].reduceRight((acc, curr) => {
@@ -24,5 +24,3 @@ function trimEnd (string, chars = ' ') {
     }
   }, '')
 }
-
-export { trimEnd }

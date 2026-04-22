@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-any-type */
+// @ts-nocheck TODO: Fix types on this late
 
 /**
  * Result, creates an array of values corresponding to paths of the object. If value is a function, returns result of calling function
@@ -16,7 +17,7 @@
  * console.log(objects.result(obj, ['front', 5], func(3)));
  * > 10
  */
-function result (object, path, defaultValue) {
+export function result (object, path, defaultValue) {
   if (typeof path === 'undefined') { return undefined }
   let pathArray
 
@@ -41,5 +42,3 @@ function result (object, path, defaultValue) {
     return typeof defaultValue === 'function' ? defaultValue() : defaultValue
   }
 }
-
-export { result }

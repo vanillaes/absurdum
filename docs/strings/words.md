@@ -7,16 +7,16 @@
 
 <!-- div -->
 
-<h3 id="wordsstring-pattern"><code>words([string], [pattern])</code></h3>
+<h3 id="exportfunctionwordsstringstring-pattern"><code>export function words *(string(string, [pattern])*</code></h3>
 
 Splits `string` into an array of its words.
 
 #### Arguments
-1. `[string]` *(string)*: string to inspect for words
+1. `string` *(string)*: string to inspect for words
 2. `[pattern]` *(RegExp|string)*: regex pattern to match words or string of characters to split words by.
 
 #### Returns
-*(Array)*: Returns an array of words
+*(&#42;)*: Returns an array of words
 
 #### Example
 ```js

@@ -7,13 +7,13 @@
 
 <!-- div -->
 
-<h3 id="chompstring-separatorrnrn"><code>chomp(string, [separator='\r'||'\n'||'\r\n'])</code></h3>
+<h3 id="exportfunctionchompstringstring-separator"><code>export function chomp *(string(string, [separator])*</code></h3>
 
 Chomp removes record separator characters *(ex \n, \r, \r\n)* from the end of a string.
 
 #### Arguments
 1. `string` *(string)*: input string
-2. `[separator='\r'||'\n'||'\r\n']` *(string)*: separator removed from end of string
+2. `[separator]` *(string): separator removed from end of string &#42;(default '\r' | '\n' | '\r\n')*&#42;
 
 #### Returns
 *(string)*: does the input end with the substring?

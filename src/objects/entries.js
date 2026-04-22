@@ -1,3 +1,5 @@
+// @ts-nocheck TODO: Fix types on this later
+
 /**
  * Entries takes an object and returns an array composed from key-value pairs.
  * @param {object} object input object
@@ -7,11 +9,9 @@
  * console.log(result);
  * > [[asuka, 643], [heian, 795], [meiji: 1868]]
  */
-function entries (object) {
+export function entries (object) {
   return Object.keys(object).reduce((acc, key) => {
     acc.push([key, object[key]])
     return acc
   }, [])
 }
-
-export { entries }

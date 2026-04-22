@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="defaultsobject-sources"><code>defaults(object, sources)</code></h3>
+<h3 id="exportfunctiondefaultsobjectobject-sources"><code>export function defaults *(object(object, sources)*</code></h3>
 
 Defaults recursively merges object properties from all supplied objects. If a property
 already exists, then the existing one is kept when merged from left to right.

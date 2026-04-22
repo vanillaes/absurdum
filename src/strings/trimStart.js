@@ -1,6 +1,6 @@
 /**
  * TrimStart trims any whitespace or the selected characters from the beginning of the string
- * @param {string} [string] input string
+ * @param {string} string input string
  * @param {string} [chars] characters to remove from beginning of string (default ' ')
  * @returns {string} string with the characters removed from beginning
  * @example
@@ -8,7 +8,7 @@
  * console.log(result);
  * > 'abc-_-'
  */
-function trimStart (string, chars = ' ') {
+export function trimStart (string, chars = ' ') {
   const testChars = new Set([...chars])
   let first = true
   return [...string].reduce((acc, curr) => {
@@ -24,5 +24,3 @@ function trimStart (string, chars = ' ') {
     }
   }, '')
 }
-
-export { trimStart }

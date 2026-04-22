@@ -7,7 +7,7 @@
 
 <!-- div -->
 
-<h3 id="defaultsdeepobject-sources"><code>defaultsDeep(object, sources)</code></h3>
+<h3 id="exportfunctiondefaultsdeepobjectobject-sources"><code>export function defaultsDeep *(object(object, sources)*</code></h3>
 
 DefaultsDeep recursively merges object properties from all supplied objects with object values
 being merged recursively and once a property is set, additional values of the same property are ignored.

@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this late
 
 /**
  * Transform works like reduce, except the accumulator is implicitly returned
@@ -13,7 +14,7 @@
  * console.log(result);
  * > { harmony: '7_0', daft: '9_1', stripes: '11_2' }
  */
-function transform (object, func, accumulator = {}) {
+export function transform (object, func, accumulator = {}) {
   if (typeof func === 'undefined') { return object }
 
   return Object.keys(object).reduce((acc, key) => {
@@ -21,5 +22,3 @@ function transform (object, func, accumulator = {}) {
     return acc
   }, accumulator)
 }
-
-export { transform }

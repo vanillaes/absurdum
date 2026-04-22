@@ -20,13 +20,13 @@
  *  console.log(result);
  *  > 'abcabcfunfunfunf'
  */
-function padEnd (string, length = 0, substr = ' ') {
+export function padEnd (string, length = 0, substr = ' ') {
   let strLen = string.length
   const padLen = (length - string.length) > 0 ? length - string.length : 0
   let substrIdx = 0
   const stringArr = [...string, ...Array(padLen)]
 
-  const reducer = (acc, curr) => {
+  const reducer = (/** @type {string[]} */ acc, /** @type {string} */ curr) => {
     if (strLen !== 0) {
       acc.push(curr)
       strLen--
@@ -39,5 +39,3 @@ function padEnd (string, length = 0, substr = ' ') {
 
   return stringArr.reduce(reducer, []).join('')
 }
-
-export { padEnd }

@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /**
  * forIn iterates over own and inherited enumerable string keyed properties of an object and invokes
@@ -19,7 +20,7 @@
  * // 15
  * > { a: 5, b: 10 }
  */
-function forIn (object, func) {
+export function forIn (object, func) {
   const objProto = Object.getPrototypeOf(object)
   const proto = objProto ? Object.keys(objProto) : []
 
@@ -33,7 +34,5 @@ function forIn (object, func) {
     return null
   }, null)
 
-  return object
+  return Object.setPrototypeOf(object, Object.prototype)
 }
-
-export { forIn }
